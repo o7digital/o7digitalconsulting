@@ -1,42 +1,26 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { filterButtons, portfolios } from "@/data/portfolio";
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 export default function Portfolio() {
   const [currentFilter, setCurrentFilter] = useState("*");
-  const isotopContainer = useRef();
-  const isotope = useRef();
-  const initIsotop = async () => {
-    const Isotope = (await import("isotope-layout")).default;
-    const imagesloaded = (await import("imagesloaded")).default;
 
-    // Initialize Isotope in the mounted hook
-    isotope.current = new Isotope(isotopContainer.current, {
-      itemSelector: ".portfolio-3",
-      layoutMode: "masonry", // or 'fitRows', depending on your layout needs
+  // Filtrage côté React, sans Isotope
+  const displayed = useMemo(() => {
+    if (currentFilter === "*") return portfolios;
+    const key = currentFilter.startsWith(".")
+      ? currentFilter.slice(1)
+      : currentFilter;
+    return portfolios.filter((p) => {
+      const cats = String(p.categories || "").split(/\s+/);
+      return cats.includes(key);
     });
-    imagesloaded(isotopContainer.current).on("progress", function () {
-      // Trigger Isotope layout
-      isotope.current.layout();
-    });
-  };
-  const updateCategory = (val) => {
-    setCurrentFilter(val);
-    isotope.current.arrange({
-      filter: val,
-    });
-    //   isotope.value.layout();
-  };
-  useEffect(() => {
-    /////////////////////////////////////////////////////
-    // Magnate Animation
+  }, [currentFilter]);
 
-    initIsotop();
-  }, []);
   return (
-    <div className="rainbow-portfolio-area rainbow-section-gap masonary-wrapper-activation">
+    <div className="rainbow-portfolio-area rainbow-section-gap">
       <div className="container-fluid plr--30">
         <div className="row">
           <div className="col-lg-12">
@@ -47,39 +31,38 @@ export default function Portfolio() {
               data-sal-delay={100}
             >
               <h4 className="subtitle">
-                <span className="theme-gradient">Portfolio Box Layout</span>
+                <span className="theme-gradient">Études de cas</span>
               </h4>
               <h2 className="title w-600 mb--20">
-                Happily Clients Complete <br />
-                Our Business Project!
+                Des résultats concrets, <br /> des projets menés à bien.
               </h2>
             </div>
           </div>
         </div>
+
+        {/* Filtres */}
         <div className="row">
           <div className="col-lg-12">
             <div className="rainbow-portfolio-filter filter-button-default messonry-button text-center mb--30">
               {filterButtons.map((button) => (
                 <button
                   key={button.filter}
-                  onClick={() => updateCategory(button.filter)}
+                  onClick={() => setCurrentFilter(button.filter)}
                   data-filter={button.filter}
-                  className={currentFilter == button.filter ? "is-checked" : ""}
+                  className={currentFilter === button.filter ? "is-checked" : ""}
                 >
                   <span className="filter-text">{button.label}</span>
                 </button>
               ))}
             </div>
-            <div
-              ref={isotopContainer}
-              className="portfolio-items grid-metro3 mesonry-list"
-            >
+
+            {/* Grille simple sans Isotope */}
+            <div className="portfolio-items grid-metro3 mesonry-list">
               <div className="resizer" />
-              {/* Start Single Portfolio  */}
-              {portfolios.map((portfolio) => (
+              {displayed.map((portfolio) => (
                 <div
                   key={portfolio.id}
-                  className={`portfolio-3 box-grid-layout  ${portfolio.categories}`}
+                  className={`portfolio-3 box-grid-layout ${portfolio.categories}`}
                 >
                   <div className="rainbow-card portfolio">
                     <div className="inner">
@@ -105,34 +88,31 @@ export default function Portfolio() {
                             {portfolio.title}
                           </Link>
                         </h5>
-                        <span className="subtitle b2">
-                          {portfolio.subtitle}
-                        </span>
+                        <span className="subtitle b2">{portfolio.subtitle}</span>
                       </div>
                     </div>
                   </div>
                 </div>
               ))}
-              {/* Start Single Portfolio  */}
+              {displayed.length === 0 && (
+                <div className="text-center b2 mt--20 mb--20">Aucun élément.</div>
+              )}
             </div>
           </div>
         </div>
-        {/* Start Load More Button  */}
+
+        {/* Bouton voir plus */}
         <div className="row row--15">
           <div className="col-lg-12">
             <div className="rainbow-load-more text-center mt--60">
-              <Link
-                href={`/portfolio`}
-                className="btn btn-default btn-large btn-icon"
-              >
+              <Link href={`/portfolio`} className="btn btn-default btn-large btn-icon">
                 <span>
-                  Load More <span className="icon feather-loader" />
+                  Voir plus de projets <span className="icon feather-loader" />
                 </span>
               </Link>
             </div>
           </div>
         </div>
-        {/* End Load More Button  */}
       </div>
     </div>
   );

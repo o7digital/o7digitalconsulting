@@ -5,12 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 import ModeSwitcher from "../common/ModeSwitcher";
 import { openMenu } from "@/utlis/toggleMenu";
+
 export default function Header2({
   parentClass = "rainbow-header header-default header-left-align header-not-transparent header-sticky",
   btnClass = "btn-default btn-small round",
 }) {
+  // Force un header non transparent même si une page passe "header-transparent"
+  const computedParentClass = (parentClass || "")
+    .replace("header-transparent", "header-not-transparent")
+    .trim();
+
   return (
-    <header className={parentClass}>
+    <header className={computedParentClass}>
       <div className="container position-relative">
         <div className="row align-items-center">
           <div className="col-lg-9 col-md-6 col-4 position-static">
@@ -19,14 +25,14 @@ export default function Header2({
                 <Link href={`/`}>
                   <Image
                     className="logo-light"
-                    alt="Corporate Logo"
+                    alt="O7 Digital Consulting"
                     src="/assets/images/logo/logo.png"
                     width={288}
                     height={100}
                   />
                   <Image
                     className="logo-dark"
-                    alt="Corporate Logo"
+                    alt="O7 Digital Consulting"
                     src="/assets/images/logo/logo-dark.png"
                     width={288}
                     height={100}
@@ -42,16 +48,7 @@ export default function Header2({
           </div>
           <div className="col-lg-3 col-md-6 col-8">
             <div className="header-right">
-              <div className="header-btn">
-                <a
-                  className={btnClass}
-                  target="_blank"
-                  href="https://themeforest.net/user/rainbow-themes/portfolio"
-                >
-                  BUY NOW
-                </a>
-              </div>
-              {/* Start Mobile-Menu-Bar */}
+              {/* pas de bouton BUY NOW */}
               <div className="mobile-menu-bar ml--5 d-block d-lg-none">
                 <div className="hamberger">
                   <button onClick={openMenu} className="hamberger-button">
@@ -59,10 +56,7 @@ export default function Header2({
                   </button>
                 </div>
               </div>
-              {/* Start Mobile-Menu-Bar */}
-              {/* Start Switcher Area  */}
               <ModeSwitcher />
-              {/* Start Switcher Area  */}
             </div>
           </div>
         </div>
