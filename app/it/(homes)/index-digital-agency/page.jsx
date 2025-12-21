@@ -51,13 +51,8 @@ export default function HomeIt() {
             "@id": "https://www.o7digital-consulting.com/it/#organization",
             "name": "O7 Digital Consulting",
             "alternateName": "O7 Digital",
-            "url": "https://www.o7digital-consulting.com/it/",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
-              "width": 250,
-              "height": 75
-            },
+            "url": "https://www.o7digital-consulting.com/it",
+            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
             ],
@@ -78,6 +73,123 @@ export default function HomeIt() {
               { "@type": "City", "name": "Z\u00fcrich", "containedIn": { "@type": "Country", "name": "Svizzera" } },
               { "@type": "City", "name": "Ginevra", "containedIn": { "@type": "Country", "name": "Svizzera" } },
               { "@type": "City", "name": "Lugano", "containedIn": { "@type": "Country", "name": "Svizzera" } }
+            ],
+            "founder": {
+              "@type": "Person",
+              "name": "Olivier Steineur"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Servizi digitali",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "CTO as a Service Italia | Leadership digitale esternalizzata",
+                    "description": "CTO as a Service per aziende in Italia e Svizzera, direzione tecnologica esternalizzata."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Sviluppo web React e Next.js Italia",
+                    "description": "Sviluppo web su misura con React e Next.js per aziende in Italia e Svizzera."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Consulenza DevOps e cloud Italia",
+                    "description": "Consulenza cloud e DevOps per infrastrutture scalabili e affidabili."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "SEO tecnico internazionale",
+                    "description": "SEO tecnico avanzato, performance web e dati strutturati per siti internazionali."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "CMS headless per aziende",
+                    "description": "CMS headless e architetture API per la gestione dei contenuti in azienda."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Consulenza IT strategica",
+                    "description": "Consulenza IT e trasformazione digitale per aziende B2B."
+                  }
+                }
+              ]
+            }
+          }
+        `}
+      </Script>
+      <Script id="ld-professionalservice-it" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "@id": "https://www.o7digital-consulting.com/it/#professionalservice",
+            "name": "O7 Digital Consulting",
+            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital-consulting.com/it",
+            "telephone": "+33-XX-XX-XX-XX",
+            "priceRange": "€€€",
+            "address": [
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Paris",
+                "addressLocality": "Paris",
+                "addressRegion": "Île-de-France",
+                "postalCode": "75000",
+                "addressCountry": "FR"
+              },
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Montréal",
+                "addressLocality": "Montréal",
+                "addressRegion": "QC",
+                "postalCode": "H0H 0H0",
+                "addressCountry": "CA"
+              }
+            ],
+            "geo": [
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 48.8566,
+                "longitude": 2.3522
+              },
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5017,
+                "longitude": -73.5673
+              }
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/o7-digital-consulting"
             ]
           }
         `}
@@ -88,7 +200,7 @@ export default function HomeIt() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "@id": "https://www.o7digital-consulting.com/it/#website",
-            "url": "https://www.o7digital-consulting.com/it/",
+            "url": "https://www.o7digital-consulting.com/it",
             "name": "O7 Digital Consulting",
             "inLanguage": "it-IT",
             "publisher": {
@@ -104,7 +216,8 @@ export default function HomeIt() {
             "@type": "WebPage",
             "@id": "https://www.o7digital-consulting.com/it/index-digital-agency#webpage",
             "url": "https://www.o7digital-consulting.com/it/index-digital-agency",
-            "name": "CTO as a Service Italia | Leadership digitale esternalizzata",
+            "name": "Agenzia digitale Italia | Consulenza IT Milano Roma Torino Bologna Firenze | CTO as a Service",
+            "description": "Agenzia digitale internazionale e consulenza IT per aziende in Italia, Svizzera ed Europa. CTO as a Service, sviluppo web su misura, consulenza cloud, DevOps consulting, SEO tecnica e integrazione AI per trasformazione digitale. IT consulting Milano, Roma, Torino, Bologna, Firenze, Venezia.",
             "inLanguage": "it-IT",
             "isPartOf": {
               "@id": "https://www.o7digital-consulting.com/it/#website"
@@ -112,7 +225,25 @@ export default function HomeIt() {
             "about": {
               "@id": "https://www.o7digital-consulting.com/it/#organization"
             },
-            "description": "Servizi CTO esternalizzati e trasformazione digitale per aziende in Italia, Europa, USA e Canada. SEO tecnico internazionale, architettura web ad alte prestazioni, consulenza digitale B2B e consulenza IT strategica."
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.o7digital-consulting.com/it/index-digital-agency"
+                }
+              ]
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.o7digital-consulting.com/it/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
           }
         `}
       </Script>

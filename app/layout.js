@@ -49,12 +49,6 @@ export const metadata = {
       },
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'O7 Digital Consulting | Agence de consulting digital',
-    description: 'Agence de consulting digital spécialisée en stratégie digitale, CTO as a Service, développement web moderne et SEO.',
-    images: ['/assets/images/o7digital-logo.png'],
-  },
   robots: {
     index: true,
     follow: true,

@@ -44,9 +44,10 @@ export default function Home() {
           {
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": "https://www.o7digital-consulting.com/#organization",
             "name": "O7 Digital Consulting",
             "url": "https://www.o7digital-consulting.com",
-            "logo": "https://www.o7digital-consulting.com/logo.png",
+            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
             "description": "Agence de consulting digital à Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec spécialisée en CTO as a Service, développement web React Next.js, consulting DevOps, CMS headless entreprise, intégration IA et SEO technique avancé.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
@@ -191,14 +192,14 @@ export default function Home() {
           }
         `}
       </Script>
-      <Script id="ld-localbusiness" type="application/ld+json" strategy="afterInteractive">
+      <Script id="ld-professionalservice" type="application/ld+json" strategy="afterInteractive">
         {`
           {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
+            "@id": "https://www.o7digital-consulting.com/#professionalservice",
             "name": "O7 Digital Consulting",
-            "image": "https://www.o7digital-consulting.com/logo.png",
-            "@id": "https://www.o7digital-consulting.com",
+            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
             "url": "https://www.o7digital-consulting.com",
             "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
@@ -250,19 +251,36 @@ export default function Home() {
           }
         `}
       </Script>
+      <Script id="ld-website" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://www.o7digital-consulting.com/#website",
+            "url": "https://www.o7digital-consulting.com",
+            "name": "O7 Digital Consulting",
+            "inLanguage": "fr-FR",
+            "publisher": {
+              "@id": "https://www.o7digital-consulting.com/#organization"
+            }
+          }
+        `}
+      </Script>
       <Script id="ld-webpage" type="application/ld+json" strategy="afterInteractive">
         {`
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": "O7 Digital Consulting | Agence de consulting digital",
-            "description": "Agence de conseil digital à Paris et Montréal spécialisée en CTO as a Service, développement web sur mesure, conseil DevOps, cloud, intégration IA et stratégie SEO avancée.",
+            "@id": "https://www.o7digital-consulting.com/index-digital-agency#webpage",
             "url": "https://www.o7digital-consulting.com/index-digital-agency",
+            "name": "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal | Direction Digitale Externalisée",
+            "description": "CTO as a Service Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec. Direction digitale externalisée Paris, Lyon, Montréal. SEO technique Paris et Montréal, consulting IT stratégique Montréal, architecture web haute performance, transformation digitale groupes internationaux France et Québec.",
             "inLanguage": "fr-FR",
             "isPartOf": {
-              "@type": "WebSite",
-              "name": "O7 Digital Consulting",
-              "url": "https://www.o7digital-consulting.com"
+              "@id": "https://www.o7digital-consulting.com/#website"
+            },
+            "about": {
+              "@id": "https://www.o7digital-consulting.com/#organization"
             },
             "breadcrumb": {
               "@type": "BreadcrumbList",
@@ -271,7 +289,7 @@ export default function Home() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Accueil",
-                  "item": "https://www.o7digital-consulting.com"
+                  "item": "https://www.o7digital-consulting.com/index-digital-agency"
                 }
               ]
             },

@@ -51,7 +51,7 @@ export default function HomeEs() {
             "@id": "https://www.o7digital-consulting.com/es/#organization",
             "name": "O7 Digital Consulting",
             "url": "https://www.o7digital-consulting.com/es",
-            "logo": "https://www.o7digital-consulting.com/logo.png",
+            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
             "description": "Agencia digital Madrid, Barcelona, Ciudad de México, Monterrey y Guadalajara especializada en CTO as a Service, desarrollo web React Next.js, consultoría DevOps México y España, CMS headless para empresas, integración IA y SEO técnico México y España.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
@@ -197,6 +197,118 @@ export default function HomeEs() {
                   }
                 }
               ]
+            }
+          }
+        `}
+      </Script>
+      <Script id="ld-professionalservice-es" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "@id": "https://www.o7digital-consulting.com/es/#professionalservice",
+            "name": "O7 Digital Consulting",
+            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital-consulting.com/es",
+            "telephone": "+33-XX-XX-XX-XX",
+            "priceRange": "€€€",
+            "address": [
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Paris",
+                "addressLocality": "Paris",
+                "addressRegion": "Île-de-France",
+                "postalCode": "75000",
+                "addressCountry": "FR"
+              },
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Montréal",
+                "addressLocality": "Montréal",
+                "addressRegion": "QC",
+                "postalCode": "H0H 0H0",
+                "addressCountry": "CA"
+              }
+            ],
+            "geo": [
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 48.8566,
+                "longitude": 2.3522
+              },
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5017,
+                "longitude": -73.5673
+              }
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/o7-digital-consulting"
+            ]
+          }
+        `}
+      </Script>
+      <Script id="ld-website-es" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://www.o7digital-consulting.com/es/#website",
+            "url": "https://www.o7digital-consulting.com/es",
+            "name": "O7 Digital Consulting",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://www.o7digital-consulting.com/es/#organization"
+            }
+          }
+        `}
+      </Script>
+      <Script id="ld-webpage-es" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://www.o7digital-consulting.com/es/index-digital-agency#webpage",
+            "url": "https://www.o7digital-consulting.com/es/index-digital-agency",
+            "name": "CTO as a Service Madrid Barcelona México Monterrey Guadalajara | Dirección Digital Externalizada",
+            "description": "CTO as a Service Madrid, Barcelona, Valencia, Sevilla, Ciudad de México, Monterrey y Guadalajara. Dirección digital externalizada México y España. Consultoría SEO técnica México y Madrid, consultoría IT estratégica España y México, arquitectura web escalable, transformación digital empresas México y España. Consultoría digital B2B internacional.",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://www.o7digital-consulting.com/es/#website"
+            },
+            "about": {
+              "@id": "https://www.o7digital-consulting.com/es/#organization"
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://www.o7digital-consulting.com/es/index-digital-agency"
+                }
+              ]
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.o7digital-consulting.com/es/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
             }
           }
         `}

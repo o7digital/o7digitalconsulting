@@ -51,7 +51,7 @@ export default function HomeDe() {
             "@id": "https://www.o7digital-consulting.com/de/#organization",
             "name": "O7 Digital Consulting",
             "url": "https://www.o7digital-consulting.com/de",
-            "logo": "https://www.o7digital-consulting.com/logo.png",
+            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
             "description": "Digitale Beratungsagentur in Deutschland, Österreich und der Schweiz – spezialisiert auf CTO as a Service, individuelle Webentwicklung, DevOps- und Cloud-Consulting, KI-Integration und technisches SEO.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
@@ -114,6 +114,118 @@ export default function HomeDe() {
                   }
                 }
               ]
+            }
+          }
+        `}
+      </Script>
+      <Script id="ld-professionalservice-de" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "@id": "https://www.o7digital-consulting.com/de/#professionalservice",
+            "name": "O7 Digital Consulting",
+            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital-consulting.com/de",
+            "telephone": "+33-XX-XX-XX-XX",
+            "priceRange": "€€€",
+            "address": [
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Paris",
+                "addressLocality": "Paris",
+                "addressRegion": "Île-de-France",
+                "postalCode": "75000",
+                "addressCountry": "FR"
+              },
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Montréal",
+                "addressLocality": "Montréal",
+                "addressRegion": "QC",
+                "postalCode": "H0H 0H0",
+                "addressCountry": "CA"
+              }
+            ],
+            "geo": [
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 48.8566,
+                "longitude": 2.3522
+              },
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5017,
+                "longitude": -73.5673
+              }
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/o7-digital-consulting"
+            ]
+          }
+        `}
+      </Script>
+      <Script id="ld-website-de" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://www.o7digital-consulting.com/de/#website",
+            "url": "https://www.o7digital-consulting.com/de",
+            "name": "O7 Digital Consulting",
+            "inLanguage": "de-DE",
+            "publisher": {
+              "@id": "https://www.o7digital-consulting.com/de/#organization"
+            }
+          }
+        `}
+      </Script>
+      <Script id="ld-webpage-de" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://www.o7digital-consulting.com/de/index-digital-agency#webpage",
+            "url": "https://www.o7digital-consulting.com/de/index-digital-agency",
+            "name": "Digitalagentur Deutschland | IT-Beratung Berlin München Frankfurt Wien Zürich | CTO as a Service DACH",
+            "description": "Internationale Digitalagentur und IT-Beratung für Unternehmen in Deutschland, Österreich, Schweiz. CTO as a Service, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für digitale Transformation DACH. IT Consulting Berlin, München, Hamburg, Frankfurt, Wien, Zürich.",
+            "inLanguage": "de-DE",
+            "isPartOf": {
+              "@id": "https://www.o7digital-consulting.com/de/#website"
+            },
+            "about": {
+              "@id": "https://www.o7digital-consulting.com/de/#organization"
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Startseite",
+                  "item": "https://www.o7digital-consulting.com/de/index-digital-agency"
+                }
+              ]
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.o7digital-consulting.com/de/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
             }
           }
         `}

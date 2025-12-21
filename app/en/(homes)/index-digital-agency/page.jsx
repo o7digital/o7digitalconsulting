@@ -51,7 +51,7 @@ export default function HomeEn() {
             "@id": "https://www.o7digital-consulting.com/en/#organization",
             "name": "O7 Digital Consulting",
             "url": "https://www.o7digital-consulting.com/en",
-            "logo": "https://www.o7digital-consulting.com/logo.png",
+            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
             "description": "Digital consulting firm London, New York, San Francisco and Toronto specializing in CTO as a Service, React Next.js development, DevOps consulting, headless CMS for enterprises, AI integration and technical SEO consulting UK, USA and Canada.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
@@ -217,6 +217,118 @@ export default function HomeEn() {
                   }
                 }
               ]
+            }
+          }
+        `}
+      </Script>
+      <Script id="ld-professionalservice-en" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "@id": "https://www.o7digital-consulting.com/en/#professionalservice",
+            "name": "O7 Digital Consulting",
+            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital-consulting.com/en",
+            "telephone": "+33-XX-XX-XX-XX",
+            "priceRange": "€€€",
+            "address": [
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Paris",
+                "addressLocality": "Paris",
+                "addressRegion": "Ile-de-France",
+                "postalCode": "75000",
+                "addressCountry": "FR"
+              },
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Montreal",
+                "addressLocality": "Montreal",
+                "addressRegion": "QC",
+                "postalCode": "H0H 0H0",
+                "addressCountry": "CA"
+              }
+            ],
+            "geo": [
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 48.8566,
+                "longitude": 2.3522
+              },
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5017,
+                "longitude": -73.5673
+              }
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/o7-digital-consulting"
+            ]
+          }
+        `}
+      </Script>
+      <Script id="ld-website-en" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://www.o7digital-consulting.com/en/#website",
+            "url": "https://www.o7digital-consulting.com/en",
+            "name": "O7 Digital Consulting",
+            "inLanguage": "en-US",
+            "publisher": {
+              "@id": "https://www.o7digital-consulting.com/en/#organization"
+            }
+          }
+        `}
+      </Script>
+      <Script id="ld-webpage-en" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://www.o7digital-consulting.com/en/index-digital-agency#webpage",
+            "url": "https://www.o7digital-consulting.com/en/index-digital-agency",
+            "name": "CTO as a Service London New York San Francisco Toronto | Fractional CTO UK USA Canada",
+            "description": "CTO as a Service London, New York, San Francisco, Toronto, Montreal and Vancouver. Digital consulting firm London, New York and Toronto. Technical SEO consulting London and New York, enterprise digital consulting, high-performance web architecture, digital transformation consulting UK, USA and Canada. IT consulting for enterprises.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://www.o7digital-consulting.com/en/#website"
+            },
+            "about": {
+              "@id": "https://www.o7digital-consulting.com/en/#organization"
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.o7digital-consulting.com/en/index-digital-agency"
+                }
+              ]
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.o7digital-consulting.com/en/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
             }
           }
         `}
