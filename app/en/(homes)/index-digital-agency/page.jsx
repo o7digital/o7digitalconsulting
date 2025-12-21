@@ -13,9 +13,9 @@ import {
 } from "@/data/o7.en";
 
 export const metadata = {
-  title: "CTO as a Service UK & USA | Outsourced Digital Leadership",
+  title: "CTO as a Service London New York San Francisco Toronto | Fractional CTO UK USA Canada",
   description:
-    "Outsourced CTO services and digital transformation for companies in UK, USA, Canada and Mexico. Technical SEO international, high-performance web architecture, B2B digital consulting and strategic IT consulting.",
+    "CTO as a Service London, New York, San Francisco, Toronto, Montreal and Vancouver. Digital consulting firm London, New York and Toronto. Technical SEO consulting London and New York, enterprise digital consulting, high-performance web architecture, digital transformation consulting UK, USA and Canada. IT consulting for enterprises.",
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/en/index-digital-agency',
     languages: {
@@ -52,11 +52,101 @@ export default function HomeEn() {
             "name": "O7 Digital Consulting",
             "url": "https://www.o7digital-consulting.com/en",
             "logo": "https://www.o7digital-consulting.com/logo.png",
-            "description": "Digital consulting agency UK & USA specializing in CTO as a Service, custom website development, DevOps consulting, cloud infrastructure, AI integration and technical SEO consulting.",
+            "description": "Digital consulting firm London, New York, San Francisco and Toronto specializing in CTO as a Service, React Next.js development, DevOps consulting, headless CMS for enterprises, AI integration and technical SEO consulting UK, USA and Canada.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
             ],
             "areaServed": [
+              { 
+                "@type": "City", 
+                "name": "London",
+                "addressCountry": "GB"
+              },
+              { 
+                "@type": "City", 
+                "name": "Manchester",
+                "addressCountry": "GB"
+              },
+              { 
+                "@type": "City", 
+                "name": "Birmingham",
+                "addressCountry": "GB"
+              },
+              { 
+                "@type": "City", 
+                "name": "Leeds",
+                "addressCountry": "GB"
+              },
+              { 
+                "@type": "City", 
+                "name": "Bristol",
+                "addressCountry": "GB"
+              },
+              { 
+                "@type": "City", 
+                "name": "Edinburgh",
+                "addressCountry": "GB"
+              },
+              { 
+                "@type": "City", 
+                "name": "New York",
+                "addressCountry": "US"
+              },
+              { 
+                "@type": "City", 
+                "name": "San Francisco",
+                "addressCountry": "US"
+              },
+              { 
+                "@type": "City", 
+                "name": "Los Angeles",
+                "addressCountry": "US"
+              },
+              { 
+                "@type": "City", 
+                "name": "Seattle",
+                "addressCountry": "US"
+              },
+              { 
+                "@type": "City", 
+                "name": "Austin",
+                "addressCountry": "US"
+              },
+              { 
+                "@type": "City", 
+                "name": "Boston",
+                "addressCountry": "US"
+              },
+              { 
+                "@type": "City", 
+                "name": "Chicago",
+                "addressCountry": "US"
+              },
+              { 
+                "@type": "City", 
+                "name": "Toronto",
+                "addressCountry": "CA"
+              },
+              { 
+                "@type": "City", 
+                "name": "Montreal",
+                "addressCountry": "CA"
+              },
+              { 
+                "@type": "City", 
+                "name": "Vancouver",
+                "addressCountry": "CA"
+              },
+              { 
+                "@type": "City", 
+                "name": "Calgary",
+                "addressCountry": "CA"
+              },
+              { 
+                "@type": "City", 
+                "name": "Ottawa",
+                "addressCountry": "CA"
+              },
               { 
                 "@type": "Country", 
                 "name": "United Kingdom"
@@ -64,6 +154,10 @@ export default function HomeEn() {
               { 
                 "@type": "Country", 
                 "name": "United States"
+              },
+              { 
+                "@type": "Country", 
+                "name": "Canada"
               }
             ],
             "founder": {
@@ -78,32 +172,48 @@ export default function HomeEn() {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "CTO as a Service",
-                    "description": "Fractional CTO services for UK and USA companies"
+                    "name": "CTO as a Service London New York San Francisco Toronto Montreal",
+                    "description": "Fractional CTO London, New York and Toronto. Technical leadership outsourcing UK, USA and Canada"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Custom Website Development",
-                    "description": "Bespoke web development services UK and USA"
+                    "name": "Custom web development London New York Toronto",
+                    "description": "React development consulting and Next.js development consulting UK, USA, Canada"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "DevOps Consulting Services",
-                    "description": "Cloud infrastructure and DevOps consulting"
+                    "name": "DevOps consulting London USA Canada",
+                    "description": "Cloud consulting and DevOps consulting UK, USA and Canada"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Technical SEO Consulting",
-                    "description": "Advanced SEO strategy and implementation"
+                    "name": "Technical SEO consulting London New York San Francisco Toronto",
+                    "description": "Enterprise SEO consulting London, technical SEO for international websites"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Headless CMS consulting London USA Canada",
+                    "description": "Headless CMS for enterprises UK, USA and Canada"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Digital transformation consulting UK USA Canada",
+                    "description": "Enterprise digital consulting London, New York and Toronto"
                   }
                 }
               ]
