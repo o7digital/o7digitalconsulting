@@ -13,9 +13,9 @@ import {
 } from "@/data/o7.es";
 
 export const metadata = {
-  title: "CTO as a Service España & México | Dirección Digital Externalizada",
+  title: "CTO as a Service Madrid Barcelona México Monterrey Guadalajara | Dirección Digital Externalizada",
   description:
-    "Dirección digital externalizada y CTO as a Service para empresas en España, México, USA y Canadá. SEO técnico internacional, arquitectura web alto rendimiento, transformación digital B2B y consultoría IT estratégica.",
+    "CTO as a Service Madrid, Barcelona, Valencia, Sevilla, Ciudad de México, Monterrey y Guadalajara. Dirección digital externalizada México y España. Consultoría SEO técnica México y Madrid, consultoría IT estratégica España y México, arquitectura web escalable, transformación digital empresas México y España. Consultoría digital B2B internacional.",
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/es/index-digital-agency',
     languages: {
@@ -52,7 +52,7 @@ export default function HomeEs() {
             "name": "O7 Digital Consulting",
             "url": "https://www.o7digital-consulting.com/es",
             "logo": "https://www.o7digital-consulting.com/logo.png",
-            "description": "Agencia de consultoría digital en Madrid y México especializada en CTO as a Service, desarrollo de sitios web a medida, consultoría DevOps, cloud, integración IA y estrategia SEO profesional.",
+            "description": "Agencia digital Madrid, Barcelona, Ciudad de México, Monterrey y Guadalajara especializada en CTO as a Service, desarrollo web React Next.js, consultoría DevOps México y España, CMS headless para empresas, integración IA y SEO técnico México y España.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
             ],
@@ -64,7 +64,77 @@ export default function HomeEs() {
               },
               { 
                 "@type": "City", 
+                "name": "Barcelona",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Valencia",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Sevilla",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Málaga",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Bilbao",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Zaragoza",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Alicante",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
                 "name": "Ciudad de México",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Monterrey",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Guadalajara",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Querétaro",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Puebla",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Tijuana",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Mérida",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Cancún",
                 "addressCountry": "MX"
               },
               { "@type": "Country", "name": "España" },
@@ -82,32 +152,48 @@ export default function HomeEs() {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "CTO as a Service",
-                    "description": "Servicios de dirección técnica externalizada"
+                    "name": "CTO as a Service Madrid Barcelona México Monterrey Guadalajara",
+                    "description": "Dirección digital externalizada México y España, dirección tecnológica externalizada para empresas"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Desarrollo de sitios web a medida",
-                    "description": "Desarrollo web personalizado en Madrid y México"
+                    "name": "Desarrollo web a medida México y España",
+                    "description": "Desarrollo web React México y España, desarrollo web Next.js con arquitectura escalable"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Consultoría DevOps y Cloud",
-                    "description": "Consultoría en infraestructura cloud y DevOps"
+                    "name": "Consultoría DevOps México y España",
+                    "description": "Consultoría cloud México y España, infraestructura cloud empresas"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Estrategia SEO profesional",
-                    "description": "Optimización SEO técnica y estratégica"
+                    "name": "SEO técnico México y España",
+                    "description": "Consultoría SEO técnica México y España, auditoría SEO técnica avanzada"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "CMS headless para empresas México y España",
+                    "description": "Consultoría CMS headless México y España, gestión de contenidos empresariales"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Transformación digital empresas México y España",
+                    "description": "Consultoría IT estratégica México y España, estrategia digital empresarial"
                   }
                 }
               ]

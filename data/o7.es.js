@@ -2,10 +2,10 @@ export const o7HomeIntro = {
   eyebrow: "Dirección digital externalizada",
   title: "CTO as a Service & transformación digital para empresas internacionales",
   description:
-    "O7 Digital acompaña la transformación digital de empresas en España, México, USA y Canadá. Dirección digital externalizada, arquitectura web alto rendimiento, SEO técnico internacional y gestión de proyectos digitales complejos para organizaciones B2B exigentes.",
+    "O7 Digital acompaña la transformación digital de empresas en Madrid, Barcelona, Ciudad de México, Monterrey y Guadalajara. CTO as a Service México, España, Madrid, Barcelona, CDMX, Monterrey y Guadalajara. Dirección digital externalizada México y España, arquitectura web alto rendimiento, consultoría SEO técnica México y Madrid, gestión de proyectos digitales complejos para organizaciones B2B exigentes en México, España, USA y Canadá.",
   bullets: [
-    "Experiencia en consultoría IT estratégica: CTO as a Service internacional, consultoría en arquitectura técnica, desarrollo web React Next.js, CMS headless para empresas y automatización de procesos.",
-    "Ayudamos a crear plataformas rápidas, fiables y seguras. O7 Digital: la tecnología al servicio de tu crecimiento internacional.",
+    "Consultoría IT estratégica México y España: CTO as a Service internacional, consultoría arquitectura técnica, desarrollo web React Next.js, CMS headless para empresas México y España, automatización de procesos empresariales.",
+    "Consultoría digital B2B México y España: ayudamos a crear plataformas rápidas, fiables y seguras. O7 Digital: la tecnología al servicio de tu crecimiento internacional.",
   ],
 };
 
@@ -13,7 +13,7 @@ export const o7HomeServices = [
   {
     title: "CTO as a Service España & México",
     description:
-      "Dirección digital externalizada para empresas en España, México, USA y Canadá. Intervenimos como CTO as a Service para asegurar decisiones tecnológicas: auditoría SEO técnico avanzada, consultoría en arquitectura técnica, gestión de proyectos digitales complejos, selección de stack y roadmap producto. Transformación digital B2B sin contratar CTO interno.",
+      "CTO as a Service Madrid, Barcelona, Valencia, Sevilla, Málaga, Ciudad de México, Monterrey, Guadalajara, Querétaro y Puebla. Dirección digital externalizada México, España, Madrid, Barcelona y CDMX. Dirección tecnológica externalizada México y España para empresas internacionales. Consultoría IT estratégica México y España: auditoría SEO técnico avanzada, consultoría arquitectura técnica, gestión proyectos digitales complejos, selección de stack y roadmap producto. Transformación digital empresas México y España sin contratar CTO interno.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
@@ -25,7 +25,7 @@ export const o7HomeServices = [
   {
     title: "Desarrollo web React Next.js de alto rendimiento",
     description:
-      "Arquitectura web alto rendimiento para empresas exigentes. Desarrollo web a medida con React, Next.js y Astro. Optimización de rendimiento web, CMS headless para empresas e integración de inteligencia artificial. Cada plataforma se diseña para escalar y apoyar tu crecimiento internacional.",
+      "Desarrollo web empresarial México y España. Desarrollo web a medida México, Madrid, Barcelona, CDMX, Monterrey y Guadalajara con React, Next.js y Astro. Desarrollo web profesional México y España para empresas exigentes. Desarrollo web React México y España, desarrollo web Next.js México y España. Arquitectura web escalable México y España, plataformas digitales empresariales México y España, soluciones web de alto rendimiento México y España. Cada plataforma se diseña para escalar y apoyar tu crecimiento internacional.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
@@ -39,14 +39,14 @@ export const o7HomeServices = [
   {
     title: "CMS headless y backends a medida",
     description:
-      "Implementamos CMS headless y backends a medida para industrializar contenidos y flujos de negocio. Modelado de datos, APIs, roles, workflows de publicación e integraciones externas (CRM, formularios, analytics) para ofrecer flexibilidad, performance y administración simple.",
+      "CMS headless para empresas México y España: implementamos CMS headless y backends a medida para industrializar contenidos y flujos de negocio. Consultoría CMS headless México y España especializada en modelado de datos, APIs, roles, workflows de publicación e integraciones externas (CRM, formularios, analytics). Gestión de contenidos empresariales México y España: soluciones para ofrecer flexibilidad, performance y administración simple para empresas en México y España.",
     iconClass: "feather-trending-up",
     align: "text-left",
   },
   {
     title: "Inteligencia artificial y automatización de procesos",
     description:
-      "Integramos IA y automatización para optimizar procesos internos y digitales. Cualificación de leads, tareas repetitivas, extracción y análisis de datos o asistentes inteligentes: cada uso se define para garantizar seguridad, fiabilidad y retorno medible.",
+      "Automatización de procesos México y España: integramos IA y automatización empresarial México y España para optimizar procesos internos y digitales. Integración inteligencia artificial México y España, IA para empresas México y España. Cualificación de leads, tareas repetitivas, extracción y análisis de datos o asistentes inteligentes: cada uso se define para garantizar seguridad, fiabilidad y retorno medible en México y España.",
     iconClass: "feather-layers",
     align: "text-left",
     image: {
@@ -57,7 +57,7 @@ export const o7HomeServices = [
   {
     title: "SEO técnico internacional & auditoría SEO avanzada",
     description:
-      "Agencia SEO técnico España especializada en posicionamiento internacional. Auditoría SEO técnico avanzada, optimización de rendimiento web, datos estructurados Schema.org y estrategia SEO técnica para sitios internacionales. Visibilidad sostenible en Google para mercados España, México, USA y Canadá.",
+      "SEO técnico México, SEO técnico España, SEO técnico Madrid, SEO técnico CDMX. Consultoría SEO técnica México y España: agencia SEO técnica México y España especializada en posicionamiento internacional. SEO técnico para sitios internacionales México y España. Auditoría SEO técnica México y España, optimización SEO técnica, datos estructurados Schema.org y estrategia SEO técnica para sitios internacionales. SEO técnico B2B México y España. Visibilidad sostenible en Google para mercados España, México, USA y Canadá.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
@@ -154,8 +154,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital se especializa en transformación digital, desarrollo web moderno y performance técnica y operativa. Acompañamos a empresas en Francia, Norteamérica y Latinoamérica en el diseño, construcción y evolución de sus plataformas digitales.",
-  "Nuestra experiencia abarca toda la cadena de valor: estrategia digital y arquitectura moderna, desarrollo web de alto rendimiento, CMS headless y backends, inteligencia artificial y automatización, SEO técnico avanzado, infogestión y soporte.",
+  "O7 Digital es una agencia digital Madrid, Barcelona, Ciudad de México, Monterrey y Guadalajara especializada en transformación digital, desarrollo web moderno y performance técnica y operativa. Transformación digital empresas México y España: acompañamos a empresas en España, México, Norteamérica y Latinoamérica en el diseño, construcción y evolución de sus plataformas digitales.",
+  "Nuestra experiencia abarca toda la cadena de valor: estrategia digital empresarial México y España, consultoría arquitectura técnica México y España, desarrollo web de alto rendimiento, CMS headless, inteligencia artificial y automatización, SEO técnico avanzado, consultoría DevOps México y España, infogestión IT y soporte.",
 ];
 
 export const o7Methodology = [
