@@ -1,19 +1,19 @@
 export const o7HomeIntro = {
   eyebrow: "Internationale Digitalberatung",
-  title: "Digitale Beratung & IT-Beratung für Unternehmen in Deutschland, Österreich & Schweiz",
+  title: "Digitale Beratung & IT-Beratung für internationale Unternehmen",
   description:
-    "O7 Digital ist Ihre internationale Digitalagentur für digitale Transformation, IT-Beratung Unternehmen und CTO as a Service im DACH-Raum (Deutschland, Österreich, Schweiz). Wir bieten strategische IT-Beratung, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für B2B-Organisationen in Berlin, München, Hamburg, Frankfurt, Wien und Zürich.",
+    "O7 Digital ist Ihre internationale Digitalagentur für digitale Transformation, IT-Beratung und CTO as a Service. Wir bieten strategische IT-Beratung, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für B2B-Organisationen.",
   bullets: [
     "Expertise in digitaler Beratung: IT Consulting international, Software Architektur Beratung, Enterprise Digitalstrategie, moderne Webtechnologien (React, Next.js), Headless CMS und digitale Prozessautomatisierung für Unternehmen.",
-    "Technologiepartner für digitale Skalierung: IT-Beratung DACH, Cloud Migration, DevOps Prozesse, Web Performance Optimierung und langfristige IT Strategie für digitale Wettbewerbsfähigkeit und Business Transformation.",
+    "Technologiepartner für digitale Skalierung: IT-Beratung international, Cloud Migration, DevOps Prozesse, Web Performance Optimierung und langfristige IT Strategie für digitale Wettbewerbsfähigkeit und Business Transformation.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "CTO as a Service & IT Consulting Deutschland",
+    title: "CTO as a Service & IT Consulting international",
     description:
-      "Strategische IT-Beratung und CTO as a Service für Unternehmen in Deutschland, Österreich, Schweiz. Wir bieten IT Leadership as a Service, Technologieberatung, Software Consulting und digitale Roadmap-Entwicklung: IT Strategie Beratung, technische Auditierung, IT Architektur, Stack-Auswahl und digitale Transformation Mittelstand. IT Consulting international für B2B-Organisationen ohne internen CTO in Berlin, München, Frankfurt, Wien, Zürich.",
+      "Strategische IT-Beratung und CTO as a Service für internationale Unternehmen. IT Leadership as a Service, Technologieberatung, Software Consulting und digitale Roadmap-Entwicklung: IT Strategie Beratung, technische Auditierung, IT Architektur, Stack-Auswahl und digitale Transformation. IT Consulting international für B2B-Organisationen ohne internen CTO.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
@@ -25,7 +25,7 @@ export const o7HomeServices = [
   {
     title: "Webentwicklung Agentur: React, Next.js & moderne Webtechnologien",
     description:
-      "Individuelle Webentwicklung und Enterprise Webentwicklung für Unternehmen in Deutschland, Österreich, Schweiz. Webentwicklung Agentur spezialisiert auf skalierbare Weblösungen mit React Entwicklung, Next.js Agentur, Headless CMS und moderne Webtechnologien. Web Performance Optimierung, maßgeschneiderte Software, digitale Plattformen und API Integration für Webentwicklung Berlin, München, Hamburg, Frankfurt, Wien, Zürich.",
+      "Individuelle Webentwicklung und Enterprise Webentwicklung für internationale Unternehmen. Webentwicklung Agentur spezialisiert auf skalierbare Weblösungen mit React Entwicklung, Next.js Agentur, Headless CMS und moderne Webtechnologien. Web Performance Optimierung, maßgeschneiderte Software, digitale Plattformen und API Integration.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
@@ -46,7 +46,7 @@ export const o7HomeServices = [
   {
     title: "KI Beratung & Automatisierung Prozesse für Unternehmen",
     description:
-      "KI Beratung und künstliche Intelligenz Unternehmen: digitale Automatisierung Unternehmen, automatisierte Workflows, Prozessdigitalisierung und digitale Effizienz. KI-Integration für Lead-Qualifizierung, Datenanalyse Unternehmen, Business Intelligence und intelligente Assistenten. KI Beratung Deutschland für digitale Prozesse optimieren, Automatisierung Prozesse und messbaren ROI.",
+      "KI Beratung und künstliche Intelligenz für Unternehmen: digitale Automatisierung, automatisierte Workflows, Prozessdigitalisierung und digitale Effizienz. KI-Integration für Lead-Qualifizierung, Datenanalyse, Business Intelligence und intelligente Assistenten. KI Beratung für digitale Prozesse optimieren, Automatisierung Prozesse und messbaren ROI.",
     iconClass: "feather-layers",
     align: "text-left",
     image: {
@@ -55,9 +55,9 @@ export const o7HomeServices = [
     },
   },
   {
-    title: "SEO Agentur Deutschland: Technische SEO & SEO Beratung DACH",
+    title: "SEO Agentur: Technische SEO & SEO Beratung international",
     description:
-      "SEO Agentur Deutschland spezialisiert auf technische SEO, SEO Beratung und SEO technische Optimierung für Unternehmen im DACH-Raum. Fortgeschrittene technische Auditierung, Web Performance Optimierung, Schema.org strukturierte Daten und internationale SEO-Strategie. SEO Beratung Berlin, SEO Beratung München und SEO Agentur Österreich/Schweiz für nachhaltige Google-Sichtbarkeit und digitale Performance.",
+      "SEO Agentur spezialisiert auf technische SEO, SEO Beratung und SEO technische Optimierung für internationale Unternehmen. Fortgeschrittene technische Auditierung, Web Performance Optimierung, Schema.org strukturierte Daten und internationale SEO-Strategie. SEO Beratung für nachhaltige Google-Sichtbarkeit und digitale Performance.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
@@ -68,7 +68,7 @@ export const o7HomeServices = [
   {
     title: "Cloud Beratung, DevOps & Managed IT Services",
     description:
-      "Cloud Consulting, DevOps Beratung und Managed IT Services für Unternehmen in Deutschland, Österreich, Schweiz. Cloud Migration auf AWS/Azure/GCP, DevOps Prozesse, CI/CD Pipelines, Microservices Architektur, IT Sicherheit Beratung und IT Support Unternehmen. Google Workspace Beratung, Microsoft 365 Beratung, Cloud Infrastruktur und IT Governance für Cloud Beratung Deutschland und DACH.",
+      "Cloud Consulting, DevOps Beratung und Managed IT Services für internationale Unternehmen. Cloud Migration auf AWS/Azure/GCP, DevOps Prozesse, CI/CD Pipelines, Microservices Architektur, IT Sicherheit Beratung und IT Support. Google Workspace Beratung, Microsoft 365 Beratung, Cloud Infrastruktur und IT Governance.",,
     iconClass: "feather-command",
     align: "text-left",
     image: {
@@ -154,8 +154,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital ist eine internationale Digitalagentur und B2B Digitalberatung spezialisiert auf digitale Transformation, IT-Beratung Unternehmen und digitale Lösungen Unternehmen. Wir begleiten Organisationen in Deutschland, Österreich, Schweiz, Frankreich und Nordamerika beim Design, Entwicklung und Skalierung digitaler Produkte mit Enterprise Digitalstrategie und Technologieberatung DACH.",
-  "Unsere Expertise als internationale Digitalagentur: digitale Beratung für internationale Unternehmen, IT Consulting DACH, individuelle Webentwicklung, Software Architektur, Cloud Consulting, DevOps Beratung, KI Beratung, technische SEO, Managed IT Services und digitale Wertschöpfung für Digitalagentur Deutschland, Österreich, Schweiz.",
+  "O7 Digital ist eine internationale Digitalagentur und B2B Digitalberatung spezialisiert auf digitale Transformation, IT-Beratung und digitale Lösungen für Unternehmen. Wir begleiten internationale Organisationen beim Design, Entwicklung und Skalierung digitaler Produkte mit Enterprise Digitalstrategie und Technologieberatung.",
+  "Unsere Expertise als internationale Digitalagentur: digitale Beratung für internationale Unternehmen, IT Consulting, individuelle Webentwicklung, Software Architektur, Cloud Consulting, DevOps Beratung, KI Beratung, technische SEO, Managed IT Services und digitale Wertschöpfung.",
 ];
 
 export const o7Methodology = [

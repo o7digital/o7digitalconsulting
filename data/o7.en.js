@@ -2,18 +2,18 @@ export const o7HomeIntro = {
   eyebrow: "Outsourced digital leadership",
   title: "CTO as a Service & digital transformation for international companies",
   description:
-    "O7 Digital supports digital transformation for companies in London, New York, San Francisco, Toronto and Montreal. CTO as a Service London, New York, San Francisco, Toronto, Montreal and Vancouver. Digital consulting firm London, New York and Toronto: outsourced CTO services, high-performance web architecture, technical SEO consulting London and New York, complex digital project management for demanding B2B organizations in UK, USA and Canada.",
+    "O7 Digital supports digital transformation for international companies. CTO as a Service, outsourced digital leadership, high-performance web architecture, technical SEO consulting and complex digital project management for demanding B2B organizations.",
   bullets: [
-    "IT consulting for enterprises London, New York and Toronto: CTO as a Service UK, USA and Canada, technical architecture consulting, React development consulting, headless CMS for enterprises UK and business process automation.",
-    "Enterprise digital consulting London, New York and Toronto: we help organizations build fast, reliable and secure platforms. O7 Digital: technology serving your international growth.",
+    "IT consulting for enterprises: CTO as a Service, technical architecture consulting, React development consulting, headless CMS for enterprises and business process automation.",
+    "Enterprise digital consulting: we help organizations build fast, reliable and secure platforms. O7 Digital: technology serving your international growth.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "CTO as a Service UK & USA",
+    title: "CTO as a Service international",
     description:
-      "CTO as a Service London, Manchester, Birmingham, Leeds, Bristol, New York, San Francisco, Los Angeles, Seattle, Toronto, Montreal and Vancouver. Fractional CTO London and New York for enterprises. Digital consulting firm London, New York, San Francisco and Toronto providing outsourced digital leadership. Technical leadership outsourcing UK, USA and Canada: advanced technical SEO audit, technical architecture consulting, complex digital project management, stack selection and product roadmap. Digital transformation consulting UK, USA and Canada without hiring an internal CTO.",
+      "Fractional CTO for international enterprises. Outsourced digital leadership for secure technology decisions: advanced technical SEO audit, technical architecture consulting, complex digital project management, stack selection and product roadmap. Digital transformation consulting without hiring an internal CTO.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
@@ -25,7 +25,7 @@ export const o7HomeServices = [
   {
     title: "React Next.js development & high-performance web architecture",
     description:
-      "Modern web development agency London, New York, San Francisco and Toronto. Custom web development London, New York and Toronto with React, Next.js and Astro. High performance web development London, USA and Canada for demanding enterprises. React development consulting London, USA and Canada, Next.js development consulting UK, USA and Canada. Web architecture consulting London, USA and Canada, headless CMS consulting London, USA and Canada, and AI integration services. Enterprise web development London, New York and Toronto: each platform is designed to scale and support your international growth.",
+      "Modern web development agency for international enterprises. Custom web development with React, Next.js and Astro. High performance web development for demanding organizations. React development consulting, Next.js development consulting, web architecture consulting, headless CMS consulting and AI integration services. Enterprise web development: each platform is designed to scale and support your international growth.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
@@ -39,7 +39,7 @@ export const o7HomeServices = [
   {
     title: "Headless CMS & custom backends",
     description:
-      "Headless CMS for enterprises UK, USA and Canada: we implement headless CMS and custom backends to industrialise content management and business workflows. Headless CMS consulting London, USA and Canada specialized in data modelling, APIs, user roles, publishing workflows and external integrations (CRM, forms, analytics). Digital platform consulting London: solutions designed for flexibility, performance and easy administration for enterprises in UK, USA and Canada.",
+      "Headless CMS for international enterprises: we implement headless CMS and custom backends to industrialise content management and business workflows. Headless CMS consulting specialized in data modelling, APIs, user roles, publishing workflows and external integrations (CRM, forms, analytics). Solutions designed for flexibility, performance and easy administration.",
     iconClass: "feather-trending-up",
     align: "text-left",
   },
@@ -57,7 +57,7 @@ export const o7HomeServices = [
   {
     title: "Technical SEO international & advanced SEO audit",
     description:
-      "Technical SEO consulting London, New York, San Francisco and Toronto. Enterprise SEO consulting London: technical SEO agency UK specialized in international SEO. SEO for international websites UK, USA and Canada. Advanced technical SEO audit, web performance optimization, Schema.org structured data and technical SEO strategy for international websites. Technical SEO consulting UK, USA and Canada. Sustainable Google visibility for UK, USA, Canada and Mexico markets.",
+      "Technical SEO consulting for international enterprises. Enterprise SEO consulting: technical SEO agency specialized in international SEO. Advanced technical SEO audit, web performance optimization, Schema.org structured data and technical SEO strategy for international websites. Technical SEO consulting for sustainable Google visibility in international markets.",,
     iconClass: "feather-shield",
     align: "text-left",
     image: {
@@ -154,8 +154,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital is a digital consulting firm London, New York, San Francisco, Toronto and Montreal specialized in digital transformation, modern web development and technical/operational performance. Digital transformation consulting UK, USA and Canada: we support companies in UK, USA, Canada and Latin America in designing, building and evolving their digital platforms.",
-  "Our expertise covers the full value chain: enterprise digital strategy London and New York, web architecture consulting USA and Canada, high-performance web development, headless CMS consulting, AI and automation, advanced technical SEO, DevOps consulting London, USA and Canada, managed services and support.",
+  "O7 Digital is a digital consulting firm specialized in digital transformation, modern web development and technical/operational performance. We support international companies in designing, building and evolving their digital platforms.",
+  "Our expertise covers the full value chain: enterprise digital strategy, web architecture consulting, high-performance web development, headless CMS consulting, AI and automation, advanced technical SEO, DevOps consulting, managed services and support.",
 ];
 
 export const o7Methodology = [

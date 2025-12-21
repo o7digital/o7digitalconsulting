@@ -26,36 +26,36 @@ export const o7HomeIntro = {
   eyebrow: "Direction digitale externalisée",
   title: "CTO as a Service & transformation digitale pour groupes internationaux",
   description:
-    "O7 Digital accompagne la transformation digitale des entreprises à Paris, Lyon, Marseille, Toulouse, Bordeaux, Montréal et Québec. Direction digitale externalisée Paris, Lyon et Montréal, architecture web haute performance, SEO technique Paris et Montréal, pilotage de projets digitaux complexes pour groupes B2B exigeants en France, USA, Canada, Mexique et Allemagne.",
+    "O7 Digital accompagne la transformation digitale des entreprises internationales. Direction digitale externalisée, architecture web haute performance, SEO technique et pilotage de projets digitaux complexes pour groupes B2B exigeants.",
   bullets: [
-    "Consulting IT stratégique Montréal et Paris : CTO as a Service Paris, Lyon, Marseille, Toulouse, Bordeaux et Montréal. Conseil en architecture technique, développement web React Next.js, CMS headless entreprise et automatisation des processus métiers.",
-    "Consulting digital B2B France et Québec : nous aidons les organisations à créer des plateformes rapides, fiables et sécurisées. O7 Digital : la technologie au service de votre croissance internationale.",
+    "Expertise en consulting IT stratégique : CTO as a Service international, conseil en architecture technique, développement web React Next.js, CMS headless entreprise et automatisation des processus métiers.",
+    "Consulting digital B2B : nous aidons les organisations à créer des plateformes rapides, fiables et sécurisées. O7 Digital : la technologie au service de votre croissance internationale.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "CTO as a Service France & Europe",
+    title: "CTO as a Service international",
     description:
-      "Direction digitale externalisée pour entreprises à Paris, Lyon, Marseille, Toulouse, Bordeaux, Montréal et Québec. CTO as a Service Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec. Nous intervenons comme CTO as a Service Europe pour sécuriser vos décisions technologiques : audit SEO technique avancé, conseil en architecture technique, pilotage de projets digitaux complexes, choix de stack et roadmap produit. Direction digitale externalisée Paris, Lyon et Montréal : accompagnement transformation digitale groupes internationaux sans recruter un CTO interne.",
+      "Direction digitale externalisée pour entreprises internationales. Nous intervenons comme CTO as a Service pour sécuriser vos décisions technologiques : audit SEO technique avancé, conseil en architecture technique, pilotage de projets digitaux complexes, choix de stack et roadmap produit. Accompagnement transformation digitale groupes internationaux sans recruter un CTO interne.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
       src: "/strategie/strategie-cto.webp",
-      alt: "Direction digitale externalisée et CTO as a Service Europe",
+      alt: "Direction digitale externalisée et CTO as a Service",
       height: "330px",
     },
   },
   {
     title: "Développement web React Next.js haute performance",
     description:
-      "Agence de consulting digital Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec. Développement web sur mesure Paris, Lyon et Montréal avec React, Next.js et Astro. Architecture web haute performance Europe pour entreprises exigeantes. Développement web React Next.js France et Québec, optimisation de performance web Paris et Montréal, CMS headless pour entreprises France et Québec, intégration intelligence artificielle. Chaque plateforme est conçue pour évoluer durablement et soutenir votre croissance en France, Europe et international.",
+      "Agence de consulting digital internationale. Développement web sur mesure avec React, Next.js et Astro. Architecture web haute performance pour entreprises exigeantes. Optimisation de performance web, CMS headless entreprise, intégration intelligence artificielle. Chaque plateforme est conçue pour évoluer durablement et soutenir votre croissance internationale.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
     image: {
       src: "/strategie/dev-web.webp",
-      alt: "Développement web React Next.js haute performance Europe",
+      alt: "Développement web React Next.js haute performance",
       className: "service-image-span-two",
       height: "330px",
     },
@@ -63,7 +63,7 @@ export const o7HomeServices = [
   {
     title: "CMS headless & backends sur mesure",
     description:
-      "CMS headless pour entreprises France et Québec : nous mettons en place des CMS headless et backends sur mesure pour industrialiser la gestion de contenu et les flux métiers. Agence de consulting digital Montréal et Paris spécialisée en modélisation des données, APIs, rôles utilisateurs, workflows de publication et intégrations externes (CRM, formulaires, analytics). Solutions conçues pour offrir flexibilité, performance et simplicité d'administration aux entreprises en France et Québec.",
+      "Nous mettons en place des CMS headless et backends sur mesure pour industrialiser la gestion de contenu et les flux métiers. Modélisation des données, APIs, rôles utilisateurs, workflows de publication et intégrations externes (CRM, formulaires, analytics). Solutions conçues pour offrir flexibilité, performance et simplicité d'administration.",
     iconClass: "feather-trending-up",
     align: "text-left",
   },
@@ -79,20 +79,20 @@ export const o7HomeServices = [
     },
   },
   {
-    title: "SEO technique international Europe & audit SEO avancé",
+    title: "SEO technique international & audit SEO avancé",
     description:
-      "SEO technique Paris et Montréal : agence SEO technique France spécialisée en référencement international Europe. Consulting IT stratégique Montréal et Paris pour audit SEO technique avancé, optimisation performance web internationale, données structurées Schema.org et stratégie SEO pour sites multilingues Europe. SEO technique Paris, Lyon, Marseille, Toulouse, Bordeaux et Montréal. Visibilité durable sur Google pour marchés France, USA, Canada, Mexique et Allemagne.",
+      "Agence SEO technique spécialisée en référencement international. Audit SEO technique avancé, optimisation performance web internationale, données structurées Schema.org et stratégie SEO pour sites multilingues. Visibilité durable sur Google pour marchés internationaux.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
       src: "/strategie/seo-perfo.webp",
-      alt: "SEO technique international Europe et audit SEO avancé",
+      alt: "SEO technique international et audit SEO avancé",
     },
   },
   {
     title: "Infogérance IT & support opérationnel",
     description:
-      "Infogérance IT Montréal et Québec : nous assurons l'infogérance et le support opérationnel des environnements digitaux pour entreprises à Paris, Lyon, Marseille, Toulouse, Bordeaux, Montréal et Québec. Consulting DevOps France et Québec : maintenance, supervision, sauvegardes, sécurité et assistance utilisateurs. Nous accompagnons également les organisations sur Google Workspace et Microsoft 365 afin de garantir stabilité, continuité de service et productivité des équipes.",
+      "Nous assurons l'infogérance et le support opérationnel des environnements digitaux pour entreprises internationales. Maintenance, supervision, sauvegardes, sécurité et assistance utilisateurs. Nous accompagnons également les organisations sur Google Workspace et Microsoft 365 afin de garantir stabilité, continuité de service et productivité des équipes.",
     iconClass: "feather-command",
     align: "text-left",
     image: {
@@ -178,8 +178,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital est une agence de consulting digital Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec spécialisée dans la transformation digitale, le développement web moderne et l'optimisation de la performance technique et opérationnelle. Accompagnement transformation digitale France et Québec : nous accompagnons les entreprises en France, en Amérique du Nord et en Amérique Latine dans la conception, la construction et l'évolution de leurs plateformes digitales.",
-  "Notre expertise couvre l'ensemble de la chaîne de valeur : stratégie digitale et architecture moderne, développement web React Next.js France et Québec, intégration de CMS headless et backends, intelligence artificielle et automatisation, SEO technique avancé, consulting DevOps France et Québec, infogérance et support.",
+  "O7 Digital est une agence de consulting digital spécialisée dans la transformation digitale, le développement web moderne et l'optimisation de la performance technique et opérationnelle. Nous accompagnons les entreprises internationales dans la conception, la construction et l'évolution de leurs plateformes digitales.",
+  "Notre expertise couvre l'ensemble de la chaîne de valeur : stratégie digitale et architecture moderne, développement web React Next.js, intégration de CMS headless et backends, intelligence artificielle et automatisation, SEO technique avancé, consulting DevOps, infogérance et support.",
 ];
 
 export const o7Methodology = [
