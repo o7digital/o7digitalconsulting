@@ -57,7 +57,7 @@ export const o7HomeServices = [
   {
     title: "Technical SEO international & advanced SEO audit",
     description:
-      "Technical SEO consulting for international enterprises. Enterprise SEO consulting: technical SEO agency specialized in international SEO. Advanced technical SEO audit, web performance optimization, Schema.org structured data and technical SEO strategy for international websites. Technical SEO consulting for sustainable Google visibility in international markets.",,
+      "Technical SEO consulting for international enterprises. Enterprise SEO consulting: technical SEO agency specialized in international SEO. Advanced technical SEO audit, web performance optimization, Schema.org structured data and technical SEO strategy for international websites. Technical SEO consulting for sustainable Google visibility in international markets.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {

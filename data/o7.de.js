@@ -68,7 +68,7 @@ export const o7HomeServices = [
   {
     title: "Cloud Beratung, DevOps & Managed IT Services",
     description:
-      "Cloud Consulting, DevOps Beratung und Managed IT Services für internationale Unternehmen. Cloud Migration auf AWS/Azure/GCP, DevOps Prozesse, CI/CD Pipelines, Microservices Architektur, IT Sicherheit Beratung und IT Support. Google Workspace Beratung, Microsoft 365 Beratung, Cloud Infrastruktur und IT Governance.",,
+      "Cloud Consulting, DevOps Beratung und Managed IT Services für internationale Unternehmen. Cloud Migration auf AWS/Azure/GCP, DevOps Prozesse, CI/CD Pipelines, Microservices Architektur, IT Sicherheit Beratung und IT Support. Google Workspace Beratung, Microsoft 365 Beratung, Cloud Infrastruktur und IT Governance.",
     iconClass: "feather-command",
     align: "text-left",
     image: {
