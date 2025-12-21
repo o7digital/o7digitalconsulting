@@ -116,7 +116,7 @@ export default function Footer2({ lang = "fr" }) {
           <div className="row mt--40">
             <div className="col-lg-12">
               <div className="rainbow-footer-widget">
-                {lang === "fr" && content.description ? (
+                {content.description ? (
                   <div className="inner">
                     <p style={{ color: "#8f8f8f", fontSize: "14px", lineHeight: "1.6", marginTop: "0" }}>
                       {content.description}
