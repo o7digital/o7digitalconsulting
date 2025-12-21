@@ -5,27 +5,27 @@ import { footerSections, socialLinks } from "@/data/footerLinks";
 
 const expertiseContent = {
   fr: {
-    description: "O7 Digital est une agence de consulting digital internationale spécialisée en CTO as a Service, développement web sur mesure, SEO technique, cloud, DevOps, intelligence artificielle et automatisation au service de la performance des entreprises.",
+    description: "O7 Digital est une agence de consulting digital et CTO as a Service spécialisée en transformation digitale, développement web haute performance, SEO technique et architecture IT pour entreprises en France et au Québec, notamment à Paris, Lyon, Marseille et Montréal.",
     followUs: "Suivez-nous",
     legalNotice: "Mentions Légales"
   },
   en: {
-    description: "O7 Digital is an international digital consulting agency delivering CTO as a Service, custom web development, technical SEO, cloud, DevOps, artificial intelligence and automation to drive business performance.",
+    description: "O7 Digital is a digital consulting and CTO as a Service agency delivering high-performance web development, technical SEO, cloud architecture and digital transformation for international companies in the UK, USA and Canada, including London, New York and Toronto.",
     followUs: "Follow us",
     legalNotice: "Legal Notice"
   },
   es: {
-    description: "O7 Digital es una agencia internacional de consultoría digital especializada en CTO as a Service, desarrollo web a medida, SEO técnico, cloud, DevOps, inteligencia artificial y automatización para impulsar el rendimiento empresarial.",
+    description: "O7 Digital es una agencia de consultoría digital y CTO as a Service especializada en transformación digital, desarrollo web de alto rendimiento y SEO técnico para empresas en España, México y Norteamérica, incluyendo Madrid, Barcelona y Ciudad de México.",
     followUs: "Síguenos",
     legalNotice: "Aviso Legal"
   },
   de: {
-    description: "O7 Digital ist eine internationale Digitalberatung, spezialisiert auf CTO as a Service, individuelle Webentwicklung, technische SEO, Cloud- und DevOps-Architekturen, künstliche Intelligenz und Automatisierung zur Steigerung der Unternehmensperformance.",
+    description: "O7 Digital ist eine Agentur für digitale Beratung und CTO as a Service mit Fokus auf digitale Transformation, High-Performance-Webentwicklung und technisches SEO für Unternehmen in Deutschland, Österreich und der Schweiz, unter anderem in Berlin, München und Zürich.",
     followUs: "Folgen Sie uns",
     legalNotice: "Impressum"
   },
   it: {
-    description: "O7 Digital è una società di consulenza digitale internazionale specializzata in CTO as a Service, sviluppo web su misura, SEO tecnica, architetture cloud e DevOps, intelligenza artificiale e automazione dei processi per supportare la crescita delle aziende.",
+    description: "O7 Digital è un'agenzia di consulenza digitale e CTO as a Service specializzata in trasformazione digitale, sviluppo web ad alte prestazioni e SEO tecnico per aziende in Italia, Svizzera ed Europa, inclusi Milano, Roma e Torino.",
     followUs: "Seguici",
     legalNotice: "Note Legali"
   }
