@@ -5,47 +5,7 @@ import { footerSections, socialLinks } from "@/data/footerLinks";
 
 const expertiseContent = {
   fr: {
-    title: "Expertise digitale Europe, Amérique du Nord & Latam",
-    keywords: [
-      "consulting digital Paris",
-      "consulting digital Lyon",
-      "consulting digital Marseille",
-      "consulting digital Toulouse",
-      "consulting digital Bordeaux",
-      "consulting digital Lille",
-      "consulting digital Nantes",
-      "consulting digital Strasbourg",
-      "consulting digital Nice",
-      "consulting digital Rennes",
-      "consulting digital Montréal",
-      "consulting digital Québec",
-      "expertise digitale France",
-      "expertise digitale Québec",
-      "développement web professionnel France",
-      "développement web professionnel Québec",
-      "SEO professionnel Paris",
-      "SEO professionnel Montréal",
-      "performance web France",
-      "performance web Québec",
-      "consulting IT Paris",
-      "consulting IT Lyon",
-      "consulting IT Marseille",
-      "consulting IT Toulouse",
-      "consulting IT Bordeaux",
-      "consulting IT Lille",
-      "consulting IT Nantes",
-      "consulting IT Strasbourg",
-      "consulting IT Nice",
-      "consulting IT Rennes",
-      "consulting IT Montréal",
-      "consulting IT Québec",
-      "consulting IT France",
-      "consulting IT international",
-      "agence digitale France",
-      "agence digitale Québec",
-      "solutions digitales entreprises France",
-      "solutions digitales entreprises Québec"
-    ],
+    description: "O7 Digital est une agence de consulting digital internationale spécialisée en CTO as a Service, développement web sur mesure, SEO technique, cloud, DevOps, intelligence artificielle et automatisation au service de la performance des entreprises.",
     followUs: "Suivez-nous",
     legalNotice: "Mentions Légales"
   },
@@ -275,16 +235,26 @@ export default function Footer2({ lang = "fr" }) {
           <div className="row mt--40">
             <div className="col-lg-12">
               <div className="rainbow-footer-widget">
-                <h4 className="title">{content.title}</h4>
-                <div className="inner">
-                  <ul className="footer-link link-hover" style={{ columns: "2", columnGap: "2rem" }}>
-                    {content.keywords.map((keyword, i) => (
-                      <li key={i} style={{ breakInside: "avoid", marginBottom: "8px" }}>
-                        <span style={{ color: "#8f8f8f", fontSize: "14px" }}>{keyword}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {lang === "fr" && content.description ? (
+                  <div className="inner">
+                    <p style={{ color: "#8f8f8f", fontSize: "14px", lineHeight: "1.6", marginTop: "0" }}>
+                      {content.description}
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <h4 className="title">{content.title}</h4>
+                    <div className="inner">
+                      <ul className="footer-link link-hover" style={{ columns: "2", columnGap: "2rem" }}>
+                        {content.keywords.map((keyword, i) => (
+                          <li key={i} style={{ breakInside: "avoid", marginBottom: "8px" }}>
+                            <span style={{ color: "#8f8f8f", fontSize: "14px" }}>{keyword}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
