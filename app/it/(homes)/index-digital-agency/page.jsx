@@ -13,9 +13,9 @@ import {
 } from "@/data/o7.it";
 
 export const metadata = {
-  title: "CTO as a Service Italia | Leadership digitale esternalizzata",
+  title: "Agenzia digitale Italia | Consulenza IT Milano Roma Torino Bologna Firenze | CTO as a Service",
   description:
-    "Servizi CTO esternalizzati e trasformazione digitale per aziende in Italia, Europa, USA e Canada. SEO tecnico internazionale, architettura web ad alte prestazioni, consulenza digitale B2B e consulenza IT strategica.",
+    "Agenzia digitale internazionale e consulenza IT per aziende in Italia, Svizzera ed Europa. CTO as a Service, sviluppo web su misura, consulenza cloud, DevOps consulting, SEO tecnica e integrazione AI per trasformazione digitale. IT consulting Milano, Roma, Torino, Bologna, Firenze, Venezia.",
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/it/index-digital-agency',
     languages: {
@@ -63,26 +63,21 @@ export default function HomeIt() {
             ],
             "description": "Servizi CTO esternalizzati e trasformazione digitale per aziende in Italia, Europa, USA e Canada. SEO tecnico internazionale, architettura web ad alte prestazioni, consulenza digitale B2B e consulenza IT strategica.",
             "areaServed": [
-              {
-                "@type": "Country",
-                "name": "Italia"
-              },
-              {
-                "@type": "Country",
-                "name": "Svizzera"
-              },
-              {
-                "@type": "Country",
-                "name": "Francia"
-              },
-              {
-                "@type": "Country",
-                "name": "USA"
-              },
-              {
-                "@type": "Country",
-                "name": "Canada"
-              }
+              { "@type": "City", "name": "Milano", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Roma", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Torino", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Bologna", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Firenze", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Napoli", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Venezia", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Verona", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Padova", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Modena", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Genova", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Palermo", "containedIn": { "@type": "Country", "name": "Italia" } },
+              { "@type": "City", "name": "Z\u00fcrich", "containedIn": { "@type": "Country", "name": "Svizzera" } },
+              { "@type": "City", "name": "Ginevra", "containedIn": { "@type": "Country", "name": "Svizzera" } },
+              { "@type": "City", "name": "Lugano", "containedIn": { "@type": "Country", "name": "Svizzera" } }
             ]
           }
         `}

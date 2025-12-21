@@ -1,37 +1,37 @@
 export const o7HomeIntro = {
-  eyebrow: "Leadership digitale esternalizzata",
-  title: "CTO as a Service & trasformazione digitale per aziende internazionali",
+  eyebrow: "Consulenza digitale internazionale",
+  title: "Consulenza digitale & IT per aziende in Italia, Svizzera ed Europa",
   description:
-    "O7 Digital accompagna la trasformazione digitale delle aziende in Italia, Europa, USA e Canada. Servizi CTO esternalizzati, architettura web ad alte prestazioni, SEO tecnico internazionale e gestione di progetti digitali complessi per organizzazioni B2B esigenti.",
+    "O7 Digital è un'agenzia digitale internazionale specializzata in trasformazione digitale, consulenza IT e CTO as a Service per aziende B2B in Italia. Offriamo consulenza IT strategica, sviluppo web su misura, consulenza cloud, DevOps consulting, SEO tecnica e integrazione AI per organizzazioni a Milano, Roma, Torino, Bologna, Firenze, Venezia e in tutta Italia.",
   bullets: [
-    "Competenza in consulenza IT strategica: CTO as a Service internazionale, consulenza di architettura tecnica, sviluppo React Next.js, CMS Headless per aziende e automazione dei processi aziendali.",
-    "Aiutiamo le organizzazioni a costruire piattaforme veloci, affidabili e sicure. O7 Digital: tecnologia al servizio della vostra crescita internazionale.",
+    "Esperienza in consulenza digitale: IT consulting internazionale, consulenza architettura software, strategia digitale enterprise, tecnologie web moderne (React, Next.js), CMS headless e automazione processi digitali per aziende.",
+    "Partner tecnologico per scalabilità digitale: consulenza IT Italia, migrazione cloud, processi DevOps, ottimizzazione performance web e strategia IT aziendale per competitività digitale e trasformazione business.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "CTO as a Service Italia & Europa",
+    title: "CTO as a Service & IT Consulting Italia",
     description:
-      "Leadership digitale esternalizzata per aziende in Italia, Europa, USA e Canada. Agiamo come CTO as a Service per assicurare le vostre decisioni tecnologiche: audit SEO tecnico avanzato, consulenza di architettura tecnica, gestione di progetti digitali complessi, scelta dello stack e roadmap del prodotto. Trasformazione digitale B2B senza CTO interno.",
+      "Consulenza IT strategica e CTO as a Service per aziende in Italia, Svizzera ed Europa. Offriamo IT leadership as a service, consulenza tecnologica, consulenza software e roadmap digitale azienda: consulenza IT strategica, audit tecnico, architettura IT, scelta dello stack tecnologico e trasformazione digitale B2B. IT consulting internazionale per organizzazioni senza CTO interno a Milano, Roma, Torino, Bologna, Firenze.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
       src: "/strategie/strategie-cto.webp",
-      alt: "Servizi CTO esternalizzati e leadership digitale",
+      alt: "CTO as a Service e consulenza IT strategica Italia",
       height: "330px",
     },
   },
   {
-    title: "Sviluppo React Next.js & architettura web ad alte prestazioni",
+    title: "Sviluppo web: React, Next.js & tecnologie web moderne",
     description:
-      "Architettura web ad alte prestazioni per aziende esigenti. Sviluppo web personalizzato con React, Next.js e Astro. Ottimizzazione delle prestazioni web, CMS Headless per aziende e integrazione AI. Ogni piattaforma è progettata per la crescita e lo scaling internazionale.",
+      "Sviluppo web su misura e sviluppo web enterprise per aziende in Italia, Svizzera ed Europa. Agenzia specializzata in soluzioni digitali scalabili con sviluppo React, agenzia Next.js, CMS headless e tecnologie web moderne. Ottimizzazione performance web, software personalizzato, piattaforme digitali e integrazione API per sviluppo web Milano, Roma, Torino, Bologna, Firenze.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
     image: {
       src: "/strategie/dev-web.webp",
-      alt: "Sviluppo web ad alte prestazioni React Next.js",
+      alt: "Sviluppo web: React Next.js sviluppo enterprise",
       className: "service-image-span-two",
       height: "330px",
     },
@@ -44,36 +44,36 @@ export const o7HomeServices = [
     align: "text-left",
   },
   {
-    title: "Intelligenza Artificiale & automazione dei processi",
+    title: "Consulenza intelligenza artificiale & automazione processi",
     description:
-      "Integriamo AI e automazione per ottimizzare i processi interni e digitali. Qualificazione dei lead, automazione di attività ripetitive, estrazione e analisi dei dati o assistenti intelligenti: ogni scenario è progettato per sicurezza, affidabilità e ROI misurabile.",
+      "Consulenza intelligenza artificiale e AI per aziende: automazione digitale aziende, workflow automatizzati, digitalizzazione processi ed efficienza digitale. Integrazione AI per qualificazione lead, analisi dati aziendali, business intelligence e assistenti intelligenti. Consulenza AI Italia per ottimizzazione processi digitali, automazione processi e ROI misurabile.",
     iconClass: "feather-layers",
     align: "text-left",
     image: {
       src: "/strategie/ia-automat.webp",
-      alt: "Workflow per AI e automazione",
+      alt: "Consulenza AI e automazione processi aziende",
     },
   },
   {
-    title: "SEO tecnico internazionale & audit SEO avanzato",
+    title: "Agenzia SEO Italia: SEO tecnica & consulenza SEO",
     description:
-      "Agenzia SEO tecnico Italia specializzata in SEO internazionale. Audit SEO tecnico avanzato, ottimizzazione delle prestazioni web, dati strutturati Schema.org e strategia SEO tecnica per siti web internazionali. Visibilità sostenibile su Google per i mercati Italia, Europa, USA e Canada.",
+      "Agenzia SEO Italia specializzata in SEO tecnica, consulenza SEO e ottimizzazione SEO tecnica per aziende italiane. Audit tecnico avanzato, ottimizzazione performance web, dati strutturati Schema.org e strategia SEO internazionale. Consulenza SEO Milano, consulenza SEO Roma e agenzia SEO per visibilità sostenibile su Google e performance digitale in Italia ed Europa.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
       src: "/strategie/seo-perfo.webp",
-      alt: "SEO tecnico internazionale e audit avanzato",
+      alt: "Agenzia SEO Italia: consulenza SEO tecnica",
     },
   },
   {
-    title: "IT Managed Services & supporto operativo",
+    title: "Consulenza cloud, DevOps & servizi IT gestiti",
     description:
-      "Ci occupiamo di Managed Services e supporto operativo: manutenzione, monitoraggio, backup, sicurezza e assistenza utenti. Accompagniamo anche su Google Workspace e Microsoft 365, per garantire stabilità, continuità e produttività.",
+      "Consulenza cloud, DevOps consulting e servizi IT gestiti per aziende in Italia, Svizzera ed Europa. Migrazione cloud su AWS/Azure/Google, processi DevOps, CI/CD pipelines, architettura microservizi, sicurezza informatica e supporto IT aziendale. Consulenza Google Workspace, consulenza Microsoft 365, infrastruttura cloud e governance IT per consulenza cloud Italia.",
     iconClass: "feather-command",
     align: "text-left",
     image: {
       src: "/strategie/info-support.webp",
-      alt: "Supporto IT e Managed Services",
+      alt: "Consulenza cloud, DevOps e servizi IT gestiti Italia",
     },
   },
   {
@@ -154,8 +154,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital è specializzata in trasformazione digitale, sviluppo web moderno e performance tecnica e operativa. Accompagniamo aziende in Italia, Europa, Nord America e America Latina nella progettazione, costruzione e evoluzione delle loro piattaforme digitali.",
-  "La nostra competenza copre l'intera catena del valore: strategia digitale e architettura moderna, sviluppo web ad alte prestazioni, CMS Headless e backend, AI e automazione, SEO tecnico avanzato, Managed Services e supporto.",
+  "O7 Digital è un'agenzia digitale internazionale e consulenza digitale B2B specializzata in trasformazione digitale, consulenza IT e soluzioni digitali per aziende. Accompagniamo organizzazioni in Italia, Svizzera, Francia ed Europa nella progettazione, sviluppo e scalabilità di prodotti digitali con strategia digitale enterprise e consulenza tecnologica Italia.",
+  "La nostra esperienza come agenzia digitale internazionale: consulenza digitale per aziende internazionali, IT consulting Italia, sviluppo web su misura, architettura software, consulenza cloud, DevOps consulting, consulenza AI, SEO tecnica, servizi IT gestiti e valore digitale per agenzia digitale Italia, Svizzera ed Europa.",
 ];
 
 export const o7Methodology = [

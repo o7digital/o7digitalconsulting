@@ -25,25 +25,7 @@ const expertiseContent = {
     legalNotice: "Impressum"
   },
   it: {
-    title: "Esperienza digitale Italia, Svizzera, Europa, USA & Canada",
-    keywords: [
-      "consulenza digitale B2B internazionale",
-      "sviluppo web professionale",
-      "soluzioni digitali personalizzate",
-      "trasformazione digitale aziende",
-      "consulenza digitale strategica",
-      "architettura digitale moderna",
-      "SEO professionale avanzato",
-      "performance web ottimizzate",
-      "soluzioni web aziende",
-      "esperienza digitale internazionale",
-      "servizi IT per aziende",
-      "ottimizzazione SEO tecnico",
-      "consulenza Google Workspace",
-      "consulenza Microsoft 365",
-      "design grafico digitale",
-      "motion design professionale"
-    ],
+    description: "O7 Digital è una società di consulenza digitale internazionale specializzata in CTO as a Service, sviluppo web su misura, SEO tecnica, architetture cloud e DevOps, intelligenza artificiale e automazione dei processi per supportare la crescita delle aziende.",
     followUs: "Seguici",
     legalNotice: "Note Legali"
   }
