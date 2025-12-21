@@ -20,25 +20,7 @@ const expertiseContent = {
     legalNotice: "Aviso Legal"
   },
   de: {
-    title: "Digitale Expertise Deutschland, Österreich, Schweiz, USA & Kanada",
-    keywords: [
-      "B2B Digital Consulting international",
-      "professionelle Webentwicklung",
-      "maßgeschneiderte digitale Lösungen",
-      "digitale Transformation Unternehmen",
-      "strategisches Digital Consulting",
-      "moderne digitale Architektur",
-      "fortgeschrittenes professionelles SEO",
-      "optimierte Web-Performance",
-      "Unternehmen Web-Lösungen",
-      "internationale digitale Expertise",
-      "IT-Dienstleistungen für Unternehmen",
-      "technische SEO-Optimierung",
-      "Google Workspace Consulting",
-      "Microsoft 365 Consulting",
-      "digitales Grafikdesign",
-      "professionelles Motion Design"
-    ],
+    description: "O7 Digital ist eine internationale Digitalberatung, spezialisiert auf CTO as a Service, individuelle Webentwicklung, technische SEO, Cloud- und DevOps-Architekturen, künstliche Intelligenz und Automatisierung zur Steigerung der Unternehmensperformance.",
     followUs: "Folgen Sie uns",
     legalNotice: "Impressum"
   },
