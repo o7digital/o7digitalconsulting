@@ -1,37 +1,37 @@
 export const o7HomeIntro = {
-  eyebrow: "Externalisierte digitale Führung",
-  title: "CTO as a Service & digitale Transformation für internationale Unternehmen",
+  eyebrow: "Internationale Digitalberatung",
+  title: "Digitale Beratung & IT-Beratung für Unternehmen in Deutschland, Österreich & Schweiz",
   description:
-    "O7 Digital begleitet die digitale Transformation von Unternehmen in Deutschland, Österreich, Schweiz, USA und Kanada. Externalisierte CTO Dienstleistungen, Hochleistungs-Webarchitektur, technisches SEO international und Management komplexer Digitalprojekte für anspruchsvolle B2B-Organisationen.",
+    "O7 Digital ist Ihre internationale Digitalagentur für digitale Transformation, IT-Beratung Unternehmen und CTO as a Service im DACH-Raum (Deutschland, Österreich, Schweiz). Wir bieten strategische IT-Beratung, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für B2B-Organisationen in Berlin, München, Hamburg, Frankfurt, Wien und Zürich.",
   bullets: [
-    "Expertise in strategischer IT-Beratung: CTO as a Service international, technische Architekturberatung, React Next.js Entwicklung, Headless CMS für Unternehmen und Geschäftsprozessautomatisierung.",
-    "Wir helfen Organisationen, schnelle, zuverlässige und sichere Plattformen zu bauen. O7 Digital: Technologie im Dienst Ihres internationalen Wachstums.",
+    "Expertise in digitaler Beratung: IT Consulting international, Software Architektur Beratung, Enterprise Digitalstrategie, moderne Webtechnologien (React, Next.js), Headless CMS und digitale Prozessautomatisierung für Unternehmen.",
+    "Technologiepartner für digitale Skalierung: IT-Beratung DACH, Cloud Migration, DevOps Prozesse, Web Performance Optimierung und langfristige IT Strategie für digitale Wettbewerbsfähigkeit und Business Transformation.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "CTO as a Service Deutschland & DACH",
+    title: "CTO as a Service & IT Consulting Deutschland",
     description:
-      "Externalisierte digitale Führung für Unternehmen in Deutschland, Österreich, Schweiz, USA und Kanada. Wir agieren als CTO as a Service, um Ihre Technologieentscheidungen abzusichern: fortgeschrittenes technisches SEO Audit, technische Architekturberatung, Management komplexer Digitalprojekte, Stack-Auswahl und Produkt-Roadmap. B2B digitale Transformation ohne internen CTO.",
+      "Strategische IT-Beratung und CTO as a Service für Unternehmen in Deutschland, Österreich, Schweiz. Wir bieten IT Leadership as a Service, Technologieberatung, Software Consulting und digitale Roadmap-Entwicklung: IT Strategie Beratung, technische Auditierung, IT Architektur, Stack-Auswahl und digitale Transformation Mittelstand. IT Consulting international für B2B-Organisationen ohne internen CTO in Berlin, München, Frankfurt, Wien, Zürich.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
       src: "/strategie/strategie-cto.webp",
-      alt: "Externalisierte CTO Dienstleistungen und digitale Führung",
+      alt: "CTO as a Service und strategische IT-Beratung DACH",
       height: "330px",
     },
   },
   {
-    title: "React Next.js Entwicklung & Hochleistungs-Webarchitektur",
+    title: "Webentwicklung Agentur: React, Next.js & moderne Webtechnologien",
     description:
-      "Hochleistungs-Webarchitektur für anspruchsvolle Unternehmen. Maßgeschneiderte Webentwicklung mit React, Next.js und Astro. Web-Performance-Optimierung, Headless CMS für Unternehmen und KI-Integration. Jede Plattform ist für Wachstum und internationales Scaling konzipiert.",
+      "Individuelle Webentwicklung und Enterprise Webentwicklung für Unternehmen in Deutschland, Österreich, Schweiz. Webentwicklung Agentur spezialisiert auf skalierbare Weblösungen mit React Entwicklung, Next.js Agentur, Headless CMS und moderne Webtechnologien. Web Performance Optimierung, maßgeschneiderte Software, digitale Plattformen und API Integration für Webentwicklung Berlin, München, Hamburg, Frankfurt, Wien, Zürich.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
     image: {
       src: "/strategie/dev-web.webp",
-      alt: "React Next.js Hochleistungs-Webentwicklung",
+      alt: "Webentwicklung Agentur: React Next.js Enterprise Entwicklung",
       className: "service-image-span-two",
       height: "330px",
     },
@@ -44,36 +44,36 @@ export const o7HomeServices = [
     align: "text-left",
   },
   {
-    title: "Künstliche Intelligenz & Prozessautomatisierung",
+    title: "KI Beratung & Automatisierung Prozesse für Unternehmen",
     description:
-      "Wir integrieren KI und Automatisierung, um interne und digitale Prozesse zu optimieren. Lead-Qualifizierung, Automatisierung repetitiver Aufgaben, Datenextraktion und -analyse oder intelligente Assistenten: jedes Szenario wird auf Sicherheit, Zuverlässigkeit und messbaren ROI ausgerichtet.",
+      "KI Beratung und künstliche Intelligenz Unternehmen: digitale Automatisierung Unternehmen, automatisierte Workflows, Prozessdigitalisierung und digitale Effizienz. KI-Integration für Lead-Qualifizierung, Datenanalyse Unternehmen, Business Intelligence und intelligente Assistenten. KI Beratung Deutschland für digitale Prozesse optimieren, Automatisierung Prozesse und messbaren ROI.",
     iconClass: "feather-layers",
     align: "text-left",
     image: {
       src: "/strategie/ia-automat.webp",
-      alt: "Workflows für KI und Automatisierung",
+      alt: "KI Beratung und Automatisierung Prozesse Unternehmen",
     },
   },
   {
-    title: "Technisches SEO international & fortgeschrittenes SEO Audit",
+    title: "SEO Agentur Deutschland: Technische SEO & SEO Beratung DACH",
     description:
-      "Technische SEO Agentur Deutschland spezialisiert auf internationales SEO. Fortgeschrittenes technisches SEO Audit, Web-Performance-Optimierung, Schema.org strukturierte Daten und technische SEO-Strategie für internationale Websites. Nachhaltige Google-Sichtbarkeit für Märkte Deutschland, Österreich, Schweiz, USA und Kanada.",
+      "SEO Agentur Deutschland spezialisiert auf technische SEO, SEO Beratung und SEO technische Optimierung für Unternehmen im DACH-Raum. Fortgeschrittene technische Auditierung, Web Performance Optimierung, Schema.org strukturierte Daten und internationale SEO-Strategie. SEO Beratung Berlin, SEO Beratung München und SEO Agentur Österreich/Schweiz für nachhaltige Google-Sichtbarkeit und digitale Performance.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
       src: "/strategie/seo-perfo.webp",
-      alt: "Technisches SEO international und fortgeschrittenes Audit",
+      alt: "SEO Agentur Deutschland: technische SEO Beratung DACH",
     },
   },
   {
-    title: "IT-Managed Services & operativer Support",
+    title: "Cloud Beratung, DevOps & Managed IT Services",
     description:
-      "Wir übernehmen Managed Services und operativen Support: Wartung, Monitoring, Backups, Sicherheit und Nutzerunterstützung. Wir begleiten auch auf Google Workspace und Microsoft 365, um Stabilität, Kontinuität und Produktivität sicherzustellen.",
+      "Cloud Consulting, DevOps Beratung und Managed IT Services für Unternehmen in Deutschland, Österreich, Schweiz. Cloud Migration auf AWS/Azure/GCP, DevOps Prozesse, CI/CD Pipelines, Microservices Architektur, IT Sicherheit Beratung und IT Support Unternehmen. Google Workspace Beratung, Microsoft 365 Beratung, Cloud Infrastruktur und IT Governance für Cloud Beratung Deutschland und DACH.",
     iconClass: "feather-command",
     align: "text-left",
     image: {
       src: "/strategie/info-support.webp",
-      alt: "IT-Support und Managed Services",
+      alt: "Cloud Beratung, DevOps und Managed IT Services DACH",
     },
   },
   {
@@ -154,8 +154,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital ist spezialisiert auf digitale Transformation, modernes Webdevelopment und technische wie operative Performance. Wir begleiten Unternehmen in Frankreich, Nordamerika und Lateinamerika beim Design, Bau und der Weiterentwicklung ihrer digitalen Plattformen.",
-  "Unsere Expertise deckt die gesamte Wertschöpfung ab: digitale Strategie und moderne Architektur, hochperformante Webentwicklung, Headless CMS und Backends, KI und Automatisierung, fortgeschrittenes technisches SEO, Managed Services und Support.",
+  "O7 Digital ist eine internationale Digitalagentur und B2B Digitalberatung spezialisiert auf digitale Transformation, IT-Beratung Unternehmen und digitale Lösungen Unternehmen. Wir begleiten Organisationen in Deutschland, Österreich, Schweiz, Frankreich und Nordamerika beim Design, Entwicklung und Skalierung digitaler Produkte mit Enterprise Digitalstrategie und Technologieberatung DACH.",
+  "Unsere Expertise als internationale Digitalagentur: digitale Beratung für internationale Unternehmen, IT Consulting DACH, individuelle Webentwicklung, Software Architektur, Cloud Consulting, DevOps Beratung, KI Beratung, technische SEO, Managed IT Services und digitale Wertschöpfung für Digitalagentur Deutschland, Österreich, Schweiz.",
 ];
 
 export const o7Methodology = [

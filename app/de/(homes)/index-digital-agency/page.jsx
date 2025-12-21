@@ -13,9 +13,9 @@ import {
 } from "@/data/o7.de";
 
 export const metadata = {
-  title: "CTO as a Service Deutschland & DACH | Externalisierte CTO Dienstleistungen",
+  title: "Digitalagentur Deutschland | IT-Beratung Berlin München Frankfurt Wien Zürich | CTO as a Service DACH",
   description:
-    "Externalisierte CTO Dienstleistungen und digitale Transformation für Unternehmen in Deutschland, Österreich, Schweiz, USA und Kanada. Technisches SEO international, Hochleistungs-Webarchitektur, B2B Digital Consulting und strategische IT-Beratung.",
+    "Internationale Digitalagentur und IT-Beratung für Unternehmen in Deutschland, Österreich, Schweiz. CTO as a Service, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für digitale Transformation DACH. IT Consulting Berlin, München, Hamburg, Frankfurt, Wien, Zürich.",
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/de/index-digital-agency',
     languages: {
@@ -57,18 +57,21 @@ export default function HomeDe() {
               "https://www.linkedin.com/company/o7-digital-consulting"
             ],
             "areaServed": [
-              { 
-                "@type": "Country", 
-                "name": "Deutschland"
-              },
-              { 
-                "@type": "Country", 
-                "name": "Österreich"
-              },
-              { 
-                "@type": "Country", 
-                "name": "Schweiz"
-              }
+              { "@type": "City", "name": "Berlin", "containedIn": { "@type": "Country", "name": "Deutschland" } },
+              { "@type": "City", "name": "München", "containedIn": { "@type": "Country", "name": "Deutschland" } },
+              { "@type": "City", "name": "Hamburg", "containedIn": { "@type": "Country", "name": "Deutschland" } },
+              { "@type": "City", "name": "Frankfurt", "containedIn": { "@type": "Country", "name": "Deutschland" } },
+              { "@type": "City", "name": "Köln", "containedIn": { "@type": "Country", "name": "Deutschland" } },
+              { "@type": "City", "name": "Düsseldorf", "containedIn": { "@type": "Country", "name": "Deutschland" } },
+              { "@type": "City", "name": "Stuttgart", "containedIn": { "@type": "Country", "name": "Deutschland" } },
+              { "@type": "City", "name": "Leipzig", "containedIn": { "@type": "Country", "name": "Deutschland" } },
+              { "@type": "City", "name": "Nürnberg", "containedIn": { "@type": "Country", "name": "Deutschland" } },
+              { "@type": "City", "name": "Wien", "containedIn": { "@type": "Country", "name": "Österreich" } },
+              { "@type": "City", "name": "Graz", "containedIn": { "@type": "Country", "name": "Österreich" } },
+              { "@type": "City", "name": "Linz", "containedIn": { "@type": "Country", "name": "Österreich" } },
+              { "@type": "City", "name": "Zürich", "containedIn": { "@type": "Country", "name": "Schweiz" } },
+              { "@type": "City", "name": "Genf", "containedIn": { "@type": "Country", "name": "Schweiz" } },
+              { "@type": "City", "name": "Basel", "containedIn": { "@type": "Country", "name": "Schweiz" } }
             ],
             "founder": {
               "@type": "Person",
