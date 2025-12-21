@@ -9,9 +9,9 @@ import HomeServices from "@/components/o7/home/HomeServices";
 
 export const metadata = {
   title:
-    "CTO as a Service France & Europe | Direction Digitale Externalisée",
+    "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal | Direction Digitale Externalisée",
   description:
-    "Direction digitale externalisée et CTO as a Service pour entreprises en France, Canada, USA, Mexique et Allemagne. SEO technique international Europe, architecture web haute performance, transformation digitale groupes internationaux et consulting IT stratégique.",
+    "CTO as a Service Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec. Direction digitale externalisée Paris, Lyon, Montréal. SEO technique Paris et Montréal, consulting IT stratégique Montréal, architecture web haute performance, transformation digitale groupes internationaux France et Québec.",
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/index-digital-agency',
     languages: {
@@ -47,7 +47,7 @@ export default function Home() {
             "name": "O7 Digital Consulting",
             "url": "https://www.o7digital-consulting.com",
             "logo": "https://www.o7digital-consulting.com/logo.png",
-            "description": "Agence de conseil digital à Paris et Montréal spécialisée en CTO as a Service, développement web sur mesure, conseil DevOps, cloud, intégration IA et stratégie SEO avancée.",
+            "description": "Agence de consulting digital à Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec spécialisée en CTO as a Service, développement web React Next.js, consulting DevOps, CMS headless entreprise, intégration IA et SEO technique avancé.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
             ],
@@ -59,7 +59,72 @@ export default function Home() {
               },
               { 
                 "@type": "City", 
+                "name": "Lyon",
+                "addressCountry": "FR"
+              },
+              { 
+                "@type": "City", 
+                "name": "Marseille",
+                "addressCountry": "FR"
+              },
+              { 
+                "@type": "City", 
+                "name": "Toulouse",
+                "addressCountry": "FR"
+              },
+              { 
+                "@type": "City", 
+                "name": "Bordeaux",
+                "addressCountry": "FR"
+              },
+              { 
+                "@type": "City", 
+                "name": "Lille",
+                "addressCountry": "FR"
+              },
+              { 
+                "@type": "City", 
+                "name": "Nantes",
+                "addressCountry": "FR"
+              },
+              { 
+                "@type": "City", 
+                "name": "Strasbourg",
+                "addressCountry": "FR"
+              },
+              { 
+                "@type": "City", 
+                "name": "Nice",
+                "addressCountry": "FR"
+              },
+              { 
+                "@type": "City", 
+                "name": "Rennes",
+                "addressCountry": "FR"
+              },
+              { 
+                "@type": "City", 
                 "name": "Montréal",
+                "addressCountry": "CA"
+              },
+              { 
+                "@type": "City", 
+                "name": "Québec",
+                "addressCountry": "CA"
+              },
+              { 
+                "@type": "City", 
+                "name": "Laval",
+                "addressCountry": "CA"
+              },
+              { 
+                "@type": "City", 
+                "name": "Longueuil",
+                "addressCountry": "CA"
+              },
+              { 
+                "@type": "City", 
+                "name": "Gatineau",
                 "addressCountry": "CA"
               },
               { "@type": "Country", "name": "France" },
@@ -77,32 +142,48 @@ export default function Home() {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "CTO as a Service",
-                    "description": "Services de direction technique externalisée"
+                    "name": "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal Québec",
+                    "description": "Direction digitale externalisée Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Développement web sur mesure",
-                    "description": "Création de sites web et applications à Paris et Montréal"
+                    "name": "Développement web React Next.js France Québec",
+                    "description": "Développement web sur mesure Paris, Lyon, Montréal avec React, Next.js et architecture haute performance"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Conseil DevOps et Cloud",
-                    "description": "Conseil en infrastructure cloud et DevOps"
+                    "name": "CMS headless pour entreprises France Québec",
+                    "description": "CMS headless et backends sur mesure pour entreprises en France et Québec"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Stratégie SEO avancée",
-                    "description": "Optimisation SEO technique et stratégique"
+                    "name": "Consulting DevOps France Québec",
+                    "description": "Conseil DevOps, cloud et infrastructure pour entreprises France et Québec"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "SEO technique Paris Montréal",
+                    "description": "SEO technique Paris et Montréal, optimisation performance web internationale, audit SEO avancé"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Consulting IT stratégique Montréal Paris",
+                    "description": "Consulting IT stratégique pour entreprises à Montréal et Paris"
                   }
                 }
               ]
