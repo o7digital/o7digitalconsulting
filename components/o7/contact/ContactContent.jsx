@@ -275,6 +275,81 @@ export default function ContactContent({
             </form>
           </div>
         </div>
+
+        {/* International Offices Section */}
+        <div className="row mt--60">
+          <div className="col-lg-12">
+            <div className="section-title text-center mb--40">
+              <h3 className="title">Nos bureaux internationaux</h3>
+              <p className="description">Une présence mondiale pour mieux vous accompagner</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="row row--15">
+          {/* France Office */}
+          <div className="col-lg-4 col-md-6 col-12 mb--30">
+            <div className="rainbow-address h-100">
+              <div className="icon">
+                <i className="feather-map-pin" />
+              </div>
+              <div className="inner">
+                <h4 className="title">France</h4>
+                <p className="mb--10">
+                  <strong>O7 DIGITAL CONSULTING SAS</strong>
+                </p>
+                <p className="mb--0">
+                  10 rue de Penthièvre<br />
+                  75008 Paris<br />
+                  Île-de-France, France
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Canada Office */}
+          <div className="col-lg-4 col-md-6 col-12 mb--30">
+            <div className="rainbow-address h-100">
+              <div className="icon">
+                <i className="feather-map-pin" />
+              </div>
+              <div className="inner">
+                <h4 className="title">Canada</h4>
+                <p className="mb--10">
+                  <strong>9517-6806 Québec inc</strong>
+                </p>
+                <p className="mb--0">
+                  1030, Avenue Muguette<br />
+                  Saint-Élie-de-Caxton QC G0X 2N0<br />
+                  Canada
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mexico Office */}
+          <div className="col-lg-4 col-md-6 col-12 mb--30">
+            <div className="rainbow-address h-100">
+              <div className="icon">
+                <i className="feather-map-pin" />
+              </div>
+              <div className="inner">
+                <h4 className="title">Mexique</h4>
+                <p className="mb--10">
+                  <strong>Integra 365</strong><br />
+                  <a href="https://integra365.digital" target="_blank" rel="noopener noreferrer">
+                    Integra365.digital
+                  </a>
+                </p>
+                <p className="mb--0">
+                  Prolongación Paseo de la Reforma 1015<br />
+                  Piso 1, Col. Santa Fe, Álvaro Obregón<br />
+                  CDMX 01376, Mexico
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
