@@ -447,6 +447,41 @@ export const o7ContactInfo = {
   location: "France / Amérique du Nord / Amérique Latine",
 };
 
+export const o7ContactCopy = {
+  title: "Parlons de votre projet digital",
+  intro: [
+    "Chez O7 Digital Consulting, chaque collaboration commence par un échange clair et stratégique. Que vous ayez un projet précis ou une réflexion en cours, nous prenons le temps de comprendre vos enjeux business, vos objectifs et votre contexte technologique.",
+    "Nous accompagnons des dirigeants, des équipes et des organisations qui recherchent un partenaire impliqué, capable de structurer, piloter et faire évoluer leur écosystème digital dans la durée.",
+  ],
+  whenTitle: "Quand nous contacter ?",
+  whenItems: [
+    "Lancement ou refonte d'un site ou d'une plateforme digitale",
+    "Besoin d'un accompagnement CTO ou direction digitale",
+    "Problématiques de performance, SEO ou scalabilité",
+    "Projet nécessitant design, développement et vision stratégique",
+    "Volonté d'aligner le digital avec les objectifs business",
+  ],
+  preForm:
+    "Après un premier échange, nous vous proposons une approche claire et structurée : cadrage des besoins, analyse du contexte, recommandations et plan d'action. Chaque collaboration est pensée sur mesure, avec transparence et engagement.",
+  officesTitle: "Nos bureaux internationaux",
+  officesDescription: "Une présence mondiale pour mieux vous accompagner",
+  labels: {
+    emailTitle: "Email",
+    phoneTitle: "Téléphone",
+    phoneFallback: "Disponible sur demande",
+    bookingTitle: "Prendre rendez-vous",
+    bookingCta: "Planifier un échange",
+    namePlaceholder: "Nom complet",
+    emailPlaceholder: "Email professionnel",
+    phonePlaceholder: "Téléphone",
+    messagePlaceholder: "Votre message",
+    submit: "Envoyer",
+    sending: "Envoi...",
+    success: "Merci, votre message a bien été envoyé.",
+    error: "Une erreur est survenue, merci de réessayer.",
+  },
+};
+
 export const o7PortfolioCopy = {
   eyebrow: "Nos réalisations",
   title: "Nos réalisations en aperçu live",

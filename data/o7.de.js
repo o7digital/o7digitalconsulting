@@ -198,6 +198,8 @@ export const o7ContactCopy = {
   ],
   preForm:
     "Nach einem ersten Gespräch liefern wir einen klaren, strukturierten Ansatz: Bedarfsklärung, Kontextanalyse, Empfehlungen und Aktionsplan. Jede Zusammenarbeit ist maßgeschneidert, transparent und verbindlich.",
+  officesTitle: "Unsere internationalen Büros",
+  officesDescription: "Eine globale Präsenz, um Sie besser zu begleiten",
   labels: {
     emailTitle: "E-Mail",
     phoneTitle: "Telefon",

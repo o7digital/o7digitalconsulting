@@ -19,8 +19,8 @@ const defaultCopy = {
     "Volonté d’aligner le digital avec les objectifs business",
   ],
   preForm:
-    "Après un premier échange, nous vous proposons une approche claire et structurée : cadrage des besoins, analyse du contexte, recommandations et plan d’action. Chaque collaboration est pensée sur mesure, avec transparence et engagement.",
-  labels: {
+    "Après un premier échange, nous vous proposons une approche claire et structurée : cadrage des besoins, analyse du contexte, recommandations et plan d’action. Chaque collaboration est pensée sur mesure, avec transparence et engagement.",  officesTitle: "Nos bureaux internationaux",
+  officesDescription: "Une présence mondiale pour mieux vous accompagner",  labels: {
     emailTitle: "Email",
     phoneTitle: "Téléphone",
     phoneFallback: "Disponible sur demande",
@@ -280,8 +280,8 @@ export default function ContactContent({
         <div className="row mt--60">
           <div className="col-lg-12">
             <div className="section-title text-center mb--40">
-              <h3 className="title">Nos bureaux internationaux</h3>
-              <p className="description">Une présence mondiale pour mieux vous accompagner</p>
+              <h3 className="title">{copy.officesTitle || "Nos bureaux internationaux"}</h3>
+              <p className="description">{copy.officesDescription || "Une présence mondiale pour mieux vous accompagner"}</p>
             </div>
           </div>
         </div>

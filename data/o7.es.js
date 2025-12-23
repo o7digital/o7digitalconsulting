@@ -198,6 +198,8 @@ export const o7ContactCopy = {
   ],
   preForm:
     "Tras un primer intercambio, proponemos un enfoque claro y estructurado: definición de necesidades, análisis del contexto, recomendaciones y plan de acción. Cada colaboración es a medida, con transparencia y compromiso.",
+  officesTitle: "Nuestras oficinas internacionales",
+  officesDescription: "Una presencia global para acompañarte mejor",
   labels: {
     emailTitle: "Email",
     phoneTitle: "Teléfono",

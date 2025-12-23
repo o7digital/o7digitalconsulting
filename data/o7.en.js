@@ -198,6 +198,8 @@ export const o7ContactCopy = {
   ],
   preForm:
     "After a first call, we provide a clear, structured approach: needs framing, context analysis, recommendations and action plan. Every engagement is tailored, transparent and committed.",
+  officesTitle: "Our international offices",
+  officesDescription: "A global presence to better support you",
   labels: {
     emailTitle: "Email",
     phoneTitle: "Phone",
