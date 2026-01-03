@@ -336,10 +336,7 @@ export default function ContactContent({
               <div className="inner">
                 <h4 className="title">Mexique</h4>
                 <p className="mb--10">
-                  <strong>Integra 365</strong><br />
-                  <a href="https://integra365.digital" target="_blank" rel="noopener noreferrer">
-                    Integra365.digital
-                  </a>
+                  <strong>Integra 365</strong>
                 </p>
                 <p className="mb--0">
                   Prolongación Paseo de la Reforma 1015<br />
