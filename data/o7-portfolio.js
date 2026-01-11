@@ -111,4 +111,22 @@ export const o7PortfolioProjects = [
     category: "hospitality",
     alt: "Luxury romantic boutique hotel in Zihuatanejo Ixtapa, Mexico",
   },
+  {
+    id: "my-light-art-gallery",
+    title: "My Light Art Gallery",
+    url: "https://www.mylightartgallery.com/",
+    category: "studio",
+  },
+  {
+    id: "gescom",
+    title: "GESCOM",
+    url: "https://gescom.digital/",
+    category: "corporate",
+  },
+  {
+    id: "transteck",
+    title: "Transteck",
+    url: "https://www.transteck.online/",
+    category: "technologySecurity",
+  },
 ];
