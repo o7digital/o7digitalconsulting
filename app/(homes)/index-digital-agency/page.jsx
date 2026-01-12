@@ -6,6 +6,7 @@ import Hero from "@/components/homes/index-international-consulting/Hero";
 import CtaSection from "@/components/o7/common/CtaSection";
 import HomeIntro from "@/components/o7/home/HomeIntro";
 import HomeServices from "@/components/o7/home/HomeServices";
+import LocalCoverage from "@/components/o7/home/LocalCoverage";
 
 export const metadata = {
   title:
@@ -112,6 +113,7 @@ export default function Home() {
       <Hero />
       <HomeIntro />
       <HomeServices />
+      <LocalCoverage />
       <CtaSection anchorId="cta" />
       <Footer2 />
     </>
