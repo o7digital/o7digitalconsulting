@@ -5,43 +5,53 @@ import { footerSections, socialLinks } from "@/data/footerLinks";
 
 const expertiseContent = {
   fr: {
-    description: "O7 Digital est une agence de consulting digital et CTO as a Service spécialisée en transformation digitale, développement web haute performance, SEO technique et architecture IT pour entreprises en France et au Québec, notamment à Paris, Lyon, Marseille et Montréal.",
+    description:
+      "O7 Digital est une agence de consulting digital et CTO as a Service spécialisée en transformation digitale, développement web haute performance, SEO technique et architecture IT pour entreprises en France et au Québec, notamment à Paris, Lyon, Marseille et Montréal.",
     followUs: "Suivez-nous",
-    legalNotice: "Mentions Légales"
+    legalNotice: "Mentions Légales",
   },
   en: {
-    description: "O7 Digital is a digital consulting and CTO as a Service agency delivering high-performance web development, technical SEO, cloud architecture and digital transformation for international companies in the UK, USA and Canada, including London, New York and Toronto.",
+    description:
+      "O7 Digital is a digital consulting and CTO as a Service agency delivering high-performance web development, technical SEO, cloud architecture and digital transformation for international companies in the UK, USA and Canada, including London, New York and Toronto.",
     followUs: "Follow us",
-    legalNotice: "Legal Notice"
+    legalNotice: "Legal Notice",
   },
   es: {
-    description: "O7 Digital es una agencia de consultoría digital y CTO as a Service especializada en transformación digital, desarrollo web de alto rendimiento y SEO técnico para empresas en España, México y Norteamérica, incluyendo Madrid, Barcelona y Ciudad de México.",
+    description:
+      "O7 Digital es una agencia de consultoría digital y CTO as a Service especializada en transformación digital, desarrollo web de alto rendimiento y SEO técnico para empresas en España, México y Norteamérica, incluyendo Madrid, Barcelona y Ciudad de México.",
     followUs: "Síguenos",
-    legalNotice: "Aviso Legal"
+    legalNotice: "Aviso Legal",
   },
   de: {
-    description: "O7 Digital ist eine Agentur für digitale Beratung und CTO as a Service mit Fokus auf digitale Transformation, High-Performance-Webentwicklung und technisches SEO für Unternehmen in Deutschland, Österreich und der Schweiz, unter anderem in Berlin, München und Zürich.",
+    description:
+      "O7 Digital ist eine Agentur für digitale Beratung und CTO as a Service mit Fokus auf digitale Transformation, High-Performance-Webentwicklung und technisches SEO für Unternehmen in Deutschland, Österreich und der Schweiz, unter anderem in Berlin, München und Zürich.",
     followUs: "Folgen Sie uns",
-    legalNotice: "Impressum"
+    legalNotice: "Impressum",
   },
   it: {
-    description: "O7 Digital è un'agenzia di consulenza digitale e CTO as a Service specializzata in trasformazione digitale, sviluppo web ad alte prestazioni e SEO tecnico per aziende in Italia, Svizzera ed Europa, inclusi Milano, Roma e Torino.",
+    description:
+      "O7 Digital è un'agenzia di consulenza digitale e CTO as a Service specializzata in trasformazione digitale, sviluppo web ad alte prestazioni e SEO tecnico per aziende in Italia, Svizzera ed Europa, inclusi Milano, Roma e Torino.",
     followUs: "Seguici",
-    legalNotice: "Note Legali"
-  }
+    legalNotice: "Note Legali",
+  },
 };
 
 export default function Footer2({ lang = "fr" }) {
   const content = expertiseContent[lang] || expertiseContent.fr;
   const prefix =
-    lang === "en" ? "/en" : lang === "es" ? "/es" : lang === "de" ? "/de" : lang === "it" ? "/it" : "";
+    lang === "en"
+      ? "/en"
+      : lang === "es"
+      ? "/es"
+      : lang === "de"
+      ? "/de"
+      : lang === "it"
+      ? "/it"
+      : "";
 
   return (
     <footer className="rainbow-footer footer-style-default no-border">
-      <div
-        className="footer-top"
-        style={{ paddingTop: "32px", paddingBottom: "8px" }}
-      >
+      <div className="footer-top" style={{ paddingTop: "32px", paddingBottom: "8px" }}>
         <div className="container">
           <div className="row">
             {footerSections.map((section, index) => (
@@ -82,7 +92,14 @@ export default function Footer2({ lang = "fr" }) {
               <div className="rainbow-footer-widget">
                 {content.description ? (
                   <div className="inner">
-                    <p style={{ color: "#8f8f8f", fontSize: "14px", lineHeight: "1.6", marginTop: "0" }}>
+                    <p
+                      style={{
+                        color: "#8f8f8f",
+                        fontSize: "14px",
+                        lineHeight: "1.6",
+                        marginTop: "0",
+                      }}
+                    >
                       {content.description}
                     </p>
                   </div>
@@ -90,7 +107,10 @@ export default function Footer2({ lang = "fr" }) {
                   <>
                     <h4 className="title">{content.title}</h4>
                     <div className="inner">
-                      <ul className="footer-link link-hover" style={{ columns: "2", columnGap: "2rem" }}>
+                      <ul
+                        className="footer-link link-hover"
+                        style={{ columns: "2", columnGap: "2rem" }}
+                      >
                         {content.keywords.map((keyword, i) => (
                           <li key={i} style={{ breakInside: "avoid", marginBottom: "8px" }}>
                             <span style={{ color: "#8f8f8f", fontSize: "14px" }}>{keyword}</span>
@@ -122,9 +142,7 @@ export default function Footer2({ lang = "fr" }) {
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="copyright-right text-center text-md-right">
-                <p className="copyright-text">
-                  © o7 Digital
-                </p>
+                <p className="copyright-text">© o7 Digital</p>
               </div>
             </div>
           </div>
