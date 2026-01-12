@@ -1,159 +1,75 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { footerSections, socialLinks } from "@/data/footerLinks";
+import { socialLinks } from "@/data/footerLinks";
 
-const expertiseContent = {
+const editorialContent = {
   fr: {
-    title: "Expertise digitale Paris & Montréal",
-    keywords: [
-      "agence de conseil digital à Paris",
-      "agence de développement web à Montréal",
-      "création de site web sur mesure",
-      "services de développement full-stack",
-      "CTO as a Service",
-      "conseil DevOps et cloud",
-      "intégration intelligence artificielle",
-      "stratégie SEO avancée"
-    ],
+    editorial:
+      "Depuis Paris et en Île-de-France, nous assurons une direction digitale externalisée pour entreprises internationales en orchestrant CTO as a Service, développement web sur mesure, conseil DevOps, cloud, intégration IA et stratégie SEO avancée. En Savoie, la même équipe déploie cette exigence avec une approche discrète et orientée marque.",
     followUs: "Suivez-nous",
     legalNotice: "Mentions Légales"
   },
   en: {
-    title: "Digital consulting services – UK & USA",
-    keywords: [
-      "digital consulting agency UK",
-      "web development agency USA",
-      "custom website development",
-      "full-stack development services",
-      "CTO as a Service",
-      "DevOps consulting services",
-      "AI integration services",
-      "SEO strategy and optimization"
-    ],
+    editorial:
+      "From Paris and across Île-de-France, we deliver digital leadership for international companies with CTO as a Service, custom web development, DevOps and cloud guidance, AI integration, and advanced SEO. In Savoie, the same team keeps that brand-first, low-friction approach.",
     followUs: "Follow us",
     legalNotice: "Legal Notice"
   },
   es: {
-    title: "Servicios digitales en Madrid y México",
-    keywords: [
-      "agencia de consultoría digital en Madrid",
-      "agencia de desarrollo web en México",
-      "desarrollo web a medida CDMX",
-      "consultoría DevOps en Madrid",
-      "integración de IA para empresas",
-      "automatización de procesos digitales",
-      "estrategia SEO profesional",
-      "desarrollo e-commerce en México"
-    ],
+    editorial:
+      "Desde París y en Île-de-France, ofrecemos dirección digital externalizada para empresas internacionales combinando CTO as a Service, desarrollo web a medida, consultoría DevOps y cloud, integración de IA y estrategia SEO avanzada. En Savoie, el mismo equipo mantiene esta lógica de marca sin fricción.",
     followUs: "Síguenos",
     legalNotice: "Aviso Legal"
   },
   de: {
-    title: "Digitale Beratung in Deutschland, Österreich & Schweiz",
-    keywords: [
-      "digitale Beratungsagentur in Berlin",
-      "Webentwicklung Agentur Deutschland",
-      "maßgeschneiderte Website Entwicklung",
-      "Full-Stack Entwicklungsservices",
-      "CTO as a Service DACH",
-      "DevOps- und Cloud-Consulting",
-      "KI-Integration für Unternehmen",
-      "Technisches SEO & Performance"
-    ],
+    editorial:
+      "Von Paris aus und in der Île-de-France führen wir eine digitalisierte Leitung für internationale Unternehmen mit CTO as a Service, individueller Webentwicklung, DevOps- und Cloud-Beratung, KI-Integration und fortgeschrittener SEO. In Savoie setzt dasselbe Team diese markenzentrierte, unaufdringliche Begleitung fort.",
     followUs: "Folgen Sie uns",
     legalNotice: "Impressum"
   }
 };
 
 export default function Footer2({ lang = "fr" }) {
-  const content = expertiseContent[lang] || expertiseContent.fr;
+  const content = editorialContent[lang] || editorialContent.fr;
   const prefix =
     lang === "en" ? "/en" : lang === "es" ? "/es" : lang === "de" ? "/de" : "";
 
   return (
     <footer className="rainbow-footer footer-style-default no-border">
-      <div
-        className="footer-top"
-        style={{ paddingTop: "32px", paddingBottom: "8px" }}
-      >
-        <div className="container">
-          <div className="row">
-            {footerSections.map((section, index) => (
-              <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={index}>
-                <div className="rainbow-footer-widget">
-                  <h4 className="title">{section.title}</h4>
-                  <div className="inner">
-                    <ul className="footer-link link-hover">
-                      {section.links.map((link, i) => (
-                        <li key={i}>
-                          <Link href={link.href}>{link.label}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+      <div className="container" style={{ paddingTop: "32px", paddingBottom: "20px" }}>
+        <p
+          style={{
+            color: "#8f8f8f",
+            fontSize: "15px",
+            lineHeight: 1.7,
+            margin: 0,
+            display: "flex",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: "12px"
+          }}
+        >
+          <span>{content.editorial}</span>
+          <Link
+            href={`${prefix || ""}/privacy-policy`}
+            style={{ color: "#8f8f8f", fontSize: "14px", textDecoration: "none" }}
+          >
+            {content.legalNotice}
+          </Link>
+          <span style={{ color: "#8f8f8f", fontSize: "14px" }}>{content.followUs}</span>
+          <span
+            className="social-icon social-default"
+            style={{ display: "flex", alignItems: "center", gap: "10px" }}
+          >
+            {socialLinks.map((link, index) => (
+              <a href={link.href} key={index}>
+                <i className={link.iconClass} />
+              </a>
             ))}
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <div className="rainbow-footer-widget">
-                <h4 className="title">{content.followUs}</h4>
-                <div className="inner">
-                  <ul className="social-icon social-default justify-content-start">
-                    {socialLinks.map((link, index) => (
-                      <li key={index}>
-                        <a href={link.href}>
-                          <i className={link.iconClass} />
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row mt--40">
-            <div className="col-lg-12">
-              <div className="rainbow-footer-widget">
-                <h4 className="title">{content.title}</h4>
-                <div className="inner">
-                  <ul className="footer-link link-hover" style={{ columns: "2", columnGap: "2rem" }}>
-                    {content.keywords.map((keyword, i) => (
-                      <li key={i} style={{ breakInside: "avoid", marginBottom: "8px" }}>
-                        <span style={{ color: "#8f8f8f", fontSize: "14px" }}>{keyword}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="copyright-area copyright-style-one no-border"
-        style={{ paddingTop: "10px", paddingBottom: "10px" }}
-      >
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="copyright-left">
-                <ul className="ft-menu link-hover">
-                  <li>
-                    <Link href={`${prefix || ""}/privacy-policy`}>{content.legalNotice}</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="copyright-right text-center text-md-right">
-                <p className="copyright-text">
-                  © o7 Digital
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+          </span>
+          <span style={{ color: "#8f8f8f", fontSize: "14px" }}>© o7 Digital</span>
+        </p>
       </div>
     </footer>
   );
