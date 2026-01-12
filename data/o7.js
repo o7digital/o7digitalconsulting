@@ -507,3 +507,12 @@ export const o7PortfolioCopy = {
     technologySecurity: "Technologie & solutions de sécurité",
   },
 };
+
+export const o7LocalCoverage = {
+  intro:
+    "Un accompagnement de proximité complète notre présence internationale pour les organisations basées en France.",
+  paragraphs: [
+    "Nous assurons une direction digitale externalisée pour entreprises en Île-de-France, avec des interventions sur site et un suivi rapproché pour sécuriser vos projets stratégiques.",
+    "En Savoie, nous proposons une direction digitale externalisée pour entreprises en Savoie, ajustée aux spécificités industrielles, touristiques et territoriales.",
+  ],
+};
