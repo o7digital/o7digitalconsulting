@@ -12,7 +12,13 @@ const buildPreviewUrl = (url) => {
 function PortfolioCard({ project, labels, categoryLabel }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const previewUrl = useMemo(() => buildPreviewUrl(project.url), [project.url]);
+  const previewImageUrl = useMemo(() => {
+    if (project.previewImage) {
+      return project.previewImage;
+    }
+
+    return buildPreviewUrl(project.url);
+  }, [project.url, project.previewImage]);
   const isBusy = !isLoaded && !hasError;
 
   const handleLoad = () => setIsLoaded(true);
@@ -40,7 +46,7 @@ function PortfolioCard({ project, labels, categoryLabel }) {
               aria-label={`${labels.viewSite}: ${project.title}`}
             >
               <img
-                src={previewUrl}
+                src={previewImageUrl}
                 alt={project.alt || project.title}
                 loading="lazy"
                 decoding="async"
