@@ -11,11 +11,13 @@ import {
   o7HomeServices as o7HomeServicesEs,
   o7CtaBlock as o7CtaEs,
 } from "@/data/o7.es";
+import { spanishSeoKeywords } from "@/data/seoKeywords";
 
 export const metadata = {
   title: "CTO as a Service Madrid Barcelona México Monterrey Guadalajara | Dirección Digital Externalizada",
   description:
     "CTO as a Service Madrid, Barcelona, Valencia, Sevilla, Ciudad de México, Monterrey y Guadalajara. Dirección digital externalizada México y España. Consultoría SEO técnica México y Madrid, consultoría IT estratégica España y México, arquitectura web escalable, transformación digital empresas México y España. Consultoría digital B2B internacional.",
+  keywords: spanishSeoKeywords,
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/es/index-digital-agency',
     languages: {

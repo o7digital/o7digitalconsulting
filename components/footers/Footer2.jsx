@@ -2,6 +2,13 @@
 import React from "react";
 import Link from "next/link";
 import { footerSections, socialLinks } from "@/data/footerLinks";
+import {
+  englishSeoKeywords,
+  frenchSeoKeywords,
+  germanSeoKeywords,
+  italianSeoKeywords,
+  spanishSeoKeywords,
+} from "@/data/seoKeywords";
 
 const expertiseContent = {
   fr: {
@@ -9,35 +16,41 @@ const expertiseContent = {
       "O7 Digital est une agence de consulting digital et CTO as a Service spécialisée en transformation digitale, développement web haute performance, SEO technique et architecture IT pour entreprises en France et au Québec, notamment à Paris, Lyon, Marseille et Montréal.",
     followUs: "Suivez-nous",
     legalNotice: "Mentions Légales",
+    keywords: frenchSeoKeywords,
   },
   en: {
     description:
       "O7 Digital is a digital consulting and CTO as a Service agency delivering high-performance web development, technical SEO, cloud architecture and digital transformation for international companies in the UK, USA and Canada, including London, New York and Toronto.",
     followUs: "Follow us",
     legalNotice: "Legal Notice",
+    keywords: englishSeoKeywords,
   },
   es: {
     description:
       "O7 Digital es una agencia de consultoría digital y CTO as a Service especializada en transformación digital, desarrollo web de alto rendimiento y SEO técnico para empresas en España, México y Norteamérica, incluyendo Madrid, Barcelona y Ciudad de México.",
     followUs: "Síguenos",
     legalNotice: "Aviso Legal",
+    keywords: spanishSeoKeywords,
   },
   de: {
     description:
       "O7 Digital ist eine Agentur für digitale Beratung und CTO as a Service mit Fokus auf digitale Transformation, High-Performance-Webentwicklung und technisches SEO für Unternehmen in Deutschland, Österreich und der Schweiz, unter anderem in Berlin, München und Zürich.",
     followUs: "Folgen Sie uns",
     legalNotice: "Impressum",
+    keywords: germanSeoKeywords,
   },
   it: {
     description:
       "O7 Digital è un'agenzia di consulenza digitale e CTO as a Service specializzata in trasformazione digitale, sviluppo web ad alte prestazioni e SEO tecnico per aziende in Italia, Svizzera ed Europa, inclusi Milano, Roma e Torino.",
     followUs: "Seguici",
     legalNotice: "Note Legali",
+    keywords: italianSeoKeywords,
   },
 };
 
 export default function Footer2({ lang = "fr" }) {
   const content = expertiseContent[lang] || expertiseContent.fr;
+  const footerKeywords = content.keywords || [];
   const prefix =
     lang === "en"
       ? "/en"
@@ -125,6 +138,28 @@ export default function Footer2({ lang = "fr" }) {
           </div>
         </div>
       </div>
+      {footerKeywords.length > 0 && (
+        <div style={{ borderTop: "1px solid rgba(143, 143, 143, 0.2)", padding: "18px 0 8px" }}>
+          <div className="container">
+            <p
+              style={{
+                color: "#8f8f8f",
+                fontSize: "14px",
+                lineHeight: "1.8",
+                textAlign: "center",
+                marginBottom: "0",
+              }}
+            >
+              {footerKeywords.map((keyword, index) => (
+                <React.Fragment key={keyword}>
+                  <span>{keyword}</span>
+                  {index < footerKeywords.length - 1 && <span>{" \u2022 "}</span>}
+                </React.Fragment>
+              ))}
+            </p>
+          </div>
+        </div>
+      )}
       <div
         className="copyright-area copyright-style-one no-border"
         style={{ paddingTop: "10px", paddingBottom: "10px" }}

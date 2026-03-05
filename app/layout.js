@@ -5,6 +5,7 @@ import "../public/assets/css/fonts-optimized.css";
 import "./custom-styles.css";
 import Script from "next/script";
 import ClientLayout from "./ClientLayout";
+import { frenchSeoKeywords } from "@/data/seoKeywords";
 
 export const metadata = {
   metadataBase: new URL('https://www.o7digital-consulting.com'),
@@ -13,7 +14,7 @@ export const metadata = {
     template: '%s | O7 Digital Consulting'
   },
   description: 'CTO as a Service international - Europe, Amérique du Nord et Latam. Direction digitale externalisée, SEO technique international, architecture web haute performance pour entreprises en Europe, USA, Canada, Mexique et Amérique Latine.',
-  keywords: ['CTO as a Service international', 'CTO as a Service Europe', 'CTO as a Service Amérique du Nord', 'CTO as a Service Latam', 'direction digitale externalisée internationale', 'conseil IT stratégique international', 'transformation digitale groupes internationaux', 'SEO technique international', 'consulting digital B2B international', 'consulting digital Europe Amérique', 'architecture web haute performance internationale', 'audit SEO technique avancé', 'accompagnement transformation digitale B2B', 'direction informatique externalisée internationale', 'consulting IT groupes internationaux', 'stratégie digitale internationale', 'développement web React Next.js', 'CMS headless entreprise internationale', 'optimisation performance web internationale', 'conseil architecture technique internationale'],
+  keywords: frenchSeoKeywords,
   authors: [{ name: 'O7 Digital Consulting' }],
   creator: 'O7 Digital Consulting',
   publisher: 'O7 Digital Consulting',

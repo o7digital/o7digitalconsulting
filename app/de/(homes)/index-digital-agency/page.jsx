@@ -11,11 +11,13 @@ import {
   o7HomeServices as o7HomeServicesDe,
   o7CtaBlock as o7CtaDe,
 } from "@/data/o7.de";
+import { germanSeoKeywords } from "@/data/seoKeywords";
 
 export const metadata = {
   title: "Digitalagentur Deutschland | IT-Beratung Berlin München Frankfurt Wien Zürich | CTO as a Service DACH",
   description:
     "Internationale Digitalagentur und IT-Beratung für Unternehmen in Deutschland, Österreich, Schweiz. CTO as a Service, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für digitale Transformation DACH. IT Consulting Berlin, München, Hamburg, Frankfurt, Wien, Zürich.",
+  keywords: germanSeoKeywords,
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/de/index-digital-agency',
     languages: {
