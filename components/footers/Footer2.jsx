@@ -143,10 +143,11 @@ export default function Footer2({ lang = "fr" }) {
           <div className="container">
             <p
               style={{
-                color: "#8f8f8f",
-                fontSize: "14px",
-                lineHeight: "1.8",
+                color: "#9a9a9a",
+                fontSize: "clamp(10px, 1.1vw, 12px)",
+                lineHeight: "1.65",
                 textAlign: "center",
+                letterSpacing: "0.1px",
                 marginBottom: "0",
               }}
             >
