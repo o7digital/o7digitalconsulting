@@ -12,8 +12,8 @@ import Footer3 from "@/components/footers/Footer3";
 
 export const metadata = {
   title:
-    "Home Travel Agency || Doob Business and Consulting React Nextjs Bootstrap5 Template",
-  description: "Doob Business and Consulting React Nextjs Bootstrap5 Template",
+    "Home Travel Agency || Showcase page for O7 Digital Consulting website templates and components",
+  description: "Showcase page for O7 Digital Consulting website templates and components",
 };
 export default function page() {
   return (

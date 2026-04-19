@@ -17,12 +17,13 @@ export const metadata = {
   creator: 'O7 Digital Consulting',
   publisher: 'O7 Digital Consulting',
   alternates: {
-    canonical: '/',
+    canonical: '/index-digital-agency',
     languages: {
-      'fr': '/',
-      'en': '/en',
-      'es': '/es',
-      'de': '/de',
+      'fr': '/index-digital-agency',
+      'en': '/en/index-digital-agency',
+      'es': '/es/index-digital-agency',
+      'de': '/de/index-digital-agency',
+      'it': '/it/index-digital-agency',
     },
   },
   openGraph: {

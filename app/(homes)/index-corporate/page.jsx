@@ -16,8 +16,8 @@ import Pricing4 from "@/components/common/Pricing4";
 
 export const metadata = {
   title:
-    "Home Corporate || Doob Business and Consulting React Nextjs Bootstrap5 Template",
-  description: "Doob Business and Consulting React Nextjs Bootstrap5 Template",
+    "Home Corporate || Showcase page for O7 Digital Consulting website templates and components",
+  description: "Showcase page for O7 Digital Consulting website templates and components",
 };
 export default function page() {
   return (

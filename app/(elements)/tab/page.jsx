@@ -5,8 +5,8 @@ import Topbar from "@/components/headers/Topbar";
 import React from "react";
 
 export const metadata = {
-  title: "Tab || Doob Business and Consulting React Nextjs Bootstrap5 Template",
-  description: "Doob Business and Consulting React Nextjs Bootstrap5 Template",
+  title: "Tab || Showcase page for O7 Digital Consulting website templates and components",
+  description: "Showcase page for O7 Digital Consulting website templates and components",
 };
 export default function page() {
   return (

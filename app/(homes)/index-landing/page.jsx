@@ -9,8 +9,9 @@ import Testimonials from "@/components/homes/home-landing/Testimonials";
 
 export const metadata = {
   title:
-    "Home Langing || Doob Business and Consulting React Nextjs Bootstrap5 Template",
-  description: "Doob Business and Consulting React Nextjs Bootstrap5 Template",
+    "Home Langing || Showcase page for O7 Digital Consulting website templates and components",
+  description: "Showcase page for O7 Digital Consulting website templates and components",
+  robots: { index: false, follow: true },
 };
 export default function Home() {
   return (
