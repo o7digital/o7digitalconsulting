@@ -95,7 +95,7 @@ export const o7PortfolioProjects = [
   {
     id: "integra365",
     title: "Integra365",
-    url: "https://www.integra365.digital/",
+    url: "https://integra365.vercel.app/",
     category: "corporateDigitalTransformation",
     alt: "Digital Transformation Platform for Businesses",
   },
@@ -109,7 +109,7 @@ export const o7PortfolioProjects = [
   {
     id: "el-murmullo",
     title: "El Murmullo",
-    url: "https://www.el-murmullo.com/en/luxury-romantic-boutique-hotel-zihuatanejo-ixtapa-mexico.php",
+    url: "https://www.el-murmullo.com/",
     category: "hospitality",
     alt: "Luxury romantic boutique hotel in Zihuatanejo Ixtapa, Mexico",
     previewImage: "/assets/images/portfolio/el-murmullo.png",

@@ -4,7 +4,6 @@ export default function sitemap() {
   
   // Liste des pages principales avec leurs priorités
   const routes = [
-    { path: '', priority: 1.0, changeFreq: 'weekly' },
     { path: '/index-digital-agency', priority: 1.0, changeFreq: 'weekly' },
     { path: '/about', priority: 0.9, changeFreq: 'monthly' },
     { path: '/contact', priority: 0.9, changeFreq: 'monthly' },

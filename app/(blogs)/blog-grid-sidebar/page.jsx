@@ -7,8 +7,8 @@ import React from "react";
 
 export const metadata = {
   title:
-    "Blog Grid Sidebar || Doob Business and Consulting React Nextjs Bootstrap5 Template",
-  description: "Doob Business and Consulting React Nextjs Bootstrap5 Template",
+    "Blog Grid Sidebar || Showcase page for O7 Digital Consulting website templates and components",
+  description: "Showcase page for O7 Digital Consulting website templates and components",
 };
 export default function page() {
   return (

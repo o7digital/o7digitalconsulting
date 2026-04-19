@@ -25,12 +25,13 @@ export const metadata = {
   },
   manifest: '/manifest.json',
   alternates: {
-    canonical: '/',
+    canonical: '/index-digital-agency',
     languages: {
-      'fr': '/',
-      'en': '/en',
-      'es': '/es',
-      'de': '/de',
+      'fr': '/index-digital-agency',
+      'en': '/en/index-digital-agency',
+      'es': '/es/index-digital-agency',
+      'de': '/de/index-digital-agency',
+      'it': '/it/index-digital-agency',
     },
   },
   openGraph: {

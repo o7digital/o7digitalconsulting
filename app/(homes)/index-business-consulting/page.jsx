@@ -17,8 +17,8 @@ import Testimonials from "@/components/homes/index-business-consulting-2/Testimo
 
 export const metadata = {
   title:
-    "Home Business Consulting || Doob Business and Consulting React Nextjs Bootstrap5 Template",
-  description: "Doob Business and Consulting React Nextjs Bootstrap5 Template",
+    "Home Business Consulting || Showcase page for O7 Digital Consulting website templates and components",
+  description: "Showcase page for O7 Digital Consulting website templates and components",
 };
 export default function page() {
   return (

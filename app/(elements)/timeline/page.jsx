@@ -6,8 +6,8 @@ import React from "react";
 
 export const metadata = {
   title:
-    "Timeline || Doob Business and Consulting React Nextjs Bootstrap5 Template",
-  description: "Doob Business and Consulting React Nextjs Bootstrap5 Template",
+    "Timeline || Showcase page for O7 Digital Consulting website templates and components",
+  description: "Showcase page for O7 Digital Consulting website templates and components",
 };
 export default function page() {
   return (
