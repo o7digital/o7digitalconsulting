@@ -15,11 +15,12 @@ export const metadata = {
       en: "https://www.o7digital-consulting.com/en/portfolio",
       es: "https://www.o7digital-consulting.com/es/portfolio",
       de: "https://www.o7digital-consulting.com/de/portfolio",
+      it: "https://www.o7digital-consulting.com/it/portfolio",
     },
   },
   openGraph: {
     locale: "es_ES",
-    alternateLocale: ["fr_FR", "en_US", "de_DE"],
+    alternateLocale: ["fr_FR", "en_US", "de_DE", "it_IT"],
   },
 };
 

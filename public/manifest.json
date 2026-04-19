@@ -1,0 +1,28 @@
+{
+  "name": "O7 Digital Consulting",
+  "short_name": "O7 Digital",
+  "description": "Agence de consulting digital spécialisée en stratégie digitale, CTO as a Service, développement web moderne et SEO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3461FF",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "categories": ["business", "consulting", "technology"],
+  "icons": [
+    {
+      "src": "/assets/images/logo/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/logo/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

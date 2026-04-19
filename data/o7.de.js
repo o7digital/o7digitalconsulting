@@ -1,37 +1,37 @@
 export const o7HomeIntro = {
-  eyebrow: "Überblick O7 Digital",
-  title: "O7 Digital: Engineering, Strategie und digitale Performance",
+  eyebrow: "Internationale Digitalberatung",
+  title: "Digitale Beratung & IT-Beratung für internationale Unternehmen",
   description:
-    "O7 Digital ist eine Agentur, spezialisiert auf digitale Transformation, modernes Webdevelopment und Performance-Optimierung. Wir begleiten Unternehmen in Frankreich, Nordamerika und Lateinamerika bei der Konzeption, Umsetzung und Weiterentwicklung ihrer digitalen Lösungen – mit Strategie, Engineering und Innovation.",
+    "O7 Digital ist Ihre internationale Digitalagentur für digitale Transformation, IT-Beratung und CTO as a Service. Wir bieten strategische IT-Beratung, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für B2B-Organisationen.",
   bullets: [
-    "Unsere Expertise umfasst digitale Strategie, leistungsstarkes Webdevelopment, Headless CMS, KI und Automatisierung, technisches SEO und kontinuierliche Optimierung.",
-    "Wir helfen Unternehmen, schnelle, zuverlässige, sichere und ergebnisorientierte Plattformen zu bauen. O7 Digital: Technologie im Dienst Ihres Wachstums.",
+    "Expertise in digitaler Beratung: IT Consulting international, Software Architektur Beratung, Enterprise Digitalstrategie, moderne Webtechnologien (React, Next.js), Headless CMS und digitale Prozessautomatisierung für Unternehmen.",
+    "Technologiepartner für digitale Skalierung: IT-Beratung international, Cloud Migration, DevOps Prozesse, Web Performance Optimierung und langfristige IT Strategie für digitale Wettbewerbsfähigkeit und Business Transformation.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "Digitale Strategie & CTO as a Service",
+    title: "CTO as a Service & IT Consulting international",
     description:
-      "Wir beraten Führungsteams als CTO as a Service. Technischer Audit, Architekturdefinition, Stack-Auswahl, Steuerung von Dienstleistern und Produkt-Roadmap gehören dazu. Ziel: Skalierbarkeit, Performance und technische Kohärenz sichern, ohne sofort einen internen CTO einzustellen.",
+      "Strategische IT-Beratung und CTO as a Service für internationale Unternehmen. IT Leadership as a Service, Technologieberatung, Software Consulting und digitale Roadmap-Entwicklung: IT Strategie Beratung, technische Auditierung, IT Architektur, Stack-Auswahl und digitale Transformation. IT Consulting international für B2B-Organisationen ohne internen CTO.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
       src: "/strategie/strategie-cto.webp",
-      alt: "Workshop zur digitalen Strategie",
+      alt: "CTO as a Service und strategische IT-Beratung DACH",
       height: "330px",
     },
   },
   {
-    title: "Modernes Webdevelopment & performante Anwendungen",
+    title: "Webentwicklung Agentur: React, Next.js & moderne Webtechnologien",
     description:
-      "Wir entwickeln moderne, schnelle und sichere Websites und Anwendungen mit Fokus auf Conversion und Performance. Wir setzen auf aktuelle Technologien (React, Next.js, Astro je nach Projekt) und strenge Best Practices in UX, Accessibility und Ladezeiten. Jede Plattform ist auf nachhaltiges Wachstum ausgelegt.",
+      "Individuelle Webentwicklung und Enterprise Webentwicklung für internationale Unternehmen. Webentwicklung Agentur spezialisiert auf skalierbare Weblösungen mit React Entwicklung, Next.js Agentur, Headless CMS und moderne Webtechnologien. Web Performance Optimierung, maßgeschneiderte Software, digitale Plattformen und API Integration.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
     image: {
       src: "/strategie/dev-web.webp",
-      alt: "Modernes Webdevelopment",
+      alt: "Webentwicklung Agentur: React Next.js Enterprise Entwicklung",
       className: "service-image-span-two",
       height: "330px",
     },
@@ -44,36 +44,36 @@ export const o7HomeServices = [
     align: "text-left",
   },
   {
-    title: "Künstliche Intelligenz & Prozessautomatisierung",
+    title: "KI Beratung & Automatisierung Prozesse für Unternehmen",
     description:
-      "Wir integrieren KI und Automatisierung, um interne und digitale Prozesse zu optimieren. Lead-Qualifizierung, Automatisierung repetitiver Aufgaben, Datenextraktion und -analyse oder intelligente Assistenten: jedes Szenario wird auf Sicherheit, Zuverlässigkeit und messbaren ROI ausgerichtet.",
+      "KI Beratung und künstliche Intelligenz für Unternehmen: digitale Automatisierung, automatisierte Workflows, Prozessdigitalisierung und digitale Effizienz. KI-Integration für Lead-Qualifizierung, Datenanalyse, Business Intelligence und intelligente Assistenten. KI Beratung für digitale Prozesse optimieren, Automatisierung Prozesse und messbaren ROI.",
     iconClass: "feather-layers",
     align: "text-left",
     image: {
       src: "/strategie/ia-automat.webp",
-      alt: "Workflows für KI und Automatisierung",
+      alt: "KI Beratung und Automatisierung Prozesse Unternehmen",
     },
   },
   {
-    title: "Technisches SEO & digitale Performance",
+    title: "SEO Agentur: Technische SEO & SEO Beratung international",
     description:
-      "Wir setzen eine ergebnisorientierte technische SEO-Strategie um: Seitenstruktur, Performance, Metadaten, strukturierte Daten und Analytics-Tracking. Ziel: nachhaltige Sichtbarkeit bei Google, qualifizierter Traffic und bessere Conversion – nach Best Practices des SEO.",
+      "SEO Agentur spezialisiert auf technische SEO, SEO Beratung und SEO technische Optimierung für internationale Unternehmen. Fortgeschrittene technische Auditierung, Web Performance Optimierung, Schema.org strukturierte Daten und internationale SEO-Strategie. SEO Beratung für nachhaltige Google-Sichtbarkeit und digitale Performance.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
       src: "/strategie/seo-perfo.webp",
-      alt: "Dashboard für SEO-Performance",
+      alt: "SEO Agentur Deutschland: technische SEO Beratung DACH",
     },
   },
   {
-    title: "IT-Managed Services & operativer Support",
+    title: "Cloud Beratung, DevOps & Managed IT Services",
     description:
-      "Wir übernehmen Managed Services und operativen Support: Wartung, Monitoring, Backups, Sicherheit und Nutzerunterstützung. Wir begleiten auch auf Google Workspace und Microsoft 365, um Stabilität, Kontinuität und Produktivität sicherzustellen.",
+      "Cloud Consulting, DevOps Beratung und Managed IT Services für internationale Unternehmen. Cloud Migration auf AWS/Azure/GCP, DevOps Prozesse, CI/CD Pipelines, Microservices Architektur, IT Sicherheit Beratung und IT Support. Google Workspace Beratung, Microsoft 365 Beratung, Cloud Infrastruktur und IT Governance.",
     iconClass: "feather-command",
     align: "text-left",
     image: {
       src: "/strategie/info-support.webp",
-      alt: "IT-Support und Managed Services",
+      alt: "Cloud Beratung, DevOps und Managed IT Services DACH",
     },
   },
   {
@@ -154,8 +154,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital ist spezialisiert auf digitale Transformation, modernes Webdevelopment und technische wie operative Performance. Wir begleiten Unternehmen in Frankreich, Nordamerika und Lateinamerika beim Design, Bau und der Weiterentwicklung ihrer digitalen Plattformen.",
-  "Unsere Expertise deckt die gesamte Wertschöpfung ab: digitale Strategie und moderne Architektur, hochperformante Webentwicklung, Headless CMS und Backends, KI und Automatisierung, fortgeschrittenes technisches SEO, Managed Services und Support.",
+  "O7 Digital ist eine internationale Digitalagentur und B2B Digitalberatung spezialisiert auf digitale Transformation, IT-Beratung und digitale Lösungen für Unternehmen. Wir begleiten internationale Organisationen beim Design, Entwicklung und Skalierung digitaler Produkte mit Enterprise Digitalstrategie und Technologieberatung.",
+  "Unsere Expertise als internationale Digitalagentur: digitale Beratung für internationale Unternehmen, IT Consulting, individuelle Webentwicklung, Software Architektur, Cloud Consulting, DevOps Beratung, KI Beratung, technische SEO, Managed IT Services und digitale Wertschöpfung.",
 ];
 
 export const o7Methodology = [
@@ -198,6 +198,8 @@ export const o7ContactCopy = {
   ],
   preForm:
     "Nach einem ersten Gespräch liefern wir einen klaren, strukturierten Ansatz: Bedarfsklärung, Kontextanalyse, Empfehlungen und Aktionsplan. Jede Zusammenarbeit ist maßgeschneidert, transparent und verbindlich.",
+  officesTitle: "Unsere internationalen Büros",
+  officesDescription: "Eine globale Präsenz, um Sie besser zu begleiten",
   labels: {
     emailTitle: "E-Mail",
     phoneTitle: "Telefon",

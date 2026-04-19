@@ -25,11 +25,12 @@ export const metadata = {
       'en': 'https://www.o7digital-consulting.com/en/about',
       'es': 'https://www.o7digital-consulting.com/es/about',
       'de': 'https://www.o7digital-consulting.com/de/about',
+      'it': 'https://www.o7digital-consulting.com/it/about',
     },
   },
   openGraph: {
     locale: 'es_ES',
-    alternateLocale: ['fr_FR', 'en_US', 'de_DE'],
+    alternateLocale: ['fr_FR', 'en_US', 'de_DE', 'it_IT'],
   },
 };
 

@@ -1,0 +1,22 @@
+/* Optimisation des fonts */
+@font-face {
+  font-family: 'Feather';
+  src: url('../fonts/Feather.ttf') format('truetype'),
+       url('../fonts/Feather.woff') format('woff');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'slick';
+  src: url('../fonts/slick.woff') format('woff'),
+       url('../fonts/slick.ttf') format('truetype'),
+       url('../fonts/slick.eot') format('embedded-opentype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Optimisation Inter font (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

@@ -1,37 +1,37 @@
 export const o7HomeIntro = {
-  eyebrow: "About O7 Digital",
-  title: "O7 Digital: engineering, strategy and digital performance",
+  eyebrow: "Outsourced digital leadership",
+  title: "CTO as a Service & digital transformation for international companies",
   description:
-    "O7 Digital is a consulting agency specialised in digital transformation, modern web development and performance optimisation. We support companies in France, North America and Latin America by combining strategy, engineering and innovation.",
+    "O7 Digital supports digital transformation for international companies. CTO as a Service, outsourced digital leadership, high-performance web architecture, technical SEO consulting and complex digital project management for demanding B2B organizations.",
   bullets: [
-    "Our expertise covers key domains: digital strategy, high-performance web development, headless CMS, AI and automation, technical SEO and continuous optimisation.",
-    "We help organisations build fast, reliable, secure, results-oriented platforms. O7 Digital: technology serving your growth.",
+    "IT consulting for enterprises: CTO as a Service, technical architecture consulting, React development consulting, headless CMS for enterprises and business process automation.",
+    "Enterprise digital consulting: we help organizations build fast, reliable and secure platforms. O7 Digital: technology serving your international growth.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "Digital strategy & CTO as a Service",
+    title: "CTO as a Service international",
     description:
-      "We advise leadership teams on key technology decisions as CTO as a Service. Technical audit, architecture, stack choices, vendor management and product roadmap are part of our support. The goal is to secure scalability, performance and technical coherence without hiring an internal CTO immediately.",
+      "Fractional CTO for international enterprises. Outsourced digital leadership for secure technology decisions: advanced technical SEO audit, technical architecture consulting, complex digital project management, stack selection and product roadmap. Digital transformation consulting without hiring an internal CTO.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
       src: "/strategie/strategie-cto.webp",
-      alt: "Digital strategy workshop",
+      alt: "Outsourced CTO services and digital leadership",
       height: "330px",
     },
   },
   {
-    title: "Modern web development & performant apps",
+    title: "React Next.js development & high-performance web architecture",
     description:
-      "We build modern, fast and secure websites and applications, focused on conversion and performance. We rely on recent technologies (React, Next.js, Astro) and strict best practices for UX, accessibility and load speed. Each platform is designed to evolve and support growth.",
+      "Modern web development agency for international enterprises. Custom web development with React, Next.js and Astro. High performance web development for demanding organizations. React development consulting, Next.js development consulting, web architecture consulting, headless CMS consulting and AI integration services. Enterprise web development: each platform is designed to scale and support your international growth.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
     image: {
       src: "/strategie/dev-web.webp",
-      alt: "Modern web development",
+      alt: "React Next.js high-performance web development",
       className: "service-image-span-two",
       height: "330px",
     },
@@ -39,7 +39,7 @@ export const o7HomeServices = [
   {
     title: "Headless CMS & custom backends",
     description:
-      "We implement headless CMS and custom backends to industrialise content management and business workflows. Data modelling, APIs, user roles, publishing workflows and external integrations (CRM, forms, analytics) are designed for flexibility, performance and easy administration.",
+      "Headless CMS for international enterprises: we implement headless CMS and custom backends to industrialise content management and business workflows. Headless CMS consulting specialized in data modelling, APIs, user roles, publishing workflows and external integrations (CRM, forms, analytics). Solutions designed for flexibility, performance and easy administration.",
     iconClass: "feather-trending-up",
     align: "text-left",
   },
@@ -55,14 +55,14 @@ export const o7HomeServices = [
     },
   },
   {
-    title: "Technical SEO & digital performance",
+    title: "Technical SEO international & advanced SEO audit",
     description:
-      "We deploy a results-driven technical SEO approach, combining site structure, performance, meta optimisation, structured data and analytics tracking. Goal: sustainable visibility on Google, qualified traffic and better conversion, following best practices.",
+      "Technical SEO consulting for international enterprises. Enterprise SEO consulting: technical SEO agency specialized in international SEO. Advanced technical SEO audit, web performance optimization, Schema.org structured data and technical SEO strategy for international websites. Technical SEO consulting for sustainable Google visibility in international markets.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
       src: "/strategie/seo-perfo.webp",
-      alt: "SEO performance dashboard",
+      alt: "Technical SEO international and advanced audit",
     },
   },
   {
@@ -154,8 +154,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital is specialised in digital transformation, modern web development and technical/operational performance. We support companies in France, North America and Latin America in designing, building and evolving their digital platforms.",
-  "Our expertise covers the full value chain: digital strategy and modern architecture, high-performance web development, headless CMS and backends, AI and automation, advanced technical SEO, managed services and support.",
+  "O7 Digital is a digital consulting firm specialized in digital transformation, modern web development and technical/operational performance. We support international companies in designing, building and evolving their digital platforms.",
+  "Our expertise covers the full value chain: enterprise digital strategy, web architecture consulting, high-performance web development, headless CMS consulting, AI and automation, advanced technical SEO, DevOps consulting, managed services and support.",
 ];
 
 export const o7Methodology = [
@@ -198,6 +198,8 @@ export const o7ContactCopy = {
   ],
   preForm:
     "After a first call, we provide a clear, structured approach: needs framing, context analysis, recommendations and action plan. Every engagement is tailored, transparent and committed.",
+  officesTitle: "Our international offices",
+  officesDescription: "A global presence to better support you",
   labels: {
     emailTitle: "Email",
     phoneTitle: "Phone",

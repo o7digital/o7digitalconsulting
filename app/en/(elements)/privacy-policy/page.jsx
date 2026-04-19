@@ -13,6 +13,7 @@ export const metadata = {
       'en': 'https://www.o7digital-consulting.com/en/privacy-policy',
       'es': 'https://www.o7digital-consulting.com/es/privacy-policy',
       'de': 'https://www.o7digital-consulting.com/de/privacy-policy',
+      'it': 'https://www.o7digital-consulting.com/it/privacy-policy',
     },
   },
 };

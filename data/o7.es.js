@@ -1,37 +1,37 @@
 export const o7HomeIntro = {
-  eyebrow: "Presentación O7 Digital",
-  title: "O7 Digital: ingeniería, estrategia y rendimiento digital",
+  eyebrow: "Dirección digital externalizada",
+  title: "CTO as a Service & transformación digital para empresas internacionales",
   description:
-    "O7 Digital es una agencia especializada en transformación digital, desarrollo web moderno y optimización de la performance. Acompañamos a empresas en Francia, Norteamérica y Latinoamérica combinando estrategia, ingeniería e innovación.",
+    "O7 Digital acompaña la transformación digital de empresas internacionales. CTO as a Service, dirección digital externalizada, arquitectura web de alto rendimiento, consultoría SEO técnica y gestión de proyectos digitales complejos para organizaciones B2B exigentes.",
   bullets: [
-    "Nuestra experiencia cubre estrategia digital, desarrollo web de alto rendimiento, CMS headless, IA y automatización, SEO técnico y optimización continua.",
-    "Ayudamos a crear plataformas rápidas, fiables, seguras y orientadas a resultados. O7 Digital: la tecnología al servicio de tu crecimiento.",
+    "Consultoría IT estratégica: CTO as a Service internacional, consultoría arquitectura técnica, desarrollo web React Next.js, CMS headless para empresas y automatización de procesos empresariales.",
+    "Consultoría digital B2B: ayudamos a crear plataformas rápidas, fiables y seguras. O7 Digital: la tecnología al servicio de tu crecimiento internacional.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "Estrategia digital y CTO as a Service",
+    title: "CTO as a Service internacional",
     description:
-      "Acompañamos a directivos en decisiones tecnológicas clave como CTO as a Service. Auditoría técnica, arquitectura, elección de stack, gestión de proveedores y roadmap producto. Objetivo: asegurar escalabilidad, performance y coherencia técnica sin contratar un CTO interno de inmediato.",
+      "Dirección digital externalizada para empresas internacionales. Consultoría IT estratégica: auditoría SEO técnico avanzada, consultoría arquitectura técnica, gestión proyectos digitales complejos, selección de stack y roadmap producto. Transformación digital sin contratar CTO interno.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
       src: "/strategie/strategie-cto.webp",
-      alt: "Estrategia digital",
+      alt: "Dirección digital externalizada y CTO as a Service",
       height: "330px",
     },
   },
   {
-    title: "Desarrollo web moderno y apps de alto rendimiento",
+    title: "Desarrollo web React Next.js de alto rendimiento",
     description:
-      "Creamos sitios y aplicaciones modernos, rápidos y seguros, orientados a conversión y rendimiento. Tecnologías recientes (React, Next.js, Astro) y buenas prácticas estrictas en UX, accesibilidad y tiempos de carga. Cada plataforma se diseña para crecer de forma sostenible.",
+      "Desarrollo web empresarial a medida con React, Next.js y Astro. Desarrollo web profesional para empresas exigentes. Arquitectura web escalable, plataformas digitales empresariales y soluciones web de alto rendimiento. Cada plataforma se diseña para escalar y apoyar tu crecimiento internacional.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
     image: {
       src: "/strategie/dev-web.webp",
-      alt: "Desarrollo web moderno",
+      alt: "Desarrollo web React Next.js alto rendimiento",
       className: "service-image-span-two",
       height: "330px",
     },
@@ -39,14 +39,14 @@ export const o7HomeServices = [
   {
     title: "CMS headless y backends a medida",
     description:
-      "Implementamos CMS headless y backends a medida para industrializar contenidos y flujos de negocio. Modelado de datos, APIs, roles, workflows de publicación e integraciones externas (CRM, formularios, analytics) para ofrecer flexibilidad, performance y administración simple.",
+      "Implementamos CMS headless y backends a medida para industrializar contenidos y flujos de negocio. Consultoría especializada en modelado de datos, APIs, roles, workflows de publicación e integraciones externas (CRM, formularios, analytics). Soluciones que ofrecen flexibilidad, performance y administración simple para empresas.",
     iconClass: "feather-trending-up",
     align: "text-left",
   },
   {
     title: "Inteligencia artificial y automatización de procesos",
     description:
-      "Integramos IA y automatización para optimizar procesos internos y digitales. Cualificación de leads, tareas repetitivas, extracción y análisis de datos o asistentes inteligentes: cada uso se define para garantizar seguridad, fiabilidad y retorno medible.",
+      "Integramos IA y automatización empresarial para optimizar procesos internos y digitales. Cualificación de leads, tareas repetitivas, extracción y análisis de datos o asistentes inteligentes: cada uso se define para garantizar seguridad, fiabilidad y retorno medible.",
     iconClass: "feather-layers",
     align: "text-left",
     image: {
@@ -55,14 +55,14 @@ export const o7HomeServices = [
     },
   },
   {
-    title: "SEO técnico y rendimiento digital",
+    title: "SEO técnico internacional & auditoría SEO avanzada",
     description:
-      "Aplicamos SEO técnico orientado a resultados: estructura del sitio, performance, optimización de metadatos, datos estructurados y seguimiento analítico. Objetivo: visibilidad sostenible en Google, tráfico cualificado y mejor conversión.",
+      "Consultoría SEO técnica especializada en posicionamiento internacional. Auditoría SEO técnica, optimización SEO técnica, datos estructurados Schema.org y estrategia SEO técnica para sitios internacionales B2B. Visibilidad sostenible en Google para mercados internacionales.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
       src: "/strategie/seo-perfo.webp",
-      alt: "Panel de rendimiento SEO",
+      alt: "SEO técnico internacional y auditoría avanzada",
     },
   },
   {
@@ -154,8 +154,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital se especializa en transformación digital, desarrollo web moderno y performance técnica y operativa. Acompañamos a empresas en Francia, Norteamérica y Latinoamérica en el diseño, construcción y evolución de sus plataformas digitales.",
-  "Nuestra experiencia abarca toda la cadena de valor: estrategia digital y arquitectura moderna, desarrollo web de alto rendimiento, CMS headless y backends, inteligencia artificial y automatización, SEO técnico avanzado, infogestión y soporte.",
+  "O7 Digital es una agencia digital especializada en transformación digital, desarrollo web moderno y performance técnica y operativa. Acompañamos a empresas internacionales en el diseño, construcción y evolución de sus plataformas digitales.",
+  "Nuestra experiencia abarca toda la cadena de valor: estrategia digital empresarial, consultoría arquitectura técnica, desarrollo web de alto rendimiento, CMS headless, inteligencia artificial y automatización, SEO técnico avanzado, consultoría DevOps, infogestión IT y soporte.",
 ];
 
 export const o7Methodology = [
@@ -198,6 +198,8 @@ export const o7ContactCopy = {
   ],
   preForm:
     "Tras un primer intercambio, proponemos un enfoque claro y estructurado: definición de necesidades, análisis del contexto, recomendaciones y plan de acción. Cada colaboración es a medida, con transparencia y compromiso.",
+  officesTitle: "Nuestras oficinas internacionales",
+  officesDescription: "Una presencia global para acompañarte mejor",
   labels: {
     emailTitle: "Email",
     phoneTitle: "Teléfono",

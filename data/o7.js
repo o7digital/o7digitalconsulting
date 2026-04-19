@@ -23,39 +23,39 @@ export const o7HeroSlides = [
 ];
 
 export const o7HomeIntro = {
-  eyebrow: "Présentation O7 Digital",
-  title: "O7 Digital : ingénierie, stratégie et performance digitale",
+  eyebrow: "Direction digitale externalisée",
+  title: "CTO as a Service & transformation digitale pour groupes internationaux",
   description:
-    "O7 Digital est une agence spécialisée dans la transformation digitale, le développement web moderne et l'optimisation de la performance. Nous accompagnons les entreprises en France, en Amérique du Nord et en Amérique Latine dans la conception, la mise en œuvre et l'évolution de leurs solutions digitales, en combinant stratégie, ingénierie et innovation.",
+    "O7 Digital accompagne la transformation digitale des entreprises internationales. Direction digitale externalisée, architecture web haute performance, SEO technique et pilotage de projets digitaux complexes pour groupes B2B exigeants.",
   bullets: [
-    "Notre expertise couvre plusieurs domaines clés : stratégie digitale, développement web haute performance, CMS headless, intelligence artificielle, automatisation, SEO technique et optimisation continue.",
-    "Nous aidons les organisations à créer des plateformes rapides, fiables, sécurisées et orientées résultats. O7 Digital : la technologie au service de votre croissance.",
+    "Expertise en consulting IT stratégique : CTO as a Service international, conseil en architecture technique, développement web React Next.js, CMS headless entreprise et automatisation des processus métiers.",
+    "Consulting digital B2B : nous aidons les organisations à créer des plateformes rapides, fiables et sécurisées. O7 Digital : la technologie au service de votre croissance internationale.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "Stratégie digitale & CTO as a Service",
+    title: "CTO as a Service international",
     description:
-      "Nous accompagnons les dirigeants et équipes dans leurs décisions technologiques clés en intervenant comme CTO as a Service. Audit technique, définition d’architecture, choix de stack, pilotage des prestataires et roadmap produit font partie de notre accompagnement. L’objectif est de sécuriser la scalabilité, la performance et la cohérence technique des projets digitaux, sans recruter immédiatement un CTO interne.",
+      "Direction digitale externalisée pour entreprises internationales. Nous intervenons comme CTO as a Service pour sécuriser vos décisions technologiques : audit SEO technique avancé, conseil en architecture technique, pilotage de projets digitaux complexes, choix de stack et roadmap produit. Accompagnement transformation digitale groupes internationaux sans recruter un CTO interne.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
       src: "/strategie/strategie-cto.webp",
-      alt: "Atelier de stratégie digitale",
+      alt: "Direction digitale externalisée et CTO as a Service",
       height: "330px",
     },
   },
   {
-    title: "Développement web moderne & applications performantes",
+    title: "Développement web React Next.js haute performance",
     description:
-      "Nous concevons des sites web et applications modernes, rapides et sécurisés, orientés conversion et performance. Nos développements reposent sur des technologies récentes (React, Next.js, Astro selon les projets) et des bonnes pratiques strictes en matière d’UX, d’accessibilité et de temps de chargement. Chaque plateforme est pensée pour évoluer durablement et soutenir la croissance.",
+      "Agence de consulting digital internationale. Développement web sur mesure avec React, Next.js et Astro. Architecture web haute performance pour entreprises exigeantes. Optimisation de performance web, CMS headless entreprise, intégration intelligence artificielle. Chaque plateforme est conçue pour évoluer durablement et soutenir votre croissance internationale.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
     image: {
       src: "/strategie/dev-web.webp",
-      alt: "Développement web moderne",
+      alt: "Développement web React Next.js haute performance",
       className: "service-image-span-two",
       height: "330px",
     },
@@ -63,7 +63,7 @@ export const o7HomeServices = [
   {
     title: "CMS headless & backends sur mesure",
     description:
-      "Nous mettons en place des CMS headless et backends sur mesure pour industrialiser la gestion de contenu et les flux métiers. Modélisation des données, APIs, rôles utilisateurs, workflows de publication et intégrations externes (CRM, formulaires, analytics) sont conçus pour offrir flexibilité, performance et simplicité d’administration.",
+      "Nous mettons en place des CMS headless et backends sur mesure pour industrialiser la gestion de contenu et les flux métiers. Modélisation des données, APIs, rôles utilisateurs, workflows de publication et intégrations externes (CRM, formulaires, analytics). Solutions conçues pour offrir flexibilité, performance et simplicité d'administration.",
     iconClass: "feather-trending-up",
     align: "text-left",
   },
@@ -79,20 +79,20 @@ export const o7HomeServices = [
     },
   },
   {
-    title: "SEO technique & performance digitale",
+    title: "SEO technique international & audit SEO avancé",
     description:
-      "Nous déployons une approche SEO technique orientée résultats, combinant structure du site, performance, optimisation des balises, données structurées et suivi analytique. L’objectif est d’améliorer durablement la visibilité sur Google, d’attirer un trafic qualifié et d’optimiser la conversion, tout en respectant les meilleures pratiques du référencement naturel.",
+      "Agence SEO technique spécialisée en référencement international. Audit SEO technique avancé, optimisation performance web internationale, données structurées Schema.org et stratégie SEO pour sites multilingues. Visibilité durable sur Google pour marchés internationaux.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
       src: "/strategie/seo-perfo.webp",
-      alt: "Tableau de bord de performance SEO",
+      alt: "SEO technique international et audit SEO avancé",
     },
   },
   {
     title: "Infogérance IT & support opérationnel",
     description:
-      "Nous assurons l’infogérance et le support opérationnel des environnements digitaux : maintenance, supervision, sauvegardes, sécurité et assistance utilisateurs. Nous accompagnons également les organisations sur Google Workspace et Microsoft 365 afin de garantir stabilité, continuité de service et productivité des équipes.",
+      "Nous assurons l'infogérance et le support opérationnel des environnements digitaux pour entreprises internationales. Maintenance, supervision, sauvegardes, sécurité et assistance utilisateurs. Nous accompagnons également les organisations sur Google Workspace et Microsoft 365 afin de garantir stabilité, continuité de service et productivité des équipes.",
     iconClass: "feather-command",
     align: "text-left",
     image: {
@@ -178,8 +178,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital est une agence spécialisée dans la transformation digitale, le développement web moderne et l’optimisation de la performance technique et opérationnelle. Nous accompagnons les entreprises en France, en Amérique du Nord et en Amérique Latine dans la conception, la construction et l’évolution de leurs plateformes digitales.",
-  "Notre expertise couvre l’ensemble de la chaîne de valeur : stratégie digitale et architecture moderne, développement web haute performance, intégration de CMS headless et backends, intelligence artificielle et automatisation, SEO technique avancé, infogérance et support.",
+  "O7 Digital est une agence de consulting digital spécialisée dans la transformation digitale, le développement web moderne et l'optimisation de la performance technique et opérationnelle. Nous accompagnons les entreprises internationales dans la conception, la construction et l'évolution de leurs plateformes digitales.",
+  "Notre expertise couvre l'ensemble de la chaîne de valeur : stratégie digitale et architecture moderne, développement web React Next.js, intégration de CMS headless et backends, intelligence artificielle et automatisation, SEO technique avancé, consulting DevOps, infogérance et support.",
 ];
 
 export const o7Methodology = [
@@ -445,6 +445,41 @@ export const o7ContactInfo = {
   email: "info@o7digital.com",
   phone: "",
   location: "France / Amérique du Nord / Amérique Latine",
+};
+
+export const o7ContactCopy = {
+  title: "Parlons de votre projet digital",
+  intro: [
+    "Chez O7 Digital Consulting, chaque collaboration commence par un échange clair et stratégique. Que vous ayez un projet précis ou une réflexion en cours, nous prenons le temps de comprendre vos enjeux business, vos objectifs et votre contexte technologique.",
+    "Nous accompagnons des dirigeants, des équipes et des organisations qui recherchent un partenaire impliqué, capable de structurer, piloter et faire évoluer leur écosystème digital dans la durée.",
+  ],
+  whenTitle: "Quand nous contacter ?",
+  whenItems: [
+    "Lancement ou refonte d'un site ou d'une plateforme digitale",
+    "Besoin d'un accompagnement CTO ou direction digitale",
+    "Problématiques de performance, SEO ou scalabilité",
+    "Projet nécessitant design, développement et vision stratégique",
+    "Volonté d'aligner le digital avec les objectifs business",
+  ],
+  preForm:
+    "Après un premier échange, nous vous proposons une approche claire et structurée : cadrage des besoins, analyse du contexte, recommandations et plan d'action. Chaque collaboration est pensée sur mesure, avec transparence et engagement.",
+  officesTitle: "Nos bureaux internationaux",
+  officesDescription: "Une présence mondiale pour mieux vous accompagner",
+  labels: {
+    emailTitle: "Email",
+    phoneTitle: "Téléphone",
+    phoneFallback: "Disponible sur demande",
+    bookingTitle: "Prendre rendez-vous",
+    bookingCta: "Planifier un échange",
+    namePlaceholder: "Nom complet",
+    emailPlaceholder: "Email professionnel",
+    phonePlaceholder: "Téléphone",
+    messagePlaceholder: "Votre message",
+    submit: "Envoyer",
+    sending: "Envoi...",
+    success: "Merci, votre message a bien été envoyé.",
+    error: "Une erreur est survenue, merci de réessayer.",
+  },
 };
 
 export const o7PortfolioCopy = {

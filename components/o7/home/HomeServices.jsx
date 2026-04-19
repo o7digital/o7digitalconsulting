@@ -59,6 +59,8 @@ export default function HomeServices({
                     <img
                       src={service.image.src}
                       alt={service.image.alt}
+                      loading="lazy"
+                      decoding="async"
                       className={`radius ${
                         service.image.className || (!service.image.width ? "w-100" : "")
                       }`}

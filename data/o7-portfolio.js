@@ -10,6 +10,7 @@ export const o7PortfolioProjects = [
     title: "El Ensueno",
     url: "https://www.el-ensueno.com/",
     category: "hospitality",
+    previewImage: "/assets/images/portfolio/el-ensueno-hero.webp",
   },
   {
     id: "villa-de-la-roca",
@@ -46,6 +47,7 @@ export const o7PortfolioProjects = [
     title: "GC Chapa Abogados",
     url: "https://gcchapacabogados.com/",
     category: "legal",
+    previewImage: "/assets/images/portfolio/gc-chapa-abogados.png",
   },
   {
     id: "scm-abogados",
@@ -110,6 +112,7 @@ export const o7PortfolioProjects = [
     url: "https://www.el-murmullo.com/",
     category: "hospitality",
     alt: "Luxury romantic boutique hotel in Zihuatanejo Ixtapa, Mexico",
+    previewImage: "/assets/images/portfolio/el-murmullo.png",
   },
   {
     id: "my-light-art-gallery",
@@ -128,5 +131,26 @@ export const o7PortfolioProjects = [
     title: "Transteck",
     url: "https://www.transteck.online/",
     category: "technologySecurity",
+  },
+  {
+    id: "elite-ride-mexico",
+    title: "Elite Ride Mexico",
+    url: "https://www.eliteridemexico.com/",
+    category: "corporate",
+    previewImage: "/assets/images/portfolio/elite-ride-mexico.png",
+  },
+  {
+    id: "delicia-de-maiz",
+    title: "Delicia de Maíz",
+    url: "https://deliciademaiz.com/",
+    category: "ecommerce",
+    previewImage: "/assets/images/portfolio/delicia-de-maiz.png",
+  },
+  {
+    id: "duc-drivers-financing",
+    title: "DUC Drivers Financing",
+    url: "https://ducdriversfinancing.com/",
+    category: "corporate",
+    previewImage: "/assets/images/portfolio/duc-drivers-financing.png",
   },
 ];

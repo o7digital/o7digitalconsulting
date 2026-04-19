@@ -7,6 +7,7 @@ import React from "react";
 export const metadata = {
   title: "Tab || Showcase page for O7 Digital Consulting website templates and components",
   description: "Showcase page for O7 Digital Consulting website templates and components",
+  robots: { index: false, follow: true },
 };
 export default function page() {
   return (

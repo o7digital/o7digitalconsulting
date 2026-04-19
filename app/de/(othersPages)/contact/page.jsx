@@ -15,11 +15,12 @@ export const metadata = {
       'en': 'https://www.o7digital-consulting.com/en/contact',
       'es': 'https://www.o7digital-consulting.com/es/contact',
       'de': 'https://www.o7digital-consulting.com/de/contact',
+      'it': 'https://www.o7digital-consulting.com/it/contact',
     },
   },
   openGraph: {
     locale: 'de_DE',
-    alternateLocale: ['fr_FR', 'en_US', 'es_ES'],
+    alternateLocale: ['fr_FR', 'en_US', 'es_ES', 'it_IT'],
   },
 };
 

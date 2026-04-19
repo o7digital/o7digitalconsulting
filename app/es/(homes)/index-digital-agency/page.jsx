@@ -11,11 +11,13 @@ import {
   o7HomeServices as o7HomeServicesEs,
   o7CtaBlock as o7CtaEs,
 } from "@/data/o7.es";
+import { spanishSeoKeywords } from "@/data/seoKeywords";
 
 export const metadata = {
-  title: "O7 Digital Consulting | Ingeniería, estrategia y desarrollo web",
+  title: "CTO as a Service Madrid Barcelona México Monterrey Guadalajara | Dirección Digital Externalizada",
   description:
-    "Agencia de consultoría digital en Madrid y México especializada en CTO as a Service, desarrollo de sitios web a medida, consultoría DevOps, cloud, integración IA y estrategia SEO profesional.",
+    "CTO as a Service Madrid, Barcelona, Valencia, Sevilla, Ciudad de México, Monterrey y Guadalajara. Dirección digital externalizada México y España. Consultoría SEO técnica México y Madrid, consultoría IT estratégica España y México, arquitectura web escalable, transformación digital empresas México y España. Consultoría digital B2B internacional.",
+  keywords: spanishSeoKeywords,
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/es/index-digital-agency',
     languages: {
@@ -23,11 +25,12 @@ export const metadata = {
       'en': 'https://www.o7digital-consulting.com/en/index-digital-agency',
       'es': 'https://www.o7digital-consulting.com/es/index-digital-agency',
       'de': 'https://www.o7digital-consulting.com/de/index-digital-agency',
+      'it': 'https://www.o7digital-consulting.com/it/index-digital-agency',
     },
   },
   openGraph: {
     locale: 'es_ES',
-    alternateLocale: ['fr_FR', 'en_US', 'de_DE'],
+    alternateLocale: ['fr_FR', 'en_US', 'de_DE', 'it_IT'],
   },
 };
 
@@ -50,8 +53,8 @@ export default function HomeEs() {
             "@id": "https://www.o7digital-consulting.com/es/#organization",
             "name": "O7 Digital Consulting",
             "url": "https://www.o7digital-consulting.com/es",
-            "logo": "https://www.o7digital-consulting.com/logo.png",
-            "description": "Agencia de consultoría digital en Madrid y México especializada en CTO as a Service, desarrollo de sitios web a medida, consultoría DevOps, cloud, integración IA y estrategia SEO profesional.",
+            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "description": "Agencia digital Madrid, Barcelona, Ciudad de México, Monterrey y Guadalajara especializada en CTO as a Service, desarrollo web React Next.js, consultoría DevOps México y España, CMS headless para empresas, integración IA y SEO técnico México y España.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
             ],
@@ -63,7 +66,77 @@ export default function HomeEs() {
               },
               { 
                 "@type": "City", 
+                "name": "Barcelona",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Valencia",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Sevilla",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Málaga",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Bilbao",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Zaragoza",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
+                "name": "Alicante",
+                "addressCountry": "ES"
+              },
+              { 
+                "@type": "City", 
                 "name": "Ciudad de México",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Monterrey",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Guadalajara",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Querétaro",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Puebla",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Tijuana",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Mérida",
+                "addressCountry": "MX"
+              },
+              { 
+                "@type": "City", 
+                "name": "Cancún",
                 "addressCountry": "MX"
               },
               { "@type": "Country", "name": "España" },
@@ -81,35 +154,163 @@ export default function HomeEs() {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "CTO as a Service",
-                    "description": "Servicios de dirección técnica externalizada"
+                    "name": "CTO as a Service Madrid Barcelona México Monterrey Guadalajara",
+                    "description": "Dirección digital externalizada México y España, dirección tecnológica externalizada para empresas"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Desarrollo de sitios web a medida",
-                    "description": "Desarrollo web personalizado en Madrid y México"
+                    "name": "Desarrollo web a medida México y España",
+                    "description": "Desarrollo web React México y España, desarrollo web Next.js con arquitectura escalable"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Consultoría DevOps y Cloud",
-                    "description": "Consultoría en infraestructura cloud y DevOps"
+                    "name": "Consultoría DevOps México y España",
+                    "description": "Consultoría cloud México y España, infraestructura cloud empresas"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Estrategia SEO profesional",
-                    "description": "Optimización SEO técnica y estratégica"
+                    "name": "SEO técnico México y España",
+                    "description": "Consultoría SEO técnica México y España, auditoría SEO técnica avanzada"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "CMS headless para empresas México y España",
+                    "description": "Consultoría CMS headless México y España, gestión de contenidos empresariales"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Transformación digital empresas México y España",
+                    "description": "Consultoría IT estratégica México y España, estrategia digital empresarial"
                   }
                 }
               ]
+            }
+          }
+        `}
+      </Script>
+      <Script id="ld-professionalservice-es" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "@id": "https://www.o7digital-consulting.com/es/#professionalservice",
+            "name": "O7 Digital Consulting",
+            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital-consulting.com/es",
+            "telephone": "+33-XX-XX-XX-XX",
+            "priceRange": "€€€",
+            "address": [
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Paris",
+                "addressLocality": "Paris",
+                "addressRegion": "Île-de-France",
+                "postalCode": "75000",
+                "addressCountry": "FR"
+              },
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Montréal",
+                "addressLocality": "Montréal",
+                "addressRegion": "QC",
+                "postalCode": "H0H 0H0",
+                "addressCountry": "CA"
+              }
+            ],
+            "geo": [
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 48.8566,
+                "longitude": 2.3522
+              },
+              {
+                "@type": "GeoCoordinates",
+                "latitude": 45.5017,
+                "longitude": -73.5673
+              }
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/o7-digital-consulting"
+            ]
+          }
+        `}
+      </Script>
+      <Script id="ld-website-es" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://www.o7digital-consulting.com/es/#website",
+            "url": "https://www.o7digital-consulting.com/es",
+            "name": "O7 Digital Consulting",
+            "inLanguage": "es-ES",
+            "publisher": {
+              "@id": "https://www.o7digital-consulting.com/es/#organization"
+            }
+          }
+        `}
+      </Script>
+      <Script id="ld-webpage-es" type="application/ld+json" strategy="afterInteractive">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://www.o7digital-consulting.com/es/index-digital-agency#webpage",
+            "url": "https://www.o7digital-consulting.com/es/index-digital-agency",
+            "name": "CTO as a Service Madrid Barcelona México Monterrey Guadalajara | Dirección Digital Externalizada",
+            "description": "CTO as a Service Madrid, Barcelona, Valencia, Sevilla, Ciudad de México, Monterrey y Guadalajara. Dirección digital externalizada México y España. Consultoría SEO técnica México y Madrid, consultoría IT estratégica España y México, arquitectura web escalable, transformación digital empresas México y España. Consultoría digital B2B internacional.",
+            "inLanguage": "es-ES",
+            "isPartOf": {
+              "@id": "https://www.o7digital-consulting.com/es/#website"
+            },
+            "about": {
+              "@id": "https://www.o7digital-consulting.com/es/#organization"
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Inicio",
+                  "item": "https://www.o7digital-consulting.com/es/index-digital-agency"
+                }
+              ]
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.o7digital-consulting.com/es/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
             }
           }
         `}

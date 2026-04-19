@@ -2,6 +2,7 @@ import React from "react";
 import Footer2 from "@/components/footers/Footer2";
 import Header2 from "@/components/headers/Header2";
 import ContactContent from "@/components/o7/contact/ContactContent";
+import { o7ContactCopy } from "@/data/o7";
 
 export const metadata = {
   title: "Contact O7 Digital Consulting | Parlez de votre projet digital",
@@ -14,11 +15,12 @@ export const metadata = {
       'en': 'https://www.o7digital-consulting.com/en/contact',
       'es': 'https://www.o7digital-consulting.com/es/contact',
       'de': 'https://www.o7digital-consulting.com/de/contact',
+      'it': 'https://www.o7digital-consulting.com/it/contact',
     },
   },
   openGraph: {
     locale: 'fr_FR',
-    alternateLocale: ['en_US', 'es_ES', 'de_DE'],
+    alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
   },
 };
 
@@ -30,7 +32,7 @@ export default function Page() {
         <div className="rainbow-gradient-circle" />
         <div className="rainbow-gradient-circle theme-pink" />
       </div>
-      <ContactContent />
+      <ContactContent copy={o7ContactCopy} />
       <Footer2 />
     </>
   );

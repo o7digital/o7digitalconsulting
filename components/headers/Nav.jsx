@@ -3,6 +3,7 @@ import { menuItems } from "@/data/menu";
 import { menuItemsEn } from "@/data/menu-en";
 import { menuItemsEs } from "@/data/menu-es";
 import { menuItemsDe } from "@/data/menu-de";
+import { menuItemsIt } from "@/data/menu-it";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -19,6 +20,8 @@ export default function Nav({ items }) {
       ? menuItemsEs
       : locale === "de"
       ? menuItemsDe
+      : locale === "it"
+      ? menuItemsIt
       : menuItems);
 
   const isActiveParent = (menu) => {

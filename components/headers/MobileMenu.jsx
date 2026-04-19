@@ -3,6 +3,7 @@ import { menuItems } from "@/data/menu";
 import { menuItemsEn } from "@/data/menu-en";
 import { menuItemsEs } from "@/data/menu-es";
 import { menuItemsDe } from "@/data/menu-de";
+import { menuItemsIt } from "@/data/menu-it";
 import { closeMenu } from "@/utlis/toggleMenu";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,6 +13,8 @@ import React, { useEffect, useRef } from "react";
 export default function MobileMenu() {
   const pathname = usePathname();
   const locale = pathname.split("/")[1];
+  const localePrefix =
+    pathname?.match(/^\/(en|es|de|it)(?=\/|$)/)?.[0] || "";
   const resolvedItems =
     locale === "en"
       ? menuItemsEn
@@ -19,9 +22,11 @@ export default function MobileMenu() {
       ? menuItemsEs
       : locale === "de"
       ? menuItemsDe
+      : locale === "it"
+      ? menuItemsIt
       : menuItems;
   const prefix =
-    locale === "en" ? "/en" : locale === "es" ? "/es" : locale === "de" ? "/de" : "";
+    locale === "en" ? "/en" : locale === "es" ? "/es" : locale === "de" ? "/de" : locale === "it" ? "/it" : "";
   const popupRef = useRef(null); // For .popup-mobile-menu
   const innerRef = useRef(null); // For .inner
 
@@ -80,6 +85,14 @@ export default function MobileMenu() {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
+
+  const buildLocaleHref = (nextLocale) => {
+    const current = pathname || "";
+    const stripped = current.replace(/^\/(en|es|de|it)(?=\/|$)/, "");
+    if (nextLocale === "fr") return stripped || "/";
+    const base = stripped.startsWith("/") ? stripped : `/${stripped}`;
+    return `/${nextLocale}${base === "/" ? "" : base}`;
+  };
 
   const isActiveParent = (menu) => {
     var isActive = false;
@@ -220,6 +233,42 @@ export default function MobileMenu() {
             </li>
           ))}
         </ul>
+        <div className="mobile-language-switcher" aria-label="Language switcher">
+          <Link
+            href={buildLocaleHref("fr")}
+            className={localePrefix === "" ? "active" : ""}
+          >
+            FR
+          </Link>
+          <span className="separator">|</span>
+          <Link
+            href={buildLocaleHref("en")}
+            className={localePrefix === "/en" ? "active" : ""}
+          >
+            EN
+          </Link>
+          <span className="separator">|</span>
+          <Link
+            href={buildLocaleHref("es")}
+            className={localePrefix === "/es" ? "active" : ""}
+          >
+            ES
+          </Link>
+          <span className="separator">|</span>
+          <Link
+            href={buildLocaleHref("de")}
+            className={localePrefix === "/de" ? "active" : ""}
+          >
+            DE
+          </Link>
+          <span className="separator">|</span>
+          <Link
+            href={buildLocaleHref("it")}
+            className={localePrefix === "/it" ? "active" : ""}
+          >
+            IT
+          </Link>
+        </div>
       </div>
     </div>
   );
