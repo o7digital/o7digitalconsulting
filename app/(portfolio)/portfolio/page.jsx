@@ -11,6 +11,7 @@ export const metadata = {
   alternates: {
     canonical: "https://www.o7digital-consulting.com/portfolio",
     languages: {
+      "x-default": "https://www.o7digital-consulting.com/portfolio",
       fr: "https://www.o7digital-consulting.com/portfolio",
       en: "https://www.o7digital-consulting.com/en/portfolio",
       es: "https://www.o7digital-consulting.com/es/portfolio",
@@ -19,8 +20,27 @@ export const metadata = {
     },
   },
   openGraph: {
+    type: "website",
     locale: "fr_FR",
     alternateLocale: ["en_US", "es_ES", "de_DE", "it_IT"],
+    url: "https://www.o7digital-consulting.com/portfolio",
+    siteName: "O7 Digital Consulting",
+    title: o7PortfolioCopy.metaTitle,
+    description: o7PortfolioCopy.metaDescription,
+    images: [
+      {
+        url: "/assets/images/o7digital-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio O7 Digital Consulting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: o7PortfolioCopy.metaTitle,
+    description: o7PortfolioCopy.metaDescription,
+    images: ["/assets/images/o7digital-logo.png"],
   },
 };
 

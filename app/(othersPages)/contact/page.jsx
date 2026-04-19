@@ -11,6 +11,7 @@ export const metadata = {
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/contact',
     languages: {
+      'x-default': 'https://www.o7digital-consulting.com/contact',
       'fr': 'https://www.o7digital-consulting.com/contact',
       'en': 'https://www.o7digital-consulting.com/en/contact',
       'es': 'https://www.o7digital-consulting.com/es/contact',
@@ -19,8 +20,29 @@ export const metadata = {
     },
   },
   openGraph: {
+    type: 'website',
     locale: 'fr_FR',
     alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
+    url: 'https://www.o7digital-consulting.com/contact',
+    siteName: 'O7 Digital Consulting',
+    title: 'Contact O7 Digital Consulting | Parlez de votre projet digital',
+    description:
+      "Contactez O7 Digital Consulting pour échanger sur votre projet digital, votre stratégie technologique ou votre transformation digitale.",
+    images: [
+      {
+        url: '/assets/images/o7digital-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Contact O7 Digital Consulting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact O7 Digital Consulting | Parlez de votre projet digital',
+    description:
+      'Réponse rapide et accompagnement personnalisé pour votre projet digital.',
+    images: ['/assets/images/o7digital-logo.png'],
   },
 };
 
