@@ -9,12 +9,38 @@ export const metadata = {
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/privacy-policy',
     languages: {
+      'x-default': 'https://www.o7digital-consulting.com/privacy-policy',
       'fr': 'https://www.o7digital-consulting.com/privacy-policy',
       'en': 'https://www.o7digital-consulting.com/en/privacy-policy',
       'es': 'https://www.o7digital-consulting.com/es/privacy-policy',
       'de': 'https://www.o7digital-consulting.com/de/privacy-policy',
       'it': 'https://www.o7digital-consulting.com/it/privacy-policy',
     },
+  },
+  openGraph: {
+    type: 'article',
+    locale: 'fr_FR',
+    alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
+    url: 'https://www.o7digital-consulting.com/privacy-policy',
+    siteName: 'O7 Digital Consulting',
+    title: 'Mentions Légales & Politique de Confidentialité – O7 Digital',
+    description:
+      "Mentions légales, informations éditeur, hébergement et politique de confidentialité d’O7 Digital Consulting.",
+    images: [
+      {
+        url: '/assets/images/o7digital-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mentions légales O7 Digital',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mentions Légales & Politique de Confidentialité – O7 Digital',
+    description:
+      "Mentions légales, informations éditeur, hébergement et politique de confidentialité d’O7 Digital Consulting.",
+    images: ['/assets/images/o7digital-logo.png'],
   },
 };
 

@@ -15,6 +15,7 @@ export const metadata = {
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/about',
     languages: {
+      'x-default': 'https://www.o7digital-consulting.com/about',
       'fr': 'https://www.o7digital-consulting.com/about',
       'en': 'https://www.o7digital-consulting.com/en/about',
       'es': 'https://www.o7digital-consulting.com/es/about',
@@ -23,8 +24,31 @@ export const metadata = {
     },
   },
   openGraph: {
+    type: 'article',
     locale: 'fr_FR',
     alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
+    url: 'https://www.o7digital-consulting.com/about',
+    siteName: 'O7 Digital Consulting',
+    title:
+      "À propos de O7 Digital Consulting | Direction digitale & consulting stratégique",
+    description:
+      "Découvrez O7 Digital Consulting, agence de consulting digital impliquée au cœur du business de ses clients.",
+    images: [
+      {
+        url: '/assets/images/o7digital-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'À propos O7 Digital Consulting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title:
+      "À propos de O7 Digital Consulting | Direction digitale & consulting stratégique",
+    description:
+      "Agence de consulting digital impliquée au cœur du business de ses clients.",
+    images: ['/assets/images/o7digital-logo.png'],
   },
 };
 

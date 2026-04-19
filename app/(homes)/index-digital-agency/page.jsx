@@ -16,6 +16,7 @@ export const metadata = {
   alternates: {
     canonical: 'https://www.o7digital-consulting.com/index-digital-agency',
     languages: {
+      'x-default': 'https://www.o7digital-consulting.com/index-digital-agency',
       'fr': 'https://www.o7digital-consulting.com/index-digital-agency',
       'en': 'https://www.o7digital-consulting.com/en/index-digital-agency',
       'es': 'https://www.o7digital-consulting.com/es/index-digital-agency',
@@ -24,8 +25,31 @@ export const metadata = {
     },
   },
   openGraph: {
+    type: 'website',
     locale: 'fr_FR',
     alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
+    url: 'https://www.o7digital-consulting.com/index-digital-agency',
+    siteName: 'O7 Digital Consulting',
+    title:
+      "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal | Direction Digitale Externalisée",
+    description:
+      "CTO as a Service Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec. Direction digitale externalisée Paris, Lyon, Montréal.",
+    images: [
+      {
+        url: '/assets/images/o7digital-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'O7 Digital Consulting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title:
+      "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal | Direction Digitale Externalisée",
+    description:
+      "Direction digitale externalisée, SEO technique international, architecture web haute performance.",
+    images: ['/assets/images/o7digital-logo.png'],
   },
 };
 
