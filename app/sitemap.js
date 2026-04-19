@@ -27,6 +27,7 @@ export default function sitemap() {
         priority: route.priority,
         alternates: {
           languages: {
+            'x-default': `${baseUrl}${route.path}`,
             fr: `${baseUrl}${route.path}`,
             en: `${baseUrl}/en${route.path}`,
             es: `${baseUrl}/es${route.path}`,

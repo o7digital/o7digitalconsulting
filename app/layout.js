@@ -27,6 +27,7 @@ export const metadata = {
   alternates: {
     canonical: '/index-digital-agency',
     languages: {
+      'x-default': '/index-digital-agency',
       'fr': '/index-digital-agency',
       'en': '/en/index-digital-agency',
       'es': '/es/index-digital-agency',
@@ -37,7 +38,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    alternateLocale: ['en_US', 'es_ES', 'de_DE'],
+    alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
     url: 'https://www.o7digital-consulting.com',
     siteName: 'O7 Digital Consulting',
     title: 'O7 Digital Consulting | Agence de consulting digital, CTO & développement web',
@@ -50,6 +51,12 @@ export const metadata = {
         alt: 'O7 Digital Consulting',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'O7 Digital Consulting | Agence de consulting digital, CTO & développement web',
+    description: 'O7 Digital Consulting est une agence de consulting digital spécialisée en stratégie digitale, CTO as a Service, développement web moderne, design graphique, motion design, SEO et performance digitale.',
+    images: ['/assets/images/o7digital-logo.png'],
   },
   robots: {
     index: true,
