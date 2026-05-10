@@ -17,8 +17,6 @@ const DEFAULT_FR_SLIDES = [
     title: "Sites Astro & React conçus pour Google",
     subtitle:
       "SEO technique, performance web et architecture moderne pour positionner votre site plus rapidement.",
-    shortText:
-      "O7 Digital crée des sites rapides, multilingues et optimisés pour Google avec Astro, React, CMS headless et une stratégie SEO orientée résultats.",
     ctaLabel: "Demander un audit SEO",
     ctaHref: "/contact",
   },
@@ -26,8 +24,6 @@ const DEFAULT_FR_SLIDES = [
     title: "SEO technique & performance web",
     subtitle:
       "Un site rapide, propre et bien structuré donne à Google de meilleures conditions pour comprendre, indexer et positionner vos pages.",
-    shortText:
-      "Core Web Vitals, balises SEO, structure HTML, contenus optimisés, maillage interne et indexation sont intégrés dès la conception.",
     ctaLabel: "Voir notre méthode SEO",
     ctaHref: "/contact",
   },
@@ -35,8 +31,6 @@ const DEFAULT_FR_SLIDES = [
     title: "Migration WordPress vers Astro",
     subtitle:
       "Nous transformons les sites WordPress lents ou surchargés en plateformes rapides, modernes et optimisées pour le référencement naturel.",
-    shortText:
-      "Conservez votre contenu, améliorez votre vitesse, renforcez votre SEO et donnez à votre site une base technique plus professionnelle.",
     ctaLabel: "Migrer mon site",
     ctaHref: "/contact",
   },
@@ -44,8 +38,6 @@ const DEFAULT_FR_SLIDES = [
     title: "Premiers résultats SEO visibles rapidement",
     subtitle:
       "Sur des marchés ciblés, une bonne architecture technique et une stratégie SEO claire peuvent générer des résultats visibles en moins de 30 jours.",
-    shortText:
-      "Audit, mots-clés, optimisation technique, contenu SEO, performance mobile et suivi de positionnement : chaque page est construite pour être trouvée.",
     ctaLabel: "Parler de mon projet",
     ctaHref: "/contact",
   },
@@ -114,7 +106,7 @@ export default function Hero({
 
   return (
     <div
-      className="slider-area slider-style-1 variation-default height-850"
+      className="slider-area slider-style-1 variation-default height-850 hero-slider"
       style={{ position: "relative", overflow: "hidden" }}
       onMouseEnter={stop}
       onMouseLeave={start}
@@ -124,7 +116,7 @@ export default function Hero({
         {SLIDES.map((src, i) => {
           const content = slideContents[i] || slideContents[0];
           return (
-          <div key={`${src}-${i}`} className={`slide ${i === index ? "active" : ""}`}>
+          <div key={`${src}-${i}`} className={`slide hero-slide ${i === index ? "active" : ""}`}>
             <Image
               src={src}
               alt={`Hero slide ${i + 1}`}
@@ -136,12 +128,9 @@ export default function Hero({
             <div className="container" style={{ position: "relative", zIndex: 2 }}>
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="inner text-center hero-content-white">
+                  <div className="inner text-center hero-content hero-content-white">
                     <h1 className="title display-one">{content.title}</h1>
                     <p className="description">{content.subtitle}</p>
-                    {content.shortText ? (
-                      <p className="description hero-short-text">{content.shortText}</p>
-                    ) : null}
                     <div className="button-group">
                       <Link className="btn-default btn-medium btn-icon btn-border btn-hero" href={content.ctaHref}>
                         {content.ctaLabel}
@@ -191,29 +180,47 @@ export default function Hero({
           transition: opacity 800ms ease-in-out;
           will-change: opacity;
         }
+        .hero-slide::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.78) 0%,
+            rgba(0, 0, 0, 0.62) 45%,
+            rgba(0, 0, 0, 0.38) 100%
+          );
+          z-index: 1;
+          pointer-events: none;
+        }
         .slide.active {
           opacity: 1;
         }
-        .overlay {
-          position: absolute;
-          inset: 0;
-          background: rgba(0, 0, 0, 0.45);
-          z-index: 1;
+        .overlay { display: none; }
+        .hero-content,
+        .hero-slider-content,
+        .slider-content {
+          position: relative;
+          z-index: 2;
         }
         .hero-content-white .title,
         .hero-content-white .description {
           color: #fff !important;
         }
-        .hero-short-text {
-          max-width: 950px;
-          margin: 12px auto 0;
-          font-size: 1rem;
-          line-height: 1.65;
-          opacity: 0.95;
+        .hero-content h1,
+        .hero-content p,
+        .hero-slider h1,
+        .hero-slider p {
+          text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+        }
+        .hero-content-white .description {
+          color: #f3f4f6 !important;
         }
         .btn-hero {
           color: #fff !important;
-          border-color: rgba(255, 255, 255, 0.9) !important;
+          border: 1px solid rgba(255, 255, 255, 0.85) !important;
+          background: linear-gradient(135deg, #7b61ff 0%, #e95f7b 100%) !important;
+          box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
         }
         .hero-nav {
           position: absolute;
