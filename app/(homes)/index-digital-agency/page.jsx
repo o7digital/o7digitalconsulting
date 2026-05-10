@@ -10,9 +10,9 @@ import LocalCoverage from "@/components/o7/home/LocalCoverage";
 
 export const metadata = {
   title:
-    "Agence SEO technique Astro React | Migration WordPress vers Astro | O7 Digital",
+    "Agence SEO Astro React | Sites rapides & positionnement Google | O7 Digital",
   description:
-    "Agence SEO technique spécialisée Astro & React. Sites rapides, multilingues et optimisés Google. Migration WordPress vers Astro, Core Web Vitals, indexation, maillage interne et stratégie mots-clés pour des résultats visibles rapidement selon la concurrence.",
+    "O7 Digital développe des sites Astro et React rapides, multilingues et optimisés SEO pour améliorer votre visibilité Google. Migration WordPress vers Astro, SEO technique, performance web et stratégie de positionnement.",
   alternates: {
     canonical: 'https://www.o7digital.com/index-digital-agency',
     languages: {
@@ -31,9 +31,9 @@ export const metadata = {
     url: 'https://www.o7digital.com/index-digital-agency',
     siteName: 'O7 Digital Consulting',
     title:
-      "Agence SEO technique Astro React | Migration WordPress vers Astro | O7 Digital",
+      "Agence SEO Astro React | Sites rapides & positionnement Google | O7 Digital",
     description:
-      "Sites rapides et optimisés Google avec Astro & React, migration WordPress vers Astro, SEO technique et performance mobile.",
+      "O7 Digital développe des sites Astro et React rapides, multilingues et optimisés SEO pour améliorer votre visibilité Google. Migration WordPress vers Astro, SEO technique, performance web et stratégie de positionnement.",
     images: [
       {
         url: '/assets/images/o7digital-logo.png',
@@ -46,9 +46,9 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      "Agence SEO technique Astro React | Migration WordPress vers Astro | O7 Digital",
+      "Agence SEO Astro React | Sites rapides & positionnement Google | O7 Digital",
     description:
-      "SEO technique, Astro, React, migration WordPress vers Astro et performance web orientée résultats Google.",
+      "O7 Digital développe des sites Astro et React rapides, multilingues et optimisés SEO pour améliorer votre visibilité Google. Migration WordPress vers Astro, SEO technique, performance web et stratégie de positionnement.",
     images: ['/assets/images/o7digital-logo.png'],
   },
 };
