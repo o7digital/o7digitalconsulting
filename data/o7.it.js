@@ -226,7 +226,8 @@ export const o7PortfolioCopy = {
   metaDescription:
     "Scoprite i progetti di O7 Digital Consulting con anteprime live dinamiche dei siti web.",
   labels: {
-    viewSite: "Visita il sito",
+    viewProject: "Vedi il progetto",
+    pageOneGoogle: "Pagina 1 Google",
     loading: "Caricamento...",
     previewUnavailable: "Anteprima non disponibile",
   },
