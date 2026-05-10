@@ -65,6 +65,28 @@
     align-self: flex-start;
 }
 
+.o7-portfolio-seo-proof {
+    margin-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 12px;
+}
+
+.o7-portfolio-seo-title {
+    margin: 0 0 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.o7-portfolio-seo-keywords {
+    margin: 0;
+    font-size: 0.84rem;
+    line-height: 1.5;
+    color: var(--color-body);
+}
+
 .o7-portfolio-preview {
     position: relative;
     margin: 0;
