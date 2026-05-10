@@ -117,14 +117,7 @@
 }
 
 .o7-portfolio-placeholder {
-    background: linear-gradient(
-        110deg,
-        var(--color-blackest) 0%,
-        var(--color-darker) 45%,
-        var(--color-blackest) 70%
-    );
-    background-size: 200% 100%;
-    animation: o7-portfolio-shimmer 1.6s linear infinite;
+    display: none;
 }
 
 .o7-portfolio-card.is-loaded .o7-portfolio-placeholder {
