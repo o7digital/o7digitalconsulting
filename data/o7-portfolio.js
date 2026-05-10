@@ -66,6 +66,8 @@ export const o7PortfolioProjects = [
     title: "Mary Cielo",
     url: "https://marycielo.mx/",
     category: "hospitality",
+    previewImage:
+      "https://marycielo.mx/wp-content/uploads/2022/04/698eb08458461ec7b162801c6e46fc53.webp",
   },
   {
     id: "heli-america-mexico",
