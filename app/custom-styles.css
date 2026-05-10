@@ -89,12 +89,12 @@
     height: 100%;
     display: block;
     object-fit: cover;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.35s ease, transform 0.4s ease;
 }
 
-.o7-portfolio-card.is-loaded .o7-portfolio-preview img {
-    opacity: 1;
+.o7-portfolio-card.has-error .o7-portfolio-preview img {
+    opacity: 0;
 }
 
 .o7-portfolio-card:hover .o7-portfolio-preview img {
