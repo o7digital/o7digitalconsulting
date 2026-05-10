@@ -1,48 +1,49 @@
 export const o7HeroSlides = [
   {
     id: 1,
-    title: "Titre de slide temporaire 01",
+    title: "Sites web qui montent sur Google",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "Agence SEO technique spécialisée Astro & React. Architecture propre, Core Web Vitals et performance mobile pour des résultats visibles.",
     bgImageClass: "bg_image--6",
   },
   {
     id: 2,
-    title: "Titre de slide temporaire 02",
+    title: "Astro & React pour SEO et performance",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Développement rapide, contenu structuré, maillage interne et indexation maîtrisée pour viser la page 1 Google selon la concurrence.",
     bgImageClass: "bg_image--14",
   },
   {
     id: 3,
-    title: "Titre de slide temporaire 03",
+    title: "Migration WordPress vers Astro",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Refonte SEO-ready et migration technique vers Astro avec objectifs de premiers résultats en moins de 30 jours selon le niveau concurrentiel.",
     bgImageClass: "bg_image--15",
   },
 ];
 
 export const o7HomeIntro = {
-  eyebrow: "Direction digitale externalisée",
-  title: "CTO as a Service & transformation digitale pour groupes internationaux",
+  eyebrow: "Agence SEO technique",
+  title:
+    "Agence SEO technique spécialisée Astro & React pour atteindre la page 1 Google",
   description:
-    "O7 Digital accompagne la transformation digitale des entreprises internationales. Direction digitale externalisée, architecture web haute performance, SEO technique et pilotage de projets digitaux complexes pour groupes B2B exigeants.",
+    "Nous concevons des sites rapides, multilingues et optimisés Google avec Astro et React. Objectif : positions visibles rapidement, souvent en moins de 30 jours selon la concurrence.",
   bullets: [
-    "Expertise en consulting IT stratégique : CTO as a Service international, conseil en architecture technique, développement web React Next.js, CMS headless entreprise et automatisation des processus métiers.",
-    "Consulting digital B2B : nous aidons les organisations à créer des plateformes rapides, fiables et sécurisées. O7 Digital : la technologie au service de votre croissance internationale.",
+    "Performance mobile et Core Web Vitals, structure SEO technique, contenu ciblé mots-clés, maillage interne et indexation propre.",
+    "Migration WordPress vers Astro : reprise des contenus, redirections, nettoyage technique et montée SEO progressive.",
   ],
 };
 
 export const o7HomeServices = [
   {
-    title: "CTO as a Service international",
+    title: "SEO technique international & performance Google",
     description:
-      "Direction digitale externalisée pour entreprises internationales. Nous intervenons comme CTO as a Service pour sécuriser vos décisions technologiques : audit SEO technique avancé, conseil en architecture technique, pilotage de projets digitaux complexes, choix de stack et roadmap produit. Accompagnement transformation digitale groupes internationaux sans recruter un CTO interne.",
+      "Audit SEO technique, optimisation Core Web Vitals, architecture d'indexation, données structurées et stratégie de visibilité multilingue. Nous construisons des bases solides pour viser rapidement la page 1 Google selon le niveau de concurrence.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
       src: "/strategie/strategie-cto.webp",
-      alt: "Direction digitale externalisée et CTO as a Service",
+      alt: "SEO technique et performance web",
       height: "330px",
     },
   },
@@ -79,14 +80,14 @@ export const o7HomeServices = [
     },
   },
   {
-    title: "SEO technique international & audit SEO avancé",
+    title: "CTO as a Service (expertise secondaire)",
     description:
-      "Agence SEO technique spécialisée en référencement international. Audit SEO technique avancé, optimisation performance web internationale, données structurées Schema.org et stratégie SEO pour sites multilingues. Visibilité durable sur Google pour marchés internationaux.",
+      "Direction digitale externalisée pour entreprises internationales. Nous intervenons comme CTO as a Service pour sécuriser les décisions technologiques : architecture, roadmap produit, choix de stack, pilotage des équipes et gouvernance technique.",
     iconClass: "feather-shield",
     align: "text-left",
     image: {
       src: "/strategie/seo-perfo.webp",
-      alt: "SEO technique international et audit SEO avancé",
+      alt: "Direction digitale externalisée et CTO as a Service",
     },
   },
   {

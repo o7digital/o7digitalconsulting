@@ -10,30 +10,30 @@ import LocalCoverage from "@/components/o7/home/LocalCoverage";
 
 export const metadata = {
   title:
-    "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal | Direction Digitale Externalisée",
+    "Agence SEO technique Astro React | Migration WordPress vers Astro | O7 Digital",
   description:
-    "CTO as a Service Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec. Direction digitale externalisée Paris, Lyon, Montréal. SEO technique Paris et Montréal, consulting IT stratégique Montréal, architecture web haute performance, transformation digitale groupes internationaux France et Québec.",
+    "Agence SEO technique spécialisée Astro & React. Sites rapides, multilingues et optimisés Google. Migration WordPress vers Astro, Core Web Vitals, indexation, maillage interne et stratégie mots-clés pour des résultats visibles rapidement selon la concurrence.",
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/index-digital-agency',
+    canonical: 'https://www.o7digital.com/index-digital-agency',
     languages: {
-      'x-default': 'https://www.o7digital-consulting.com/index-digital-agency',
-      'fr': 'https://www.o7digital-consulting.com/index-digital-agency',
-      'en': 'https://www.o7digital-consulting.com/en/index-digital-agency',
-      'es': 'https://www.o7digital-consulting.com/es/index-digital-agency',
-      'de': 'https://www.o7digital-consulting.com/de/index-digital-agency',
-      'it': 'https://www.o7digital-consulting.com/it/index-digital-agency',
+      'x-default': 'https://www.o7digital.com/index-digital-agency',
+      'fr': 'https://www.o7digital.com/index-digital-agency',
+      'en': 'https://www.o7digital.com/en/index-digital-agency',
+      'es': 'https://www.o7digital.com/es/index-digital-agency',
+      'de': 'https://www.o7digital.com/de/index-digital-agency',
+      'it': 'https://www.o7digital.com/it/index-digital-agency',
     },
   },
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
     alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
-    url: 'https://www.o7digital-consulting.com/index-digital-agency',
+    url: 'https://www.o7digital.com/index-digital-agency',
     siteName: 'O7 Digital Consulting',
     title:
-      "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal | Direction Digitale Externalisée",
+      "Agence SEO technique Astro React | Migration WordPress vers Astro | O7 Digital",
     description:
-      "CTO as a Service Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec. Direction digitale externalisée Paris, Lyon, Montréal.",
+      "Sites rapides et optimisés Google avec Astro & React, migration WordPress vers Astro, SEO technique et performance mobile.",
     images: [
       {
         url: '/assets/images/o7digital-logo.png',
@@ -46,9 +46,9 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal | Direction Digitale Externalisée",
+      "Agence SEO technique Astro React | Migration WordPress vers Astro | O7 Digital",
     description:
-      "Direction digitale externalisée, SEO technique international, architecture web haute performance.",
+      "SEO technique, Astro, React, migration WordPress vers Astro et performance web orientée résultats Google.",
     images: ['/assets/images/o7digital-logo.png'],
   },
 };
@@ -69,10 +69,10 @@ export default function Home() {
           {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://www.o7digital-consulting.com/#organization",
+            "@id": "https://www.o7digital.com/#organization",
             "name": "O7 Digital Consulting",
-            "url": "https://www.o7digital-consulting.com",
-            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital.com",
+            "logo": "https://www.o7digital.com/assets/images/logo/logo.png",
             "description": "Agence de consulting digital à Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec spécialisée en CTO as a Service, développement web React Next.js, consulting DevOps, CMS headless entreprise, intégration IA et SEO technique avancé.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
@@ -222,10 +222,10 @@ export default function Home() {
           {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "@id": "https://www.o7digital-consulting.com/#professionalservice",
+            "@id": "https://www.o7digital.com/#professionalservice",
             "name": "O7 Digital Consulting",
-            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
-            "url": "https://www.o7digital-consulting.com",
+            "image": "https://www.o7digital.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital.com",
             "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
             "address": [
@@ -281,12 +281,12 @@ export default function Home() {
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "@id": "https://www.o7digital-consulting.com/#website",
-            "url": "https://www.o7digital-consulting.com",
+            "@id": "https://www.o7digital.com/#website",
+            "url": "https://www.o7digital.com",
             "name": "O7 Digital Consulting",
             "inLanguage": "fr-FR",
             "publisher": {
-              "@id": "https://www.o7digital-consulting.com/#organization"
+              "@id": "https://www.o7digital.com/#organization"
             }
           }
         `}
@@ -296,16 +296,16 @@ export default function Home() {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://www.o7digital-consulting.com/index-digital-agency#webpage",
-            "url": "https://www.o7digital-consulting.com/index-digital-agency",
+            "@id": "https://www.o7digital.com/index-digital-agency#webpage",
+            "url": "https://www.o7digital.com/index-digital-agency",
             "name": "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal | Direction Digitale Externalisée",
             "description": "CTO as a Service Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec. Direction digitale externalisée Paris, Lyon, Montréal. SEO technique Paris et Montréal, consulting IT stratégique Montréal, architecture web haute performance, transformation digitale groupes internationaux France et Québec.",
             "inLanguage": "fr-FR",
             "isPartOf": {
-              "@id": "https://www.o7digital-consulting.com/#website"
+              "@id": "https://www.o7digital.com/#website"
             },
             "about": {
-              "@id": "https://www.o7digital-consulting.com/#organization"
+              "@id": "https://www.o7digital.com/#organization"
             },
             "breadcrumb": {
               "@type": "BreadcrumbList",
@@ -314,7 +314,7 @@ export default function Home() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Accueil",
-                  "item": "https://www.o7digital-consulting.com/index-digital-agency"
+                  "item": "https://www.o7digital.com/index-digital-agency"
                 }
               ]
             },
@@ -322,7 +322,7 @@ export default function Home() {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.o7digital-consulting.com/search?q={search_term_string}"
+                "urlTemplate": "https://www.o7digital.com/search?q={search_term_string}"
               },
               "query-input": "required name=search_term_string"
             }

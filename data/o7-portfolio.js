@@ -110,7 +110,7 @@ export const o7PortfolioProjects = [
     url: "https://marycielo.mx/",
     category: "hospitality",
     previewImage:
-      "https://marycielo.mx/wp-content/uploads/2022/04/698eb08458461ec7b162801c6e46fc53.webp",
+      "https://marycielo.mx/wp-content/uploads/2023/03/Logo-Mar-y-Cielo-2023-500x500-1.png",
   },
   {
     id: "heli-america-mexico",
