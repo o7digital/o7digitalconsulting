@@ -12,24 +12,76 @@ const SLIDES = [
 
 const INTERVAL_MS = 5000; // 5s entre slides
 
+const DEFAULT_FR_SLIDES = [
+  {
+    title: "Sites Astro & React conçus pour Google",
+    subtitle:
+      "SEO technique, performance web et architecture moderne pour positionner votre site plus rapidement.",
+    shortText:
+      "O7 Digital crée des sites rapides, multilingues et optimisés pour Google avec Astro, React, CMS headless et une stratégie SEO orientée résultats.",
+    ctaLabel: "Demander un audit SEO",
+    ctaHref: "/contact",
+  },
+  {
+    title: "SEO technique & performance web",
+    subtitle:
+      "Un site rapide, propre et bien structuré donne à Google de meilleures conditions pour comprendre, indexer et positionner vos pages.",
+    shortText:
+      "Core Web Vitals, balises SEO, structure HTML, contenus optimisés, maillage interne et indexation sont intégrés dès la conception.",
+    ctaLabel: "Voir notre méthode SEO",
+    ctaHref: "/contact",
+  },
+  {
+    title: "Migration WordPress vers Astro",
+    subtitle:
+      "Nous transformons les sites WordPress lents ou surchargés en plateformes rapides, modernes et optimisées pour le référencement naturel.",
+    shortText:
+      "Conservez votre contenu, améliorez votre vitesse, renforcez votre SEO et donnez à votre site une base technique plus professionnelle.",
+    ctaLabel: "Migrer mon site",
+    ctaHref: "/contact",
+  },
+  {
+    title: "Premiers résultats SEO visibles rapidement",
+    subtitle:
+      "Sur des marchés ciblés, une bonne architecture technique et une stratégie SEO claire peuvent générer des résultats visibles en moins de 30 jours.",
+    shortText:
+      "Audit, mots-clés, optimisation technique, contenu SEO, performance mobile et suivi de positionnement : chaque page est construite pour être trouvée.",
+    ctaLabel: "Parler de mon projet",
+    ctaHref: "/contact",
+  },
+];
+
 export default function Hero({
-  title = (
-    <>
-      Nous vous accompagnons <br />
-      dans votre croissance et votre développement
-    </>
-  ),
-  description = "Go-to-market, marketing digital, et services IT & Cloud (infogérance, cybersécurité, consulting):",
-  ctaLabel = "Parler à un expert →",
-  ctaHref = "/contact",
+  title,
+  description,
+  ctaLabel,
+  ctaHref,
 }) {
   const [index, setIndex] = useState(0);
   const timerRef = useRef(null);
+  const useLegacySingleSlide =
+    typeof title !== "undefined" ||
+    typeof description !== "undefined" ||
+    typeof ctaLabel !== "undefined" ||
+    typeof ctaHref !== "undefined";
+  const slideContents = useLegacySingleSlide
+    ? SLIDES.map(() => ({
+        title:
+          title ||
+          "Sites Astro & React conçus pour Google",
+        subtitle:
+          description ||
+          "SEO technique, performance web et architecture moderne pour positionner votre site plus rapidement.",
+        shortText: "",
+        ctaLabel: ctaLabel || "Demander un audit SEO",
+        ctaHref: ctaHref || "/contact",
+      }))
+    : DEFAULT_FR_SLIDES;
 
   const start = () => {
     stop();
     timerRef.current = setInterval(() => {
-      setIndex((i) => (i + 1) % SLIDES.length);
+      setIndex((i) => (i + 1) % slideContents.length);
     }, INTERVAL_MS);
   };
   const stop = () => {
@@ -57,8 +109,8 @@ export default function Hero({
   }, []);
 
   const goPrev = () =>
-    setIndex((i) => (i - 1 + SLIDES.length) % SLIDES.length);
-  const goNext = () => setIndex((i) => (i + 1) % SLIDES.length);
+    setIndex((i) => (i - 1 + slideContents.length) % slideContents.length);
+  const goNext = () => setIndex((i) => (i + 1) % slideContents.length);
 
   return (
     <div
@@ -69,8 +121,10 @@ export default function Hero({
     >
       {/* Slides */}
       <div className="hero-slides">
-        {SLIDES.map((src, i) => (
-          <div key={src} className={`slide ${i === index ? "active" : ""}`}>
+        {SLIDES.map((src, i) => {
+          const content = slideContents[i] || slideContents[0];
+          return (
+          <div key={`${src}-${i}`} className={`slide ${i === index ? "active" : ""}`}>
             <Image
               src={src}
               alt={`Hero slide ${i + 1}`}
@@ -79,29 +133,30 @@ export default function Hero({
               sizes="100vw"
               style={{ objectFit: "cover" }}
             />
+            <div className="container" style={{ position: "relative", zIndex: 2 }}>
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="inner text-center hero-content-white">
+                    <h1 className="title display-one">{content.title}</h1>
+                    <p className="description">{content.subtitle}</p>
+                    {content.shortText ? (
+                      <p className="description hero-short-text">{content.shortText}</p>
+                    ) : null}
+                    <div className="button-group">
+                      <Link className="btn-default btn-medium btn-icon btn-border btn-hero" href={content.ctaHref}>
+                        {content.ctaLabel}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        ))}
+        )})}
       </div>
 
       {/* Overlay pour lisibilité */}
       <div className="overlay" aria-hidden="true" />
-
-      {/* Contenu */}
-      <div className="container" style={{ position: "relative", zIndex: 2 }}>
-        <div className="row">
-          <div className="col-lg-12">
-              <div className="inner text-center hero-content-white">
-              <h1 className="title display-one">{title}</h1>
-              <p className="description">{description}</p>
-              <div className="button-group">
-                <Link className="btn-default btn-medium btn-icon btn-border btn-hero" href={ctaHref}>
-                  {ctaLabel}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Nav */}
       <button className="hero-nav prev" aria-label="Slide précédent" onClick={goPrev}>
@@ -113,7 +168,7 @@ export default function Hero({
 
       {/* Dots */}
       <div className="dots">
-        {SLIDES.map((_, i) => (
+        {slideContents.map((_, i) => (
           <button
             key={i}
             aria-label={`Aller au slide ${i + 1}`}
@@ -148,6 +203,13 @@ export default function Hero({
         .hero-content-white .title,
         .hero-content-white .description {
           color: #fff !important;
+        }
+        .hero-short-text {
+          max-width: 950px;
+          margin: 12px auto 0;
+          font-size: 1rem;
+          line-height: 1.65;
+          opacity: 0.95;
         }
         .btn-hero {
           color: #fff !important;

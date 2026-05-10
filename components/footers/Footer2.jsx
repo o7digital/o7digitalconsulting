@@ -6,19 +6,19 @@ import { socialLinks } from "@/data/footerLinks";
 const editorialContent = {
   fr: {
     editorial:
-      "Depuis Paris et en Île-de-France, nous assurons une direction digitale externalisée pour entreprises internationales en orchestrant CTO as a Service, développement web sur mesure, conseil DevOps, cloud, intégration IA et stratégie SEO avancée. En Savoie, la même équipe déploie cette exigence avec une approche discrète et orientée marque.",
+      "O7 Digital Consulting accompagne les entreprises en France, au Mexique, en Europe, en Amérique du Nord et en Amérique Latine avec des sites Astro, React et CMS headless optimisés pour le SEO technique, la performance web et le positionnement Google.",
     followUs: "Suivez-nous",
     legalNotice: "Mentions Légales"
   },
   en: {
     editorial:
-      "From Paris and across Île-de-France, we deliver digital leadership for international companies with CTO as a Service, custom web development, DevOps and cloud guidance, AI integration, and advanced SEO. In Savoie, the same team keeps that brand-first, low-friction approach.",
+      "O7 Digital Consulting supports companies in France, Mexico, Europe, North America, and Latin America with Astro, React, and headless CMS websites optimized for technical SEO, web performance, and Google ranking.",
     followUs: "Follow us",
     legalNotice: "Legal Notice"
   },
   es: {
     editorial:
-      "Desde París y en Île-de-France, ofrecemos dirección digital externalizada para empresas internacionales combinando CTO as a Service, desarrollo web a medida, consultoría DevOps y cloud, integración de IA y estrategia SEO avanzada. En Savoie, el mismo equipo mantiene esta lógica de marca sin fricción.",
+      "O7 Digital Consulting acompaña a empresas en Francia, México, Europa, América del Norte y América Latina con sitios Astro, React y CMS headless optimizados para SEO técnico, rendimiento web y posicionamiento en Google.",
     followUs: "Síguenos",
     legalNotice: "Aviso Legal"
   },
@@ -30,7 +30,13 @@ const editorialContent = {
   }
 };
 
-export default function Footer2({ lang = "fr" }) {
+const seoFooterKeywords = {
+  fr: "Agence SEO Astro React · Sites web optimisés Google · Développement Astro · Développement React SEO · Migration WordPress vers Astro · SEO technique international · Audit SEO technique · Optimisation Core Web Vitals · Performance web mobile · Architecture SEO multilingue · Sites multilingues français anglais espagnol · CMS headless entreprise · Consultant SEO technique · Refonte web orientée SEO · Positionnement Google · Agence web haute performance · CTO as a Service · Conseil IT stratégique · Transformation digitale internationale · Direction digitale externalisée",
+  en: "Astro React SEO agency · Google optimized websites · Astro development · React SEO development · WordPress to Astro migration · International technical SEO · Technical SEO audit · Core Web Vitals optimization · Mobile web performance · Multilingual SEO architecture · French English Spanish websites · Enterprise headless CMS · Technical SEO consultant · SEO-driven website redesign · Google ranking strategy · High performance web agency · CTO as a Service · Strategic IT consulting · International digital transformation · Outsourced digital leadership",
+  es: "Agencia SEO Astro React · Sitios web optimizados para Google · Desarrollo Astro · Desarrollo React SEO · Migración WordPress a Astro · SEO técnico internacional · Auditoría SEO técnica · Optimización Core Web Vitals · Rendimiento web móvil · Arquitectura SEO multilingüe · Sitios multilingües francés inglés español · CMS headless empresarial · Consultor SEO técnico · Rediseño web orientado a SEO · Posicionamiento Google · Agencia web de alto rendimiento · CTO as a Service · Consultoría IT estratégica · Transformación digital internacional · Dirección digital externalizada",
+};
+
+export default function Footer2({ lang = "fr", showSeoFooterBlock = false }) {
   const content = editorialContent[lang] || editorialContent.fr;
   const prefix =
     lang === "en" ? "/en" : lang === "es" ? "/es" : lang === "de" ? "/de" : "";
@@ -70,6 +76,20 @@ export default function Footer2({ lang = "fr" }) {
           </span>
           <span style={{ color: "#8f8f8f", fontSize: "14px" }}>© o7 Digital</span>
         </p>
+        {showSeoFooterBlock && (
+          <div
+            style={{
+              marginTop: "14px",
+              fontSize: "12px",
+              lineHeight: 1.7,
+              color: "rgba(143, 143, 143, 0.9)",
+            }}
+          >
+            <p style={{ margin: "0 0 4px" }}>{seoFooterKeywords.fr}</p>
+            <p style={{ margin: "0 0 4px" }}>{seoFooterKeywords.en}</p>
+            <p style={{ margin: 0 }}>{seoFooterKeywords.es}</p>
+          </div>
+        )}
       </div>
     </footer>
   );
