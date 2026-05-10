@@ -38,6 +38,7 @@ const seoFooterKeywords = {
 
 export default function Footer2({ lang = "fr", showSeoFooterBlock = false }) {
   const content = editorialContent[lang] || editorialContent.fr;
+  const seoKeywords = seoFooterKeywords[lang];
   const prefix =
     lang === "en" ? "/en" : lang === "es" ? "/es" : lang === "de" ? "/de" : "";
 
@@ -76,7 +77,7 @@ export default function Footer2({ lang = "fr", showSeoFooterBlock = false }) {
           </span>
           <span style={{ color: "#8f8f8f", fontSize: "14px" }}>© o7 Digital</span>
         </p>
-        {showSeoFooterBlock && (
+        {showSeoFooterBlock && seoKeywords && (
           <div
             style={{
               marginTop: "14px",
@@ -85,9 +86,7 @@ export default function Footer2({ lang = "fr", showSeoFooterBlock = false }) {
               color: "rgba(143, 143, 143, 0.9)",
             }}
           >
-            <p style={{ margin: "0 0 4px" }}>{seoFooterKeywords.fr}</p>
-            <p style={{ margin: "0 0 4px" }}>{seoFooterKeywords.en}</p>
-            <p style={{ margin: 0 }}>{seoFooterKeywords.es}</p>
+            <p style={{ margin: 0 }}>{seoKeywords}</p>
           </div>
         )}
       </div>
