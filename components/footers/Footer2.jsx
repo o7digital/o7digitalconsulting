@@ -6,19 +6,19 @@ import { socialLinks } from "@/data/footerLinks";
 const editorialContent = {
   fr: {
     editorial:
-      "Depuis Paris et en Île-de-France, nous assurons une direction digitale externalisée pour entreprises internationales en orchestrant CTO as a Service, développement web sur mesure, conseil DevOps, cloud, intégration IA et stratégie SEO avancée. En Savoie, la même équipe déploie cette exigence avec une approche discrète et orientée marque.",
+      "O7 Digital Consulting accompagne les entreprises en France, au Mexique, en Europe, en Amérique du Nord et en Amérique Latine avec des sites Astro, React et CMS headless optimisés pour le SEO technique, la performance web et le positionnement Google.",
     followUs: "Suivez-nous",
     legalNotice: "Mentions Légales"
   },
   en: {
     editorial:
-      "From Paris and across Île-de-France, we deliver digital leadership for international companies with CTO as a Service, custom web development, DevOps and cloud guidance, AI integration, and advanced SEO. In Savoie, the same team keeps that brand-first, low-friction approach.",
+      "O7 Digital Consulting supports companies in France, Mexico, Europe, North America, and Latin America with Astro, React, and headless CMS websites optimized for technical SEO, web performance, and Google ranking.",
     followUs: "Follow us",
     legalNotice: "Legal Notice"
   },
   es: {
     editorial:
-      "Desde París y en Île-de-France, ofrecemos dirección digital externalizada para empresas internacionales combinando CTO as a Service, desarrollo web a medida, consultoría DevOps y cloud, integración de IA y estrategia SEO avanzada. En Savoie, el mismo equipo mantiene esta lógica de marca sin fricción.",
+      "O7 Digital Consulting acompaña a empresas en Francia, México, Europa, América del Norte y América Latina con sitios Astro, React y CMS headless optimizados para SEO técnico, rendimiento web y posicionamiento en Google.",
     followUs: "Síguenos",
     legalNotice: "Aviso Legal"
   },
@@ -30,7 +30,13 @@ const editorialContent = {
   }
 };
 
-export default function Footer2({ lang = "fr" }) {
+const seoFooterKeywords = {
+  fr: "Agence SEO Astro React · Création de sites web rapides · Sites web optimisés pour Google · Positionnement Google international · SEO technique pour entreprises · Migration WordPress vers Astro · Développement Astro multilingue · Développement React SEO · Refonte de site web orientée SEO · Optimisation Core Web Vitals · Performance web mobile · Architecture SEO multilingue · Sites multilingues français espagnol anglais · Consultant SEO Astro · Consultant React SEO · Agence web haute performance · CTO as a Service international · Direction digitale externalisée internationale · Conseil IT stratégique international · Transformation digitale groupes internationaux · CMS headless entreprise internationale",
+  en: "Astro React SEO agency · Fast website development · Websites optimized for Google · International Google ranking · Technical SEO for businesses · WordPress to Astro migration · Multilingual Astro development · React SEO development · SEO-driven website redesign · Core Web Vitals optimization · Mobile web performance · Multilingual SEO architecture · French Spanish English multilingual websites · Astro SEO consultant · React SEO consultant · High performance web agency · International CTO as a Service · Outsourced digital leadership · Strategic IT consulting international · Digital transformation for international groups · Enterprise headless CMS",
+  es: "Agencia SEO Astro React · Creación de sitios web rápidos · Sitios web optimizados para Google · Posicionamiento Google internacional · SEO técnico para empresas · Migración WordPress a Astro · Desarrollo Astro multilingüe · Desarrollo React SEO · Rediseño web orientado a SEO · Optimización Core Web Vitals · Rendimiento web móvil · Arquitectura SEO multilingüe · Sitios multilingües francés español inglés · Consultor SEO Astro · Consultor React SEO · Agencia web de alto rendimiento · CTO as a Service internacional · Dirección digital externalizada internacional · Consultoría IT estratégica internacional · Transformación digital para grupos internacionales · CMS headless empresarial",
+};
+
+export default function Footer2({ lang = "fr", showSeoFooterBlock = false }) {
   const content = editorialContent[lang] || editorialContent.fr;
   const prefix =
     lang === "en" ? "/en" : lang === "es" ? "/es" : lang === "de" ? "/de" : "";
@@ -70,6 +76,20 @@ export default function Footer2({ lang = "fr" }) {
           </span>
           <span style={{ color: "#8f8f8f", fontSize: "14px" }}>© o7 Digital</span>
         </p>
+        {showSeoFooterBlock && (
+          <div
+            style={{
+              marginTop: "14px",
+              fontSize: "12px",
+              lineHeight: 1.7,
+              color: "rgba(143, 143, 143, 0.9)",
+            }}
+          >
+            <p style={{ margin: "0 0 4px" }}>{seoFooterKeywords.fr}</p>
+            <p style={{ margin: "0 0 4px" }}>{seoFooterKeywords.en}</p>
+            <p style={{ margin: 0 }}>{seoFooterKeywords.es}</p>
+          </div>
+        )}
       </div>
     </footer>
   );
