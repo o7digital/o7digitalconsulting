@@ -153,28 +153,4 @@ export const o7PortfolioProjects = [
     category: "corporate",
     previewImage: "/assets/images/portfolio/duc-drivers-financing.png",
   },
-  {
-    id: "cusiflores",
-    title: "Cusiflores",
-    url: "https://www.cusiflores.com/",
-    category: "ecommerce",
-  },
-  {
-    id: "elite7-piel",
-    title: "Elite7 Piel",
-    url: "https://elite7piel.com/",
-    category: "beautyWellness",
-  },
-  {
-    id: "cenote-maravilla",
-    title: "Cenote Maravilla",
-    url: "https://www.cenotemaravilla.online/es",
-    category: "tourism",
-  },
-  {
-    id: "jean-louis-david-mexico",
-    title: "Jean Louis David Mexico",
-    url: "https://www.jeanlouisdavid.com.mx/",
-    category: "beautyWellness",
-  },
 ];

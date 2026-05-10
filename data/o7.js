@@ -505,8 +505,6 @@ export const o7PortfolioCopy = {
     creativeDesignArchitecture: "Création & design / Architecture & intérieur",
     corporateDigitalTransformation: "Corporate & transformation digitale",
     technologySecurity: "Technologie & solutions de sécurité",
-    beautyWellness: "Beauté & bien-être",
-    tourism: "Tourisme",
   },
 };
 
