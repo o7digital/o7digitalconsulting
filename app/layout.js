@@ -5,7 +5,6 @@ import "../public/assets/css/fonts-optimized.css";
 import "./custom-styles.css";
 import Script from "next/script";
 import ClientLayout from "./ClientLayout";
-import { frenchSeoKeywords } from "@/data/seoKeywords";
 
 export const metadata = {
   metadataBase: new URL('https://www.o7digital.com'),
@@ -14,15 +13,9 @@ export const metadata = {
     template: '%s | O7 Digital Consulting'
   },
   description: 'CTO as a Service international - Europe, Amérique du Nord et Latam. Direction digitale externalisée, SEO technique international, architecture web haute performance pour entreprises en Europe, USA, Canada, Mexique et Amérique Latine.',
-  keywords: frenchSeoKeywords,
   authors: [{ name: 'O7 Digital Consulting' }],
   creator: 'O7 Digital Consulting',
   publisher: 'O7 Digital Consulting',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
   manifest: '/manifest.json',
   alternates: {
     canonical: '/',
@@ -72,6 +65,12 @@ export const metadata = {
   verification: {
     google: 'google2942c8bf8c7f17a1',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({ children }) {

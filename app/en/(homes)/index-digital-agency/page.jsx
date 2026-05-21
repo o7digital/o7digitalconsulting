@@ -11,13 +11,11 @@ import {
   o7HomeServices as o7HomeServicesEn,
   o7CtaBlock as o7CtaEn,
 } from "@/data/o7.en";
-import { englishSeoKeywords } from "@/data/seoKeywords";
 
 export const metadata = {
   title: "CTO as a Service London New York San Francisco Toronto | Fractional CTO UK USA Canada",
   description:
     "CTO as a Service London, New York, San Francisco, Toronto, Montreal and Vancouver. Digital consulting firm London, New York and Toronto. Technical SEO consulting London and New York, enterprise digital consulting, high-performance web architecture, digital transformation consulting UK, USA and Canada. IT consulting for enterprises.",
-  keywords: englishSeoKeywords,
   alternates: {
     canonical: 'https://www.o7digital.com/en/index-digital-agency',
     languages: {

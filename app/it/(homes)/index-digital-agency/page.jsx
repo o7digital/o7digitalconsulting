@@ -11,13 +11,11 @@ import {
   o7HomeServices as o7HomeServicesIt,
   o7CtaBlock as o7CtaIt,
 } from "@/data/o7.it";
-import { italianSeoKeywords } from "@/data/seoKeywords";
 
 export const metadata = {
   title: "Agenzia digitale Italia | Consulenza IT Milano Roma Torino Bologna Firenze | CTO as a Service",
   description:
     "Agenzia digitale internazionale e consulenza IT per aziende in Italia, Svizzera ed Europa. CTO as a Service, sviluppo web su misura, consulenza cloud, DevOps consulting, SEO tecnica e integrazione AI per trasformazione digitale. IT consulting Milano, Roma, Torino, Bologna, Firenze, Venezia.",
-  keywords: italianSeoKeywords,
   alternates: {
     canonical: 'https://www.o7digital.com/it/index-digital-agency',
     languages: {

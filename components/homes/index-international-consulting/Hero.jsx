@@ -129,7 +129,11 @@ export default function Hero({
               <div className="row">
                 <div className="col-lg-12">
                   <div className="inner text-center hero-content hero-content-white">
-                    <h1 className="title display-one">{content.title}</h1>
+                    {i === 0 ? (
+                      <h1 className="title display-one">{content.title}</h1>
+                    ) : (
+                      <h2 className="title display-one">{content.title}</h2>
+                    )}
                     <p className="description">{content.subtitle}</p>
                     <div className="button-group">
                       <Link className="btn-default btn-medium btn-icon btn-border btn-hero" href={content.ctaHref}>
@@ -208,8 +212,10 @@ export default function Hero({
           color: #fff !important;
         }
         .hero-content h1,
+        .hero-content h2,
         .hero-content p,
         .hero-slider h1,
+        .hero-slider h2,
         .hero-slider p {
           text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
         }
