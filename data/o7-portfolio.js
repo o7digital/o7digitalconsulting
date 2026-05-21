@@ -266,4 +266,22 @@ export const o7PortfolioProjects = [
       "salón de cabello premium Santa Fe CDMX Cuajimalpa",
     ],
   },
+  {
+    id: "touski-2",
+    title: "Touski 2",
+    url: "https://touski2.vercel.app/",
+    category: "ecommerce",
+  },
+  {
+    id: "satellite-guard",
+    title: "Satellite Guard",
+    url: "https://www.satelliteguard.com.mx/",
+    category: "technologySecurity",
+  },
+  {
+    id: "golden-health",
+    title: "Golden Health",
+    url: "https://goldenhealth.vercel.app/",
+    category: "beautyWellness",
+  },
 ];
