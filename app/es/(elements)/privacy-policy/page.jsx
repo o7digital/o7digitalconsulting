@@ -7,13 +7,13 @@ export const metadata = {
   description:
     "Información legal, detalles del editor, alojamiento y política de privacidad de O7 Digital Consulting.",
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/es/privacy-policy',
+    canonical: 'https://www.o7digital.com/es/privacy-policy',
     languages: {
-      'fr': 'https://www.o7digital-consulting.com/privacy-policy',
-      'en': 'https://www.o7digital-consulting.com/en/privacy-policy',
-      'es': 'https://www.o7digital-consulting.com/es/privacy-policy',
-      'de': 'https://www.o7digital-consulting.com/de/privacy-policy',
-      'it': 'https://www.o7digital-consulting.com/it/privacy-policy',
+      'fr': 'https://www.o7digital.com/privacy-policy',
+      'en': 'https://www.o7digital.com/en/privacy-policy',
+      'es': 'https://www.o7digital.com/es/privacy-policy',
+      'de': 'https://www.o7digital.com/de/privacy-policy',
+      'it': 'https://www.o7digital.com/it/privacy-policy',
     },
   },
 };
@@ -90,13 +90,13 @@ export default function Page() {
                 </Paragraph>
                 <Paragraph>
                   <strong>Email:</strong>{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                   <br />
                   <strong>Sitio web:</strong>{" "}
-                  <a href="http://www.o7digital-consulting.com">
-                    www.o7digital-consulting.com
+                  <a href="http://www.o7digital.com">
+                    www.o7digital.com
                   </a>
                   <br />
                   Director de publicación: <strong>Olivier Steineur</strong>
@@ -133,10 +133,10 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>2. Condiciones de Uso</SectionTitle>
                 <Paragraph>
-                  El sitio web <strong>www.o7digital-consulting.com</strong> se proporciona 
-                  tal cual. El visitante reconoce poseer las competencias técnicas necesarias 
-                  para utilizarlo y se compromete a usarlo conforme a la legislación vigente. 
-                  O7 Digital Consulting no garantiza la ausencia total de errores y declina 
+                  El sitio web <strong>www.o7digital.com</strong> se proporciona
+                  tal cual. El visitante reconoce poseer las competencias técnicas necesarias
+                  para utilizarlo y se compromete a usarlo conforme a la legislación vigente.
+                  O7 Digital Consulting no garantiza la ausencia total de errores y declina
                   toda responsabilidad en caso de indisponibilidad o mal funcionamiento.
                 </Paragraph>
               </div>
@@ -144,9 +144,9 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>3. Propiedad Intelectual</SectionTitle>
                 <Paragraph>
-                  La totalidad del contenido del sitio (textos, imágenes, logo, código, 
-                  elementos gráficos) está protegida por las leyes de propiedad intelectual. 
-                  Toda reproducción, representación o explotación, total o parcial, sin 
+                  La totalidad del contenido del sitio (textos, imágenes, logo, código,
+                  elementos gráficos) está protegida por las leyes de propiedad intelectual.
+                  Toda reproducción, representación o explotación, total o parcial, sin
                   autorización escrita previa, está estrictamente prohibida.
                 </Paragraph>
               </div>
@@ -154,10 +154,10 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>4. Enlaces Hipertexto</SectionTitle>
                 <Paragraph>
-                  El sitio puede contener enlaces que apuntan a recursos externos. O7 Digital 
-                  Consulting no ejerce ningún control sobre estos sitios de terceros y declina 
-                  toda responsabilidad respecto a su disponibilidad, contenido o seguridad. 
-                  La creación de enlaces hacia este sitio requiere autorización escrita previa 
+                  El sitio puede contener enlaces que apuntan a recursos externos. O7 Digital
+                  Consulting no ejerce ningún control sobre estos sitios de terceros y declina
+                  toda responsabilidad respecto a su disponibilidad, contenido o seguridad.
+                  La creación de enlaces hacia este sitio requiere autorización escrita previa
                   del editor.
                 </Paragraph>
               </div>
@@ -165,8 +165,8 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>5. Cookies</SectionTitle>
                 <Paragraph>
-                  El sitio puede utilizar cookies técnicas o estadísticas. El usuario puede 
-                  rechazar las cookies a través de la configuración de su navegador. El rechazo 
+                  El sitio puede utilizar cookies técnicas o estadísticas. El usuario puede
+                  rechazar las cookies a través de la configuración de su navegador. El rechazo
                   puede alterar ciertas funcionalidades.
                 </Paragraph>
               </div>
@@ -209,7 +209,7 @@ export default function Page() {
 
                 <SubTitle>6.4. Destinatarios de los Datos</SubTitle>
                 <Paragraph>
-                  Los datos son tratados exclusivamente por <strong>O7 Digital Consulting</strong> y 
+                  Los datos son tratados exclusivamente por <strong>O7 Digital Consulting</strong> y
                   no se comparten con terceros, excepto:
                 </Paragraph>
                 <BulletList
@@ -246,14 +246,14 @@ export default function Page() {
                 />
                 <Paragraph>
                   Para ejercer estos derechos, contacte:{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                 </Paragraph>
 
                 <SubTitle>6.7. Reclamaciones</SubTitle>
                 <Paragraph>
-                  Si considera que no se respetan sus derechos, puede presentar una 
+                  Si considera que no se respetan sus derechos, puede presentar una
                   reclamación ante la autoridad de control:
                 </Paragraph>
                 <Paragraph>
@@ -270,8 +270,8 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>7. Seguridad de los Datos</SectionTitle>
                 <Paragraph>
-                  O7 Digital Consulting implementa medidas técnicas y organizativas apropiadas 
-                  para proteger los datos personales contra el acceso no autorizado, la pérdida, 
+                  O7 Digital Consulting implementa medidas técnicas y organizativas apropiadas
+                  para proteger los datos personales contra el acceso no autorizado, la pérdida,
                   la alteración o la divulgación.
                 </Paragraph>
               </div>
@@ -279,7 +279,7 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>8. Modificaciones</SectionTitle>
                 <Paragraph>
-                  Este aviso legal y política de privacidad pueden actualizarse. La fecha de 
+                  Este aviso legal y política de privacidad pueden actualizarse. La fecha de
                   la última actualización aparece en la parte superior de esta página.
                 </Paragraph>
               </div>
@@ -289,8 +289,8 @@ export default function Page() {
                 <Paragraph>
                   Para cualquier pregunta sobre esta política o sus datos:
                   <br />
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                 </Paragraph>
               </div>

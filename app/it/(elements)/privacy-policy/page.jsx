@@ -7,13 +7,13 @@ export const metadata = {
   description:
     "Informazioni legali, dettagli editore, hosting e politica sulla privacy di O7 Digital Consulting.",
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/it/privacy-policy',
+    canonical: 'https://www.o7digital.com/it/privacy-policy',
     languages: {
-      'fr': 'https://www.o7digital-consulting.com/privacy-policy',
-      'en': 'https://www.o7digital-consulting.com/en/privacy-policy',
-      'es': 'https://www.o7digital-consulting.com/es/privacy-policy',
-      'de': 'https://www.o7digital-consulting.com/de/privacy-policy',
-      'it': 'https://www.o7digital-consulting.com/it/privacy-policy',
+      'fr': 'https://www.o7digital.com/privacy-policy',
+      'en': 'https://www.o7digital.com/en/privacy-policy',
+      'es': 'https://www.o7digital.com/es/privacy-policy',
+      'de': 'https://www.o7digital.com/de/privacy-policy',
+      'it': 'https://www.o7digital.com/it/privacy-policy',
     },
   },
 };
@@ -90,13 +90,13 @@ export default function Page() {
                 </Paragraph>
                 <Paragraph>
                   <strong>Email:</strong>{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                   <br />
                   <strong>Sito web:</strong>{" "}
-                  <a href="http://www.o7digital-consulting.com">
-                    www.o7digital-consulting.com
+                  <a href="http://www.o7digital.com">
+                    www.o7digital.com
                   </a>
                   <br />
                   <strong>Rappresentante legale:</strong> Olivier Steineur, Presidente
@@ -224,8 +224,8 @@ export default function Page() {
                 />
                 <Paragraph>
                   Per esercitare questi diritti, potete contattarci a:{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                 </Paragraph>
 
@@ -301,8 +301,8 @@ export default function Page() {
                   <strong>O7 Digital Consulting</strong>
                   <br />
                   Email:{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                   <br />
                   Indirizzo: 10 rue de Penthièvre, 75008 Parigi – Francia

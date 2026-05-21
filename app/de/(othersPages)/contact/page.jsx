@@ -9,13 +9,13 @@ export const metadata = {
   description:
     "Kontaktieren Sie O7 Digital Consulting, um über Ihr digitales Projekt, Ihre Technologie-Strategie oder Ihre digitale Transformation zu sprechen. Schnelle Antwort und maßgeschneiderte Begleitung.",
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/de/contact',
+    canonical: 'https://www.o7digital.com/de/contact',
     languages: {
-      'fr': 'https://www.o7digital-consulting.com/contact',
-      'en': 'https://www.o7digital-consulting.com/en/contact',
-      'es': 'https://www.o7digital-consulting.com/es/contact',
-      'de': 'https://www.o7digital-consulting.com/de/contact',
-      'it': 'https://www.o7digital-consulting.com/it/contact',
+      'fr': 'https://www.o7digital.com/contact',
+      'en': 'https://www.o7digital.com/en/contact',
+      'es': 'https://www.o7digital.com/es/contact',
+      'de': 'https://www.o7digital.com/de/contact',
+      'it': 'https://www.o7digital.com/it/contact',
     },
   },
   openGraph: {

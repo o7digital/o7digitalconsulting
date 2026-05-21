@@ -22,7 +22,7 @@ export const footerSections = [
     links: [
       { href: "/about", label: "About" },
       { href: "/contact", label: "Contact" },
-      { href: "/service", label: "Service" },
+      { href: "/#services", label: "Service" },
     ],
   },
 ];

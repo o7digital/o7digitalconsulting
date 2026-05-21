@@ -19,13 +19,13 @@ export const metadata = {
   description:
     "O7 Digital Consulting: estrategia, ingeniería y rendimiento. Descubre nuestro enfoque, misión, visión y valores.",
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/es/about',
+    canonical: 'https://www.o7digital.com/es/about',
     languages: {
-      'fr': 'https://www.o7digital-consulting.com/about',
-      'en': 'https://www.o7digital-consulting.com/en/about',
-      'es': 'https://www.o7digital-consulting.com/es/about',
-      'de': 'https://www.o7digital-consulting.com/de/about',
-      'it': 'https://www.o7digital-consulting.com/it/about',
+      'fr': 'https://www.o7digital.com/about',
+      'en': 'https://www.o7digital.com/en/about',
+      'es': 'https://www.o7digital.com/es/about',
+      'de': 'https://www.o7digital.com/de/about',
+      'it': 'https://www.o7digital.com/it/about',
     },
   },
   openGraph: {

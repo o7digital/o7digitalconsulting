@@ -9,13 +9,13 @@ export const metadata = {
   title: o7PortfolioCopy.metaTitle,
   description: o7PortfolioCopy.metaDescription,
   alternates: {
-    canonical: "https://www.o7digital-consulting.com/de/portfolio",
+    canonical: "https://www.o7digital.com/de/portfolio",
     languages: {
-      fr: "https://www.o7digital-consulting.com/portfolio",
-      en: "https://www.o7digital-consulting.com/en/portfolio",
-      es: "https://www.o7digital-consulting.com/es/portfolio",
-      de: "https://www.o7digital-consulting.com/de/portfolio",
-      it: "https://www.o7digital-consulting.com/it/portfolio",
+      fr: "https://www.o7digital.com/portfolio",
+      en: "https://www.o7digital.com/en/portfolio",
+      es: "https://www.o7digital.com/es/portfolio",
+      de: "https://www.o7digital.com/de/portfolio",
+      it: "https://www.o7digital.com/it/portfolio",
     },
   },
   openGraph: {

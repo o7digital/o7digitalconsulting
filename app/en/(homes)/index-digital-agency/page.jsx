@@ -19,13 +19,13 @@ export const metadata = {
     "CTO as a Service London, New York, San Francisco, Toronto, Montreal and Vancouver. Digital consulting firm London, New York and Toronto. Technical SEO consulting London and New York, enterprise digital consulting, high-performance web architecture, digital transformation consulting UK, USA and Canada. IT consulting for enterprises.",
   keywords: englishSeoKeywords,
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/en/index-digital-agency',
+    canonical: 'https://www.o7digital.com/en/index-digital-agency',
     languages: {
-      'fr': 'https://www.o7digital-consulting.com/index-digital-agency',
-      'en': 'https://www.o7digital-consulting.com/en/index-digital-agency',
-      'es': 'https://www.o7digital-consulting.com/es/index-digital-agency',
-      'de': 'https://www.o7digital-consulting.com/de/index-digital-agency',
-      'it': 'https://www.o7digital-consulting.com/it/index-digital-agency',
+      'fr': 'https://www.o7digital.com/',
+      'en': 'https://www.o7digital.com/en/index-digital-agency',
+      'es': 'https://www.o7digital.com/es/index-digital-agency',
+      'de': 'https://www.o7digital.com/de/index-digital-agency',
+      'it': 'https://www.o7digital.com/it/index-digital-agency',
     },
   },
   openGraph: {
@@ -50,10 +50,10 @@ export default function HomeEn() {
           {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://www.o7digital-consulting.com/en/#organization",
+            "@id": "https://www.o7digital.com/en/#organization",
             "name": "O7 Digital Consulting",
-            "url": "https://www.o7digital-consulting.com/en",
-            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital.com/en",
+            "logo": "https://www.o7digital.com/assets/images/logo/logo.png",
             "description": "Digital consulting firm London, New York, San Francisco and Toronto specializing in CTO as a Service, React Next.js development, DevOps consulting, headless CMS for enterprises, AI integration and technical SEO consulting UK, USA and Canada.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
@@ -228,10 +228,10 @@ export default function HomeEn() {
           {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "@id": "https://www.o7digital-consulting.com/en/#professionalservice",
+            "@id": "https://www.o7digital.com/en/#professionalservice",
             "name": "O7 Digital Consulting",
-            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
-            "url": "https://www.o7digital-consulting.com/en",
+            "image": "https://www.o7digital.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital.com/en",
             "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
             "address": [
@@ -287,12 +287,12 @@ export default function HomeEn() {
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "@id": "https://www.o7digital-consulting.com/en/#website",
-            "url": "https://www.o7digital-consulting.com/en",
+            "@id": "https://www.o7digital.com/en/#website",
+            "url": "https://www.o7digital.com/en",
             "name": "O7 Digital Consulting",
             "inLanguage": "en-US",
             "publisher": {
-              "@id": "https://www.o7digital-consulting.com/en/#organization"
+              "@id": "https://www.o7digital.com/en/#organization"
             }
           }
         `}
@@ -302,16 +302,16 @@ export default function HomeEn() {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://www.o7digital-consulting.com/en/index-digital-agency#webpage",
-            "url": "https://www.o7digital-consulting.com/en/index-digital-agency",
+            "@id": "https://www.o7digital.com/en/index-digital-agency#webpage",
+            "url": "https://www.o7digital.com/en/index-digital-agency",
             "name": "CTO as a Service London New York San Francisco Toronto | Fractional CTO UK USA Canada",
             "description": "CTO as a Service London, New York, San Francisco, Toronto, Montreal and Vancouver. Digital consulting firm London, New York and Toronto. Technical SEO consulting London and New York, enterprise digital consulting, high-performance web architecture, digital transformation consulting UK, USA and Canada. IT consulting for enterprises.",
             "inLanguage": "en-US",
             "isPartOf": {
-              "@id": "https://www.o7digital-consulting.com/en/#website"
+              "@id": "https://www.o7digital.com/en/#website"
             },
             "about": {
-              "@id": "https://www.o7digital-consulting.com/en/#organization"
+              "@id": "https://www.o7digital.com/en/#organization"
             },
             "breadcrumb": {
               "@type": "BreadcrumbList",
@@ -320,7 +320,7 @@ export default function HomeEn() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.o7digital-consulting.com/en/index-digital-agency"
+                  "item": "https://www.o7digital.com/en/index-digital-agency"
                 }
               ]
             },
@@ -328,7 +328,7 @@ export default function HomeEn() {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.o7digital-consulting.com/en/search?q={search_term_string}"
+                "urlTemplate": "https://www.o7digital.com/en/search?q={search_term_string}"
               },
               "query-input": "required name=search_term_string"
             }

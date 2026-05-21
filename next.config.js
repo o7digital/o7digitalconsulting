@@ -6,9 +6,34 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/index-digital-agency',
-        permanent: false,
+        source: '/index-digital-agency',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/service',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/en',
+        destination: '/en/index-digital-agency',
+        permanent: true,
+      },
+      {
+        source: '/es',
+        destination: '/es/index-digital-agency',
+        permanent: true,
+      },
+      {
+        source: '/de',
+        destination: '/de/index-digital-agency',
+        permanent: true,
+      },
+      {
+        source: '/it',
+        destination: '/it/index-digital-agency',
+        permanent: true,
       },
     ];
   },

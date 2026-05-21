@@ -7,13 +7,13 @@ export const metadata = {
   description:
     "Impressum, Anbieter-Informationen, Hosting und Datenschutzrichtlinie von O7 Digital Consulting.",
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/de/privacy-policy',
+    canonical: 'https://www.o7digital.com/de/privacy-policy',
     languages: {
-      'fr': 'https://www.o7digital-consulting.com/privacy-policy',
-      'en': 'https://www.o7digital-consulting.com/en/privacy-policy',
-      'es': 'https://www.o7digital-consulting.com/es/privacy-policy',
-      'de': 'https://www.o7digital-consulting.com/de/privacy-policy',
-      'it': 'https://www.o7digital-consulting.com/it/privacy-policy',
+      'fr': 'https://www.o7digital.com/privacy-policy',
+      'en': 'https://www.o7digital.com/en/privacy-policy',
+      'es': 'https://www.o7digital.com/es/privacy-policy',
+      'de': 'https://www.o7digital.com/de/privacy-policy',
+      'it': 'https://www.o7digital.com/it/privacy-policy',
     },
   },
 };
@@ -90,13 +90,13 @@ export default function Page() {
                 </Paragraph>
                 <Paragraph>
                   <strong>Email:</strong>{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                   <br />
                   <strong>Website:</strong>{" "}
-                  <a href="http://www.o7digital-consulting.com">
-                    www.o7digital-consulting.com
+                  <a href="http://www.o7digital.com">
+                    www.o7digital.com
                   </a>
                   <br />
                   Verantwortlich für die Veröffentlichung:{" "}
@@ -134,7 +134,7 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>2. Nutzungsbedingungen</SectionTitle>
                 <Paragraph>
-                  Die Website <strong>www.o7digital-consulting.com</strong> wird
+                  Die Website <strong>www.o7digital.com</strong> wird
                   „wie besehen“ bereitgestellt. Besucher bestätigen, die
                   erforderlichen technischen Kenntnisse zu besitzen, und nutzen
                   die Seite in Übereinstimmung mit geltendem Recht. O7 Digital
@@ -240,8 +240,8 @@ export default function Page() {
                   Verarbeitung und Widerspruch gegen die Verarbeitung Ihrer
                   personenbezogenen Daten sowie auf Datenübertragbarkeit. Zur
                   Ausübung dieser Rechte kontaktieren Sie uns unter{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                   .
                 </Paragraph>

@@ -1,11 +1,11 @@
 # robots.txt for O7 Digital Consulting
-# https://www.o7digital-consulting.com/robots.txt
+# https://www.o7digital.com/robots.txt
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.o7digital-consulting.com/sitemap.xml
+Sitemap: https://www.o7digital.com/sitemap.xml
 
 # Disallow admin or private areas if any
 # User-agent: *

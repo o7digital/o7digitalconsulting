@@ -8,7 +8,7 @@ import ClientLayout from "./ClientLayout";
 import { frenchSeoKeywords } from "@/data/seoKeywords";
 
 export const metadata = {
-  metadataBase: new URL('https://www.o7digital-consulting.com'),
+  metadataBase: new URL('https://www.o7digital.com'),
   title: {
     default: 'O7 Digital Consulting | CTO as a Service & SEO Technique International',
     template: '%s | O7 Digital Consulting'
@@ -25,10 +25,10 @@ export const metadata = {
   },
   manifest: '/manifest.json',
   alternates: {
-    canonical: '/index-digital-agency',
+    canonical: '/',
     languages: {
-      'x-default': '/index-digital-agency',
-      'fr': '/index-digital-agency',
+      'x-default': '/',
+      'fr': '/',
       'en': '/en/index-digital-agency',
       'es': '/es/index-digital-agency',
       'de': '/de/index-digital-agency',
@@ -39,7 +39,7 @@ export const metadata = {
     type: 'website',
     locale: 'fr_FR',
     alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
-    url: 'https://www.o7digital-consulting.com',
+    url: 'https://www.o7digital.com',
     siteName: 'O7 Digital Consulting',
     title: 'O7 Digital Consulting | Agence de consulting digital, CTO & développement web',
     description: 'O7 Digital Consulting est une agence de consulting digital spécialisée en stratégie digitale, CTO as a Service, développement web moderne, design graphique, motion design, SEO et performance digitale.',
@@ -90,13 +90,13 @@ export default function RootLayout({ children }) {
           src="https://consent.cookiebot.com/uc.js"
           data-cbid="9dbb2cde-b0c4-4148-82f7-15519c23b141"
           data-blockingmode="auto"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-N5GR2L6P8T"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
-        <Script id="gtag-init" strategy="lazyOnload">
+        <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

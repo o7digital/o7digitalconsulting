@@ -7,21 +7,21 @@ export const metadata = {
   description:
     "Mentions légales, informations éditeur, hébergement et politique de confidentialité d’O7 Digital Consulting.",
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/privacy-policy',
+    canonical: 'https://www.o7digital.com/privacy-policy',
     languages: {
-      'x-default': 'https://www.o7digital-consulting.com/privacy-policy',
-      'fr': 'https://www.o7digital-consulting.com/privacy-policy',
-      'en': 'https://www.o7digital-consulting.com/en/privacy-policy',
-      'es': 'https://www.o7digital-consulting.com/es/privacy-policy',
-      'de': 'https://www.o7digital-consulting.com/de/privacy-policy',
-      'it': 'https://www.o7digital-consulting.com/it/privacy-policy',
+      'x-default': 'https://www.o7digital.com/privacy-policy',
+      'fr': 'https://www.o7digital.com/privacy-policy',
+      'en': 'https://www.o7digital.com/en/privacy-policy',
+      'es': 'https://www.o7digital.com/es/privacy-policy',
+      'de': 'https://www.o7digital.com/de/privacy-policy',
+      'it': 'https://www.o7digital.com/it/privacy-policy',
     },
   },
   openGraph: {
     type: 'article',
     locale: 'fr_FR',
     alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
-    url: 'https://www.o7digital-consulting.com/privacy-policy',
+    url: 'https://www.o7digital.com/privacy-policy',
     siteName: 'O7 Digital Consulting',
     title: 'Mentions Légales & Politique de Confidentialité – O7 Digital',
     description:
@@ -116,13 +116,13 @@ export default function Page() {
                 </Paragraph>
                 <Paragraph>
                   <strong>Email :</strong>{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                   <br />
                   <strong>Site :</strong>{" "}
-                  <a href="http://www.o7digital-consulting.com">
-                    www.o7digital-consulting.com
+                  <a href="http://www.o7digital.com">
+                    www.o7digital.com
                   </a>
                   <br />
                   Directeur de la publication : <strong>Olivier Steineur</strong>
@@ -159,7 +159,7 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>2. Conditions d’utilisation</SectionTitle>
                 <Paragraph>
-                  Le site <strong>www.o7digital-consulting.com</strong> est mis à
+                  Le site <strong>www.o7digital.com</strong> est mis à
                   disposition en l’état. Le visiteur reconnaît disposer des
                   compétences techniques nécessaires pour l’utiliser et s’engage
                   à l’utiliser conformément à la législation en vigueur. O7
@@ -278,7 +278,7 @@ export default function Page() {
                     "Opposition",
                     "Portabilité",
                     "Limitation du traitement",
-                    "Pour exercer un droit, contactez : info@o7digital-consulting.com (réponse sous 30 jours)",
+                    "Pour exercer un droit, contactez : info@o7digital.com (réponse sous 30 jours)",
                   ]}
                 />
 

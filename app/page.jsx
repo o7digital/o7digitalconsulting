@@ -1,6 +1,2 @@
-import { redirect } from "next/navigation";
-
-export default function Home() {
-  redirect("/index-digital-agency");
-  return null;
-}
+export { metadata } from "./(homes)/index-digital-agency/page";
+export { default } from "./(homes)/index-digital-agency/page";

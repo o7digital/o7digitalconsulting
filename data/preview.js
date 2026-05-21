@@ -79,7 +79,7 @@ export const demoItems = [
     title: "About Us",
   },
   {
-    href: "/service",
+    href: "/#services",
     imgDark: "/assets/images/demo/service.png",
     imgLight: "/assets/images/demo/service-light.png",
     title: "Service",

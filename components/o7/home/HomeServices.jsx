@@ -9,7 +9,7 @@ export default function HomeServices({
   description = "Stratégie, développement, IA, SEO, infogérance, design graphique, motion design et 3D pour couvrir vos besoins digitaux.",
 }) {
   return (
-    <div className="rainbow-service-area rainbow-section-gap">
+    <div id="services" className="rainbow-service-area rainbow-section-gap">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

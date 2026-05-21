@@ -13,21 +13,21 @@ export const metadata = {
   description:
     "Découvrez O7 Digital Consulting, agence de consulting digital impliquée au cœur du business de ses clients, agissant comme direction informatique et digitale externalisée.",
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/about',
+    canonical: 'https://www.o7digital.com/about',
     languages: {
-      'x-default': 'https://www.o7digital-consulting.com/about',
-      'fr': 'https://www.o7digital-consulting.com/about',
-      'en': 'https://www.o7digital-consulting.com/en/about',
-      'es': 'https://www.o7digital-consulting.com/es/about',
-      'de': 'https://www.o7digital-consulting.com/de/about',
-      'it': 'https://www.o7digital-consulting.com/it/about',
+      'x-default': 'https://www.o7digital.com/about',
+      'fr': 'https://www.o7digital.com/about',
+      'en': 'https://www.o7digital.com/en/about',
+      'es': 'https://www.o7digital.com/es/about',
+      'de': 'https://www.o7digital.com/de/about',
+      'it': 'https://www.o7digital.com/it/about',
     },
   },
   openGraph: {
     type: 'article',
     locale: 'fr_FR',
     alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
-    url: 'https://www.o7digital-consulting.com/about',
+    url: 'https://www.o7digital.com/about',
     siteName: 'O7 Digital Consulting',
     title:
       "À propos de O7 Digital Consulting | Direction digitale & consulting stratégique",

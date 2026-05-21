@@ -14,10 +14,10 @@ export const metadata = {
   description:
     "O7 Digital développe des sites Astro et React rapides, multilingues et optimisés SEO pour améliorer votre visibilité Google. Migration WordPress vers Astro, SEO technique, performance web et stratégie de positionnement.",
   alternates: {
-    canonical: 'https://www.o7digital.com/index-digital-agency',
+    canonical: 'https://www.o7digital.com/',
     languages: {
-      'x-default': 'https://www.o7digital.com/index-digital-agency',
-      'fr': 'https://www.o7digital.com/index-digital-agency',
+      'x-default': 'https://www.o7digital.com/',
+      'fr': 'https://www.o7digital.com/',
       'en': 'https://www.o7digital.com/en/index-digital-agency',
       'es': 'https://www.o7digital.com/es/index-digital-agency',
       'de': 'https://www.o7digital.com/de/index-digital-agency',
@@ -28,7 +28,7 @@ export const metadata = {
     type: 'website',
     locale: 'fr_FR',
     alternateLocale: ['en_US', 'es_ES', 'de_DE', 'it_IT'],
-    url: 'https://www.o7digital.com/index-digital-agency',
+    url: 'https://www.o7digital.com/',
     siteName: 'O7 Digital Consulting',
     title:
       "Agence SEO Astro React | Sites rapides & positionnement Google | O7 Digital",
@@ -296,8 +296,8 @@ export default function Home() {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://www.o7digital.com/index-digital-agency#webpage",
-            "url": "https://www.o7digital.com/index-digital-agency",
+            "@id": "https://www.o7digital.com/#webpage",
+            "url": "https://www.o7digital.com/",
             "name": "CTO as a Service Paris Lyon Marseille Toulouse Bordeaux Montréal | Direction Digitale Externalisée",
             "description": "CTO as a Service Paris, Lyon, Marseille, Toulouse, Bordeaux, Lille, Nantes, Strasbourg, Nice, Rennes, Montréal et Québec. Direction digitale externalisée Paris, Lyon, Montréal. SEO technique Paris et Montréal, consulting IT stratégique Montréal, architecture web haute performance, transformation digitale groupes internationaux France et Québec.",
             "inLanguage": "fr-FR",
@@ -314,7 +314,7 @@ export default function Home() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Accueil",
-                  "item": "https://www.o7digital.com/index-digital-agency"
+                  "item": "https://www.o7digital.com/"
                 }
               ]
             },

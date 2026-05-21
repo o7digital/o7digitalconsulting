@@ -7,13 +7,13 @@ export const metadata = {
   description:
     "Legal information, publisher details, hosting and privacy policy of O7 Digital Consulting.",
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/en/privacy-policy',
+    canonical: 'https://www.o7digital.com/en/privacy-policy',
     languages: {
-      'fr': 'https://www.o7digital-consulting.com/privacy-policy',
-      'en': 'https://www.o7digital-consulting.com/en/privacy-policy',
-      'es': 'https://www.o7digital-consulting.com/es/privacy-policy',
-      'de': 'https://www.o7digital-consulting.com/de/privacy-policy',
-      'it': 'https://www.o7digital-consulting.com/it/privacy-policy',
+      'fr': 'https://www.o7digital.com/privacy-policy',
+      'en': 'https://www.o7digital.com/en/privacy-policy',
+      'es': 'https://www.o7digital.com/es/privacy-policy',
+      'de': 'https://www.o7digital.com/de/privacy-policy',
+      'it': 'https://www.o7digital.com/it/privacy-policy',
     },
   },
 };
@@ -90,13 +90,13 @@ export default function Page() {
                 </Paragraph>
                 <Paragraph>
                   <strong>Email:</strong>{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                   <br />
                   <strong>Website:</strong>{" "}
-                  <a href="http://www.o7digital-consulting.com">
-                    www.o7digital-consulting.com
+                  <a href="http://www.o7digital.com">
+                    www.o7digital.com
                   </a>
                   <br />
                   Publication Director: <strong>Olivier Steineur</strong>
@@ -133,10 +133,10 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>2. Terms of Use</SectionTitle>
                 <Paragraph>
-                  The website <strong>www.o7digital-consulting.com</strong> is provided as is. 
-                  Visitors acknowledge having the necessary technical skills to use it and agree 
-                  to use it in accordance with applicable law. O7 Digital Consulting does not 
-                  guarantee complete absence of errors and disclaims all liability in case of 
+                  The website <strong>www.o7digital.com</strong> is provided as is.
+                  Visitors acknowledge having the necessary technical skills to use it and agree
+                  to use it in accordance with applicable law. O7 Digital Consulting does not
+                  guarantee complete absence of errors and disclaims all liability in case of
                   unavailability or malfunction.
                 </Paragraph>
               </div>
@@ -144,8 +144,8 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>3. Intellectual Property</SectionTitle>
                 <Paragraph>
-                  All website content (text, images, logo, code, graphic elements) is protected 
-                  by intellectual property laws. Any reproduction, representation or exploitation, 
+                  All website content (text, images, logo, code, graphic elements) is protected
+                  by intellectual property laws. Any reproduction, representation or exploitation,
                   in whole or in part, without prior written authorization, is strictly prohibited.
                 </Paragraph>
               </div>
@@ -153,9 +153,9 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>4. Hyperlinks</SectionTitle>
                 <Paragraph>
-                  The website may contain links to external resources. O7 Digital Consulting 
-                  exercises no control over these third-party sites and disclaims all 
-                  responsibility for their availability, content or security. Creating links 
+                  The website may contain links to external resources. O7 Digital Consulting
+                  exercises no control over these third-party sites and disclaims all
+                  responsibility for their availability, content or security. Creating links
                   to this site requires prior written authorization from the publisher.
                 </Paragraph>
               </div>
@@ -163,7 +163,7 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>5. Cookies</SectionTitle>
                 <Paragraph>
-                  The website may use technical or statistical cookies. Users can refuse cookies 
+                  The website may use technical or statistical cookies. Users can refuse cookies
                   via their browser settings. Refusal may impair certain functionalities.
                 </Paragraph>
               </div>
@@ -206,7 +206,7 @@ export default function Page() {
 
                 <SubTitle>6.4. Data Recipients</SubTitle>
                 <Paragraph>
-                  Data is processed exclusively by <strong>O7 Digital Consulting</strong> and 
+                  Data is processed exclusively by <strong>O7 Digital Consulting</strong> and
                   is not shared with third parties, except:
                 </Paragraph>
                 <BulletList
@@ -243,14 +243,14 @@ export default function Page() {
                 />
                 <Paragraph>
                   To exercise these rights, contact:{" "}
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                 </Paragraph>
 
                 <SubTitle>6.7. Complaints</SubTitle>
                 <Paragraph>
-                  If you believe your rights are not being respected, you may file a 
+                  If you believe your rights are not being respected, you may file a
                   complaint with the supervisory authority:
                 </Paragraph>
                 <Paragraph>
@@ -267,8 +267,8 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>7. Data Security</SectionTitle>
                 <Paragraph>
-                  O7 Digital Consulting implements appropriate technical and organizational 
-                  measures to protect personal data against unauthorized access, loss, 
+                  O7 Digital Consulting implements appropriate technical and organizational
+                  measures to protect personal data against unauthorized access, loss,
                   alteration or disclosure.
                 </Paragraph>
               </div>
@@ -276,7 +276,7 @@ export default function Page() {
               <div className="mt--30">
                 <SectionTitle>8. Changes</SectionTitle>
                 <Paragraph>
-                  This legal notice and privacy policy may be updated. The date of the last 
+                  This legal notice and privacy policy may be updated. The date of the last
                   update appears at the top of this page.
                 </Paragraph>
               </div>
@@ -286,8 +286,8 @@ export default function Page() {
                 <Paragraph>
                   For any questions regarding this policy or your data:
                   <br />
-                  <a href="mailto:info@o7digital-consulting.com">
-                    info@o7digital-consulting.com
+                  <a href="mailto:info@o7digital.com">
+                    info@o7digital.com
                   </a>
                 </Paragraph>
               </div>

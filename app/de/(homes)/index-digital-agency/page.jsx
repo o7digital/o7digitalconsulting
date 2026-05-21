@@ -19,13 +19,13 @@ export const metadata = {
     "Internationale Digitalagentur und IT-Beratung für Unternehmen in Deutschland, Österreich, Schweiz. CTO as a Service, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für digitale Transformation DACH. IT Consulting Berlin, München, Hamburg, Frankfurt, Wien, Zürich.",
   keywords: germanSeoKeywords,
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/de/index-digital-agency',
+    canonical: 'https://www.o7digital.com/de/index-digital-agency',
     languages: {
-      'fr': 'https://www.o7digital-consulting.com/index-digital-agency',
-      'en': 'https://www.o7digital-consulting.com/en/index-digital-agency',
-      'es': 'https://www.o7digital-consulting.com/es/index-digital-agency',
-      'de': 'https://www.o7digital-consulting.com/de/index-digital-agency',
-      'it': 'https://www.o7digital-consulting.com/it/index-digital-agency',
+      'fr': 'https://www.o7digital.com/',
+      'en': 'https://www.o7digital.com/en/index-digital-agency',
+      'es': 'https://www.o7digital.com/es/index-digital-agency',
+      'de': 'https://www.o7digital.com/de/index-digital-agency',
+      'it': 'https://www.o7digital.com/it/index-digital-agency',
     },
   },
   openGraph: {
@@ -50,10 +50,10 @@ export default function HomeDe() {
           {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://www.o7digital-consulting.com/de/#organization",
+            "@id": "https://www.o7digital.com/de/#organization",
             "name": "O7 Digital Consulting",
-            "url": "https://www.o7digital-consulting.com/de",
-            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital.com/de",
+            "logo": "https://www.o7digital.com/assets/images/logo/logo.png",
             "description": "Digitale Beratungsagentur in Deutschland, Österreich und der Schweiz – spezialisiert auf CTO as a Service, individuelle Webentwicklung, DevOps- und Cloud-Consulting, KI-Integration und technisches SEO.",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
@@ -125,10 +125,10 @@ export default function HomeDe() {
           {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "@id": "https://www.o7digital-consulting.com/de/#professionalservice",
+            "@id": "https://www.o7digital.com/de/#professionalservice",
             "name": "O7 Digital Consulting",
-            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
-            "url": "https://www.o7digital-consulting.com/de",
+            "image": "https://www.o7digital.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital.com/de",
             "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
             "address": [
@@ -184,12 +184,12 @@ export default function HomeDe() {
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "@id": "https://www.o7digital-consulting.com/de/#website",
-            "url": "https://www.o7digital-consulting.com/de",
+            "@id": "https://www.o7digital.com/de/#website",
+            "url": "https://www.o7digital.com/de",
             "name": "O7 Digital Consulting",
             "inLanguage": "de-DE",
             "publisher": {
-              "@id": "https://www.o7digital-consulting.com/de/#organization"
+              "@id": "https://www.o7digital.com/de/#organization"
             }
           }
         `}
@@ -199,16 +199,16 @@ export default function HomeDe() {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://www.o7digital-consulting.com/de/index-digital-agency#webpage",
-            "url": "https://www.o7digital-consulting.com/de/index-digital-agency",
+            "@id": "https://www.o7digital.com/de/index-digital-agency#webpage",
+            "url": "https://www.o7digital.com/de/index-digital-agency",
             "name": "Digitalagentur Deutschland | IT-Beratung Berlin München Frankfurt Wien Zürich | CTO as a Service DACH",
             "description": "Internationale Digitalagentur und IT-Beratung für Unternehmen in Deutschland, Österreich, Schweiz. CTO as a Service, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für digitale Transformation DACH. IT Consulting Berlin, München, Hamburg, Frankfurt, Wien, Zürich.",
             "inLanguage": "de-DE",
             "isPartOf": {
-              "@id": "https://www.o7digital-consulting.com/de/#website"
+              "@id": "https://www.o7digital.com/de/#website"
             },
             "about": {
-              "@id": "https://www.o7digital-consulting.com/de/#organization"
+              "@id": "https://www.o7digital.com/de/#organization"
             },
             "breadcrumb": {
               "@type": "BreadcrumbList",
@@ -217,7 +217,7 @@ export default function HomeDe() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Startseite",
-                  "item": "https://www.o7digital-consulting.com/de/index-digital-agency"
+                  "item": "https://www.o7digital.com/de/index-digital-agency"
                 }
               ]
             },
@@ -225,7 +225,7 @@ export default function HomeDe() {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.o7digital-consulting.com/de/search?q={search_term_string}"
+                "urlTemplate": "https://www.o7digital.com/de/search?q={search_term_string}"
               },
               "query-input": "required name=search_term_string"
             }

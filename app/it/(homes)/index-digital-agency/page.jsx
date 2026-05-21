@@ -19,13 +19,13 @@ export const metadata = {
     "Agenzia digitale internazionale e consulenza IT per aziende in Italia, Svizzera ed Europa. CTO as a Service, sviluppo web su misura, consulenza cloud, DevOps consulting, SEO tecnica e integrazione AI per trasformazione digitale. IT consulting Milano, Roma, Torino, Bologna, Firenze, Venezia.",
   keywords: italianSeoKeywords,
   alternates: {
-    canonical: 'https://www.o7digital-consulting.com/it/index-digital-agency',
+    canonical: 'https://www.o7digital.com/it/index-digital-agency',
     languages: {
-      'fr': 'https://www.o7digital-consulting.com/index-digital-agency',
-      'en': 'https://www.o7digital-consulting.com/en/index-digital-agency',
-      'es': 'https://www.o7digital-consulting.com/es/index-digital-agency',
-      'de': 'https://www.o7digital-consulting.com/de/index-digital-agency',
-      'it': 'https://www.o7digital-consulting.com/it/index-digital-agency',
+      'fr': 'https://www.o7digital.com/',
+      'en': 'https://www.o7digital.com/en/index-digital-agency',
+      'es': 'https://www.o7digital.com/es/index-digital-agency',
+      'de': 'https://www.o7digital.com/de/index-digital-agency',
+      'it': 'https://www.o7digital.com/it/index-digital-agency',
     },
   },
   openGraph: {
@@ -50,11 +50,11 @@ export default function HomeIt() {
           {
             "@context": "https://schema.org",
             "@type": "Organization",
-            "@id": "https://www.o7digital-consulting.com/it/#organization",
+            "@id": "https://www.o7digital.com/it/#organization",
             "name": "O7 Digital Consulting",
             "alternateName": "O7 Digital",
-            "url": "https://www.o7digital-consulting.com/it",
-            "logo": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital.com/it",
+            "logo": "https://www.o7digital.com/assets/images/logo/logo.png",
             "sameAs": [
               "https://www.linkedin.com/company/o7-digital-consulting"
             ],
@@ -142,10 +142,10 @@ export default function HomeIt() {
           {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            "@id": "https://www.o7digital-consulting.com/it/#professionalservice",
+            "@id": "https://www.o7digital.com/it/#professionalservice",
             "name": "O7 Digital Consulting",
-            "image": "https://www.o7digital-consulting.com/assets/images/logo/logo.png",
-            "url": "https://www.o7digital-consulting.com/it",
+            "image": "https://www.o7digital.com/assets/images/logo/logo.png",
+            "url": "https://www.o7digital.com/it",
             "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
             "address": [
@@ -201,12 +201,12 @@ export default function HomeIt() {
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "@id": "https://www.o7digital-consulting.com/it/#website",
-            "url": "https://www.o7digital-consulting.com/it",
+            "@id": "https://www.o7digital.com/it/#website",
+            "url": "https://www.o7digital.com/it",
             "name": "O7 Digital Consulting",
             "inLanguage": "it-IT",
             "publisher": {
-              "@id": "https://www.o7digital-consulting.com/it/#organization"
+              "@id": "https://www.o7digital.com/it/#organization"
             }
           }
         `}
@@ -216,16 +216,16 @@ export default function HomeIt() {
           {
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://www.o7digital-consulting.com/it/index-digital-agency#webpage",
-            "url": "https://www.o7digital-consulting.com/it/index-digital-agency",
+            "@id": "https://www.o7digital.com/it/index-digital-agency#webpage",
+            "url": "https://www.o7digital.com/it/index-digital-agency",
             "name": "Agenzia digitale Italia | Consulenza IT Milano Roma Torino Bologna Firenze | CTO as a Service",
             "description": "Agenzia digitale internazionale e consulenza IT per aziende in Italia, Svizzera ed Europa. CTO as a Service, sviluppo web su misura, consulenza cloud, DevOps consulting, SEO tecnica e integrazione AI per trasformazione digitale. IT consulting Milano, Roma, Torino, Bologna, Firenze, Venezia.",
             "inLanguage": "it-IT",
             "isPartOf": {
-              "@id": "https://www.o7digital-consulting.com/it/#website"
+              "@id": "https://www.o7digital.com/it/#website"
             },
             "about": {
-              "@id": "https://www.o7digital-consulting.com/it/#organization"
+              "@id": "https://www.o7digital.com/it/#organization"
             },
             "breadcrumb": {
               "@type": "BreadcrumbList",
@@ -234,7 +234,7 @@ export default function HomeIt() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://www.o7digital-consulting.com/it/index-digital-agency"
+                  "item": "https://www.o7digital.com/it/index-digital-agency"
                 }
               ]
             },
@@ -242,7 +242,7 @@ export default function HomeIt() {
               "@type": "SearchAction",
               "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.o7digital-consulting.com/it/search?q={search_term_string}"
+                "urlTemplate": "https://www.o7digital.com/it/search?q={search_term_string}"
               },
               "query-input": "required name=search_term_string"
             }
