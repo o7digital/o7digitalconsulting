@@ -92,19 +92,18 @@ export default function RootLayout({ children }) {
           data-blockingmode="auto"
           strategy="afterInteractive"
         />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-N5GR2L6P8T"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5GR2L6P8T"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
             gtag('config', 'G-N5GR2L6P8T');
-          `}
-        </Script>
+          `,
+          }}
+        />
       </head>
       <body className="active-dark-mode">
         <ClientLayout>{children}</ClientLayout>
