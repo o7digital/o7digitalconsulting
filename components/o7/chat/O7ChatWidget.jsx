@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const COPY = {
   fr: {
-    title: "Assistant O7",
+    title: "Olivia, assistante O7",
     status: "En ligne",
     welcome: "Bonjour, en quoi puis-je vous aider ?",
     placeholder: "Expliquez votre besoin...",
@@ -22,7 +22,7 @@ const COPY = {
     error: "Je rencontre un souci temporaire. Vous pouvez aussi écrire à info@o7digital.com.",
   },
   en: {
-    title: "O7 Assistant",
+    title: "Olivia, O7 Assistant",
     status: "Online",
     welcome: "Hello, how can I help you?",
     placeholder: "Tell me what you need...",
@@ -39,7 +39,7 @@ const COPY = {
     error: "I am having a temporary issue. You can also write to info@o7digital.com.",
   },
   es: {
-    title: "Asistente O7",
+    title: "Olivia, asistente O7",
     status: "En linea",
     welcome: "Hola, en que puedo ayudarte?",
     placeholder: "Explica tu necesidad...",
@@ -56,7 +56,7 @@ const COPY = {
     error: "Tengo un problema temporal. Tambien puedes escribir a info@o7digital.com.",
   },
   de: {
-    title: "O7 Assistent",
+    title: "Olivia, O7 Assistentin",
     status: "Online",
     welcome: "Hallo, wie kann ich Ihnen helfen?",
     placeholder: "Beschreiben Sie Ihr Anliegen...",
@@ -73,7 +73,7 @@ const COPY = {
     error: "Es gibt gerade ein technisches Problem. Sie konnen auch an info@o7digital.com schreiben.",
   },
   it: {
-    title: "Assistente O7",
+    title: "Olivia, assistente O7",
     status: "Online",
     welcome: "Ciao, come posso aiutarti?",
     placeholder: "Descrivi la tua esigenza...",
@@ -122,7 +122,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
   const pathname = usePathname();
   const language = getLanguage(pathname);
   const copy = COPY[language];
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showLeadForm, setShowLeadForm] = useState(false);
