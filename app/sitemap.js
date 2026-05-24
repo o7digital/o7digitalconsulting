@@ -20,9 +20,7 @@ export default function sitemap() {
   languages.forEach(lang => {
     routes.forEach(route => {
       const langPrefix = lang ? `/${lang}` : '';
-      const path = route.localizedHome && lang
-        ? '/index-digital-agency'
-        : route.path;
+      const path = route.localizedHome ? '' : route.path;
       urls.push({
         url: `${baseUrl}${langPrefix}${path}`,
         lastModified: currentDate,
@@ -32,10 +30,10 @@ export default function sitemap() {
           languages: {
             'x-default': route.localizedHome ? `${baseUrl}/` : `${baseUrl}${route.path}`,
             fr: route.localizedHome ? `${baseUrl}/` : `${baseUrl}${route.path}`,
-            en: route.localizedHome ? `${baseUrl}/en/index-digital-agency` : `${baseUrl}/en${route.path}`,
-            es: route.localizedHome ? `${baseUrl}/es/index-digital-agency` : `${baseUrl}/es${route.path}`,
-            de: route.localizedHome ? `${baseUrl}/de/index-digital-agency` : `${baseUrl}/de${route.path}`,
-            it: route.localizedHome ? `${baseUrl}/it/index-digital-agency` : `${baseUrl}/it${route.path}`,
+            en: route.localizedHome ? `${baseUrl}/en` : `${baseUrl}/en${route.path}`,
+            es: route.localizedHome ? `${baseUrl}/es` : `${baseUrl}/es${route.path}`,
+            de: route.localizedHome ? `${baseUrl}/de` : `${baseUrl}/de${route.path}`,
+            it: route.localizedHome ? `${baseUrl}/it` : `${baseUrl}/it${route.path}`,
           },
         },
       });

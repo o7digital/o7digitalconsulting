@@ -22,10 +22,10 @@ export const metadata = {
     languages: {
       'x-default': '/',
       'fr': '/',
-      'en': '/en/index-digital-agency',
-      'es': '/es/index-digital-agency',
-      'de': '/de/index-digital-agency',
-      'it': '/it/index-digital-agency',
+      'en': '/en',
+      'es': '/es',
+      'de': '/de',
+      'it': '/it',
     },
   },
   openGraph: {
