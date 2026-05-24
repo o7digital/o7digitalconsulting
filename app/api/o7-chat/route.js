@@ -9,6 +9,9 @@ const defaultAllowedOrigins = [
   "https://www.satelliteguard.com.mx",
   "https://satelite-guard.vercel.app",
   "https://satelite-guuard.vercel.app",
+  "https://securyti.mx",
+  "https://www.securyti.mx",
+  "https://securyti.vercel.app",
 ];
 
 const FALLBACK_REPLIES = {
@@ -40,6 +43,12 @@ Help visitors with GPS tracking, vehicle monitoring, fleet control, geofences, r
 Keep answers concise, practical, and commercial for companies or vehicle owners in Mexico.
 If the visitor asks for prices, a demo, installation, coverage, a quote, or detailed information, ask them to leave name, email, and phone so a Satellite Guard advisor can contact them.
   `.trim(),
+  securyti: `
+You are Olivia, the SecuryTI assistant.
+Help visitors with cybersecurity consulting, NIST accreditation, technology consulting, cyber training, forensic reports, security audits, risk management, and incident response.
+Keep answers concise, practical, and commercial for companies in Mexico.
+If the visitor asks for prices, a diagnosis, audit, quote, appointment, training, or detailed information, ask them to leave name, email, and phone so a SecuryTI advisor can contact them.
+  `.trim(),
 };
 
 const SITE_FALLBACK_REPLIES = {
@@ -51,6 +60,11 @@ const SITE_FALLBACK_REPLIES = {
   sateliteguard: {
     es: "Puedo ayudarte con rastreo GPS, monitoreo vehicular, control de flotillas, geocercas, alertas y seguridad. Dejame tu necesidad y un asesor de Satellite Guard te contactara.",
     en: "I can help with GPS tracking, vehicle monitoring, fleet control, geofences, alerts, and security. Share what you need and a Satellite Guard advisor will contact you.",
+  },
+  securyti: {
+    es: "Puedo ayudarte con consultoria en ciberseguridad, acreditacion NIST, auditorias, formacion, peritajes e informes periciales. Dejame tu necesidad y un asesor de SecuryTI te contactara.",
+    en: "I can help with cybersecurity consulting, NIST accreditation, audits, training, forensic reports, and security programs. Share what you need and a SecuryTI advisor will contact you.",
+    fr: "Je peux vous aider avec le conseil en cybersecurite, l'accreditation NIST, les audits, la formation et les rapports d'expertise. Indiquez votre besoin et un conseiller SecuryTI vous contactera.",
   },
 };
 
