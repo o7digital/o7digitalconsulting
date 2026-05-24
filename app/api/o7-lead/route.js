@@ -35,6 +35,7 @@ export async function POST(request) {
       source,
       language,
       siteCode,
+      pipelineId: clean(process.env.O7_CRM_LEADS_PIPELINE_ID),
       ownerEmail: "olivier.steineur@gmail.com",
       message,
     };
