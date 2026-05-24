@@ -12,7 +12,7 @@ const COPY = {
     send: "Envoyer",
     open: "Ouvrir le chat",
     close: "Fermer le chat",
-    leadIntro: "Pour vous envoyer une réponse utile, laissez vos coordonnées.",
+    leadIntro: "Avant de commencer, indiquez vos coordonnées pour qu'un conseiller O7 puisse vous contacter.",
     firstName: "Prénom",
     lastName: "Nom",
     email: "Email",
@@ -29,7 +29,7 @@ const COPY = {
     send: "Send",
     open: "Open chat",
     close: "Close chat",
-    leadIntro: "To send you a useful follow-up, please leave your contact details.",
+    leadIntro: "Before we start, please leave your contact details so an O7 advisor can contact you.",
     firstName: "First name",
     lastName: "Last name",
     email: "Email",
@@ -46,7 +46,7 @@ const COPY = {
     send: "Enviar",
     open: "Abrir chat",
     close: "Cerrar chat",
-    leadIntro: "Para enviarte una respuesta util, deja tus datos de contacto.",
+    leadIntro: "Antes de empezar, deja tus datos para que un asesor O7 pueda contactarte.",
     firstName: "Nombre",
     lastName: "Apellido",
     email: "Email",
@@ -63,7 +63,7 @@ const COPY = {
     send: "Senden",
     open: "Chat offnen",
     close: "Chat schliessen",
-    leadIntro: "Damit wir gezielt antworten konnen, hinterlassen Sie bitte Ihre Kontaktdaten.",
+    leadIntro: "Bevor wir starten, hinterlassen Sie bitte Ihre Kontaktdaten, damit ein O7-Berater Sie kontaktieren kann.",
     firstName: "Vorname",
     lastName: "Name",
     email: "E-Mail",
@@ -80,7 +80,7 @@ const COPY = {
     send: "Invia",
     open: "Apri chat",
     close: "Chiudi chat",
-    leadIntro: "Per inviarti una risposta utile, lascia i tuoi dati di contatto.",
+    leadIntro: "Prima di iniziare, lascia i tuoi dati cosi un consulente O7 potra contattarti.",
     firstName: "Nome",
     lastName: "Cognome",
     email: "Email",
@@ -96,28 +96,6 @@ function getLanguage(pathname) {
   return ["en", "es", "de", "it"].includes(firstSegment) ? firstSegment : "fr";
 }
 
-function shouldAskForLead(message) {
-  const normalized = message.toLowerCase();
-  return [
-    "audit",
-    "devis",
-    "prix",
-    "tarif",
-    "rdv",
-    "rendez",
-    "proposal",
-    "quote",
-    "price",
-    "contact",
-    "llamar",
-    "precio",
-    "angebot",
-    "termin",
-    "preventivo",
-    "appuntamento",
-  ].some((keyword) => normalized.includes(keyword));
-}
-
 export default function O7ChatWidget({ siteCode = "o7digital" }) {
   const pathname = usePathname();
   const language = getLanguage(pathname);
@@ -125,7 +103,6 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
   const [isOpen, setIsOpen] = useState(true);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [showLeadForm, setShowLeadForm] = useState(false);
   const [leadSent, setLeadSent] = useState(false);
   const [lead, setLead] = useState({ firstName: "", lastName: "", email: "", phone: "" });
   const [messages, setMessages] = useState([{ role: "assistant", content: copy.welcome }]);
@@ -137,7 +114,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
 
   const handleSend = async () => {
     const message = input.trim();
-    if (!message || isLoading) return;
+    if (!message || isLoading || !leadSent) return;
 
     setInput("");
     setMessages((prev) => [...prev, { role: "user", content: message }]);
@@ -151,10 +128,6 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
       });
       const data = await response.json();
       setMessages((prev) => [...prev, { role: "assistant", content: data.reply || copy.error }]);
-
-      if (!leadSent && shouldAskForLead(message)) {
-        setShowLeadForm(true);
-      }
     } catch {
       setMessages((prev) => [...prev, { role: "assistant", content: copy.error }]);
     } finally {
@@ -186,7 +159,6 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
         }),
       });
       setLeadSent(true);
-      setShowLeadForm(false);
       setMessages((prev) => [...prev, { role: "assistant", content: copy.leadThanks }]);
     } catch {
       setMessages((prev) => [...prev, { role: "assistant", content: copy.error }]);
@@ -218,7 +190,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
             {isLoading && <div className="o7-chat-message assistant">...</div>}
           </div>
 
-          {showLeadForm && !leadSent && (
+          {!leadSent && (
             <form className="o7-chat-lead" onSubmit={handleLeadSubmit}>
               <p>{copy.leadIntro}</p>
               <div className="o7-chat-lead-grid">
@@ -238,6 +210,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
               onKeyDown={(event) => {
                 if (event.key === "Enter") handleSend();
               }}
+              disabled={!leadSent || isLoading}
               placeholder={copy.placeholder}
             />
             <button type="button" onClick={handleSend} disabled={isLoading} aria-label={copy.send}>
