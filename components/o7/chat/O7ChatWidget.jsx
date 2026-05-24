@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const COPY = {
@@ -129,6 +129,14 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
   const [leadSent, setLeadSent] = useState(false);
   const [lead, setLead] = useState({ firstName: "", lastName: "", email: "", phone: "" });
   const [messages, setMessages] = useState([{ role: "assistant", content: copy.welcome }]);
+
+  useEffect(() => {
+    setMessages((prev) => {
+      if (prev.length !== 1 || prev[0]?.role !== "assistant") return prev;
+      if (prev[0].content === copy.welcome) return prev;
+      return [{ role: "assistant", content: copy.welcome }];
+    });
+  }, [copy.welcome]);
 
   const transcript = useMemo(
     () => messages.map((msg) => `${msg.role}: ${msg.content}`).join("\n"),
