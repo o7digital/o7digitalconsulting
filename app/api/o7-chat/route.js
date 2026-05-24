@@ -1,5 +1,12 @@
 import { NextResponse } from "next/server";
 
+const defaultAllowedOrigins = [
+  "https://www.o7digital.com",
+  "https://o7digital.com",
+  "https://jeanlouisdavid.com.mx",
+  "https://www.jeanlouisdavid.com.mx",
+];
+
 const FALLBACK_REPLIES = {
   fr: "Je peux vous aider sur le SEO technique, la performance web, une refonte, un projet React/Next.js/Astro, l'IA ou un accompagnement CTO. Donnez-moi quelques lignes sur votre besoin et je vous orienterai.",
   en: "I can help with technical SEO, web performance, redesigns, React/Next.js/Astro projects, AI integration, or fractional CTO support. Share a few details and I will guide you.",
@@ -16,8 +23,56 @@ const LANGUAGE_NAMES = {
   it: "Italian",
 };
 
+const SITE_CONTEXTS = {
+  jeanlouisdavid: `
+You are Olivia, the Jean Louis David Mexico salon assistant.
+Help visitors with salon services, appointments, branches, haircuts, color, treatments, barberia, manicure, pedicure, and general information.
+Keep answers warm, concise, and useful for a salon customer.
+If the visitor asks for an appointment, quote, detailed service information, or availability, ask them to leave name, email, and phone so a Jean Louis David advisor can contact them.
+  `.trim(),
+};
+
+const SITE_FALLBACK_REPLIES = {
+  jeanlouisdavid: {
+    es: "Puedo ayudarte con servicios de salon, citas, sucursales, cortes, color, tratamientos, barberia, manicure y pedicure. Dejame tu necesidad y un asesor de Jean Louis David te contactara.",
+    en: "I can help with salon services, appointments, branches, haircuts, color, treatments, barber services, manicure, and pedicure. Share what you need and a Jean Louis David advisor will contact you.",
+    fr: "Je peux vous aider pour les services du salon, les rendez-vous, les succursales, coupes, colorations, soins, barberie, manucure et pedicure. Indiquez votre besoin et un conseiller Jean Louis David vous recontactera.",
+  },
+};
+
 function normalizeLanguage(language) {
   return ["fr", "en", "es", "de", "it"].includes(language) ? language : "fr";
+}
+
+function getFallbackReply(siteCode, language) {
+  return SITE_FALLBACK_REPLIES[siteCode]?.[language] || FALLBACK_REPLIES[language];
+}
+
+function getCorsHeaders(request) {
+  const origin = request.headers.get("origin") || "";
+  const extraOrigins = (process.env.O7_LEAD_ALLOWED_ORIGINS || "")
+    .split(",")
+    .map((entry) => entry.trim())
+    .filter(Boolean);
+  const allowedOrigins = new Set([...defaultAllowedOrigins, ...extraOrigins]);
+  const allowedOrigin = allowedOrigins.has(origin) ? origin : defaultAllowedOrigins[0];
+
+  return {
+    "Access-Control-Allow-Origin": allowedOrigin,
+    "Access-Control-Allow-Methods": "OPTIONS, POST",
+    "Access-Control-Allow-Headers": "Content-Type",
+    Vary: "Origin",
+  };
+}
+
+function withCors(request, body, init = {}) {
+  return NextResponse.json(body, {
+    ...init,
+    headers: {
+      ...getCorsHeaders(request),
+      ...(init.headers || {}),
+    },
+  });
 }
 
 function getResponseText(data) {
@@ -32,19 +87,33 @@ function getResponseText(data) {
   return typeof text === "string" && text.trim() ? text.trim() : null;
 }
 
+export async function OPTIONS(request) {
+  return new Response(null, {
+    status: 204,
+    headers: getCorsHeaders(request),
+  });
+}
+
 export async function POST(request) {
   try {
     const { message, language = "fr", siteCode = "o7digital" } = await request.json();
     const cleanMessage = typeof message === "string" ? message.trim() : "";
     const lang = normalizeLanguage(language);
+    const fallbackReply = getFallbackReply(siteCode, lang);
 
     if (!cleanMessage) {
-      return NextResponse.json({ reply: FALLBACK_REPLIES[lang] });
+      return withCors(request, { reply: fallbackReply });
     }
 
     if (!process.env.OPENAI_API_KEY) {
-      return NextResponse.json({ reply: FALLBACK_REPLIES[lang] });
+      return withCors(request, { reply: fallbackReply });
     }
+
+    const siteContext = SITE_CONTEXTS[siteCode] || `
+You are the O7 Digital Consulting website assistant.
+Business context:
+- O7 Digital Consulting helps companies with technical SEO, Core Web Vitals, high-performance websites, React, Next.js, Astro, web architecture, UX/UI, automation, AI integration, and CTO as a Service.
+    `.trim();
 
     const response = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
@@ -55,12 +124,10 @@ export async function POST(request) {
       body: JSON.stringify({
         model: process.env.O7_CHAT_MODEL || "gpt-5.4-mini",
         instructions: `
-You are the O7 Digital Consulting website assistant.
 Answer in ${LANGUAGE_NAMES[lang]} only.
 Site code: ${siteCode}.
 
-Business context:
-- O7 Digital Consulting helps companies with technical SEO, Core Web Vitals, high-performance websites, React, Next.js, Astro, web architecture, UX/UI, automation, AI integration, and CTO as a Service.
+${siteContext}
 - Keep answers concise, practical, and commercial.
 - Do not invent pricing, timelines, guarantees, or legal commitments.
 - If the visitor wants a quote, audit, appointment, proposal, or detailed information, invite them to leave name, email, and phone in the chat form so the team can follow up.
@@ -72,13 +139,13 @@ Business context:
     });
 
     if (!response.ok) {
-      return NextResponse.json({ reply: FALLBACK_REPLIES[lang] });
+      return withCors(request, { reply: fallbackReply });
     }
 
     const data = await response.json();
-    return NextResponse.json({ reply: getResponseText(data) || FALLBACK_REPLIES[lang] });
+    return withCors(request, { reply: getResponseText(data) || fallbackReply });
   } catch (error) {
     console.error("O7 chat error:", error);
-    return NextResponse.json({ reply: FALLBACK_REPLIES.fr }, { status: 200 });
+    return withCors(request, { reply: FALLBACK_REPLIES.fr }, { status: 200 });
   }
 }

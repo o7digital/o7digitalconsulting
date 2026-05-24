@@ -1,9 +1,42 @@
 import { NextResponse } from "next/server";
 
 const formspreeEndpoint = "https://formspree.io/f/xkgdyvze";
+const defaultAllowedOrigins = [
+  "https://www.o7digital.com",
+  "https://o7digital.com",
+  "https://jeanlouisdavid.com.mx",
+  "https://www.jeanlouisdavid.com.mx",
+];
 
 function clean(value) {
   return typeof value === "string" && value.trim() ? value.trim() : "";
+}
+
+function getCorsHeaders(request) {
+  const origin = request.headers.get("origin") || "";
+  const extraOrigins = (process.env.O7_LEAD_ALLOWED_ORIGINS || "")
+    .split(",")
+    .map((entry) => entry.trim())
+    .filter(Boolean);
+  const allowedOrigins = new Set([...defaultAllowedOrigins, ...extraOrigins]);
+  const allowedOrigin = allowedOrigins.has(origin) ? origin : defaultAllowedOrigins[0];
+
+  return {
+    "Access-Control-Allow-Origin": allowedOrigin,
+    "Access-Control-Allow-Methods": "OPTIONS, POST",
+    "Access-Control-Allow-Headers": "Content-Type",
+    Vary: "Origin",
+  };
+}
+
+function withCors(request, body, init = {}) {
+  return NextResponse.json(body, {
+    ...init,
+    headers: {
+      ...getCorsHeaders(request),
+      ...(init.headers || {}),
+    },
+  });
 }
 
 function parseSiteConfigMap(rawValue) {
@@ -30,9 +63,19 @@ function getSiteConfig(siteCode) {
       clean(fromMap.pipelineId) || clean(process.env.O7_CRM_LEADS_PIPELINE_ID),
     ownerEmail:
       clean(fromMap.ownerEmail) || "olivier.steineur@gmail.com",
+    notificationEmails: Array.isArray(fromMap.notificationEmails)
+      ? fromMap.notificationEmails.map(clean).filter(Boolean)
+      : [],
     formspreeEndpoint:
       clean(fromMap.formspreeEndpoint) || formspreeEndpoint,
   };
+}
+
+export async function OPTIONS(request) {
+  return new Response(null, {
+    status: 204,
+    headers: getCorsHeaders(request),
+  });
 }
 
 export async function POST(request) {
@@ -50,7 +93,8 @@ export async function POST(request) {
     const name = `${firstName} ${lastName}`.trim();
 
     if (!firstName || !lastName || !email || !phone) {
-      return NextResponse.json(
+      return withCors(
+        request,
         { message: "Missing required lead fields." },
         { status: 400 }
       );
@@ -67,6 +111,7 @@ export async function POST(request) {
       siteCode,
       pipelineId: siteConfig.pipelineId,
       ownerEmail: siteConfig.ownerEmail,
+      notificationEmails: siteConfig.notificationEmails,
       message,
     };
 
@@ -80,6 +125,7 @@ export async function POST(request) {
         body: JSON.stringify({
           ...leadPayload,
           _subject: "Nouveau lead chat IA O7",
+          _cc: siteConfig.notificationEmails.join(","),
           message: `Lead chat IA O7 (${language}, ${siteCode})\n\n${message}`,
         }),
       }),
@@ -91,16 +137,18 @@ export async function POST(request) {
     const crmOk = crmResult.status === "fulfilled" && crmResult.value.ok;
 
     if (!formspreeOk && !crmOk) {
-      return NextResponse.json(
+      return withCors(
+        request,
         { message: "Lead delivery failed." },
         { status: 502 }
       );
     }
 
-    return NextResponse.json({ ok: true, formspreeOk, crmOk });
+    return withCors(request, { ok: true, formspreeOk, crmOk });
   } catch (error) {
     console.error("O7 lead error:", error);
-    return NextResponse.json(
+    return withCors(
+      request,
       { message: "Lead delivery failed." },
       { status: 500 }
     );
