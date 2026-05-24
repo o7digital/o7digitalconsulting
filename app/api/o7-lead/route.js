@@ -6,6 +6,35 @@ function clean(value) {
   return typeof value === "string" && value.trim() ? value.trim() : "";
 }
 
+function parseSiteConfigMap(rawValue) {
+  if (!rawValue) return {};
+  try {
+    const parsed = JSON.parse(rawValue);
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function getSiteConfig(siteCode) {
+  const code = clean(siteCode) || "o7digital";
+  const map = parseSiteConfigMap(process.env.O7_LEAD_SITE_CONFIG);
+  const fromMap = map[code] || map.default || {};
+
+  return {
+    siteCode: code,
+    crmWebhookUrl:
+      clean(fromMap.crmWebhookUrl) || clean(process.env.O7_CRM_LEADS_WEBHOOK_URL),
+    crmSecret: clean(fromMap.crmSecret) || clean(process.env.O7_CRM_LEADS_SECRET),
+    pipelineId:
+      clean(fromMap.pipelineId) || clean(process.env.O7_CRM_LEADS_PIPELINE_ID),
+    ownerEmail:
+      clean(fromMap.ownerEmail) || "olivier.steineur@gmail.com",
+    formspreeEndpoint:
+      clean(fromMap.formspreeEndpoint) || formspreeEndpoint,
+  };
+}
+
 export async function POST(request) {
   try {
     const body = await request.json();
@@ -15,6 +44,7 @@ export async function POST(request) {
     const phone = clean(body.phone);
     const language = clean(body.language) || "fr";
     const siteCode = clean(body.siteCode) || "o7digital";
+    const siteConfig = getSiteConfig(siteCode);
     const source = clean(body.source) || "Chat IA O7";
     const message = clean(body.message);
     const name = `${firstName} ${lastName}`.trim();
@@ -35,13 +65,13 @@ export async function POST(request) {
       source,
       language,
       siteCode,
-      pipelineId: clean(process.env.O7_CRM_LEADS_PIPELINE_ID),
-      ownerEmail: "olivier.steineur@gmail.com",
+      pipelineId: siteConfig.pipelineId,
+      ownerEmail: siteConfig.ownerEmail,
       message,
     };
 
     const [formspreeResult, crmResult] = await Promise.allSettled([
-      fetch(formspreeEndpoint, {
+      fetch(siteConfig.formspreeEndpoint, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -53,7 +83,7 @@ export async function POST(request) {
           message: `Lead chat IA O7 (${language}, ${siteCode})\n\n${message}`,
         }),
       }),
-      sendToCrm(leadPayload),
+      sendToCrm(leadPayload, siteConfig),
     ]);
 
     const formspreeOk =
@@ -77,9 +107,9 @@ export async function POST(request) {
   }
 }
 
-async function sendToCrm(payload) {
-  const webhookUrl = process.env.O7_CRM_LEADS_WEBHOOK_URL;
-  const secret = process.env.O7_CRM_LEADS_SECRET;
+async function sendToCrm(payload, siteConfig) {
+  const webhookUrl = siteConfig.crmWebhookUrl;
+  const secret = siteConfig.crmSecret;
 
   if (!webhookUrl || !secret) {
     return { ok: false, skipped: true };
