@@ -18,28 +18,28 @@ const DEFAULT_FR_SLIDES = [
     subtitle:
       "SEO technique, performance web et architecture moderne pour positionner votre site plus rapidement.",
     ctaLabel: "Demander un audit SEO",
-    ctaHref: "/contact",
+    ctaHref: "/contact#contact-form",
   },
   {
     title: "SEO technique & performance web",
     subtitle:
       "Un site rapide, propre et bien structuré donne à Google de meilleures conditions pour comprendre, indexer et positionner vos pages.",
     ctaLabel: "Voir notre méthode SEO",
-    ctaHref: "/contact",
+    ctaHref: "/contact#contact-form",
   },
   {
     title: "Migration WordPress vers Astro",
     subtitle:
       "Nous transformons les sites WordPress lents ou surchargés en plateformes rapides, modernes et optimisées pour le référencement naturel.",
     ctaLabel: "Migrer mon site",
-    ctaHref: "/contact",
+    ctaHref: "/contact#contact-form",
   },
   {
     title: "Premiers résultats SEO visibles rapidement",
     subtitle:
       "Sur des marchés ciblés, une bonne architecture technique et une stratégie SEO claire peuvent générer des résultats visibles en moins de 30 jours.",
     ctaLabel: "Parler de mon projet",
-    ctaHref: "/contact",
+    ctaHref: "/contact#contact-form",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function Hero({
           "SEO technique, performance web et architecture moderne pour positionner votre site plus rapidement.",
         shortText: "",
         ctaLabel: ctaLabel || "Demander un audit SEO",
-        ctaHref: ctaHref || "/contact",
+        ctaHref: ctaHref || "/contact#contact-form",
       }))
     : DEFAULT_FR_SLIDES;
 
@@ -181,6 +181,7 @@ export default function Hero({
           position: absolute;
           inset: 0;
           opacity: 0;
+          pointer-events: none;
           transition: opacity 800ms ease-in-out;
           will-change: opacity;
         }
@@ -199,6 +200,8 @@ export default function Hero({
         }
         .slide.active {
           opacity: 1;
+          pointer-events: auto;
+          z-index: 1;
         }
         .overlay { display: none; }
         .hero-content,
