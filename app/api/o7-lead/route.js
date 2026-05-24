@@ -13,6 +13,10 @@ const defaultAllowedOrigins = [
   "https://securyti.mx",
   "https://www.securyti.mx",
   "https://securyti.vercel.app",
+  "https://eliteridemexico.com",
+  "https://www.eliteridemexico.com",
+  "https://elite-ride-mexico.vercel.app",
+  "https://eliteridemexico.vercel.app",
 ];
 
 function clean(value) {

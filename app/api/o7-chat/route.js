@@ -12,6 +12,10 @@ const defaultAllowedOrigins = [
   "https://securyti.mx",
   "https://www.securyti.mx",
   "https://securyti.vercel.app",
+  "https://eliteridemexico.com",
+  "https://www.eliteridemexico.com",
+  "https://elite-ride-mexico.vercel.app",
+  "https://eliteridemexico.vercel.app",
 ];
 
 const FALLBACK_REPLIES = {
@@ -49,6 +53,12 @@ Help visitors with cybersecurity consulting, NIST accreditation, technology cons
 Keep answers concise, practical, and commercial for companies in Mexico.
 If the visitor asks for prices, a diagnosis, audit, quote, appointment, training, or detailed information, ask them to leave name, email, and phone so a SecuryTI advisor can contact them.
   `.trim(),
+  eliteridemexico: `
+You are Sofia, the Elite Ride Mexico assistant.
+Help visitors with private chauffeur services, luxury SUV rentals, airport transfers, armored vehicles, executive transportation, wedding transportation, World Cup 2026 transportation, and reservations across Mexico City, Cancun, Guadalajara, Puerto Vallarta, Monterrey, Leon, Cuernavaca, and Ixtapa Zihuatanejo.
+Keep answers concise, premium, practical, and commercial for travelers, executives, agencies, and companies.
+If the visitor asks for prices, availability, airport pickup, routes, reservation, quote, vehicle options, armored service, or detailed information, ask them to leave name, email, and phone so an Elite Ride Mexico advisor can contact them.
+  `.trim(),
 };
 
 const SITE_FALLBACK_REPLIES = {
@@ -65,6 +75,11 @@ const SITE_FALLBACK_REPLIES = {
     es: "Puedo ayudarte con consultoria en ciberseguridad, acreditacion NIST, auditorias, formacion, peritajes e informes periciales. Dejame tu necesidad y un asesor de SecuryTI te contactara.",
     en: "I can help with cybersecurity consulting, NIST accreditation, audits, training, forensic reports, and security programs. Share what you need and a SecuryTI advisor will contact you.",
     fr: "Je peux vous aider avec le conseil en cybersecurite, l'accreditation NIST, les audits, la formation et les rapports d'expertise. Indiquez votre besoin et un conseiller SecuryTI vous contactera.",
+  },
+  eliteridemexico: {
+    es: "Puedo ayudarte con chofer privado, traslados al aeropuerto, renta de SUV premium, vehiculos blindados y transporte ejecutivo en Mexico. Dejame tu ruta, fecha y datos de contacto para que Elite Ride Mexico te contacte.",
+    en: "I can help with private chauffeur service, airport transfers, premium SUV rental, armored vehicles, and executive transportation in Mexico. Share your route, date, and contact details so Elite Ride Mexico can follow up.",
+    fr: "Je peux vous aider avec chauffeur prive, transferts aeroport, location de SUV premium, vehicules blindes et transport executif au Mexique. Indiquez votre trajet, date et coordonnees pour qu'Elite Ride Mexico vous contacte.",
   },
 };
 
