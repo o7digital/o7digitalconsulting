@@ -5,6 +5,9 @@ const defaultAllowedOrigins = [
   "https://o7digital.com",
   "https://jeanlouisdavid.com.mx",
   "https://www.jeanlouisdavid.com.mx",
+  "https://satelliteguard.com.mx",
+  "https://www.satelliteguard.com.mx",
+  "https://satelite-guard.vercel.app",
 ];
 
 const FALLBACK_REPLIES = {
@@ -30,6 +33,12 @@ Help visitors with salon services, appointments, branches, haircuts, color, trea
 Keep answers warm, concise, and useful for a salon customer.
 If the visitor asks for an appointment, quote, detailed service information, or availability, ask them to leave name, email, and phone so a Jean Louis David advisor can contact them.
   `.trim(),
+  sateliteguard: `
+You are Sofia, the Satellite Guard assistant.
+Help visitors with GPS tracking, vehicle monitoring, fleet control, geofences, real-time alerts, asset tracking, security, and sales questions.
+Keep answers concise, practical, and commercial for companies or vehicle owners in Mexico.
+If the visitor asks for prices, a demo, installation, coverage, a quote, or detailed information, ask them to leave name, email, and phone so a Satellite Guard advisor can contact them.
+  `.trim(),
 };
 
 const SITE_FALLBACK_REPLIES = {
@@ -37,6 +46,10 @@ const SITE_FALLBACK_REPLIES = {
     es: "Puedo ayudarte con servicios de salon, citas, sucursales, cortes, color, tratamientos, barberia, manicure y pedicure. Dejame tu necesidad y un asesor de Jean Louis David te contactara.",
     en: "I can help with salon services, appointments, branches, haircuts, color, treatments, barber services, manicure, and pedicure. Share what you need and a Jean Louis David advisor will contact you.",
     fr: "Je peux vous aider pour les services du salon, les rendez-vous, les succursales, coupes, colorations, soins, barberie, manucure et pedicure. Indiquez votre besoin et un conseiller Jean Louis David vous recontactera.",
+  },
+  sateliteguard: {
+    es: "Puedo ayudarte con rastreo GPS, monitoreo vehicular, control de flotillas, geocercas, alertas y seguridad. Dejame tu necesidad y un asesor de Satellite Guard te contactara.",
+    en: "I can help with GPS tracking, vehicle monitoring, fleet control, geofences, alerts, and security. Share what you need and a Satellite Guard advisor will contact you.",
   },
 };
 

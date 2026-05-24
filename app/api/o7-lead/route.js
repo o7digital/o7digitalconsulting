@@ -6,6 +6,9 @@ const defaultAllowedOrigins = [
   "https://o7digital.com",
   "https://jeanlouisdavid.com.mx",
   "https://www.jeanlouisdavid.com.mx",
+  "https://satelliteguard.com.mx",
+  "https://www.satelliteguard.com.mx",
+  "https://satelite-guard.vercel.app",
 ];
 
 function clean(value) {
