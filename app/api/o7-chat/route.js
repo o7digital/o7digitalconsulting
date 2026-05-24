@@ -34,6 +34,14 @@ const LANGUAGE_NAMES = {
   it: "Italian",
 };
 
+const CLARIFYING_REPLIES = {
+  fr: "Bien sûr. Pour vous orienter correctement, pouvez-vous me préciser ce que vous cherchez exactement : un audit, un devis, une refonte, une question technique, un rendez-vous ou un service spécifique ?",
+  en: "Of course. To guide you properly, could you specify what you need: an audit, a quote, a redesign, a technical question, an appointment, or a specific service?",
+  es: "Claro. Para orientarte bien, puedes precisar que necesitas: una auditoria, una cotizacion, un rediseño, una pregunta tecnica, una cita o un servicio especifico?",
+  de: "Gerne. Damit ich Sie richtig einordnen kann: Geht es um ein Audit, ein Angebot, einen Relaunch, eine technische Frage, einen Termin oder einen bestimmten Service?",
+  it: "Certo. Per orientarti correttamente, puoi precisare cosa ti serve: un audit, un preventivo, un redesign, una domanda tecnica, un appuntamento o un servizio specifico?",
+};
+
 const SITE_CONTEXTS = {
   jeanlouisdavid: `
 You are Olivia, the Jean Louis David Mexico salon assistant.
@@ -89,6 +97,31 @@ function normalizeLanguage(language) {
 
 function getFallbackReply(siteCode, language) {
   return SITE_FALLBACK_REPLIES[siteCode]?.[language] || FALLBACK_REPLIES[language];
+}
+
+function isBroadServiceInterest(message) {
+  const value = message
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  const broadPatterns = [
+    /\b(interesse|interesado|interesada|interested|interessiert|interessato|interessata)\b.*\b(service|services|servicio|servicios|servizi|dienstleistung)/,
+    /\b(vos|sus|your|votre|tu|leurs|their)\b.*\b(service|services|servicio|servicios|servizi)/,
+    /\b(info|information|informacion|informations)\b.*\b(service|services|servicio|servicios|servizi)/,
+    /\b(que proposez vous|que ofrecen|what do you offer|cosa offrite|was bieten)\b/,
+    /\b(j ai besoin d aide|j'ai besoin d'aide|necesito ayuda|i need help|besoin d aide|besoin d'aide)\b/,
+  ];
+
+  const specificPatterns = [
+    /\b(seo|audit|core web vitals|react|next|astro|ia|ai|cto|refonte|performance|site web|web|prix|tarif|devis|quote|cotizacion|cita|appointment|rendez-vous)\b/,
+    /\b(coupe|color|salon|manicure|pedicure|barber|cita|sucursal|cabello|hair)\b/,
+    /\b(gps|rastreo|tracking|flotte|fleet|vehiculo|vehicle|geocerca|alerta)\b/,
+    /\b(ciberseguridad|cybersecurity|nist|forensic|peritaje|seguridad|security|auditoria)\b/,
+    /\b(chauffeur|chofer|airport|aeropuerto|transfer|traslado|suv|blindado|armored|cancun|cdmx|guadalajara)\b/,
+  ];
+
+  return broadPatterns.some((pattern) => pattern.test(value)) && !specificPatterns.some((pattern) => pattern.test(value));
 }
 
 function getCorsHeaders(request) {
@@ -148,6 +181,10 @@ export async function POST(request) {
       return withCors(request, { reply: fallbackReply });
     }
 
+    if (isBroadServiceInterest(cleanMessage)) {
+      return withCors(request, { reply: CLARIFYING_REPLIES[lang] });
+    }
+
     if (!process.env.OPENAI_API_KEY) {
       return withCors(request, { reply: fallbackReply });
     }
@@ -172,6 +209,9 @@ Site code: ${siteCode}.
 
 ${siteContext}
 - Keep answers concise, practical, and commercial.
+- Do not dump a full list of services when the visitor asks a broad or vague question.
+- If the visitor only says they are interested in services, asks for information in general, or does not mention a concrete need, ask one short clarifying question.
+- Use the site context only to answer the specific need mentioned by the visitor.
 - Do not invent pricing, timelines, guarantees, or legal commitments.
 - If the visitor wants a quote, audit, appointment, proposal, or detailed information, invite them to leave name, email, and phone in the chat form so the team can follow up.
 - Never ask for sensitive personal data.
