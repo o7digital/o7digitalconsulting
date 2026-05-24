@@ -147,14 +147,12 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
 
     setIsLoading(true);
     try {
-      await fetch("https://formspree.io/f/xkgdyvze", {
+      await fetch("/api/o7-lead", {
         method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name,
+          firstName: lead.firstName.trim(),
+          lastName: lead.lastName.trim(),
           email: lead.email.trim(),
           phone: lead.phone.trim(),
           source: "Chat IA O7",
