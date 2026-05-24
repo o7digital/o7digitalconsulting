@@ -9,6 +9,7 @@ const defaultAllowedOrigins = [
   "https://satelliteguard.com.mx",
   "https://www.satelliteguard.com.mx",
   "https://satelite-guard.vercel.app",
+  "https://satelite-guuard.vercel.app",
 ];
 
 function clean(value) {
