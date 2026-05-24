@@ -12,6 +12,7 @@ const COPY = {
     send: "Envoyer",
     open: "Ouvrir le chat",
     close: "Fermer le chat",
+    teaser: "Olivia peut vous aider",
     leadIntro: "Avant de commencer, indiquez vos coordonnées pour qu'un conseiller O7 puisse vous contacter.",
     firstName: "Prénom",
     lastName: "Nom",
@@ -29,6 +30,7 @@ const COPY = {
     send: "Send",
     open: "Open chat",
     close: "Close chat",
+    teaser: "Olivia can help",
     leadIntro: "Before we start, please leave your contact details so an O7 advisor can contact you.",
     firstName: "First name",
     lastName: "Last name",
@@ -46,6 +48,7 @@ const COPY = {
     send: "Enviar",
     open: "Abrir chat",
     close: "Cerrar chat",
+    teaser: "Olivia puede ayudarte",
     leadIntro: "Antes de empezar, deja tus datos para que un asesor O7 pueda contactarte.",
     firstName: "Nombre",
     lastName: "Apellido",
@@ -63,6 +66,7 @@ const COPY = {
     send: "Senden",
     open: "Chat offnen",
     close: "Chat schliessen",
+    teaser: "Olivia kann helfen",
     leadIntro: "Bevor wir starten, hinterlassen Sie bitte Ihre Kontaktdaten, damit ein O7-Berater Sie kontaktieren kann.",
     firstName: "Vorname",
     lastName: "Name",
@@ -80,6 +84,7 @@ const COPY = {
     send: "Invia",
     open: "Apri chat",
     close: "Chiudi chat",
+    teaser: "Olivia puo aiutarti",
     leadIntro: "Prima di iniziare, lascia i tuoi dati cosi un consulente O7 potra contattarti.",
     firstName: "Nome",
     lastName: "Cognome",
@@ -100,7 +105,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
   const pathname = usePathname();
   const language = getLanguage(pathname);
   const copy = COPY[language];
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [leadSent, setLeadSent] = useState(false);
@@ -220,9 +225,16 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
         </section>
       )}
 
-      <button type="button" className="o7-chat-toggle" onClick={() => setIsOpen((value) => !value)} aria-label={isOpen ? copy.close : copy.open}>
-        {isOpen ? "x" : "IA"}
-      </button>
+      <div className="o7-chat-closed">
+        {!isOpen && (
+          <button type="button" className="o7-chat-teaser" onClick={() => setIsOpen(true)}>
+            {copy.teaser}
+          </button>
+        )}
+        <button type="button" className="o7-chat-toggle" onClick={() => setIsOpen((value) => !value)} aria-label={isOpen ? copy.close : copy.open}>
+          {isOpen ? "x" : "IA"}
+        </button>
+      </div>
 
       <style jsx>{`
         .o7-chat {
@@ -265,6 +277,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
         }
         .o7-chat-close,
         .o7-chat-toggle,
+        .o7-chat-teaser,
         .o7-chat-composer button,
         .o7-chat-lead button {
           border: 0;
@@ -362,6 +375,25 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           width: 44px;
           height: 44px;
           border-radius: 13px;
+        }
+        .o7-chat-closed {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 10px;
+        }
+        .o7-chat-teaser {
+          min-height: 42px;
+          max-width: 210px;
+          padding: 0 14px;
+          border-radius: 14px;
+          color: #101522;
+          background: #fff;
+          box-shadow: 0 14px 42px rgba(0, 0, 0, 0.24);
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 1.2;
+          text-align: left;
         }
         .o7-chat-toggle {
           display: block;
