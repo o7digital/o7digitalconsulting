@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import sal from "sal.js";
 import BackToTop from "@/components/common/BackToTop";
 import MobileMenu from "@/components/headers/MobileMenu";
+import O7ChatWidget from "@/components/o7/chat/O7ChatWidget";
 import { closeMenu } from "@/utlis/toggleMenu";
 
 export default function ClientLayout({ children }) {
@@ -61,6 +62,7 @@ export default function ClientLayout({ children }) {
   return (
     <>
       <main className="page-wrapper">{children}</main>
+      <O7ChatWidget siteCode="o7digital" />
       <MobileMenu />
       <BackToTop />
     </>
