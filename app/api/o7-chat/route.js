@@ -404,7 +404,8 @@ function getPreconfiguredReply(siteCode, language, message) {
   if (!replies) return null;
 
   const value = normalizeForMatch(message);
-  const match = replies.find((entry) => entry.patterns.some((pattern) => pattern.test(value)));
+  const pricingMatch = replies.find((entry) => entry.id === "pricing" && entry.patterns.some((pattern) => pattern.test(value)));
+  const match = pricingMatch || replies.find((entry) => entry.patterns.some((pattern) => pattern.test(value)));
 
   return match?.replies?.[language] || match?.replies?.es || null;
 }
