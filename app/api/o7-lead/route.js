@@ -21,6 +21,9 @@ const defaultAllowedOrigins = [
   "https://www.cusiflores.com",
   "https://cusi2.vercel.app",
   "https://cusi-2.vercel.app",
+  "https://cervantesbienesraices.com",
+  "https://www.cervantesbienesraices.com",
+  "https://cervantesbienesraices.vercel.app",
 ];
 
 function clean(value) {

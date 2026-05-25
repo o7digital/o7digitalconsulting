@@ -20,6 +20,9 @@ const defaultAllowedOrigins = [
   "https://www.cusiflores.com",
   "https://cusi2.vercel.app",
   "https://cusi-2.vercel.app",
+  "https://cervantesbienesraices.com",
+  "https://www.cervantesbienesraices.com",
+  "https://cervantesbienesraices.vercel.app",
 ];
 
 const FALLBACK_REPLIES = {
@@ -52,6 +55,13 @@ const SITE_CLARIFYING_REPLIES = {
     en: "Of course. To guide you properly, please tell me the occasion, delivery date, CDMX area, and whether you want a bouquet, arrangement, roses, tulips, or orchids.",
     fr: "Bien sûr. Pour vous orienter, indiquez l'occasion, la date de livraison, la zone a CDMX et si vous souhaitez un bouquet, une composition, des roses, tulipes ou orchidees.",
     it: "Certo. Per orientarti bene, indicami occasione, data di consegna, zona a CDMX e se cerchi bouquet, composizione, rose, tulipani o orchidee.",
+  },
+  cervantesbienesraices: {
+    es: "Claro. Para orientarte bien, dime si buscas comprar, vender o rentar, la zona, presupuesto aproximado, tipo de propiedad y fecha ideal.",
+    en: "Of course. To guide you properly, please tell me if you want to buy, sell, or rent, plus the area, approximate budget, property type, and ideal timing.",
+    fr: "Bien sûr. Pour vous orienter, indiquez si vous souhaitez acheter, vendre ou louer, la zone, le budget approximatif, le type de bien et le calendrier ideal.",
+    it: "Certo. Per orientarti bene, indicami se vuoi comprare, vendere o affittare, la zona, il budget indicativo, il tipo di proprieta e le tempistiche.",
+    de: "Gerne. Damit ich Sie richtig beraten kann: Kaufen, verkaufen oder mieten Sie, in welcher Zone, mit welchem Budget, Immobilientyp und Zeitplan?",
   },
 };
 
@@ -87,6 +97,13 @@ CUSI serves selected CDMX areas including Lomas de Chapultepec, Bosques de las L
 Keep answers warm, elegant, concise, and useful for a floral boutique customer.
 If the visitor asks for price, availability, delivery, order confirmation, or a recommendation, ask for occasion, delivery date, delivery zone, preferred style or flowers, budget if relevant, and invite them to leave name, email, and phone so CUSI can follow up.
   `.trim(),
+  cervantesbienesraices: `
+You are Sofia, the Cervantes Bienes Raices real estate assistant.
+Help visitors with buying, selling, and renting properties in Mexico, especially premium areas such as Polanco, Condesa, Roma Norte, CDMX, and other relevant zones shown on the site.
+Support questions about houses, apartments, investment properties, property search, listing details, valuation/appraisal, real estate consulting, and scheduling an advisor conversation.
+Keep answers concise, professional, and commercial for buyers, sellers, owners, investors, and tenants.
+If the visitor asks for availability, price, viewing, valuation, selling, renting, buying, or detailed information, ask for objective, zone, budget, property type, timeline, and invite them to leave name, email, and phone so a Cervantes advisor can contact them.
+  `.trim(),
 };
 
 const SITE_FALLBACK_REPLIES = {
@@ -114,6 +131,13 @@ const SITE_FALLBACK_REPLIES = {
     en: "I can help with bouquets, floral arrangements, orchids, roses, tulips, and delivery in selected CDMX areas. Share the occasion, date, and delivery area so I can guide you.",
     fr: "Je peux vous aider avec bouquets, compositions florales, orchidees, roses, tulipes et livraison dans des zones selectionnees de CDMX. Indiquez l'occasion, la date et la zone de livraison.",
     it: "Posso aiutarti con bouquet, composizioni floreali, orchidee, rose, tulipani e consegna in zone selezionate di CDMX. Indica occasione, data e zona di consegna.",
+  },
+  cervantesbienesraices: {
+    es: "Puedo ayudarte con compra, venta o renta de propiedades, busqueda por zona, tipo de inmueble y asesoria inmobiliaria. Dime que buscas, zona y presupuesto para orientarte.",
+    en: "I can help with buying, selling, or renting properties, area-based searches, property types, and real estate advisory. Share what you need, area, and budget so I can guide you.",
+    fr: "Je peux vous aider pour acheter, vendre ou louer un bien, rechercher par zone, type de propriete et conseil immobilier. Indiquez votre besoin, zone et budget.",
+    it: "Posso aiutarti con acquisto, vendita o affitto di proprieta, ricerca per zona, tipo di immobile e consulenza immobiliare. Indica bisogno, zona e budget.",
+    de: "Ich kann beim Kauf, Verkauf oder Mieten von Immobilien, der Suche nach Zone, Immobilientyp und Immobilienberatung helfen. Nennen Sie Bedarf, Zone und Budget.",
   },
 };
 
@@ -150,6 +174,7 @@ function isBroadServiceInterest(message) {
     /\b(ciberseguridad|cybersecurity|nist|forensic|peritaje|seguridad|security|auditoria)\b/,
     /\b(chauffeur|chofer|airport|aeropuerto|transfer|traslado|suv|blindado|armored|cancun|cdmx|guadalajara)\b/,
     /\b(flores|flowers|fleurs|fiori|ramo|bouquet|arreglo|arrangement|composition|orquidea|orchid|orchidee|orchidea|rosas|roses|tulipanes|tulips|tulipes|tulipani|cumpleanos|birthday|anniversaire|consegna|livraison|delivery)\b/,
+    /\b(propiedad|property|propriete|proprieta|immobilie|casa|house|maison|departamento|apartment|appartement|wohnung|renta|rent|location|affitto|venta|sale|achat|vendita|compra|buy|polanco|condesa|roma|inmobiliaria|real estate)\b/,
   ];
 
   return broadPatterns.some((pattern) => pattern.test(value)) && !specificPatterns.some((pattern) => pattern.test(value));
