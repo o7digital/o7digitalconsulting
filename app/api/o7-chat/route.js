@@ -196,6 +196,190 @@ const SITE_FALLBACK_REPLIES = {
   },
 };
 
+const PRECONFIGURED_REPLIES = {
+  securyti: [
+    {
+      id: "nist",
+      patterns: [
+        /\bnist\b/,
+        /\bcsf\b/,
+        /\bacreditacion\b/,
+        /\baccreditation\b/,
+        /\baccreditation\b/,
+        /\bdiagnostico\b/,
+        /\bdiagnosis\b/,
+        /\bdiagnostic\b/,
+      ],
+      replies: {
+        es: "SecuryTI ofrece un diagnostico rapido basado en el NIST Cybersecurity Framework. Esta pensado para PyMEs mexicanas que trabajan, o quieren trabajar, con clientes en Estados Unidos y Canada.\n\nEl sitio lo presenta como una evaluacion en 48 horas del nivel de alineacion con NIST CSF y una acreditacion digital verificable en blockchain, util para procesos comerciales, auditorias o licitaciones.\n\nPara orientarte bien, dime el giro de tu empresa, si ya te pidieron NIST y que fecha limite tienes.",
+        en: "SecuryTI offers a fast diagnosis based on the NIST Cybersecurity Framework. It is designed for Mexican SMEs working, or planning to work, with customers in the United States and Canada.\n\nThe site presents it as a 48-hour evaluation of alignment with NIST CSF plus a verifiable digital accreditation on blockchain, useful for commercial processes, audits, or bids.\n\nTo guide you properly, please share your industry, whether a customer already requested NIST, and your deadline.",
+        fr: "SecuryTI propose un diagnostic rapide base sur le NIST Cybersecurity Framework. Il s'adresse aux PME mexicaines qui travaillent, ou veulent travailler, avec des clients aux Etats-Unis et au Canada.\n\nLe site le presente comme une evaluation en 48h de l'alignement avec NIST CSF, avec une accreditation numerique verifiable sur blockchain, utile pour les demarches commerciales, audits ou appels d'offres.\n\nPour vous orienter, indiquez le secteur de votre entreprise, si NIST vous a deja ete demande, et votre delai.",
+      },
+    },
+    {
+      id: "audit",
+      patterns: [
+        /\baudit\b/,
+        /\bauditoria\b/,
+        /\bauditorias\b/,
+        /\bevaluacion\b/,
+        /\bevaluate\b/,
+        /\bevaluation\b/,
+      ],
+      replies: {
+        es: "Una auditoria de ciberseguridad SecuryTI analiza el nivel de seguridad de la empresa para identificar riesgos, brechas y prioridades antes de que afecten la operacion.\n\nPuede revisar controles, accesos, red, endpoints, nube, politicas y exposicion frente a amenazas. El objetivo es entregar hallazgos claros y acciones priorizadas.\n\nPara avanzar, dime si buscas una auditoria general, tecnica, de cumplimiento o previa a un cliente/proveedor.",
+        en: "A SecuryTI cybersecurity audit analyzes the company's security level to identify risks, gaps, and priorities before they affect operations.\n\nIt can review controls, access, network, endpoints, cloud, policies, and exposure to threats. The goal is to provide clear findings and prioritized actions.\n\nTo move forward, please tell me whether you need a general, technical, compliance, or customer/vendor-driven audit.",
+        fr: "Un audit de cybersecurite SecuryTI analyse le niveau de securite de l'entreprise afin d'identifier les risques, les failles et les priorites avant impact operationnel.\n\nIl peut couvrir controles, acces, reseau, endpoints, cloud, politiques et exposition aux menaces. L'objectif est de livrer des constats clairs et des actions priorisees.\n\nPour avancer, indiquez si vous cherchez un audit general, technique, de conformite ou demande par un client/fournisseur.",
+      },
+    },
+    {
+      id: "technology-consulting",
+      patterns: [
+        /\bconsultoria\b/,
+        /\bconsulting\b/,
+        /\bconseil\b/,
+        /\barquitectura\b/,
+        /\barchitecture\b/,
+        /\bhardening\b/,
+        /\bgobierno\b/,
+        /\bgovernance\b/,
+        /\broadmap\b/,
+      ],
+      replies: {
+        es: "La consultoria tecnologica de SecuryTI ayuda a ordenar decisiones tecnicas de seguridad: arquitectura, controles, accesos, nube, proveedores, hardening y roadmap.\n\nEl enfoque es convertir riesgos en acciones concretas, alineadas con la operacion y las politicas internas de gestion de informacion.\n\nPara orientarte, dime que entorno quieres revisar: nube, red, accesos, proveedores, aplicacion, infraestructura o gobierno de seguridad.",
+        en: "SecuryTI technology consulting helps structure security decisions around architecture, controls, access, cloud, vendors, hardening, and roadmap.\n\nThe focus is to turn risks into concrete actions aligned with operations and internal information management policies.\n\nTo guide you, please tell me what environment you want to review: cloud, network, access, vendors, application, infrastructure, or security governance.",
+        fr: "Le conseil technologique SecuryTI aide a structurer les decisions de securite: architecture, controles, acces, cloud, fournisseurs, hardening et roadmap.\n\nL'objectif est de transformer les risques en actions concretes, alignees avec l'operation et les politiques internes de gestion de l'information.\n\nPour vous orienter, indiquez l'environnement concerne: cloud, reseau, acces, fournisseurs, application, infrastructure ou gouvernance securite.",
+      },
+    },
+    {
+      id: "compliance",
+      patterns: [
+        /\bcumplimiento\b/,
+        /\bcompliance\b/,
+        /\bconformite\b/,
+        /\biso\b/,
+        /\b27001\b/,
+        /\bnormativa\b/,
+        /\bregulacion\b/,
+      ],
+      replies: {
+        es: "SecuryTI ayuda a las organizaciones a cumplir con normativas y marcos de seguridad, incluyendo referencias como NIST e ISO 27001 segun el contexto del proyecto.\n\nEl trabajo puede incluir diagnostico, brechas, controles, evidencias, politicas y prioridades para operar dentro del marco requerido.\n\nPara orientarte, dime que marco o requisito te estan pidiendo y si viene de un cliente, auditoria, licitacion o necesidad interna.",
+        en: "SecuryTI helps organizations align with security regulations and frameworks, including references such as NIST and ISO 27001 depending on the project context.\n\nThe work can include diagnosis, gaps, controls, evidence, policies, and priorities to operate within the required framework.\n\nTo guide you, please share which framework or requirement you need and whether it comes from a customer, audit, bid, or internal need.",
+        fr: "SecuryTI accompagne les organisations dans l'alignement avec des normes et referentiels de securite, dont NIST et ISO 27001 selon le contexte du projet.\n\nLe travail peut couvrir diagnostic, ecarts, controles, preuves, politiques et priorites pour operer dans le cadre requis.\n\nPour vous orienter, indiquez le referentiel demande et s'il vient d'un client, audit, appel d'offres ou besoin interne.",
+      },
+    },
+    {
+      id: "forensics",
+      patterns: [
+        /\bperitaje\b/,
+        /\bpericial\b/,
+        /\bforense\b/,
+        /\bforensic\b/,
+        /\binforme\b/,
+        /\bevidencia\b/,
+        /\bfraude\b/,
+        /\blitigio\b/,
+      ],
+      replies: {
+        es: "SecuryTI realiza peritajes e informes periciales informaticos para incidentes, fraudes, accesos no autorizados, disputas tecnicas o procesos internos/legales.\n\nEl enfoque es preservar evidencia, reconstruir hechos, analizar elementos tecnicos y documentar hallazgos de forma clara para direccion, legal, auditoria o areas tecnicas.\n\nSi hay evidencia sensible, no la compartas por chat. Dime el tipo de caso, urgencia y si ya existe un proceso legal o interno.",
+        en: "SecuryTI prepares digital forensic reports for incidents, fraud, unauthorized access, technical disputes, or internal/legal processes.\n\nThe approach is to preserve evidence, reconstruct facts, analyze technical elements, and document findings clearly for management, legal, audit, or technical teams.\n\nIf there is sensitive evidence, do not share it in the chat. Please tell me the type of case, urgency, and whether there is already a legal or internal process.",
+        fr: "SecuryTI realise des expertises et rapports periciaux informatiques pour incidents, fraudes, acces non autorises, litiges techniques ou procedures internes/juridiques.\n\nL'approche consiste a preserver les preuves, reconstruire les faits, analyser les elements techniques et documenter les constats pour direction, juridique, audit ou equipes techniques.\n\nSi des preuves sensibles existent, ne les partagez pas dans le chat. Indiquez le type de cas, l'urgence et s'il existe deja une procedure juridique ou interne.",
+      },
+    },
+    {
+      id: "training",
+      patterns: [
+        /\bformacion\b/,
+        /\bcapacitacion\b/,
+        /\btraining\b/,
+        /\bformation\b/,
+        /\bconcienciacion\b/,
+        /\bawareness\b/,
+        /\bphishing\b/,
+      ],
+      replies: {
+        es: "La formacion en ciberseguridad de SecuryTI esta dirigida a empresas y se adapta a usuarios, liderazgo, TI y perfiles con privilegios elevados.\n\nPuede cubrir phishing, ingenieria social, manejo de informacion sensible, escalamiento de incidentes y habitos seguros en la operacion diaria.\n\nPara recomendarte un formato, dime numero aproximado de personas, perfiles a capacitar y principal riesgo que quieres reducir.",
+        en: "SecuryTI cybersecurity training is designed for companies and can be adapted for users, leadership, IT teams, and privileged profiles.\n\nIt can cover phishing, social engineering, sensitive information handling, incident escalation, and secure habits in daily operations.\n\nTo suggest a format, please share the approximate number of people, target profiles, and the main risk you want to reduce.",
+        fr: "La formation cybersecurite SecuryTI s'adresse aux entreprises et s'adapte aux utilisateurs, dirigeants, equipes IT et profils a privileges.\n\nElle peut couvrir phishing, ingenierie sociale, gestion d'information sensible, escalade d'incident et bonnes pratiques au quotidien.\n\nPour proposer un format, indiquez le nombre approximatif de personnes, les profils concernes et le risque principal a reduire.",
+      },
+    },
+    {
+      id: "incident-response",
+      patterns: [
+        /\bincidente\b/,
+        /\bincident\b/,
+        /\bransomware\b/,
+        /\bataque\b/,
+        /\battack\b/,
+        /\bbrecha\b/,
+        /\bcomprometid\b/,
+        /\bhack\b/,
+        /\bintrusion\b/,
+      ],
+      replies: {
+        es: "Si sospechas de un incidente, lo importante es contener sin destruir evidencia: no borres archivos, no reinstales equipos y documenta hora, sistemas afectados y sintomas.\n\nSecuryTI puede apoyar con analisis, contencion, respuesta a incidentes y recomendaciones posteriores.\n\nPor seguridad, no compartas credenciales ni evidencia sensible por chat. Deja tus datos y describe urgencia, sistemas afectados y desde cuando ocurre para que un asesor te contacte.",
+        en: "If you suspect an incident, the priority is containment without destroying evidence: do not delete files, do not reinstall machines, and document time, affected systems, and symptoms.\n\nSecuryTI can support analysis, containment, incident response, and follow-up recommendations.\n\nFor safety, do not share credentials or sensitive evidence in chat. Leave your contact details and describe urgency, affected systems, and when it started so an advisor can contact you.",
+        fr: "Si vous suspectez un incident, la priorite est de contenir sans detruire les preuves: ne supprimez pas de fichiers, ne reinstallez pas les machines, documentez l'heure, les systemes affectes et les symptomes.\n\nSecuryTI peut accompagner analyse, confinement, reponse a incident et recommandations.\n\nPour securite, ne partagez pas d'identifiants ni preuves sensibles dans le chat. Laissez vos coordonnees et indiquez urgence, systemes affectes et date de debut pour qu'un conseiller vous contacte.",
+      },
+    },
+    {
+      id: "pentest",
+      patterns: [
+        /\bpentest\b/,
+        /\bpenetration\b/,
+        /\bintrusion test\b/,
+        /\bprueba de penetracion\b/,
+        /\bpruebas de penetracion\b/,
+      ],
+      replies: {
+        es: "SecuryTI puede orientar sobre pruebas de penetracion para evaluar exposicion tecnica, vulnerabilidades y riesgos explotables en aplicaciones, red o infraestructura.\n\nPara definir alcance, normalmente se necesita saber si el objetivo es web, red interna, nube, endpoints o un requisito de cliente/auditoria.\n\nDime que quieres probar, si tienes ventana de pruebas y si el alcance ya esta autorizado.",
+        en: "SecuryTI can guide penetration testing to evaluate technical exposure, vulnerabilities, and exploitable risks in applications, network, or infrastructure.\n\nTo define scope, it is usually necessary to know whether the target is web, internal network, cloud, endpoints, or a customer/audit requirement.\n\nPlease tell me what you want to test, whether you have a testing window, and whether the scope is already authorized.",
+        fr: "SecuryTI peut orienter des tests d'intrusion pour evaluer exposition technique, vulnerabilites et risques exploitables sur applications, reseau ou infrastructure.\n\nPour definir le perimetre, il faut generalement savoir si la cible est web, reseau interne, cloud, endpoints ou une exigence client/audit.\n\nIndiquez ce que vous voulez tester, si une fenetre de test existe et si le perimetre est autorise.",
+      },
+    },
+    {
+      id: "pricing",
+      patterns: [
+        /\bprecio\b/,
+        /\bprecios\b/,
+        /\btarifa\b/,
+        /\btarifas\b/,
+        /\bcosto\b/,
+        /\bcotizacion\b/,
+        /\bquote\b/,
+        /\bprice\b/,
+        /\bpricing\b/,
+        /\bdevis\b/,
+        /\btarif\b/,
+      ],
+      replies: {
+        es: "Los precios dependen del servicio, alcance, tamano de la empresa, urgencia y sistemas a revisar. Para evitar darte una cifra incorrecta, SecuryTI debe validar primero el contexto.\n\nDime que necesitas: NIST, auditoria, consultoria, cumplimiento, peritaje, formacion, pentest o incidente. Tambien deja nombre, empresa, email y telefono para que un asesor te prepare una cotizacion.",
+        en: "Pricing depends on the service, scope, company size, urgency, and systems to review. To avoid giving an incorrect number, SecuryTI needs to validate the context first.\n\nPlease tell me what you need: NIST, audit, consulting, compliance, forensic report, training, pentest, or incident response. Also leave name, company, email, and phone so an advisor can prepare a quote.",
+        fr: "Les tarifs dependent du service, du perimetre, de la taille de l'entreprise, de l'urgence et des systemes a analyser. Pour eviter une estimation incorrecte, SecuryTI doit d'abord valider le contexte.\n\nIndiquez votre besoin: NIST, audit, conseil, conformite, expertise, formation, pentest ou incident. Laissez aussi nom, entreprise, email et telephone pour qu'un conseiller prepare un devis.",
+      },
+    },
+    {
+      id: "contact",
+      patterns: [
+        /\bcontacto\b/,
+        /\bcontact\b/,
+        /\btelefono\b/,
+        /\bphone\b/,
+        /\bemail\b/,
+        /\bcorreo\b/,
+        /\bdireccion\b/,
+        /\baddress\b/,
+        /\boficina\b/,
+      ],
+      replies: {
+        es: "Puedes contactar a SecuryTI en contacto@securyti.mx o al +52 1 55 6350 2870.\n\nLa oficina indicada en el sitio es Montes Urales 755, Lomas-Virreyes, Lomas de Chapultepec.\n\nTambien puedes dejar tus datos en este chat para que un asesor te contacte.",
+        en: "You can contact SecuryTI at contacto@securyti.mx or +52 1 55 6350 2870.\n\nThe office shown on the site is Montes Urales 755, Lomas-Virreyes, Lomas de Chapultepec.\n\nYou can also leave your details in this chat so an advisor can contact you.",
+        fr: "Vous pouvez contacter SecuryTI a contacto@securyti.mx ou au +52 1 55 6350 2870.\n\nL'adresse indiquee sur le site est Montes Urales 755, Lomas-Virreyes, Lomas de Chapultepec.\n\nVous pouvez aussi laisser vos coordonnees dans ce chat pour qu'un conseiller vous contacte.",
+      },
+    },
+  ],
+};
+
 function normalizeLanguage(language) {
   return ["fr", "en", "es", "de", "it"].includes(language) ? language : "fr";
 }
@@ -208,11 +392,25 @@ function getClarifyingReply(siteCode, language) {
   return SITE_CLARIFYING_REPLIES[siteCode]?.[language] || CLARIFYING_REPLIES[language];
 }
 
-function isBroadServiceInterest(message) {
-  const value = message
+function normalizeForMatch(value) {
+  return value
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
+}
+
+function getPreconfiguredReply(siteCode, language, message) {
+  const replies = PRECONFIGURED_REPLIES[siteCode];
+  if (!replies) return null;
+
+  const value = normalizeForMatch(message);
+  const match = replies.find((entry) => entry.patterns.some((pattern) => pattern.test(value)));
+
+  return match?.replies?.[language] || match?.replies?.es || null;
+}
+
+function isBroadServiceInterest(message) {
+  const value = normalizeForMatch(message);
 
   const broadPatterns = [
     /\b(interesse|interesado|interesada|interested|interessiert|interessato|interessata)\b.*\b(service|services|servicio|servicios|servizi|dienstleistung)/,
@@ -290,6 +488,11 @@ export async function POST(request) {
 
     if (!cleanMessage) {
       return withCors(request, { reply: fallbackReply });
+    }
+
+    const preconfiguredReply = getPreconfiguredReply(siteCode, lang, cleanMessage);
+    if (preconfiguredReply) {
+      return withCors(request, { reply: preconfiguredReply });
     }
 
     if (isBroadServiceInterest(cleanMessage)) {
