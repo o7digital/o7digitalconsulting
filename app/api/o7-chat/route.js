@@ -16,6 +16,10 @@ const defaultAllowedOrigins = [
   "https://www.eliteridemexico.com",
   "https://elite-ride-mexico.vercel.app",
   "https://eliteridemexico.vercel.app",
+  "https://cusiflores.com",
+  "https://www.cusiflores.com",
+  "https://cusi2.vercel.app",
+  "https://cusi-2.vercel.app",
 ];
 
 const FALLBACK_REPLIES = {
@@ -40,6 +44,15 @@ const CLARIFYING_REPLIES = {
   es: "Claro. Para orientarte bien, puedes precisar que necesitas: una auditoria, una cotizacion, un rediseño, una pregunta tecnica, una cita o un servicio especifico?",
   de: "Gerne. Damit ich Sie richtig einordnen kann: Geht es um ein Audit, ein Angebot, einen Relaunch, eine technische Frage, einen Termin oder einen bestimmten Service?",
   it: "Certo. Per orientarti correttamente, puoi precisare cosa ti serve: un audit, un preventivo, un redesign, una domanda tecnica, un appuntamento o un servizio specifico?",
+};
+
+const SITE_CLARIFYING_REPLIES = {
+  cusi: {
+    es: "Claro. Para orientarte bien, dime por favor la ocasion, la fecha de entrega, la zona de CDMX y si buscas ramo, arreglo, rosas, tulipanes u orquideas.",
+    en: "Of course. To guide you properly, please tell me the occasion, delivery date, CDMX area, and whether you want a bouquet, arrangement, roses, tulips, or orchids.",
+    fr: "Bien sûr. Pour vous orienter, indiquez l'occasion, la date de livraison, la zone a CDMX et si vous souhaitez un bouquet, une composition, des roses, tulipes ou orchidees.",
+    it: "Certo. Per orientarti bene, indicami occasione, data di consegna, zona a CDMX e se cerchi bouquet, composizione, rose, tulipani o orchidee.",
+  },
 };
 
 const SITE_CONTEXTS = {
@@ -67,6 +80,13 @@ Help visitors with private chauffeur services, luxury SUV rentals, airport trans
 Keep answers concise, premium, practical, and commercial for travelers, executives, agencies, and companies.
 If the visitor asks for prices, availability, airport pickup, routes, reservation, quote, vehicle options, armored service, or detailed information, ask them to leave name, email, and phone so an Elite Ride Mexico advisor can contact them.
   `.trim(),
+  cusi: `
+You are Conchita, the CUSI Flores assistant.
+Help visitors with premium flowers in Mexico City, flower delivery, floral arrangements, bouquets, orchids, roses, tulips, birthday flowers, Mother's Day flowers, gifts, card messages, and delivery coordination.
+CUSI serves selected CDMX areas including Lomas de Chapultepec, Bosques de las Lomas, Polanco, Santa Fe, and nearby zones depending on availability.
+Keep answers warm, elegant, concise, and useful for a floral boutique customer.
+If the visitor asks for price, availability, delivery, order confirmation, or a recommendation, ask for occasion, delivery date, delivery zone, preferred style or flowers, budget if relevant, and invite them to leave name, email, and phone so CUSI can follow up.
+  `.trim(),
 };
 
 const SITE_FALLBACK_REPLIES = {
@@ -89,6 +109,12 @@ const SITE_FALLBACK_REPLIES = {
     en: "I can help with private chauffeur service, airport transfers, premium SUV rental, armored vehicles, and executive transportation in Mexico. Share your route, date, and contact details so Elite Ride Mexico can follow up.",
     fr: "Je peux vous aider avec chauffeur prive, transferts aeroport, location de SUV premium, vehicules blindes et transport executif au Mexique. Indiquez votre trajet, date et coordonnees pour qu'Elite Ride Mexico vous contacte.",
   },
+  cusi: {
+    es: "Puedo ayudarte con ramos, arreglos florales, orquideas, rosas, tulipanes y entrega en zonas seleccionadas de CDMX. Dime la ocasion, fecha y zona de entrega para orientarte.",
+    en: "I can help with bouquets, floral arrangements, orchids, roses, tulips, and delivery in selected CDMX areas. Share the occasion, date, and delivery area so I can guide you.",
+    fr: "Je peux vous aider avec bouquets, compositions florales, orchidees, roses, tulipes et livraison dans des zones selectionnees de CDMX. Indiquez l'occasion, la date et la zone de livraison.",
+    it: "Posso aiutarti con bouquet, composizioni floreali, orchidee, rose, tulipani e consegna in zone selezionate di CDMX. Indica occasione, data e zona di consegna.",
+  },
 };
 
 function normalizeLanguage(language) {
@@ -97,6 +123,10 @@ function normalizeLanguage(language) {
 
 function getFallbackReply(siteCode, language) {
   return SITE_FALLBACK_REPLIES[siteCode]?.[language] || FALLBACK_REPLIES[language];
+}
+
+function getClarifyingReply(siteCode, language) {
+  return SITE_CLARIFYING_REPLIES[siteCode]?.[language] || CLARIFYING_REPLIES[language];
 }
 
 function isBroadServiceInterest(message) {
@@ -119,6 +149,7 @@ function isBroadServiceInterest(message) {
     /\b(gps|rastreo|tracking|flotte|fleet|vehiculo|vehicle|geocerca|alerta)\b/,
     /\b(ciberseguridad|cybersecurity|nist|forensic|peritaje|seguridad|security|auditoria)\b/,
     /\b(chauffeur|chofer|airport|aeropuerto|transfer|traslado|suv|blindado|armored|cancun|cdmx|guadalajara)\b/,
+    /\b(flores|flowers|fleurs|fiori|ramo|bouquet|arreglo|arrangement|composition|orquidea|orchid|orchidee|orchidea|rosas|roses|tulipanes|tulips|tulipes|tulipani|cumpleanos|birthday|anniversaire|consegna|livraison|delivery)\b/,
   ];
 
   return broadPatterns.some((pattern) => pattern.test(value)) && !specificPatterns.some((pattern) => pattern.test(value));
@@ -182,7 +213,7 @@ export async function POST(request) {
     }
 
     if (isBroadServiceInterest(cleanMessage)) {
-      return withCors(request, { reply: CLARIFYING_REPLIES[lang] });
+      return withCors(request, { reply: getClarifyingReply(siteCode, lang) });
     }
 
     if (!process.env.OPENAI_API_KEY) {

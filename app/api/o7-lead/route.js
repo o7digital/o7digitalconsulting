@@ -17,6 +17,10 @@ const defaultAllowedOrigins = [
   "https://www.eliteridemexico.com",
   "https://elite-ride-mexico.vercel.app",
   "https://eliteridemexico.vercel.app",
+  "https://cusiflores.com",
+  "https://www.cusiflores.com",
+  "https://cusi2.vercel.app",
+  "https://cusi-2.vercel.app",
 ];
 
 function clean(value) {
