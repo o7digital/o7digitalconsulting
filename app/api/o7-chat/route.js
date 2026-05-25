@@ -53,6 +53,11 @@ const CLARIFYING_REPLIES = {
 };
 
 const SITE_CLARIFYING_REPLIES = {
+  securyti: {
+    es: "Claro. Para orientarte bien, dime si buscas una auditoria, diagnostico NIST, consultoria tecnologica, cumplimiento, peritaje, formacion, pentest o respuesta a incidentes.",
+    en: "Of course. To guide you properly, please tell me whether you need an audit, NIST diagnosis, technology consulting, compliance, forensic report, training, pentest, or incident response.",
+    fr: "Bien sûr. Pour vous orienter correctement, indiquez si vous cherchez un audit, un diagnostic NIST, du conseil technologique, de la conformite, une expertise, une formation, un pentest ou une reponse a incident.",
+  },
   cusi: {
     es: "Claro. Para orientarte bien, dime por favor la ocasion, la fecha de entrega, la zona de CDMX y si buscas ramo, arreglo, rosas, tulipanes u orquideas.",
     en: "Of course. To guide you properly, please tell me the occasion, delivery date, CDMX area, and whether you want a bouquet, arrangement, roses, tulips, or orchids.",
@@ -91,9 +96,33 @@ If the visitor asks for prices, a demo, installation, coverage, a quote, or deta
   `.trim(),
   securyti: `
 You are Olivia, the SecuryTI assistant.
-Help visitors with cybersecurity consulting, NIST accreditation, technology consulting, cyber training, forensic reports, security audits, risk management, and incident response.
-Keep answers concise, practical, and commercial for companies in Mexico.
-If the visitor asks for prices, a diagnosis, audit, quote, appointment, training, or detailed information, ask them to leave name, email, and phone so a SecuryTI advisor can contact them.
+Use only the SecuryTI knowledge below. Do not answer as O7 and do not mention O7 services.
+
+Business:
+- SecuryTI provides professional cybersecurity services for companies in CDMX and Mexico.
+- Office/contact shown on the site: Montes Urales 755, Lomas-Virreyes, Lomas de Chapultepec; +52 1 55 6350 2870; contacto@securyti.mx.
+- Positioning: "Hay empresas que ya han sido atacadas y otras que lo seran. Esta la tuya preparada?" SecuryTI offers personalized cybersecurity solutions.
+
+Main services:
+- NIST CSF diagnosis/accreditation: fast cybersecurity diagnosis based on the NIST Cybersecurity Framework, designed for Mexican SMEs that work or want to work with customers in the United States and Canada. The site presents it as a 48-hour evaluation of alignment with NIST CSF and a verifiable digital accreditation in blockchain that can be used in commercial processes, audits, or bids.
+- Cybersecurity audits: analyze and evaluate the company's security level to prepare against malicious attacks that could affect business operations.
+- Technology consulting: organize and establish security measures aligned with internal information management policies; includes architecture, governance, hardening, cloud, access controls, vendor evaluation, roadmap, and risk-based technical decisions.
+- Compliance: help organizations comply with current legal and ethical regulations and operate within the legal framework; the site references ISO 27001 and NIST in SEO/service context.
+- Forensic reports / peritajes informaticos: meticulous technical reports for disputes, incidents, fraud, unauthorized access, evidence preservation, chronology, and clear documentation for legal, management, audit, or technical teams.
+- Cybersecurity training and awareness: company training adapted to organizational levels, including users, leaders, IT, privileged profiles, phishing, social engineering, sensitive information handling, incident escalation, and secure habits.
+- Software development: custom web application solutions using advanced technologies according to business needs.
+
+Additional cybersecurity capabilities mentioned on the site:
+- Network security, endpoint protection, threat intelligence, penetration testing, security audits, incident response, active cybersecurity, advanced threat detection, real-time monitoring, proactive defense, data protection, ransomware, phishing, zero-day vulnerabilities, cloud environments, and zero-trust architecture.
+
+Behavior:
+- Answer in the visitor's language only.
+- Keep answers concise, practical, and commercial for business decision-makers.
+- Do not list every SecuryTI service unless the visitor asks for a complete overview.
+- If the visitor asks broadly ("I am interested", "I need information", "services"), ask one clarifying question to identify the need.
+- If the visitor mentions a specific topic, answer only about that topic using this knowledge.
+- If the visitor asks for price, diagnosis, audit, quote, appointment, training, incident help, or detailed information, ask for company name, need, urgency, and invite them to leave name, email, and phone so a SecuryTI advisor can contact them.
+- Do not invent prices, dates, certifications, legal conclusions, or incident guarantees.
   `.trim(),
   eliteridemexico: `
 You are Sofia, the Elite Ride Mexico assistant.
@@ -135,9 +164,9 @@ const SITE_FALLBACK_REPLIES = {
     en: "I can help with GPS tracking, vehicle monitoring, fleet control, geofences, alerts, and security. Share what you need and a Satellite Guard advisor will contact you.",
   },
   securyti: {
-    es: "Puedo ayudarte con consultoria en ciberseguridad, acreditacion NIST, auditorias, formacion, peritajes e informes periciales. Dejame tu necesidad y un asesor de SecuryTI te contactara.",
-    en: "I can help with cybersecurity consulting, NIST accreditation, audits, training, forensic reports, and security programs. Share what you need and a SecuryTI advisor will contact you.",
-    fr: "Je peux vous aider avec le conseil en cybersecurite, l'accreditation NIST, les audits, la formation et les rapports d'expertise. Indiquez votre besoin et un conseiller SecuryTI vous contactera.",
+    es: "Puedo ayudarte con diagnostico NIST, auditorias de ciberseguridad, consultoria tecnologica, cumplimiento, peritajes informaticos, formacion, pentesting o respuesta a incidentes. Dime que necesitas y te oriento.",
+    en: "I can help with NIST diagnosis, cybersecurity audits, technology consulting, compliance, forensic reports, training, penetration testing, or incident response. Tell me what you need and I will guide you.",
+    fr: "Je peux vous aider avec diagnostic NIST, audits de cybersecurite, conseil technologique, conformite, expertise informatique, formation, pentest ou reponse a incident. Indiquez votre besoin et je vous oriente.",
   },
   eliteridemexico: {
     es: "Puedo ayudarte con chofer privado, traslados al aeropuerto, renta de SUV premium, vehiculos blindados y transporte ejecutivo en Mexico. Dejame tu ruta, fecha y datos de contacto para que Elite Ride Mexico te contacte.",
@@ -197,7 +226,7 @@ function isBroadServiceInterest(message) {
     /\b(seo|audit|core web vitals|react|next|astro|ia|ai|cto|refonte|performance|site web|web|prix|tarif|devis|quote|cotizacion|cita|appointment|rendez-vous)\b/,
     /\b(coupe|color|salon|manicure|pedicure|barber|cita|sucursal|cabello|hair)\b/,
     /\b(gps|rastreo|tracking|flotte|fleet|vehiculo|vehicle|geocerca|alerta)\b/,
-    /\b(ciberseguridad|cybersecurity|nist|forensic|peritaje|seguridad|security|auditoria)\b/,
+    /\b(ciberseguridad|cybersecurity|cybersecurite|nist|forensic|forense|peritaje|pericial|seguridad|security|securite|auditoria|audit|consultoria tecnologica|technology consulting|conseil technologique|cumplimiento|compliance|conformite|formacion|training|formation|pentest|penetration testing|incidente|incident|endpoint|ransomware|phishing)\b/,
     /\b(chauffeur|chofer|airport|aeropuerto|transfer|traslado|suv|blindado|armored|cancun|cdmx|guadalajara)\b/,
     /\b(flores|flowers|fleurs|fiori|ramo|bouquet|arreglo|arrangement|composition|orquidea|orchid|orchidee|orchidea|rosas|roses|tulipanes|tulips|tulipes|tulipani|cumpleanos|birthday|anniversaire|consegna|livraison|delivery)\b/,
     /\b(propiedad|property|propriete|proprieta|immobilie|casa|house|maison|departamento|apartment|appartement|wohnung|renta|rent|location|affitto|venta|sale|achat|vendita|compra|buy|polanco|condesa|roma|inmobiliaria|real estate)\b/,
