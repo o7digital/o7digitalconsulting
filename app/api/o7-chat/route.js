@@ -199,6 +199,24 @@ const SITE_FALLBACK_REPLIES = {
 const PRECONFIGURED_REPLIES = {
   securyti: [
     {
+      id: "network-emergency-contact",
+      patterns: [
+        /\bproblema\b.*\bred\b/,
+        /\bproblemas\b.*\bred\b/,
+        /\bred\b.*\bproblema\b/,
+        /\bred\b.*\bproblemas\b/,
+        /\bnetwork\b.*\bproblem\b/,
+        /\bnetwork\b.*\bissue\b/,
+        /\bprobleme\b.*\breseau\b/,
+        /\breseau\b.*\bprobleme\b/,
+      ],
+      replies: {
+        es: "Para problemas con una red, puedes contactar a SecuryTI en contacto@securyti.mx.\n\nEn caso de urgencia, llama al 5538352101.",
+        en: "For network issues, you can contact SecuryTI at contacto@securyti.mx.\n\nIn case of emergency, call 5538352101.",
+        fr: "Pour un probleme de reseau, vous pouvez contacter SecuryTI a contacto@securyti.mx.\n\nEn cas d'urgence, appelez le 5538352101.",
+      },
+    },
+    {
       id: "nist",
       patterns: [
         /\bnist\b/,
