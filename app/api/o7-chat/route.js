@@ -23,6 +23,9 @@ const defaultAllowedOrigins = [
   "https://cervantesbienesraices.com",
   "https://www.cervantesbienesraices.com",
   "https://cervantesbienesraices.vercel.app",
+  "https://dosalga.store",
+  "https://www.dosalga.store",
+  "https://dosalga.vercel.app",
 ];
 
 const FALLBACK_REPLIES = {
@@ -62,6 +65,14 @@ const SITE_CLARIFYING_REPLIES = {
     fr: "Bien sûr. Pour vous orienter, indiquez si vous souhaitez acheter, vendre ou louer, la zone, le budget approximatif, le type de bien et le calendrier ideal.",
     it: "Certo. Per orientarti bene, indicami se vuoi comprare, vendere o affittare, la zona, il budget indicativo, il tipo di proprieta e le tempistiche.",
     de: "Gerne. Damit ich Sie richtig beraten kann: Kaufen, verkaufen oder mieten Sie, in welcher Zone, mit welchem Budget, Immobilientyp und Zeitplan?",
+  },
+  dosalga: {
+    es: "Claro. Para ayudarte mejor, dime que producto buscas, talla, cantidad, pais de entrega y si tu consulta es de compra, envio, cambios o devoluciones.",
+    en: "Of course. To help you better, please tell me what product you need, size, quantity, delivery country, and whether your question is about purchase, shipping, exchanges, or returns.",
+    fr: "Bien sûr. Pour mieux vous aider, indiquez le produit, la taille, la quantite, le pays de livraison, et si votre demande concerne achat, livraison, echange ou retour.",
+    it: "Certo. Per aiutarti meglio, indica prodotto, taglia, quantita, paese di consegna e se la richiesta riguarda acquisto, spedizione, cambio o reso.",
+    de: "Gerne. Um besser zu helfen, nennen Sie Produkt, Groesse, Menge, Lieferland und ob es um Kauf, Versand, Umtausch oder Rueckgabe geht.",
+    pt: "Claro. Para ajudar melhor, informe produto, tamanho, quantidade, pais de entrega e se a duvida e sobre compra, envio, troca ou devolucao.",
   },
 };
 
@@ -104,6 +115,13 @@ Support questions about houses, apartments, investment properties, property sear
 Keep answers concise, professional, and commercial for buyers, sellers, owners, investors, and tenants.
 If the visitor asks for availability, price, viewing, valuation, selling, renting, buying, or detailed information, ask for objective, zone, budget, property type, timeline, and invite them to leave name, email, and phone so a Cervantes advisor can contact them.
   `.trim(),
+  dosalga: `
+You are Olivia, the DOSALGA assistant.
+Help visitors with premium sportswear and active lifestyle products sold by DOSALGA.
+Support questions about product recommendations, sizes, stock, ordering, payment, shipping, taxes/duties, returns/refunds, exchange conditions, and general ecommerce support.
+Keep answers concise, practical, and commercial for an online retail customer.
+If the visitor asks for detailed product advice, order follow-up, shipping, return, exchange, or purchase support, ask for product name, size, quantity, delivery country, and invite them to leave name, email, and phone so a DOSALGA advisor can contact them.
+  `.trim(),
 };
 
 const SITE_FALLBACK_REPLIES = {
@@ -138,6 +156,14 @@ const SITE_FALLBACK_REPLIES = {
     fr: "Je peux vous aider pour acheter, vendre ou louer un bien, rechercher par zone, type de propriete et conseil immobilier. Indiquez votre besoin, zone et budget.",
     it: "Posso aiutarti con acquisto, vendita o affitto di proprieta, ricerca per zona, tipo di immobile e consulenza immobiliare. Indica bisogno, zona e budget.",
     de: "Ich kann beim Kauf, Verkauf oder Mieten von Immobilien, der Suche nach Zone, Immobilientyp und Immobilienberatung helfen. Nennen Sie Bedarf, Zone und Budget.",
+  },
+  dosalga: {
+    es: "Puedo ayudarte con productos, tallas, stock, pedidos, envios, cambios y devoluciones de DOSALGA. Dime que producto necesitas y te oriento.",
+    en: "I can help with DOSALGA products, sizes, stock, orders, shipping, exchanges, and returns. Tell me what product you need and I will guide you.",
+    fr: "Je peux vous aider avec produits, tailles, stock, commandes, livraisons, echanges et retours DOSALGA. Dites-moi le produit recherche et je vous guide.",
+    it: "Posso aiutarti con prodotti, taglie, disponibilita, ordini, spedizioni, cambi e resi DOSALGA. Dimmi cosa cerchi e ti guido.",
+    de: "Ich kann bei DOSALGA Produkten, Groessen, Bestand, Bestellungen, Versand, Umtausch und Rueckgabe helfen. Nennen Sie das Produkt und ich helfe weiter.",
+    pt: "Posso ajudar com produtos, tamanhos, estoque, pedidos, envios, trocas e devolucoes da DOSALGA. Diga o produto e eu te oriento.",
   },
 };
 

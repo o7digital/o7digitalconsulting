@@ -24,6 +24,9 @@ const defaultAllowedOrigins = [
   "https://cervantesbienesraices.com",
   "https://www.cervantesbienesraices.com",
   "https://cervantesbienesraices.vercel.app",
+  "https://dosalga.store",
+  "https://www.dosalga.store",
+  "https://dosalga.vercel.app",
 ];
 
 function clean(value) {
