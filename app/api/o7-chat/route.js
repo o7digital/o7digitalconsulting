@@ -254,9 +254,9 @@ export async function OPTIONS(request) {
 
 export async function POST(request) {
   try {
-    const { message, language = "fr", siteCode = "o7digital" } = await request.json();
+    const { message, language, locale, siteCode = "o7digital" } = await request.json();
     const cleanMessage = typeof message === "string" ? message.trim() : "";
-    const lang = normalizeLanguage(language);
+    const lang = normalizeLanguage(language || locale || "fr");
     const fallbackReply = getFallbackReply(siteCode, lang);
 
     if (!cleanMessage) {
