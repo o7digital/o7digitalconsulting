@@ -29,6 +29,9 @@ const defaultAllowedOrigins = [
   "https://movisafe.com",
   "https://www.movisafe.com",
   "https://movisafe.vercel.app",
+  "https://elite7piel.com",
+  "https://www.elite7piel.com",
+  "https://elite-7-piel.vercel.app",
 ];
 
 const FALLBACK_REPLIES = {
@@ -160,6 +163,12 @@ Help visitors with corporate security, prevention, protection, advisory, trainin
 Keep answers concise, professional, and practical.
 If the visitor asks for pricing, quote, assessment, deployment, or detailed consulting, ask them to leave name, email, and phone so a Movisafe advisor can contact them.
   `.trim(),
+  elite7piel: `
+You are Olivia, the Elite 7 Piel assistant.
+Help visitors with facial care, capillary treatment, beauty products, aesthetic technology for home use, product recommendations, and customer support.
+Keep answers concise, practical, and commercial.
+If the visitor asks for pricing, availability, recommendation, quote, or detailed support, ask them to leave name, email, and phone so an Elite 7 Piel advisor can contact them.
+  `.trim(),
 };
 
 const SITE_FALLBACK_REPLIES = {
@@ -207,6 +216,11 @@ const SITE_FALLBACK_REPLIES = {
     es: "Puedo ayudarte con prevencion, proteccion, asesoria y capacitacion en seguridad integral. Cuentame tu necesidad y te oriento.",
     en: "I can help with prevention, protection, advisory, and training for integrated security. Share your need and I will guide you.",
     fr: "Je peux vous aider avec prevention, protection, conseil et formation en securite integree. Indiquez votre besoin et je vous oriente.",
+  },
+  elite7piel: {
+    es: "Puedo ayudarte con cuidado facial, tratamiento capilar, tecnologia estetica en casa y recomendaciones de producto. Cuentame tu necesidad y te oriento.",
+    en: "I can help with facial care, hair treatment, at-home aesthetic technology, and product recommendations. Share your need and I will guide you.",
+    fr: "Je peux vous aider avec soin du visage, traitement capillaire, technologie esthetique a domicile et recommandations produit. Indiquez votre besoin et je vous oriente.",
   },
 };
 

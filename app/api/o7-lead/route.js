@@ -30,6 +30,9 @@ const defaultAllowedOrigins = [
   "https://movisafe.com",
   "https://www.movisafe.com",
   "https://movisafe.vercel.app",
+  "https://elite7piel.com",
+  "https://www.elite7piel.com",
+  "https://elite-7-piel.vercel.app",
 ];
 
 function clean(value) {
