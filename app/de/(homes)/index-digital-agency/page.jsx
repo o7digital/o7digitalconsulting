@@ -255,7 +255,7 @@ export default function HomeDe() {
         description="Strategie, Entwicklung, KI, SEO, Managed Services, Grafikdesign, Motion Design und 3D für Ihre digitalen Anforderungen."
       />
       <CtaSection anchorId="cta-de" cta={o7CtaDe} contactHref="/de/contact" />
-      <Footer2 lang="de" />
+      <Footer2 lang="de" showSeoFooterBlock />
     </>
   );
 }

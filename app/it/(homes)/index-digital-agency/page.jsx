@@ -272,7 +272,7 @@ export default function HomeIt() {
         description="Strategia, sviluppo, IA, SEO, managed services, design grafico, motion design e 3D per coprire le vostre esigenze digitali."
       />
       <CtaSection anchorId="cta-home-it" cta={o7CtaIt} contactHref="/it/contact" />
-      <Footer2 lang="it" />
+      <Footer2 lang="it" showSeoFooterBlock />
     </>
   );
 }
