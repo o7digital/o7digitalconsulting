@@ -27,6 +27,9 @@ const defaultAllowedOrigins = [
   "https://dosalga.store",
   "https://www.dosalga.store",
   "https://dosalga.vercel.app",
+  "https://movisafe.com",
+  "https://www.movisafe.com",
+  "https://movisafe.vercel.app",
 ];
 
 function clean(value) {

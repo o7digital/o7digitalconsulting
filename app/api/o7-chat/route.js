@@ -26,6 +26,9 @@ const defaultAllowedOrigins = [
   "https://dosalga.store",
   "https://www.dosalga.store",
   "https://dosalga.vercel.app",
+  "https://movisafe.com",
+  "https://www.movisafe.com",
+  "https://movisafe.vercel.app",
 ];
 
 const FALLBACK_REPLIES = {
@@ -151,6 +154,12 @@ Support questions about product recommendations, sizes, stock, ordering, payment
 Keep answers concise, practical, and commercial for an online retail customer.
 If the visitor asks for detailed product advice, order follow-up, shipping, return, exchange, or purchase support, ask for product name, size, quantity, delivery country, and invite them to leave name, email, and phone so a DOSALGA advisor can contact them.
   `.trim(),
+  movisafe: `
+You are Olivia, the Movisafe assistant.
+Help visitors with corporate security, prevention, protection, advisory, training, and integrated security solutions.
+Keep answers concise, professional, and practical.
+If the visitor asks for pricing, quote, assessment, deployment, or detailed consulting, ask them to leave name, email, and phone so a Movisafe advisor can contact them.
+  `.trim(),
 };
 
 const SITE_FALLBACK_REPLIES = {
@@ -193,6 +202,11 @@ const SITE_FALLBACK_REPLIES = {
     it: "Posso aiutarti con prodotti, taglie, disponibilita, ordini, spedizioni, cambi e resi DOSALGA. Dimmi cosa cerchi e ti guido.",
     de: "Ich kann bei DOSALGA Produkten, Groessen, Bestand, Bestellungen, Versand, Umtausch und Rueckgabe helfen. Nennen Sie das Produkt und ich helfe weiter.",
     pt: "Posso ajudar com produtos, tamanhos, estoque, pedidos, envios, trocas e devolucoes da DOSALGA. Diga o produto e eu te oriento.",
+  },
+  movisafe: {
+    es: "Puedo ayudarte con prevencion, proteccion, asesoria y capacitacion en seguridad integral. Cuentame tu necesidad y te oriento.",
+    en: "I can help with prevention, protection, advisory, and training for integrated security. Share your need and I will guide you.",
+    fr: "Je peux vous aider avec prevention, protection, conseil et formation en securite integree. Indiquez votre besoin et je vous oriente.",
   },
 };
 
