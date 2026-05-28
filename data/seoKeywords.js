@@ -1,146 +1,86 @@
 export const frenchBaseSeoKeywords = [
-  "CTO as a Service international",
-  "CTO as a Service Europe",
-  "CTO as a Service Amérique du Nord",
-  "CTO as a Service Latam",
-  "direction digitale externalisée internationale",
-  "conseil IT stratégique international",
-  "transformation digitale groupes internationaux",
-  "SEO technique international",
-  "consulting digital B2B international",
-  "consulting digital Europe Amérique",
-  "architecture web haute performance internationale",
-  "audit SEO technique avancé",
-  "accompagnement transformation digitale B2B",
-  "direction informatique externalisée internationale",
-  "consulting IT groupes internationaux",
-  "stratégie digitale internationale",
-  "développement web React Next.js",
-  "CMS headless entreprise internationale",
-  "optimisation performance web internationale",
-  "conseil architecture technique internationale",
+  "CTO as a Service Paris",
+  "CTO externalise Paris",
+  "consultant transformation digitale Paris",
+  "consultant SEO technique Paris",
+  "developpement web Astro React Paris",
+  "developpement web haute performance Paris",
+  "architecture web moderne Paris",
+  "CTO as a Service Montreal",
+  "CTO externalise Montreal",
+  "consultant transformation digitale Montreal",
+  "consultant SEO technique Montreal",
+  "developpement web Astro React Montreal",
 ];
 
-export const frenchGeoSuffix =
-  "Paris France, Montpellier France, Marseille France, Montreal Canada";
+export const frenchGeoSuffix = "";
 
-export const frenchSeoKeywords = frenchBaseSeoKeywords.map(
-  (keyword) => `${keyword} ${frenchGeoSuffix}`,
-);
+export const frenchSeoKeywords = frenchBaseSeoKeywords;
 
 export const spanishBaseSeoKeywords = [
-  "CTO as a Service internacional",
-  "CTO fraccional para empresas internacionales",
-  "direccion digital externalizada internacional",
-  "consultoria IT estrategica internacional",
-  "transformacion digital para empresas internacionales",
-  "SEO tecnico internacional",
-  "consultoria digital B2B internacional",
-  "consultoria digital Europa America",
-  "arquitectura web de alto rendimiento",
-  "auditoria SEO tecnica avanzada",
-  "acompanamiento de transformacion digital B2B",
-  "direccion tecnologica externalizada",
-  "consultoria IT para grupos internacionales",
-  "estrategia digital internacional",
-  "desarrollo web React Next.js",
-  "CMS headless para empresas",
-  "optimizacion de performance web internacional",
-  "consultoria de arquitectura tecnica",
-  "consultoria DevOps internacional",
-  "automatizacion e inteligencia artificial empresarial",
+  "CTO as a Service Madrid",
+  "CTO fraccional Madrid",
+  "transformacion digital para empresas Madrid",
+  "consultor SEO tecnico Madrid",
+  "desarrollo web Astro React Madrid",
+  "desarrollo web de alto rendimiento Madrid",
+  "arquitectura web moderna Madrid",
+  "CTO as a Service CDMX",
+  "CTO fraccional CDMX",
+  "transformacion digital para empresas CDMX",
+  "consultor SEO tecnico CDMX",
+  "desarrollo web Astro React CDMX",
 ];
 
-export const spanishGeoSuffix = "Espana Madrid y Mexico CDMX";
+export const spanishGeoSuffix = "";
 
-export const spanishSeoKeywords = spanishBaseSeoKeywords.map(
-  (keyword) => `${keyword} ${spanishGeoSuffix}`,
-);
+export const spanishSeoKeywords = spanishBaseSeoKeywords;
 
 export const englishBaseSeoKeywords = [
-  "CTO as a Service international",
-  "fractional CTO for international enterprises",
-  "outsourced digital leadership",
-  "strategic IT consulting for enterprises",
-  "digital transformation consulting B2B",
-  "technical SEO consulting international",
-  "enterprise digital consulting",
-  "high-performance web architecture",
-  "advanced technical SEO audit",
-  "web performance optimization consulting",
-  "technology leadership outsourcing",
-  "digital strategy for global companies",
-  "React Next.js web development",
-  "headless CMS consulting for enterprises",
-  "technical architecture consulting",
-  "DevOps and cloud consulting",
-  "AI automation consulting for business",
-  "international web platform consulting",
-  "B2B digital growth consulting",
-  "scalable software architecture consulting",
+  "CTO as a Service London",
+  "Fractional CTO London",
+  "outsourced CTO London",
+  "technical SEO consultant London",
+  "Astro React web development London",
+  "high performance web development London",
+  "web architecture consultant London",
+  "CTO as a Service New York",
+  "Fractional CTO New York",
+  "technical SEO consultant New York",
+  "Astro React web development New York",
+  "high performance web development New York",
 ];
 
-export const englishGeoSuffix =
-  "United Kingdom London, USA Los Angeles, USA Chicago, USA New York";
+export const englishGeoSuffix = "";
 
-export const englishSeoKeywords = englishBaseSeoKeywords.map(
-  (keyword) => `${keyword} ${englishGeoSuffix}`,
-);
+export const englishSeoKeywords = englishBaseSeoKeywords;
 
 export const germanBaseSeoKeywords = [
-  "CTO as a Service international",
-  "digitale Transformation fur Unternehmen",
-  "IT-Beratung fur internationale Unternehmen",
-  "technische SEO Beratung international",
-  "digitale Strategie fur B2B Unternehmen",
-  "Webentwicklung mit React und Next.js",
-  "hochperformante Webarchitektur",
-  "fortgeschrittenes technisches SEO Audit",
-  "Cloud und DevOps Beratung",
-  "Headless CMS Beratung fur Unternehmen",
-  "digitale Fuhrung extern",
-  "strategische Technologieberatung",
-  "skalierbare Softwarearchitektur",
-  "B2B Digitalberatung international",
-  "Performance Optimierung fur Websites",
-  "KI und Automatisierung Beratung",
-  "IT Consulting fur Unternehmensgruppen",
-  "internationale SEO Strategie",
-  "digitale Plattformentwicklung",
-  "Beratung fur technische Architektur",
+  "CTO as a Service Frankfurt",
+  "externer CTO Frankfurt",
+  "digitale Transformation Frankfurt",
+  "technische SEO Beratung Frankfurt",
+  "Webentwicklung Astro React Frankfurt",
+  "High Performance Webentwicklung Frankfurt",
+  "moderne Webarchitektur Frankfurt",
+  "digitale Strategie B2B Frankfurt",
 ];
 
-export const germanGeoSuffix = "Germany Frankfurt";
+export const germanGeoSuffix = "";
 
-export const germanSeoKeywords = germanBaseSeoKeywords.map(
-  (keyword) => `${keyword} ${germanGeoSuffix}`,
-);
+export const germanSeoKeywords = germanBaseSeoKeywords;
 
 export const italianBaseSeoKeywords = [
-  "CTO as a Service internazionale",
-  "consulenza IT strategica internazionale",
-  "trasformazione digitale per aziende",
-  "SEO tecnico internazionale",
-  "consulenza digitale B2B internazionale",
-  "sviluppo web React Next.js",
-  "architettura web ad alte prestazioni",
-  "audit SEO tecnico avanzato",
-  "consulenza cloud e DevOps",
-  "CMS headless per aziende",
-  "leadership digitale esternalizzata",
-  "strategia digitale per imprese",
-  "architettura software scalabile",
-  "ottimizzazione performance web",
-  "integrazione AI e automazione",
-  "consulenza IT per gruppi internazionali",
-  "consulenza architettura tecnica",
-  "sviluppo piattaforme digitali",
-  "supporto operativo IT",
-  "consulenza per crescita digitale B2B",
+  "CTO as a Service Milano",
+  "CTO esterno Milano",
+  "consulente trasformazione digitale Milano",
+  "consulente SEO tecnico Milano",
+  "sviluppo web Astro React Milano",
+  "sviluppo web ad alte prestazioni Milano",
+  "architettura web moderna Milano",
+  "consulenza digitale per aziende Milano",
 ];
 
-export const italianGeoSuffix = "Italy Milano";
+export const italianGeoSuffix = "";
 
-export const italianSeoKeywords = italianBaseSeoKeywords.map(
-  (keyword) => `${keyword} ${italianGeoSuffix}`,
-);
+export const italianSeoKeywords = italianBaseSeoKeywords;
