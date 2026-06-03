@@ -10,9 +10,9 @@ import LocalCoverage from "@/components/o7/home/LocalCoverage";
 
 export const metadata = {
   title:
-    "Agence SEO Astro React | Sites rapides & positionnement Google | O7 Digital",
+    "Agence SEO technique & sites rapides | O7 Digital",
   description:
-    "O7 Digital développe des sites Astro et React rapides, multilingues et optimisés SEO pour améliorer votre visibilité Google. Migration WordPress vers Astro, SEO technique, performance web et stratégie de positionnement.",
+    "O7 Digital conçoit des sites rapides et bien structurés pour améliorer l'indexation, la performance web et le positionnement Google.",
   alternates: {
     canonical: 'https://www.o7digital.com/',
     languages: {
@@ -31,9 +31,9 @@ export const metadata = {
     url: 'https://www.o7digital.com/',
     siteName: 'O7 Digital Consulting',
     title:
-      "Agence SEO Astro React | Sites rapides & positionnement Google | O7 Digital",
+      "Agence SEO technique & sites rapides | O7 Digital",
     description:
-      "O7 Digital développe des sites Astro et React rapides, multilingues et optimisés SEO pour améliorer votre visibilité Google. Migration WordPress vers Astro, SEO technique, performance web et stratégie de positionnement.",
+      "O7 Digital conçoit des sites rapides et bien structurés pour améliorer l'indexation, la performance web et le positionnement Google.",
     images: [
       {
         url: '/assets/images/o7digital-logo.png',
@@ -46,9 +46,9 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      "Agence SEO Astro React | Sites rapides & positionnement Google | O7 Digital",
+      "Agence SEO technique & sites rapides | O7 Digital",
     description:
-      "O7 Digital développe des sites Astro et React rapides, multilingues et optimisés SEO pour améliorer votre visibilité Google. Migration WordPress vers Astro, SEO technique, performance web et stratégie de positionnement.",
+      "O7 Digital conçoit des sites rapides et bien structurés pour améliorer l'indexation, la performance web et le positionnement Google.",
     images: ['/assets/images/o7digital-logo.png'],
   },
 };
@@ -226,7 +226,6 @@ export default function Home() {
             "name": "O7 Digital Consulting",
             "image": "https://www.o7digital.com/assets/images/logo/logo.png",
             "url": "https://www.o7digital.com",
-            "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
             "address": [
               {
@@ -242,7 +241,6 @@ export default function Home() {
                 "streetAddress": "Montréal",
                 "addressLocality": "Montréal",
                 "addressRegion": "QC",
-                "postalCode": "H0H 0H0",
                 "addressCountry": "CA"
               }
             ],

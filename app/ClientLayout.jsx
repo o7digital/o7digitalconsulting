@@ -18,6 +18,15 @@ export default function ClientLayout({ children }) {
   }, []);
 
   const pathname = usePathname();
+
+  useEffect(() => {
+    const locale = pathname.split("/")[1];
+    const supportedLocales = ["en", "es", "de", "it"];
+    document.documentElement.lang = supportedLocales.includes(locale)
+      ? locale
+      : "fr";
+  }, [pathname]);
+
   useEffect(() => {
     sal({
       threshold: 0.01,

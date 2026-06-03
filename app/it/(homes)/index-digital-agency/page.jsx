@@ -13,9 +13,9 @@ import {
 } from "@/data/o7.it";
 
 export const metadata = {
-  title: "Agenzia digitale Italia | Consulenza IT Milano Roma Torino Bologna Firenze | CTO as a Service",
+  title: "CTO as a Service e SEO tecnica | O7 Digital",
   description:
-    "Agenzia digitale internazionale e consulenza IT per aziende in Italia, Svizzera ed Europa. CTO as a Service, sviluppo web su misura, consulenza cloud, DevOps consulting, SEO tecnica e integrazione AI per trasformazione digitale. IT consulting Milano, Roma, Torino, Bologna, Firenze, Venezia.",
+    "O7 Digital aiuta le aziende a migliorare performance web, SEO tecnica e architettura digitale con servizi di CTO esterno e consulenza.",
   alternates: {
     canonical: 'https://www.o7digital.com/it/index-digital-agency',
     languages: {
@@ -144,7 +144,6 @@ export default function HomeIt() {
             "name": "O7 Digital Consulting",
             "image": "https://www.o7digital.com/assets/images/logo/logo.png",
             "url": "https://www.o7digital.com/it",
-            "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
             "address": [
               {
@@ -160,7 +159,6 @@ export default function HomeIt() {
                 "streetAddress": "Montréal",
                 "addressLocality": "Montréal",
                 "addressRegion": "QC",
-                "postalCode": "H0H 0H0",
                 "addressCountry": "CA"
               }
             ],

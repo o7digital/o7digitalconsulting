@@ -13,9 +13,9 @@ import {
 } from "@/data/o7.de";
 
 export const metadata = {
-  title: "Digitalagentur Deutschland | IT-Beratung Berlin München Frankfurt Wien Zürich | CTO as a Service DACH",
+  title: "Fractional CTO und technische SEO-Beratung | O7 Digital",
   description:
-    "Internationale Digitalagentur und IT-Beratung für Unternehmen in Deutschland, Österreich, Schweiz. CTO as a Service, individuelle Webentwicklung, Cloud Consulting, DevOps Beratung, technische SEO und KI-Integration für digitale Transformation DACH. IT Consulting Berlin, München, Hamburg, Frankfurt, Wien, Zürich.",
+    "O7 Digital unterstuetzt Unternehmen bei Web-Performance, technischer SEO und digitaler Architektur mit CTO-as-a-Service und Beratung.",
   alternates: {
     canonical: 'https://www.o7digital.com/de/index-digital-agency',
     languages: {
@@ -127,7 +127,6 @@ export default function HomeDe() {
             "name": "O7 Digital Consulting",
             "image": "https://www.o7digital.com/assets/images/logo/logo.png",
             "url": "https://www.o7digital.com/de",
-            "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
             "address": [
               {
@@ -143,7 +142,6 @@ export default function HomeDe() {
                 "streetAddress": "Montréal",
                 "addressLocality": "Montréal",
                 "addressRegion": "QC",
-                "postalCode": "H0H 0H0",
                 "addressCountry": "CA"
               }
             ],

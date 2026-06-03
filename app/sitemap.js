@@ -1,44 +1,41 @@
 export default function sitemap() {
   const baseUrl = 'https://www.o7digital.com';
   const currentDate = new Date().toISOString();
-  
-  // Liste des pages principales avec leurs priorités
+
   const routes = [
-    { path: '', priority: 1.0, changeFreq: 'weekly', localizedHome: true },
+    { path: '', priority: 1.0, changeFreq: 'weekly', home: true },
     { path: '/about', priority: 0.9, changeFreq: 'monthly' },
     { path: '/contact', priority: 0.9, changeFreq: 'monthly' },
     { path: '/portfolio', priority: 0.8, changeFreq: 'weekly' },
     { path: '/privacy-policy', priority: 0.3, changeFreq: 'yearly' },
   ];
 
-  // Langues supportées
-  const languages = ['', 'en', 'es', 'de', 'it']; // '' = français (default)
+  const languages = [
+    { code: 'fr', prefix: '', homePath: '' },
+    { code: 'en', prefix: '/en', homePath: '/index-digital-agency' },
+    { code: 'es', prefix: '/es', homePath: '/index-digital-agency' },
+    { code: 'de', prefix: '/de', homePath: '/index-digital-agency' },
+    { code: 'it', prefix: '/it', homePath: '/index-digital-agency' },
+  ];
 
-  const urls = [];
+  const localizedUrl = (lang, route) =>
+    `${baseUrl}${lang.prefix}${route.home ? lang.homePath : route.path}`;
 
-  // Générer les URLs pour chaque combinaison de route et langue
-  languages.forEach(lang => {
-    routes.forEach(route => {
-      const langPrefix = lang ? `/${lang}` : '';
-      const path = route.localizedHome ? '' : route.path;
-      urls.push({
-        url: `${baseUrl}${langPrefix}${path}`,
+  return languages.flatMap((lang) =>
+    routes.map((route) => ({
+        url: localizedUrl(lang, route),
         lastModified: currentDate,
         changeFrequency: route.changeFreq,
         priority: route.priority,
         alternates: {
-          languages: {
-            'x-default': route.localizedHome ? `${baseUrl}/` : `${baseUrl}${route.path}`,
-            fr: route.localizedHome ? `${baseUrl}/` : `${baseUrl}${route.path}`,
-            en: route.localizedHome ? `${baseUrl}/en` : `${baseUrl}/en${route.path}`,
-            es: route.localizedHome ? `${baseUrl}/es` : `${baseUrl}/es${route.path}`,
-            de: route.localizedHome ? `${baseUrl}/de` : `${baseUrl}/de${route.path}`,
-            it: route.localizedHome ? `${baseUrl}/it` : `${baseUrl}/it${route.path}`,
-          },
+          languages: Object.fromEntries([
+            ['x-default', localizedUrl(languages[0], route)],
+            ...languages.map((alternateLang) => [
+              alternateLang.code,
+              localizedUrl(alternateLang, route),
+            ]),
+          ]),
         },
-      });
-    });
-  });
-
-  return urls;
+      }))
+  );
 }

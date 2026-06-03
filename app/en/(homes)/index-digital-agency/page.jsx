@@ -13,9 +13,9 @@ import {
 } from "@/data/o7.en";
 
 export const metadata = {
-  title: "CTO as a Service London New York San Francisco Toronto | Fractional CTO UK USA Canada",
+  title: "Fractional CTO & Technical SEO Consulting | O7 Digital",
   description:
-    "CTO as a Service London, New York, San Francisco, Toronto, Montreal and Vancouver. Digital consulting firm London, New York and Toronto. Technical SEO consulting London and New York, enterprise digital consulting, high-performance web architecture, digital transformation consulting UK, USA and Canada. IT consulting for enterprises.",
+    "O7 Digital helps companies improve web performance, technical SEO and digital architecture with fractional CTO and consulting services.",
   alternates: {
     canonical: 'https://www.o7digital.com/en/index-digital-agency',
     languages: {
@@ -230,7 +230,6 @@ export default function HomeEn() {
             "name": "O7 Digital Consulting",
             "image": "https://www.o7digital.com/assets/images/logo/logo.png",
             "url": "https://www.o7digital.com/en",
-            "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
             "address": [
               {
@@ -246,7 +245,6 @@ export default function HomeEn() {
                 "streetAddress": "Montreal",
                 "addressLocality": "Montreal",
                 "addressRegion": "QC",
-                "postalCode": "H0H 0H0",
                 "addressCountry": "CA"
               }
             ],

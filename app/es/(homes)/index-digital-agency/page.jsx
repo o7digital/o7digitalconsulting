@@ -13,9 +13,9 @@ import {
 } from "@/data/o7.es";
 
 export const metadata = {
-  title: "CTO as a Service Madrid Barcelona México Monterrey Guadalajara | Dirección Digital Externalizada",
+  title: "CTO as a Service y SEO tecnico | O7 Digital",
   description:
-    "CTO as a Service Madrid, Barcelona, Valencia, Sevilla, Ciudad de México, Monterrey y Guadalajara. Dirección digital externalizada México y España. Consultoría SEO técnica México y Madrid, consultoría IT estratégica España y México, arquitectura web escalable, transformación digital empresas México y España. Consultoría digital B2B internacional.",
+    "O7 Digital ayuda a empresas a mejorar rendimiento web, SEO tecnico y arquitectura digital con servicios de CTO externo y consultoria.",
   alternates: {
     canonical: 'https://www.o7digital.com/es/index-digital-agency',
     languages: {
@@ -210,7 +210,6 @@ export default function HomeEs() {
             "name": "O7 Digital Consulting",
             "image": "https://www.o7digital.com/assets/images/logo/logo.png",
             "url": "https://www.o7digital.com/es",
-            "telephone": "+33-XX-XX-XX-XX",
             "priceRange": "€€€",
             "address": [
               {
@@ -226,7 +225,6 @@ export default function HomeEs() {
                 "streetAddress": "Montréal",
                 "addressLocality": "Montréal",
                 "addressRegion": "QC",
-                "postalCode": "H0H 0H0",
                 "addressCountry": "CA"
               }
             ],
