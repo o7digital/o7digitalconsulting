@@ -1,2 +1,2 @@
-export { metadata } from "./(homes)/index-digital-agency/page";
-export { default } from "./(homes)/index-digital-agency/page";
+export { metadata } from "@/components/o7/home-page/O7HomePage";
+export { default } from "@/components/o7/home-page/O7HomePage";

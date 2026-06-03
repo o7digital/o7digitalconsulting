@@ -10,6 +10,24 @@ export default function sitemap() {
     { path: '/privacy-policy', priority: 0.3, changeFreq: 'yearly' },
   ];
 
+  const serviceRoutes = [
+    '/seo-technique',
+    '/cto-as-a-service',
+    '/developpement-web',
+    '/migration-wordpress-astro',
+    '/performance-web',
+  ];
+
+  const marketRoutes = [
+    '/france',
+    '/canada',
+    '/uk',
+    '/usa',
+    '/mexique',
+    '/allemagne',
+    '/italie',
+  ];
+
   const languages = [
     { code: 'fr', prefix: '', homePath: '' },
     { code: 'en', prefix: '/en', homePath: '/index-digital-agency' },
@@ -21,7 +39,7 @@ export default function sitemap() {
   const localizedUrl = (lang, route) =>
     `${baseUrl}${lang.prefix}${route.home ? lang.homePath : route.path}`;
 
-  return languages.flatMap((lang) =>
+  const localizedRoutes = languages.flatMap((lang) =>
     routes.map((route) => ({
         url: localizedUrl(lang, route),
         lastModified: currentDate,
@@ -38,4 +56,13 @@ export default function sitemap() {
         },
       }))
   );
+
+  const seoRoutes = [...serviceRoutes, ...marketRoutes].map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly',
+    priority: path === '/seo-technique' || path === '/cto-as-a-service' ? 0.85 : 0.75,
+  }));
+
+  return [...localizedRoutes, ...seoRoutes];
 }

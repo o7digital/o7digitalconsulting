@@ -81,6 +81,9 @@ const nextConfig = {
       { source: '/es', destination: '/es/index-digital-agency', permanent: true },
       { source: '/de', destination: '/de/index-digital-agency', permanent: true },
       { source: '/it', destination: '/it/index-digital-agency', permanent: true },
+      { source: '/blog-details/:path*', destination: '/', permanent: true },
+      { source: '/blog-grid/:path*', destination: '/', permanent: true },
+      { source: '/portfolio-details/:path*', destination: '/portfolio', permanent: true },
       ...templateRoutes.map((source) => ({
         source,
         destination: '/',
