@@ -119,13 +119,6 @@ export const o7PortfolioProjects = [
     alt: "Custom Wood Design Website & Digital Presence",
   },
   {
-    id: "integra365",
-    title: "Integra365",
-    url: "https://integra365.vercel.app/",
-    category: "corporateDigitalTransformation",
-    alt: "Digital Transformation Platform for Businesses",
-  },
-  {
     id: "movisafe",
     title: "Movisafe",
     url: "https://movisafe.com/",

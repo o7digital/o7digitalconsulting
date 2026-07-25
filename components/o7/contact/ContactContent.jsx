@@ -327,25 +327,6 @@ export default function ContactContent({
             </div>
           </div>
 
-          {/* Mexico Office */}
-          <div className="col-lg-4 col-md-6 col-12 mb--30">
-            <div className="rainbow-address h-100">
-              <div className="icon">
-                <i className="feather-map-pin" />
-              </div>
-              <div className="inner">
-                <h4 className="title">Mexique</h4>
-                <p className="mb--10">
-                  <strong>Integra 365</strong>
-                </p>
-                <p className="mb--0">
-                  Prolongación Paseo de la Reforma 1015<br />
-                  Piso 1, Col. Santa Fe, Álvaro Obregón<br />
-                  CDMX 01376, Mexico
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
