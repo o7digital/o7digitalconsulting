@@ -86,23 +86,10 @@ export const o7PortfolioProjects = [
     category: "realEstate",
   },
   {
-    id: "gc-chapa-abogados",
-    title: "GC Chapa Abogados",
-    url: "https://gcchapacabogados.com/",
-    category: "legal",
-    previewImage: "/assets/images/portfolio/gc-chapa-abogados.png",
-  },
-  {
     id: "scm-abogados",
     title: "SCM Abogados",
     url: "https://scmabogados.com/",
     category: "legal",
-  },
-  {
-    id: "kinich-studio",
-    title: "Kinich Studio",
-    url: "https://kinichstudio.com.mx/",
-    category: "studio",
   },
   {
     id: "mary-cielo",
@@ -111,12 +98,6 @@ export const o7PortfolioProjects = [
     category: "hospitality",
     previewImage:
       "https://marycielo.mx/wp-content/uploads/2023/03/Logo-Mar-y-Cielo-2023-500x500-1.png",
-  },
-  {
-    id: "heli-america-mexico",
-    title: "Heli America Mexico",
-    url: "https://heliamericamexico.com.mx/",
-    category: "corporate",
   },
   {
     id: "dosalga-store",
@@ -191,6 +172,24 @@ export const o7PortfolioProjects = [
     id: "transteck",
     title: "Transteck",
     url: "https://www.transteck.online/",
+    category: "technologySecurity",
+  },
+  {
+    id: "vialterna",
+    title: "Vialterna",
+    url: "https://www.vialterna.com/",
+    category: "corporate",
+  },
+  {
+    id: "finidi-cfo",
+    title: "FINIDI CFO",
+    url: "https://finidicfo.com/",
+    category: "corporate",
+  },
+  {
+    id: "securyti",
+    title: "SecuryTI",
+    url: "https://www.securyti.mx/",
     category: "technologySecurity",
   },
   {
