@@ -193,6 +193,12 @@ export const o7PortfolioProjects = [
     category: "technologySecurity",
   },
   {
+    id: "kabin-consultores",
+    title: "Kabin Consultores",
+    url: "https://www.kabinconsultores.com/",
+    category: "corporate",
+  },
+  {
     id: "elite-ride-mexico",
     title: "Elite Ride Mexico",
     url: "https://www.eliteridemexico.com/",
