@@ -179,24 +179,28 @@ export const o7PortfolioProjects = [
     title: "Vialterna",
     url: "https://www.vialterna.com/",
     category: "corporate",
+    previewImage: "/assets/images/portfolio/vialterna.webp",
   },
   {
     id: "finidi-cfo",
     title: "FINIDI CFO",
     url: "https://finidicfo.com/",
     category: "corporate",
+    previewImage: "/assets/images/portfolio/finidi-cfo.webp",
   },
   {
     id: "securyti",
     title: "SecuryTI",
     url: "https://www.securyti.mx/",
     category: "technologySecurity",
+    previewImage: "/assets/images/portfolio/securyti.webp",
   },
   {
     id: "kabin-consultores",
     title: "Kabin Consultores",
     url: "https://www.kabinconsultores.com/",
     category: "corporate",
+    previewImage: "/assets/images/portfolio/kabin-consultores.webp",
   },
   {
     id: "elite-ride-mexico",
