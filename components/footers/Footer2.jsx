@@ -27,6 +27,12 @@ const editorialContent = {
       "Von Paris aus und in der Île-de-France führen wir eine digitalisierte Leitung für internationale Unternehmen mit CTO as a Service, individueller Webentwicklung, DevOps- und Cloud-Beratung, KI-Integration und fortgeschrittener SEO. In Savoie setzt dasselbe Team diese markenzentrierte, unaufdringliche Begleitung fort.",
     followUs: "Folgen Sie uns",
     legalNotice: "Impressum"
+  },
+  it: {
+    editorial:
+      "O7 Digital Consulting accompagna aziende in Italia, Europa, Nord America e America Latina con siti Astro, React e CMS headless ottimizzati per SEO tecnica, performance web e posizionamento Google.",
+    followUs: "Seguici",
+    legalNotice: "Note legali"
   }
 };
 
@@ -38,11 +44,17 @@ const seoFooterKeywords = {
   it: "CTO as a Service Milano · CTO esterno Milano · consulente trasformazione digitale Milano · consulente SEO tecnico Milano · sviluppo web Astro React Milano · sviluppo web ad alte prestazioni Milano · architettura web moderna Milano · consulenza digitale per aziende Milano",
 };
 
+const additionalSeoFooterKeywords = {
+  de: "CTO as a Service Berlin · externer CTO Berlin · technische SEO Agentur Berlin · SEO Beratung Berlin · Webentwicklung Next.js Berlin · Webentwicklung React Berlin · Astro Webentwicklung Berlin · Core Web Vitals Optimierung Berlin · Headless CMS Beratung Berlin · digitale Transformation Mittelstand Deutschland · IT Beratung Deutschland · KI Integration Deutschland · DevOps Beratung Deutschland · Cloud Beratung Deutschland · technische SEO München · CTO as a Service München · Web Performance Optimierung München · technische SEO Hamburg · CTO Beratung Hamburg · technische SEO Düsseldorf · technische SEO Stuttgart · technische SEO Österreich · technische SEO Schweiz",
+  it: "CTO as a Service Roma · CTO esterno Roma · consulente SEO tecnico Roma · agenzia SEO tecnica Roma · sviluppo web Next.js Roma · sviluppo web React Roma · sviluppo web Astro Roma · ottimizzazione Core Web Vitals Roma · consulenza CMS headless Roma · trasformazione digitale aziende Italia · consulenza IT Italia · integrazione AI Italia · consulenza DevOps Italia · consulenza cloud Italia · SEO tecnica Milano · agenzia SEO tecnica Milano · performance web Milano · consulente SEO Torino · CTO as a Service Torino · SEO tecnica Bologna · SEO tecnica Firenze · SEO tecnica Svizzera italiana · consulenza digitale B2B Italia",
+};
+
 export default function Footer2({ lang = "fr", showSeoFooterBlock = false }) {
   const content = editorialContent[lang] || editorialContent.fr;
   const seoKeywords = seoFooterKeywords[lang];
+  const additionalSeoKeywords = additionalSeoFooterKeywords[lang];
   const prefix =
-    lang === "en" ? "/en" : lang === "es" ? "/es" : lang === "de" ? "/de" : "";
+    lang === "en" ? "/en" : lang === "es" ? "/es" : lang === "de" ? "/de" : lang === "it" ? "/it" : "";
 
   return (
     <footer className="rainbow-footer footer-style-default no-border">
@@ -89,6 +101,9 @@ export default function Footer2({ lang = "fr", showSeoFooterBlock = false }) {
             }}
           >
             <p style={{ margin: 0 }}>{seoKeywords}</p>
+            {additionalSeoKeywords && (
+              <p style={{ margin: "6px 0 0" }}>{additionalSeoKeywords}</p>
+            )}
           </div>
         )}
       </div>
