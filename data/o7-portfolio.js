@@ -138,7 +138,7 @@ export const o7PortfolioProjects = [
     url: "https://www.el-murmullo.com/",
     category: "hospitality",
     alt: "Luxury romantic boutique hotel in Zihuatanejo Ixtapa, Mexico",
-    previewImage: "/assets/images/portfolio/el-murmullo.png",
+    previewImage: "/assets/images/portfolio/el-murmullo.webp",
     isPageOneGoogle: true,
     primaryKeywords: [
       "Luxury villa Zihuatanejo",
@@ -179,21 +179,21 @@ export const o7PortfolioProjects = [
     title: "Elite Ride Mexico",
     url: "https://www.eliteridemexico.com/",
     category: "corporate",
-    previewImage: "/assets/images/portfolio/elite-ride-mexico.png",
+    previewImage: "/assets/images/portfolio/elite-ride-mexico.webp",
   },
   {
     id: "delicia-de-maiz",
     title: "Delicia de Maíz",
     url: "https://deliciademaiz.com/",
     category: "ecommerce",
-    previewImage: "/assets/images/portfolio/delicia-de-maiz.png",
+    previewImage: "/assets/images/portfolio/delicia-de-maiz.webp",
   },
   {
     id: "duc-drivers-financing",
     title: "DUC Drivers Financing",
     url: "https://ducdriversfinancing.com/",
     category: "corporate",
-    previewImage: "/assets/images/portfolio/duc-drivers-financing.png",
+    previewImage: "/assets/images/portfolio/duc-drivers-financing.webp",
   },
   {
     id: "cusiflores",

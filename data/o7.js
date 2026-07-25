@@ -32,12 +32,12 @@ export const o7HeroSlides = [
 export const o7HomeIntro = {
   eyebrow: "Agence SEO technique",
   title:
-    "Agence SEO technique spécialisée Astro & React pour atteindre la page 1 Google",
+    "Agence SEO technique Next.js, Astro & React pour viser la page 1 Google",
   description:
-    "Nous concevons des sites rapides, multilingues et optimisés Google avec Astro et React. Objectif : positions visibles rapidement, souvent en moins de 30 jours selon la concurrence.",
+    "O7 Digital conçoit, audite et optimise des sites Next.js, Astro et React pour améliorer l'indexation, les Core Web Vitals, la structure sémantique et le positionnement Google sur des requêtes business qualifiées.",
   bullets: [
-    "Performance mobile et Core Web Vitals, structure SEO technique, contenu ciblé mots-clés, maillage interne et indexation propre.",
-    "Migration WordPress vers Astro : reprise des contenus, redirections, nettoyage technique et montée SEO progressive.",
+    "Audit SEO technique, performance mobile, Core Web Vitals, balises title/meta, données structurées, maillage interne et indexation propre.",
+    "Migration WordPress vers Astro ou Next.js : reprise des contenus, redirections 301, nettoyage technique, sitemap, canonical et suivi de montée SEO.",
   ],
 };
 
@@ -45,7 +45,7 @@ export const o7HomeServices = [
   {
     title: "SEO technique international & performance Google",
     description:
-      "Audit SEO technique, optimisation Core Web Vitals, architecture d'indexation, données structurées et stratégie de visibilité multilingue. Nous construisons des bases solides pour viser rapidement la page 1 Google selon le niveau de concurrence.",
+      "Audit SEO technique complet : crawl, indexation, canonical, hreflang, sitemap, données structurées Schema.org, Core Web Vitals et architecture de contenu. Nous construisons des bases solides pour viser la page 1 Google selon la concurrence et le marché ciblé.",
     iconClass: "feather-cpu",
     align: "text-left",
     image: {
@@ -57,7 +57,7 @@ export const o7HomeServices = [
   {
     title: "Développement web React Next.js haute performance",
     description:
-      "Agence de consulting digital internationale. Développement web sur mesure avec React, Next.js et Astro. Architecture web haute performance pour entreprises exigeantes. Optimisation de performance web, CMS headless entreprise, intégration intelligence artificielle. Chaque plateforme est conçue pour évoluer durablement et soutenir votre croissance internationale.",
+      "Développement web sur mesure avec React, Next.js et Astro pour sites rapides, maintenables et SEO-ready. Architecture haute performance, CMS headless, optimisation JavaScript, images WebP, accessibilité et intégration IA pour soutenir une croissance durable.",
     iconClass: "feather-zap",
     align: "text-left",
     spanTwo: true,
@@ -186,8 +186,8 @@ export const o7AboutHero = {
 };
 
 export const o7AboutDetails = [
-  "O7 Digital est une agence de consulting digital spécialisée dans la transformation digitale, le développement web moderne et l'optimisation de la performance technique et opérationnelle. Nous accompagnons les entreprises internationales dans la conception, la construction et l'évolution de leurs plateformes digitales.",
-  "Notre expertise couvre l'ensemble de la chaîne de valeur : stratégie digitale et architecture moderne, développement web React Next.js, intégration de CMS headless et backends, intelligence artificielle et automatisation, SEO technique avancé, consulting DevOps, infogérance et support.",
+  "O7 Digital est une agence de consulting digital spécialisée en SEO technique, développement web Next.js, React et Astro, transformation digitale et optimisation de performance. Nous accompagnons les entreprises internationales dans la conception, la refonte et l'évolution de plateformes rapides, indexables et orientées conversion.",
+  "Notre expertise couvre l'ensemble de la chaîne de valeur : stratégie digitale, architecture web moderne, Core Web Vitals, migration WordPress, CMS headless, intelligence artificielle, automatisation, consulting DevOps, infogérance et support opérationnel.",
 ];
 
 export const o7Methodology = [
@@ -258,7 +258,7 @@ export const o7ServicesMain = [
   {
     title: "Développement web moderne & applications performantes",
     description:
-      "Nous concevons des sites web et applications modernes, rapides et sécurisés, orientés conversion et performance. Nos développements reposent sur des technologies récentes (React, Next.js, Astro selon les projets) et des bonnes pratiques strictes en matière d’UX, d’accessibilité et de temps de chargement. Chaque plateforme est pensée pour évoluer durablement et soutenir la croissance.",
+      "Nous concevons des sites web et applications modernes, rapides et sécurisés, orientés conversion, SEO technique et performance. Nos développements reposent sur React, Next.js et Astro selon les projets, avec des bonnes pratiques strictes en UX, accessibilité, temps de chargement, images WebP et structure HTML sémantique.",
     iconClass: "feather-zap",
   },
   {
@@ -276,7 +276,7 @@ export const o7ServicesMain = [
   {
     title: "SEO technique & performance digitale",
     description:
-      "Nous déployons une approche SEO technique orientée résultats, combinant structure du site, performance, optimisation des balises, données structurées et suivi analytique. L’objectif est d’améliorer durablement la visibilité sur Google, d’attirer un trafic qualifié et d’optimiser la conversion, tout en respectant les meilleures pratiques du référencement naturel.",
+      "Nous déployons une approche SEO technique orientée résultats : audit crawl, indexation, structure Hn, optimisation title/meta, données structurées, maillage interne, sitemap, canonical, vitesse mobile et suivi analytique. L’objectif est d’améliorer durablement la visibilité Google, le trafic qualifié et la conversion.",
     iconClass: "feather-trending-up",
   },
   {

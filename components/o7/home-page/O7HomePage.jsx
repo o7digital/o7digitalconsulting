@@ -10,9 +10,9 @@ import LocalCoverage from "@/components/o7/home/LocalCoverage";
 
 export const metadata = {
   title:
-    "Agence SEO technique & sites rapides | O7 Digital",
+    "Agence SEO technique, Next.js & Astro | O7 Digital",
   description:
-    "O7 Digital conçoit des sites rapides et bien structurés pour améliorer l'indexation, la performance web et le positionnement Google.",
+    "Agence SEO technique et développement web Next.js, React et Astro. O7 Digital améliore Core Web Vitals, indexation, architecture et positionnement Google.",
   alternates: {
     canonical: 'https://www.o7digital.com/',
     languages: {
@@ -31,9 +31,9 @@ export const metadata = {
     url: 'https://www.o7digital.com/',
     siteName: 'O7 Digital Consulting',
     title:
-      "Agence SEO technique & sites rapides | O7 Digital",
+      "Agence SEO technique, Next.js & Astro | O7 Digital",
     description:
-      "O7 Digital conçoit des sites rapides et bien structurés pour améliorer l'indexation, la performance web et le positionnement Google.",
+      "Agence SEO technique et développement web Next.js, React et Astro. O7 Digital améliore Core Web Vitals, indexation, architecture et positionnement Google.",
     images: [
       {
         url: '/assets/images/o7digital-logo.png',
@@ -46,9 +46,9 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      "Agence SEO technique & sites rapides | O7 Digital",
+      "Agence SEO technique, Next.js & Astro | O7 Digital",
     description:
-      "O7 Digital conçoit des sites rapides et bien structurés pour améliorer l'indexation, la performance web et le positionnement Google.",
+      "Agence SEO technique et développement web Next.js, React et Astro. O7 Digital améliore Core Web Vitals, indexation, architecture et positionnement Google.",
     images: ['/assets/images/o7digital-logo.png'],
   },
 };

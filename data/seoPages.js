@@ -1,16 +1,16 @@
 export const servicePages = {
   "seo-technique": {
-    title: "SEO technique pour sites rapides et indexables",
-    metaTitle: "SEO technique pour sites rapides | O7 Digital",
+    title: "SEO technique pour sites rapides, indexables et mieux positionnés",
+    metaTitle: "Agence SEO technique & Core Web Vitals | O7 Digital",
     description:
-      "Audit technique, structure HTML, performance, sitemap, canonical et signaux d'indexation pour aider Google a comprendre vos pages.",
+      "Audit SEO technique, Core Web Vitals, structure HTML, sitemap, canonical, hreflang et donnees structurees pour ameliorer l'indexation Google.",
     eyebrow: "SEO technique",
     intro:
-      "Nous corrigeons les freins techniques qui limitent l'indexation et la visibilite organique : architecture, rendu, performance, maillage, donnees structurees et coherence des signaux SEO.",
+      "Nous corrigeons les freins techniques qui limitent l'indexation et la visibilite organique : architecture, rendu JavaScript, performance mobile, maillage interne, donnees structurees et coherence des signaux SEO.",
     sections: [
-      "Audit crawl, indexation, canonical, hreflang et sitemap.",
-      "Optimisation des Core Web Vitals et du rendu des pages critiques.",
-      "Structuration des titres, contenus, schemas JSON-LD et liens internes.",
+      "Audit crawl, indexation, canonical, hreflang, robots.txt, sitemap et profondeur des pages.",
+      "Optimisation Core Web Vitals, vitesse mobile, poids JavaScript, images WebP et rendu initial.",
+      "Structuration title, meta description, Hn, contenus, schemas JSON-LD et liens internes.",
     ],
   },
   "cto-as-a-service": {
@@ -28,45 +28,45 @@ export const servicePages = {
     ],
   },
   "developpement-web": {
-    title: "Developpement web React, Next.js et architectures modernes",
-    metaTitle: "Developpement web React & Next.js | O7 Digital",
+    title: "Developpement web React, Next.js et Astro oriente SEO",
+    metaTitle: "Developpement web Next.js React Astro | O7 Digital",
     description:
-      "Sites et plateformes web rapides, maintenables et optimisees pour le SEO technique avec React, Next.js et CMS headless.",
+      "Sites web rapides et maintenables avec React, Next.js, Astro et CMS headless, optimises pour le SEO technique, la conversion et les Core Web Vitals.",
     eyebrow: "Developpement web",
     intro:
-      "Nous construisons des sites et plateformes web sobres, rapides et maintenables, avec une attention forte portee a la performance, au SEO technique et a l'evolutivite.",
+      "Nous construisons des sites et plateformes web sobres, rapides et maintenables, avec une attention forte portee au SEO technique, a l'accessibilite, a la performance mobile et a l'evolutivite.",
     sections: [
-      "Developpement React, Next.js, Astro et integrations CMS.",
-      "Architecture frontend propre, responsive et orientee performance.",
-      "Mise en production, analytics, formulaires et workflows metier.",
+      "Developpement React, Next.js, Astro, composants reutilisables et integrations CMS headless.",
+      "Architecture frontend propre, responsive, accessible, indexable et orientee performance.",
+      "Mise en production, analytics, formulaires, tracking de conversion et workflows metier.",
     ],
   },
   "migration-wordpress-astro": {
-    title: "Migration WordPress vers Astro ou Next.js",
-    metaTitle: "Migration WordPress vers Astro | O7 Digital",
+    title: "Migration WordPress vers Astro ou Next.js sans perdre le SEO",
+    metaTitle: "Migration WordPress Astro Next.js SEO | O7 Digital",
     description:
-      "Migration de sites WordPress lents vers des architectures plus rapides, stables et optimisees pour le referencement naturel.",
+      "Migration WordPress vers Astro ou Next.js avec redirections 301, conservation des contenus utiles, performance WebP et continuite SEO.",
     eyebrow: "Migration web",
     intro:
-      "Nous transformons les sites WordPress lourds ou difficiles a maintenir en plateformes plus rapides, plus simples a faire evoluer et mieux structurees pour Google.",
+      "Nous transformons les sites WordPress lourds ou difficiles a maintenir en plateformes plus rapides, plus simples a faire evoluer et mieux structurees pour Google, sans casser les URLs qui apportent du trafic.",
     sections: [
-      "Inventaire des pages, contenus, redirects et signaux SEO existants.",
-      "Reconstruction avec Astro, Next.js ou CMS headless selon le besoin.",
-      "Plan de migration, conservation des URLs utiles et suivi post-lancement.",
+      "Inventaire des pages, contenus, backlinks, titles, metas, redirects et signaux SEO existants.",
+      "Reconstruction avec Astro, Next.js ou CMS headless selon le besoin editorial et technique.",
+      "Plan de migration, redirections 301, conservation des URLs utiles et suivi post-lancement.",
     ],
   },
   "performance-web": {
-    title: "Performance web et Core Web Vitals",
-    metaTitle: "Performance web & Core Web Vitals | O7 Digital",
+    title: "Performance web, vitesse mobile et Core Web Vitals",
+    metaTitle: "Performance web Core Web Vitals | O7 Digital",
     description:
-      "Optimisation de la vitesse, du poids des pages, des images, du JavaScript et de l'experience utilisateur.",
+      "Optimisation vitesse mobile, Core Web Vitals, poids JavaScript, images WebP, rendu initial et experience utilisateur pour sites React, Next.js et Astro.",
     eyebrow: "Performance",
     intro:
-      "La performance web ameliore l'experience utilisateur, la conversion et les conditions techniques d'indexation. Nous intervenons sur le code, les assets, le rendu et l'architecture.",
+      "La performance web ameliore l'experience utilisateur, la conversion et les conditions techniques d'indexation. Nous intervenons sur le code, les assets, les images, le rendu initial et l'architecture frontend.",
     sections: [
-      "Analyse Lighthouse, Core Web Vitals, poids JS/CSS et images.",
-      "Optimisation du rendu initial, lazy loading et priorisation assets.",
-      "Suivi des gains et recommandations maintenables par l'equipe.",
+      "Analyse Lighthouse, Core Web Vitals, LCP, CLS, INP, poids JS/CSS et images.",
+      "Optimisation du rendu initial, lazy loading, WebP, preload et priorisation assets.",
+      "Suivi des gains, monitoring et recommandations maintenables par l'equipe.",
     ],
   },
 };
