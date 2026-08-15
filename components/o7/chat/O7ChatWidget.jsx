@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const COPY = {
@@ -126,8 +126,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [leadSent, setLeadSent] = useState(false);
-  const [lead, setLead] = useState({ firstName: "", lastName: "", email: "", phone: "" });
+  const [isInactive, setIsInactive] = useState(false);
   const [messages, setMessages] = useState([{ role: "assistant", content: copy.welcome }]);
 
   useEffect(() => {
@@ -138,14 +137,25 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
     });
   }, [copy.welcome]);
 
-  const transcript = useMemo(
-    () => messages.map((msg) => `${msg.role}: ${msg.content}`).join("\n"),
-    [messages]
-  );
+  useEffect(() => {
+    let timer;
+    const markActive = () => {
+      setIsInactive(false);
+      clearTimeout(timer);
+      timer = setTimeout(() => setIsInactive(true), 45000);
+    };
+    const events = ["pointerdown", "keydown", "scroll", "touchstart"];
+    events.forEach((eventName) => window.addEventListener(eventName, markActive, { passive: true }));
+    markActive();
+    return () => {
+      clearTimeout(timer);
+      events.forEach((eventName) => window.removeEventListener(eventName, markActive));
+    };
+  }, []);
 
   const handleSend = async () => {
     const message = input.trim();
-    if (!message || isLoading || !leadSent) return;
+    if (!message || isLoading) return;
     const messageLanguage = detectMessageLanguage(message, language);
 
     setInput("");
@@ -167,36 +177,6 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
     }
   };
 
-  const handleLeadSubmit = async (event) => {
-    event.preventDefault();
-    const name = `${lead.firstName.trim()} ${lead.lastName.trim()}`.trim();
-    if (!name || !lead.email.trim() || !lead.phone.trim()) return;
-
-    setIsLoading(true);
-    try {
-      await fetch("/api/o7-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          firstName: lead.firstName.trim(),
-          lastName: lead.lastName.trim(),
-          email: lead.email.trim(),
-          phone: lead.phone.trim(),
-          source: "Chat IA O7",
-          language,
-          siteCode,
-          message: `Lead chat IA O7 (${language}, ${siteCode})\n\n${transcript}`,
-        }),
-      });
-      setLeadSent(true);
-      setMessages((prev) => [...prev, { role: "assistant", content: copy.leadThanks }]);
-    } catch {
-      setMessages((prev) => [...prev, { role: "assistant", content: copy.error }]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   return (
     <div className="o7-chat">
       {isOpen && (
@@ -204,7 +184,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           <header className="o7-chat-header">
             <div>
               <p className="o7-chat-title">{copy.title}</p>
-              <p className="o7-chat-status">{copy.status}</p>
+              <p className={`o7-chat-status ${isInactive ? "inactive" : ""}`}><i aria-hidden="true" />{copy.status}</p>
             </div>
             <button type="button" className="o7-chat-close" onClick={() => setIsOpen(false)} aria-label={copy.close}>
               x
@@ -220,19 +200,6 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
             {isLoading && <div className="o7-chat-message assistant">...</div>}
           </div>
 
-          {!leadSent && (
-            <form className="o7-chat-lead" onSubmit={handleLeadSubmit}>
-              <p>{copy.leadIntro}</p>
-              <div className="o7-chat-lead-grid">
-                <input required placeholder={copy.firstName} value={lead.firstName} onChange={(event) => setLead((prev) => ({ ...prev, firstName: event.target.value }))} />
-                <input required placeholder={copy.lastName} value={lead.lastName} onChange={(event) => setLead((prev) => ({ ...prev, lastName: event.target.value }))} />
-                <input required type="email" placeholder={copy.email} value={lead.email} onChange={(event) => setLead((prev) => ({ ...prev, email: event.target.value }))} />
-                <input required type="tel" placeholder={copy.phone} value={lead.phone} onChange={(event) => setLead((prev) => ({ ...prev, phone: event.target.value }))} />
-              </div>
-              <button type="submit" disabled={isLoading}>{copy.submitLead}</button>
-            </form>
-          )}
-
           <div className="o7-chat-composer">
             <input
               value={input}
@@ -240,7 +207,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
               onKeyDown={(event) => {
                 if (event.key === "Enter") handleSend();
               }}
-              disabled={!leadSent || isLoading}
+              disabled={isLoading}
               placeholder={copy.placeholder}
             />
             <button type="button" onClick={handleSend} disabled={isLoading} aria-label={copy.send}>
@@ -277,9 +244,11 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           flex-direction: column;
           overflow: hidden;
           border: 1px solid rgba(255, 255, 255, 0.18);
-          border-radius: 20px;
-          background: #0b0f17;
-          box-shadow: 0 28px 90px rgba(0, 0, 0, 0.45);
+          border-radius: 28px;
+          background: linear-gradient(155deg, rgba(18, 25, 38, 0.99), rgba(6, 10, 17, 0.99));
+          box-shadow: 0 52px 90px -30px rgba(0, 0, 0, 0.86), 0 22px 42px -24px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+          transform: perspective(1200px) translateY(-8px) rotateX(0.4deg) rotateY(-0.4deg);
+          animation: o7-chat-float 5.5s ease-in-out infinite;
         }
         .o7-chat-header {
           display: flex;
@@ -296,9 +265,27 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           font-weight: 700;
         }
         .o7-chat-status {
-          margin: 4px 0 0;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          margin: 7px 0 0;
+          padding: 5px 10px;
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.09);
           font-size: 12px;
           color: rgba(255, 255, 255, 0.72);
+        }
+        .o7-chat-status i {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background: #22c55e;
+          box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.14), 0 0 14px rgba(34, 197, 94, 0.8);
+          transition: 0.25s ease;
+        }
+        .o7-chat-status.inactive i {
+          background: #f59e0b;
+          box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.14), 0 0 14px rgba(245, 158, 11, 0.75);
         }
         .o7-chat-close,
         .o7-chat-toggle,
@@ -425,8 +412,12 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           width: 62px;
           height: 62px;
           margin-left: auto;
-          border-radius: 18px;
-          box-shadow: 0 18px 48px rgba(232, 95, 79, 0.32);
+          border-radius: 50%;
+          box-shadow: 0 28px 48px -20px rgba(0, 0, 0, 0.72), 0 18px 48px rgba(232, 95, 79, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+        }
+        @keyframes o7-chat-float {
+          0%, 100% { transform: perspective(1200px) translateY(-8px) rotateX(0.4deg) rotateY(-0.4deg); }
+          50% { transform: perspective(1200px) translateY(-14px) rotateX(0.65deg) rotateY(-0.15deg); }
         }
         @media (max-width: 575px) {
           .o7-chat {
@@ -440,6 +431,9 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           .o7-chat-lead-grid {
             grid-template-columns: 1fr;
           }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .o7-chat-panel { animation: none; }
         }
       `}</style>
     </div>
