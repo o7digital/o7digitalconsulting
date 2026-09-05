@@ -58,6 +58,8 @@ const PRIVACY_REQUIRED_REPLIES = {
   it: "Conferma di aver letto l'informativa sulla privacy prima di inviare il messaggio.",
 };
 
+let cachedWidgetIdentity = null;
+
 const CLARIFYING_REPLIES = {
   fr: "Bien sûr. Pour vous orienter correctement, pouvez-vous me préciser ce que vous cherchez exactement : un audit, un devis, une refonte, une question technique, un rendez-vous ou un service spécifique ?",
   en: "Of course. To guide you properly, could you specify what you need: an audit, a quote, a redesign, a technical question, an appointment, or a specific service?",
@@ -544,15 +546,39 @@ async function callOliviaPlatform({
   const baseUrl = (
     process.env.OLIVIA_PLATFORM_URL || "https://olivia-ai.o7digital.com"
   ).replace(/\/$/, "");
-  const internalToken = process.env.OLIVIA_INTERNAL_TOKEN?.trim();
+  const siteOrigin = "https://www.o7digital.com";
 
-  if (!internalToken) return null;
+  if (
+    !cachedWidgetIdentity ||
+    cachedWidgetIdentity.expiresAt <= Date.now()
+  ) {
+    const identityResponse = await fetch(`${baseUrl}/api/widget/identity`, {
+      headers: { Origin: siteOrigin },
+      cache: "no-store",
+      signal: AbortSignal.timeout(10000),
+    });
+    const identityData = await identityResponse.json();
+
+    if (
+      !identityResponse.ok ||
+      identityData.clientCode !== siteCode ||
+      !identityData.identity
+    ) {
+      throw new Error("Unable to establish Olivia widget identity");
+    }
+
+    cachedWidgetIdentity = {
+      value: identityData.identity,
+      expiresAt: Date.now() + 50 * 60 * 1000,
+    };
+  }
 
   const response = await fetch(`${baseUrl}/api/olivia/chat`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "X-Olivia-Internal-Token": internalToken,
+      Origin: siteOrigin,
+      "X-Olivia-Widget-Identity": cachedWidgetIdentity.value,
     },
     body: JSON.stringify({
       clientCode: siteCode,
