@@ -175,6 +175,12 @@ export const o7PortfolioProjects = [
     category: "technologySecurity",
   },
   {
+    id: "zevi-capital",
+    title: "ZeVi Capital",
+    url: "https://www.zevicapital.com/",
+    category: "realEstate",
+  },
+  {
     id: "elite-ride-mexico",
     title: "Elite Ride Mexico",
     url: "https://www.eliteridemexico.com/",

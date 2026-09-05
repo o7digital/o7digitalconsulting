@@ -18,8 +18,14 @@ const COPY = {
     lastName: "Nom",
     email: "Email",
     phone: "Téléphone",
+    company: "Entreprise",
+    details: "Décrivez votre besoin",
     submitLead: "Envoyer mes coordonnées",
     leadThanks: "Merci, vos coordonnées ont bien été transmises. L'équipe O7 vous répondra rapidement.",
+    leadMissing: "Merci de compléter tous les champs demandés.",
+    consent: "J’ai lu et j’accepte la",
+    privacyNotice: "politique de confidentialité",
+    consentRequired: "Veuillez lire et accepter la politique de confidentialité pour continuer.",
     error: "Je rencontre un souci temporaire. Vous pouvez aussi écrire à info@o7digital.com.",
   },
   en: {
@@ -36,8 +42,14 @@ const COPY = {
     lastName: "Last name",
     email: "Email",
     phone: "Phone",
+    company: "Company",
+    details: "Describe your needs",
     submitLead: "Send my details",
     leadThanks: "Thanks, your details have been sent. The O7 team will reply shortly.",
+    leadMissing: "Please complete all required fields.",
+    consent: "I have read and accept the",
+    privacyNotice: "Privacy Notice",
+    consentRequired: "Please read and accept the Privacy Notice to continue.",
     error: "I am having a temporary issue. You can also write to info@o7digital.com.",
   },
   es: {
@@ -54,8 +66,14 @@ const COPY = {
     lastName: "Apellido",
     email: "Email",
     phone: "Telefono",
+    company: "Empresa",
+    details: "Describe tu necesidad",
     submitLead: "Enviar mis datos",
     leadThanks: "Gracias, tus datos han sido enviados. El equipo O7 respondera pronto.",
+    leadMissing: "Completa todos los campos obligatorios.",
+    consent: "He leído y acepto el",
+    privacyNotice: "Aviso de Privacidad",
+    consentRequired: "Lee y acepta el Aviso de Privacidad para continuar.",
     error: "Tengo un problema temporal. Tambien puedes escribir a info@o7digital.com.",
   },
   de: {
@@ -72,8 +90,14 @@ const COPY = {
     lastName: "Name",
     email: "E-Mail",
     phone: "Telefon",
+    company: "Unternehmen",
+    details: "Beschreiben Sie Ihr Anliegen",
     submitLead: "Kontaktdaten senden",
     leadThanks: "Danke, Ihre Kontaktdaten wurden gesendet. Das O7-Team meldet sich zeitnah.",
+    leadMissing: "Bitte füllen Sie alle Pflichtfelder aus.",
+    consent: "Ich habe die",
+    privacyNotice: "Datenschutzerklärung gelesen",
+    consentRequired: "Bitte lesen und akzeptieren Sie die Datenschutzerklärung, um fortzufahren.",
     error: "Es gibt gerade ein technisches Problem. Sie konnen auch an info@o7digital.com schreiben.",
   },
   it: {
@@ -90,8 +114,14 @@ const COPY = {
     lastName: "Cognome",
     email: "Email",
     phone: "Telefono",
+    company: "Azienda",
+    details: "Descrivi la tua esigenza",
     submitLead: "Invia i miei dati",
     leadThanks: "Grazie, i tuoi dati sono stati inviati. Il team O7 rispondera presto.",
+    leadMissing: "Compila tutti i campi obbligatori.",
+    consent: "Ho letto e accetto la",
+    privacyNotice: "informativa sulla privacy",
+    consentRequired: "Leggi e accetta l’informativa sulla privacy per continuare.",
     error: "Si e verificato un problema temporaneo. Puoi anche scrivere a info@o7digital.com.",
   },
 };
@@ -127,7 +157,21 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isInactive, setIsInactive] = useState(false);
+  const [hasConsent, setHasConsent] = useState(false);
+  const [consentAcceptedAt, setConsentAcceptedAt] = useState("");
+  const [leadForm, setLeadForm] = useState(null);
+  const [lead, setLead] = useState({
+    firstName: "",
+    lastName: "",
+    company: "",
+    email: "",
+    phone: "",
+    details: "",
+  });
+  const [leadMetadata, setLeadMetadata] = useState({});
   const [messages, setMessages] = useState([{ role: "assistant", content: copy.welcome }]);
+  const consentVersion = `${siteCode}-privacy-chat-2026-09-05`;
+  const privacyHref = `${language === "fr" ? "" : `/${language}`}/privacy-policy`;
 
   useEffect(() => {
     setMessages((prev) => {
@@ -136,6 +180,16 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
       return [{ role: "assistant", content: copy.welcome }];
     });
   }, [copy.welcome]);
+
+  useEffect(() => {
+    const consentKey = `oliviaConsent:${siteCode}`;
+    const consentDateKey = `oliviaConsentAt:${siteCode}`;
+    const accepted = window.localStorage.getItem(consentKey) === consentVersion;
+    setHasConsent(accepted);
+    setConsentAcceptedAt(
+      accepted ? window.localStorage.getItem(consentDateKey) || "" : ""
+    );
+  }, [consentVersion, siteCode]);
 
   useEffect(() => {
     let timer;
@@ -155,8 +209,17 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
 
   const handleSend = async () => {
     const message = input.trim();
-    if (!message || isLoading) return;
+    if (!message || isLoading || !hasConsent) return;
     const messageLanguage = detectMessageLanguage(message, language);
+    const history = messages
+      .filter(
+        (item) =>
+          (item.role === "user" || item.role === "assistant") &&
+          typeof item.content === "string" &&
+          item.content.trim()
+      )
+      .slice(-12)
+      .map((item) => ({ role: item.role, content: item.content.trim() }));
 
     setInput("");
     setMessages((prev) => [...prev, { role: "user", content: message }]);
@@ -166,10 +229,97 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
       const response = await fetch("/api/o7-chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message, language: messageLanguage, siteCode }),
+        body: JSON.stringify({
+          message,
+          language: messageLanguage,
+          siteCode,
+          history,
+          metadata: {
+            pageUrl: window.location.href,
+            pageTitle: document.title,
+            pageContent: document.body.innerText.replace(/\s+/g, " ").slice(0, 5000),
+            lead: leadMetadata,
+          },
+          consent: {
+            accepted: true,
+            acceptedAt: consentAcceptedAt,
+            version: consentVersion,
+          },
+        }),
       });
       const data = await response.json();
+      if (!response.ok) throw new Error(data.reply || copy.error);
       setMessages((prev) => [...prev, { role: "assistant", content: data.reply || copy.error }]);
+      if (data.action === "show_lead_form" || data.leadForm) {
+        setLeadForm(
+          data.leadForm || {
+            fields: ["firstName", "lastName", "company", "email", "phone", "details"],
+            required: ["firstName", "lastName", "email", "phone", "details"],
+          }
+        );
+        setLead((prev) => ({
+          ...prev,
+          details: prev.details || data.leadForm?.initialDetails || message,
+        }));
+      }
+    } catch {
+      setMessages((prev) => [...prev, { role: "assistant", content: copy.error }]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleLeadSubmit = async (event) => {
+    event.preventDefault();
+    if (isLoading || !hasConsent) return;
+
+    const fields = leadForm?.fields || [
+      "firstName",
+      "lastName",
+      "company",
+      "email",
+      "phone",
+      "details",
+    ];
+    const required = leadForm?.required || fields;
+    const isComplete = required.every((field) => String(lead[field] || "").trim());
+
+    if (!isComplete) {
+      setMessages((prev) => [...prev, { role: "assistant", content: copy.leadMissing }]);
+      return;
+    }
+
+    const normalizedLead = Object.fromEntries(
+      Object.entries(lead).map(([key, value]) => [key, value.trim()])
+    );
+    const transcript = messages
+      .map((message) => `${message.role}: ${message.content}`)
+      .join("\n");
+
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/o7-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...normalizedLead,
+          source: "Olivia AI v2 - O7 Digital",
+          language,
+          siteCode,
+          message: [
+            normalizedLead.company && `Entreprise: ${normalizedLead.company}`,
+            normalizedLead.details && `Besoin: ${normalizedLead.details}`,
+            transcript,
+          ]
+            .filter(Boolean)
+            .join("\n\n"),
+        }),
+      });
+
+      if (!response.ok) throw new Error("Lead delivery failed");
+      setLeadMetadata(normalizedLead);
+      setLeadForm(null);
+      setMessages((prev) => [...prev, { role: "assistant", content: copy.leadThanks }]);
     } catch {
       setMessages((prev) => [...prev, { role: "assistant", content: copy.error }]);
     } finally {
@@ -200,6 +350,69 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
             {isLoading && <div className="o7-chat-message assistant">...</div>}
           </div>
 
+          {leadForm && (
+            <form className="o7-chat-lead" onSubmit={handleLeadSubmit}>
+              <p>{copy.leadIntro}</p>
+              <div className="o7-chat-lead-grid">
+                {(leadForm.fields || []).map((field) =>
+                  field === "details" ? (
+                    <textarea
+                      key={field}
+                      required={(leadForm.required || []).includes(field)}
+                      rows={leadForm.detailsRows || 3}
+                      placeholder={leadForm.labels?.[field] || copy.details}
+                      value={lead[field] || ""}
+                      onChange={(event) =>
+                        setLead((prev) => ({ ...prev, [field]: event.target.value }))
+                      }
+                    />
+                  ) : (
+                    <input
+                      key={field}
+                      required={(leadForm.required || []).includes(field)}
+                      type={field === "email" ? "email" : field === "phone" ? "tel" : "text"}
+                      placeholder={leadForm.labels?.[field] || copy[field] || field}
+                      value={lead[field] || ""}
+                      onChange={(event) =>
+                        setLead((prev) => ({ ...prev, [field]: event.target.value }))
+                      }
+                    />
+                  )
+                )}
+              </div>
+              <button type="submit" disabled={isLoading || !hasConsent}>
+                {copy.submitLead}
+              </button>
+            </form>
+          )}
+
+          <label className="o7-chat-consent">
+            <input
+              type="checkbox"
+              checked={hasConsent}
+              onChange={(event) => {
+                const accepted = event.target.checked;
+                const acceptedAt = accepted ? new Date().toISOString() : "";
+                setHasConsent(accepted);
+                setConsentAcceptedAt(acceptedAt);
+                if (accepted) {
+                  window.localStorage.setItem(`oliviaConsent:${siteCode}`, consentVersion);
+                  window.localStorage.setItem(`oliviaConsentAt:${siteCode}`, acceptedAt);
+                } else {
+                  window.localStorage.removeItem(`oliviaConsent:${siteCode}`);
+                  window.localStorage.removeItem(`oliviaConsentAt:${siteCode}`);
+                }
+              }}
+            />
+            <span>
+              {copy.consent}{" "}
+              <a href={privacyHref} target="_blank" rel="noreferrer noopener">
+                {copy.privacyNotice}
+              </a>
+              .
+            </span>
+          </label>
+
           <div className="o7-chat-composer">
             <input
               value={input}
@@ -207,10 +420,10 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
               onKeyDown={(event) => {
                 if (event.key === "Enter") handleSend();
               }}
-              disabled={isLoading}
-              placeholder={copy.placeholder}
+              disabled={isLoading || !hasConsent}
+              placeholder={hasConsent ? copy.placeholder : copy.consentRequired}
             />
-            <button type="button" onClick={handleSend} disabled={isLoading} aria-label={copy.send}>
+            <button type="button" onClick={handleSend} disabled={isLoading || !hasConsent} aria-label={copy.send}>
               {">"}
             </button>
           </div>
@@ -342,6 +555,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           gap: 8px;
         }
         .o7-chat-lead input,
+        .o7-chat-lead textarea,
         .o7-chat-composer input {
           width: 100%;
           border: 1px solid rgba(255, 255, 255, 0.11);
@@ -353,6 +567,15 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           height: 38px;
           border-radius: 10px;
           padding: 0 10px;
+          font-size: 13px;
+        }
+        .o7-chat-lead textarea {
+          grid-column: 1 / -1;
+          min-height: 68px;
+          border-radius: 10px;
+          padding: 9px 10px;
+          resize: vertical;
+          font: inherit;
           font-size: 13px;
         }
         .o7-chat-lead button {
@@ -371,6 +594,29 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           border-top: 1px solid rgba(255, 255, 255, 0.08);
           background: #0e141f;
         }
+        .o7-chat-consent {
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+          padding: 10px 12px 0;
+          color: rgba(255, 255, 255, 0.78);
+          background: #0e141f;
+          font-size: 11px;
+          line-height: 1.35;
+          cursor: pointer;
+        }
+        .o7-chat-consent input {
+          width: 15px;
+          height: 15px;
+          margin-top: 1px;
+          flex: 0 0 auto;
+          accent-color: #e85f4f;
+        }
+        .o7-chat-consent a {
+          color: #fff;
+          text-decoration: underline;
+          text-underline-offset: 2px;
+        }
         .o7-chat-composer input {
           height: 44px;
           border-radius: 13px;
@@ -387,6 +633,11 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
           width: 44px;
           height: 44px;
           border-radius: 13px;
+        }
+        .o7-chat-composer button:disabled,
+        .o7-chat-lead button:disabled {
+          cursor: not-allowed;
+          opacity: 0.45;
         }
         .o7-chat-closed {
           display: flex;
