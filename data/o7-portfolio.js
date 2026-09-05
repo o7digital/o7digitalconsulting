@@ -293,4 +293,34 @@ export const o7PortfolioProjects = [
     category: "corporate",
     previewImage: "/assets/images/portfolio/kabin-consultores.webp",
   },
+  {
+    id: "o7-digital-group-holding",
+    title: "O7 Digital Group Holding",
+    url: "https://www.o7digitalgroup.com/",
+    category: "corporateDigitalTransformation",
+  },
+  {
+    id: "concha-de-palacio-interiores",
+    title: "Concha de Palacio Interiores",
+    url: "https://interiores.conchadepalacio.com/",
+    category: "creativeDesignArchitecture",
+  },
+  {
+    id: "concha-de-palacio",
+    title: "Concha de Palacio",
+    url: "https://www.conchadepalacio.com/",
+    category: "creativeDesignArchitecture",
+  },
+  {
+    id: "kallista-cafe",
+    title: "KALLISTA Café",
+    url: "https://www.kallistacafe.com/",
+    category: "hospitality",
+  },
+  {
+    id: "raquel-hedo",
+    title: "Raquel Hedo",
+    url: "https://raquel-hedo.vercel.app/",
+    category: "creativeDesignArchitecture",
+  },
 ];
