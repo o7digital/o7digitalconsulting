@@ -175,10 +175,46 @@ export const o7PortfolioProjects = [
     category: "technologySecurity",
   },
   {
+    id: "uvb-universidad-valle-del-bravo",
+    title: "UVB Universidad Valle del Bravo",
+    url: "https://uvb-fw23.vercel.app/",
+    category: "education",
+  },
+  {
+    id: "luxury-villas-la-casa-que-canta",
+    title: "Luxury Villas by La Casa Que Canta",
+    url: "https://luxuryvillas.vercel.app/",
+    category: "hospitality",
+  },
+  {
+    id: "neurodiversa",
+    title: "Neurodiversa",
+    url: "https://neurodiversa.mx/",
+    category: "healthWellness",
+  },
+  {
     id: "zevi-capital",
     title: "ZeVi Capital",
     url: "https://www.zevicapital.com/",
     category: "realEstate",
+  },
+  {
+    id: "iatera",
+    title: "IATERA",
+    url: "https://www.iatera.com.mx/",
+    category: "technologySecurity",
+  },
+  {
+    id: "kabin-financial",
+    title: "Kabin Financial",
+    url: "https://www.kabinfinancial.com.mx/",
+    category: "financialServices",
+  },
+  {
+    id: "retromacnia",
+    title: "Retromacnia",
+    url: "https://www.retromacnia.com/",
+    category: "technologySecurity",
   },
   {
     id: "elite-ride-mexico",
