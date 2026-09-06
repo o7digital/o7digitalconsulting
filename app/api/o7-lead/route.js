@@ -80,19 +80,33 @@ function getSiteConfig(siteCode) {
   const code = clean(siteCode) || "o7digital";
   const map = parseSiteConfigMap(process.env.O7_LEAD_SITE_CONFIG);
   const fromMap = map[code] || map.default || {};
+  const configuredNotificationEmails = Array.isArray(fromMap.notificationEmails)
+    ? fromMap.notificationEmails.map(clean).filter(Boolean)
+    : [];
+  const notificationEmails =
+    code === "o7digital"
+      ? ["info@o7digitalgroup.com"]
+      : Array.from(new Set(configuredNotificationEmails));
 
   return {
     siteCode: code,
+    brandName:
+      code === "o7digital" ? "o7Digital" : clean(fromMap.brandName) || code,
     crmWebhookUrl:
-      clean(fromMap.crmWebhookUrl) || clean(process.env.O7_CRM_LEADS_WEBHOOK_URL),
-    crmSecret: clean(fromMap.crmSecret) || clean(process.env.O7_CRM_LEADS_SECRET),
+      code === "o7digital"
+        ? clean(process.env.O7_CRM_LEADS_WEBHOOK_URL)
+        : clean(fromMap.crmWebhookUrl) || clean(process.env.O7_CRM_LEADS_WEBHOOK_URL),
+    crmSecret:
+      code === "o7digital"
+        ? clean(process.env.O7_CRM_LEADS_SECRET)
+        : clean(fromMap.crmSecret) || clean(process.env.O7_CRM_LEADS_SECRET),
     pipelineId:
-      clean(fromMap.pipelineId) || clean(process.env.O7_CRM_LEADS_PIPELINE_ID),
+      code === "o7digital"
+        ? clean(process.env.O7_CRM_LEADS_PIPELINE_ID)
+        : clean(fromMap.pipelineId) || clean(process.env.O7_CRM_LEADS_PIPELINE_ID),
     ownerEmail:
       clean(fromMap.ownerEmail) || "olivier.steineur@gmail.com",
-    notificationEmails: Array.isArray(fromMap.notificationEmails)
-      ? fromMap.notificationEmails.map(clean).filter(Boolean)
-      : [],
+    notificationEmails,
     formspreeEndpoint:
       clean(fromMap.formspreeEndpoint) || formspreeEndpoint,
   };
@@ -115,7 +129,10 @@ export async function POST(request) {
     const language = clean(body.language) || "fr";
     const siteCode = clean(body.siteCode) || "o7digital";
     const siteConfig = getSiteConfig(siteCode);
-    const source = clean(body.source) || "Chat IA O7";
+    const source =
+      siteCode === "o7digital"
+        ? "Olivia AI v2 - o7Digital"
+        : clean(body.source) || "Chat IA O7";
     const message = clean(body.message);
     const name = `${firstName} ${lastName}`.trim();
 
@@ -136,6 +153,7 @@ export async function POST(request) {
       source,
       language,
       siteCode,
+      brandName: siteConfig.brandName,
       pipelineId: siteConfig.pipelineId,
       ownerEmail: siteConfig.ownerEmail,
       notificationEmails: siteConfig.notificationEmails,
@@ -151,9 +169,9 @@ export async function POST(request) {
         },
         body: JSON.stringify({
           ...leadPayload,
-          _subject: "Nouveau lead chat IA O7",
+          _subject: `Nouveau lead Olivia - ${siteConfig.brandName}`,
           _cc: siteConfig.notificationEmails.join(","),
-          message: `Lead chat IA O7 (${language}, ${siteCode})\n\n${message}`,
+          message: `Lead Olivia - ${siteConfig.brandName} (${language}, ${siteCode})\n\n${message}`,
         }),
       }),
       sendToCrm(leadPayload, siteConfig),

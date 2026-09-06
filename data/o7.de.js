@@ -230,6 +230,9 @@ export const o7PortfolioCopy = {
     pageOneGoogle: "Google Seite 1",
     loading: "Laden...",
     previewUnavailable: "Vorschau nicht verfügbar",
+    filterByIndustry: "Projekte nach Branche filtern",
+    allIndustries: "Alle Branchen",
+    projectsShown: "Projekte angezeigt",
   },
   categories: {
     hospitality: "Hotellerie",
@@ -241,5 +244,8 @@ export const o7PortfolioCopy = {
     creativeDesignArchitecture: "Kreativ & Design / Architektur & Interior",
     corporateDigitalTransformation: "Unternehmen & digitale Transformation",
     technologySecurity: "Technologie & Sicherheitslösungen",
+    education: "Bildungswesen",
+    healthWellness: "Gesundheit & Wohlbefinden",
+    financialServices: "Finanzdienstleistungen",
   },
 };

@@ -50,6 +50,16 @@ const LANGUAGE_NAMES = {
   it: "Italian",
 };
 
+const PRIVACY_REQUIRED_REPLIES = {
+  fr: "Veuillez confirmer que vous avez lu la politique de confidentialité avant d'envoyer votre message.",
+  en: "Please confirm that you have read the Privacy Notice before sending your message.",
+  es: "Confirma que has leído el Aviso de Privacidad antes de enviar tu mensaje.",
+  de: "Bitte bestätigen Sie vor dem Senden, dass Sie die Datenschutzerklärung gelesen haben.",
+  it: "Conferma di aver letto l'informativa sulla privacy prima di inviare il messaggio.",
+};
+
+let cachedWidgetIdentity = null;
+
 const CLARIFYING_REPLIES = {
   fr: "Bien sûr. Pour vous orienter correctement, pouvez-vous me préciser ce que vous cherchez exactement : un audit, un devis, une refonte, une question technique, un rendez-vous ou un service spécifique ?",
   en: "Of course. To guide you properly, could you specify what you need: an audit, a quote, a redesign, a technical question, an appointment, or a specific service?",
@@ -526,6 +536,69 @@ function getResponseText(data) {
   return typeof text === "string" && text.trim() ? text.trim() : null;
 }
 
+async function callOliviaPlatform({
+  message,
+  language,
+  siteCode,
+  history,
+  metadata,
+}) {
+  const baseUrl = (
+    process.env.OLIVIA_PLATFORM_URL || "https://olivia-ai.o7digital.com"
+  ).replace(/\/$/, "");
+  const siteOrigin = "https://www.o7digital.com";
+
+  if (
+    !cachedWidgetIdentity ||
+    cachedWidgetIdentity.expiresAt <= Date.now()
+  ) {
+    const identityResponse = await fetch(`${baseUrl}/api/widget/identity`, {
+      headers: { Origin: siteOrigin },
+      cache: "no-store",
+      signal: AbortSignal.timeout(10000),
+    });
+    const identityData = await identityResponse.json();
+
+    if (
+      !identityResponse.ok ||
+      identityData.clientCode !== siteCode ||
+      !identityData.identity
+    ) {
+      throw new Error("Unable to establish Olivia widget identity");
+    }
+
+    cachedWidgetIdentity = {
+      value: identityData.identity,
+      expiresAt: Date.now() + 50 * 60 * 1000,
+    };
+  }
+
+  const response = await fetch(`${baseUrl}/api/olivia/chat`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Origin: siteOrigin,
+      "X-Olivia-Widget-Identity": cachedWidgetIdentity.value,
+    },
+    body: JSON.stringify({
+      clientCode: siteCode,
+      language,
+      message,
+      history: Array.isArray(history) ? history.slice(-12) : [],
+      metadata: metadata || {},
+      source: "website",
+    }),
+    cache: "no-store",
+    signal: AbortSignal.timeout(20000),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Olivia platform returned ${response.status}`);
+  }
+
+  return response.json();
+}
+
 export async function OPTIONS(request) {
   return new Response(null, {
     status: 204,
@@ -535,13 +608,52 @@ export async function OPTIONS(request) {
 
 export async function POST(request) {
   try {
-    const { message, language, locale, siteCode = "o7digital" } = await request.json();
+    const {
+      message,
+      language,
+      locale,
+      siteCode = "o7digital",
+      history = [],
+      metadata = {},
+      consent = {},
+    } = await request.json();
     const cleanMessage = typeof message === "string" ? message.trim() : "";
     const lang = normalizeLanguage(language || locale || "fr");
     const fallbackReply = getFallbackReply(siteCode, lang);
 
     if (!cleanMessage) {
       return withCors(request, { reply: fallbackReply });
+    }
+
+    if (siteCode === "o7digital" && consent.accepted !== true) {
+      return withCors(
+        request,
+        { reply: PRIVACY_REQUIRED_REPLIES[lang] },
+        { status: 403 }
+      );
+    }
+
+    if (siteCode === "o7digital") {
+      try {
+        const platformResponse = await callOliviaPlatform({
+          message: cleanMessage,
+          language: lang,
+          siteCode,
+          history,
+          metadata: {
+            ...metadata,
+            dataConsent: consent.accepted === true,
+            dataConsentAt: consent.acceptedAt || undefined,
+            consentVersion: consent.version || undefined,
+          },
+        });
+
+        if (platformResponse?.reply) {
+          return withCors(request, platformResponse);
+        }
+      } catch (error) {
+        console.error("Olivia v2 platform error:", error);
+      }
     }
 
     const preconfiguredReply = getPreconfiguredReply(siteCode, lang, cleanMessage);
@@ -558,9 +670,9 @@ export async function POST(request) {
     }
 
     const siteContext = SITE_CONTEXTS[siteCode] || `
-You are the O7 Digital Consulting website assistant.
+You are the o7Digital website assistant.
 Business context:
-- O7 Digital Consulting helps companies with technical SEO, Core Web Vitals, high-performance websites, React, Next.js, Astro, web architecture, UX/UI, automation, AI integration, and CTO as a Service.
+- o7Digital helps companies with technical SEO, Core Web Vitals, high-performance websites, React, Next.js, Astro, web architecture, UX/UI, automation, AI integration, and CTO as a Service.
     `.trim();
 
     const response = await fetch("https://api.openai.com/v1/responses", {
