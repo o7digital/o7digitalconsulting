@@ -131,24 +131,6 @@ function getLanguage(pathname) {
   return ["en", "es", "de", "it"].includes(firstSegment) ? firstSegment : "fr";
 }
 
-function detectMessageLanguage(message, fallbackLanguage) {
-  const value = (message || "").toLowerCase();
-  if (!value) return fallbackLanguage;
-
-  const spanishHints = /\b(hola|gracias|quiero|precio|precios|tarifa|tarifas|cita|citas|informacion|contacto|correo|telefono|servicio|servicios)\b/;
-  const frenchHints = /\b(bonjour|merci|prix|tarif|devis|rendez-vous|contact|telephone|service|services)\b/;
-  const englishHints = /\b(hello|thanks|price|prices|quote|appointment|appointments|contact|phone|service|services)\b/;
-  const germanHints = /\b(hallo|danke|preis|preise|angebot|termin|kontakt|telefon|service)\b/;
-  const italianHints = /\b(ciao|grazie|prezzo|prezzi|preventivo|appuntamento|contatto|telefono|servizio)\b/;
-
-  if (spanishHints.test(value)) return "es";
-  if (frenchHints.test(value)) return "fr";
-  if (englishHints.test(value)) return "en";
-  if (germanHints.test(value)) return "de";
-  if (italianHints.test(value)) return "it";
-  return fallbackLanguage;
-}
-
 export default function O7ChatWidget({ siteCode = "o7digital" }) {
   const pathname = usePathname();
   const language = getLanguage(pathname);
@@ -210,7 +192,6 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
   const handleSend = async () => {
     const message = input.trim();
     if (!message || isLoading || !hasConsent) return;
-    const messageLanguage = detectMessageLanguage(message, language);
     const history = messages
       .filter(
         (item) =>
@@ -231,7 +212,7 @@ export default function O7ChatWidget({ siteCode = "o7digital" }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           message,
-          language: messageLanguage,
+          language,
           siteCode,
           history,
           metadata: {
