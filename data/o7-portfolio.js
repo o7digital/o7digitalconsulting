@@ -94,12 +94,6 @@ export const o7PortfolioProjects = [
     category: "ecommerce",
   },
   {
-    id: "utopica",
-    title: "Utopica",
-    url: "https://utopica.net/",
-    category: "studio",
-  },
-  {
     id: "home-design-marques",
     title: "Home Design Marques",
     url: "https://homedesign-eight.vercel.app/",
