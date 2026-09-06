@@ -195,6 +195,10 @@ body.active-light-mode .o7-portfolio-filter button.is-active {
     font-size: 1rem;
     line-height: 1.65;
     color: #d8dbe2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
 }
 
 .o7-portfolio-preview {

@@ -225,12 +225,14 @@ export const o7PortfolioProjects = [
     title: "Cusiflores",
     url: "https://www.cusiflores.com/",
     category: "ecommerce",
+    previewImage: "/assets/images/portfolio/cusiflores.webp",
   },
   {
     id: "cenote-maravilla",
     title: "Cenote Maravilla",
     url: "https://www.cenotemaravilla.online/es",
     category: "tourism",
+    previewImage: "/assets/images/portfolio/cenote-maravilla.webp",
   },
   {
     id: "jean-louis-david-mexico",
