@@ -15,9 +15,9 @@ export const o7HeroSlides = [
   },
   {
     id: 3,
-    title: "Premiers résultats SEO visibles en moins de 30 jours",
+    title: "Une progression SEO durable",
     description:
-      "Selon la concurrence et le marché ciblé, nous visons des premiers signaux de progression SEO en moins de 30 jours.",
+      "Selon la concurrence et le marché ciblé, nous construisons une stratégie SEO conçue pour renforcer durablement votre visibilité.",
     bgImageClass: "bg_image--15",
   },
   {

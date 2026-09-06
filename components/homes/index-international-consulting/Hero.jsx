@@ -35,9 +35,9 @@ const DEFAULT_FR_SLIDES = [
     ctaHref: "/contact#contact-form",
   },
   {
-    title: "Premiers résultats SEO visibles rapidement",
+    title: "Une progression SEO durable",
     subtitle:
-      "Sur des marchés ciblés, une bonne architecture technique et une stratégie SEO claire peuvent générer des résultats visibles en moins de 30 jours.",
+      "Une architecture technique solide et une stratégie SEO claire créent les conditions d'une visibilité durable sur les marchés ciblés.",
     ctaLabel: "Parler de mon projet",
     ctaHref: "/contact#contact-form",
   },
