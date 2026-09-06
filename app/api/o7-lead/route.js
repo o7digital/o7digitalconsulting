@@ -91,7 +91,7 @@ function getSiteConfig(siteCode) {
   return {
     siteCode: code,
     brandName:
-      clean(fromMap.brandName) || (code === "o7digital" ? "o7Digital" : code),
+      code === "o7digital" ? "o7Digital" : clean(fromMap.brandName) || code,
     crmWebhookUrl:
       clean(fromMap.crmWebhookUrl) || clean(process.env.O7_CRM_LEADS_WEBHOOK_URL),
     crmSecret: clean(fromMap.crmSecret) || clean(process.env.O7_CRM_LEADS_SECRET),
