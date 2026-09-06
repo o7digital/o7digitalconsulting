@@ -93,10 +93,17 @@ function getSiteConfig(siteCode) {
     brandName:
       code === "o7digital" ? "o7Digital" : clean(fromMap.brandName) || code,
     crmWebhookUrl:
-      clean(fromMap.crmWebhookUrl) || clean(process.env.O7_CRM_LEADS_WEBHOOK_URL),
-    crmSecret: clean(fromMap.crmSecret) || clean(process.env.O7_CRM_LEADS_SECRET),
+      code === "o7digital"
+        ? clean(process.env.O7_CRM_LEADS_WEBHOOK_URL)
+        : clean(fromMap.crmWebhookUrl) || clean(process.env.O7_CRM_LEADS_WEBHOOK_URL),
+    crmSecret:
+      code === "o7digital"
+        ? clean(process.env.O7_CRM_LEADS_SECRET)
+        : clean(fromMap.crmSecret) || clean(process.env.O7_CRM_LEADS_SECRET),
     pipelineId:
-      clean(fromMap.pipelineId) || clean(process.env.O7_CRM_LEADS_PIPELINE_ID),
+      code === "o7digital"
+        ? clean(process.env.O7_CRM_LEADS_PIPELINE_ID)
+        : clean(fromMap.pipelineId) || clean(process.env.O7_CRM_LEADS_PIPELINE_ID),
     ownerEmail:
       clean(fromMap.ownerEmail) || "olivier.steineur@gmail.com",
     notificationEmails,
