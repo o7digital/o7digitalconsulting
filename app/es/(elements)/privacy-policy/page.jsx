@@ -90,8 +90,8 @@ export default function Page() {
                 </Paragraph>
                 <Paragraph>
                   <strong>Email:</strong>{" "}
-                  <a href="mailto:info@o7digital.com">
-                    info@o7digital.com
+                  <a href="mailto:info@o7digitalgroup.com">
+                    info@o7digitalgroup.com
                   </a>
                   <br />
                   <strong>Sitio web:</strong>{" "}
@@ -246,8 +246,8 @@ export default function Page() {
                 />
                 <Paragraph>
                   Para ejercer estos derechos, contacte:{" "}
-                  <a href="mailto:info@o7digital.com">
-                    info@o7digital.com
+                  <a href="mailto:info@o7digitalgroup.com">
+                    info@o7digitalgroup.com
                   </a>
                 </Paragraph>
 
@@ -289,8 +289,8 @@ export default function Page() {
                 <Paragraph>
                   Para cualquier pregunta sobre esta política o sus datos:
                   <br />
-                  <a href="mailto:info@o7digital.com">
-                    info@o7digital.com
+                  <a href="mailto:info@o7digitalgroup.com">
+                    info@o7digitalgroup.com
                   </a>
                 </Paragraph>
               </div>

@@ -450,7 +450,7 @@ export const o7ContactInfo = {
   title: "Parlons de votre projet digital",
   description:
     "Chez O7 Digital Consulting, chaque collaboration commence par un échange clair et stratégique. Que vous ayez un projet précis ou une réflexion en cours, nous prenons le temps de comprendre vos enjeux business, vos objectifs et votre contexte technologique.",
-  email: "info@o7digital.com",
+  email: "info@o7digitalgroup.com",
   phone: "",
   location: "France / Amérique du Nord / Amérique Latine",
 };

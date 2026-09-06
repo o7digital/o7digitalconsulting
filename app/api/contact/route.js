@@ -9,7 +9,7 @@ const requiredEnv = [
 ];
 
 const isConfigured = requiredEnv.every((key) => process.env[key]);
-const contactRecipient = process.env.CONTACT_TO || "info@o7digital.com";
+const contactRecipient = process.env.CONTACT_TO || "info@o7digitalgroup.com";
 
 export async function POST(request) {
   try {
@@ -26,7 +26,7 @@ export async function POST(request) {
       return NextResponse.json(
         {
           message:
-            "Le service email est momentanément indisponible. Merci de nous écrire à info@o7digital.com.",
+            "Le service email est momentanément indisponible. Merci de nous écrire à info@o7digitalgroup.com.",
         },
         { status: 503 }
       );

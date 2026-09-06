@@ -90,8 +90,8 @@ export default function Page() {
                 </Paragraph>
                 <Paragraph>
                   <strong>Email:</strong>{" "}
-                  <a href="mailto:info@o7digital.com">
-                    info@o7digital.com
+                  <a href="mailto:info@o7digitalgroup.com">
+                    info@o7digitalgroup.com
                   </a>
                   <br />
                   <strong>Sito web:</strong>{" "}
@@ -224,8 +224,8 @@ export default function Page() {
                 />
                 <Paragraph>
                   Per esercitare questi diritti, potete contattarci a:{" "}
-                  <a href="mailto:info@o7digital.com">
-                    info@o7digital.com
+                  <a href="mailto:info@o7digitalgroup.com">
+                    info@o7digitalgroup.com
                   </a>
                 </Paragraph>
 
@@ -301,8 +301,8 @@ export default function Page() {
                   <strong>O7 Digital Consulting</strong>
                   <br />
                   Email:{" "}
-                  <a href="mailto:info@o7digital.com">
-                    info@o7digital.com
+                  <a href="mailto:info@o7digitalgroup.com">
+                    info@o7digitalgroup.com
                   </a>
                   <br />
                   Indirizzo: 10 rue de Penthièvre, 75008 Parigi – Francia

@@ -90,8 +90,8 @@ export default function Page() {
                 </Paragraph>
                 <Paragraph>
                   <strong>Email:</strong>{" "}
-                  <a href="mailto:info@o7digital.com">
-                    info@o7digital.com
+                  <a href="mailto:info@o7digitalgroup.com">
+                    info@o7digitalgroup.com
                   </a>
                   <br />
                   <strong>Website:</strong>{" "}
@@ -240,8 +240,8 @@ export default function Page() {
                   Verarbeitung und Widerspruch gegen die Verarbeitung Ihrer
                   personenbezogenen Daten sowie auf Datenübertragbarkeit. Zur
                   Ausübung dieser Rechte kontaktieren Sie uns unter{" "}
-                  <a href="mailto:info@o7digital.com">
-                    info@o7digital.com
+                  <a href="mailto:info@o7digitalgroup.com">
+                    info@o7digitalgroup.com
                   </a>
                   .
                 </Paragraph>

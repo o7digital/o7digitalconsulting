@@ -31,7 +31,7 @@ export default function Page() {
               <p className="b1">SIREN : 899 748 560 · SIRET : 899 748 560 00013</p>
               <p className="b1">Siege social : 10 rue de Penthievre, 75008 Paris, France</p>
               <p className="b1">
-                Contact : <a href="mailto:info@o7digital.com">info@o7digital.com</a>
+                Contact : <a href="mailto:info@o7digitalgroup.com">info@o7digitalgroup.com</a>
               </p>
               <h2 className="title h4 mt--30">Hebergement</h2>
               <p className="b1">GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, Etats-Unis.</p>
