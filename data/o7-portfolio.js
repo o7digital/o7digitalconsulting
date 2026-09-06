@@ -74,12 +74,6 @@ export const o7PortfolioProjects = [
     category: "corporate",
   },
   {
-    id: "cervantes-bienes-raices",
-    title: "Cervantes Bienes Raices",
-    url: "https://www.cervantesbienesraices.com/",
-    category: "realEstate",
-  },
-  {
     id: "scm-abogados",
     title: "SCM Abogados",
     url: "https://scmabogados.com/",
