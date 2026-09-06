@@ -114,7 +114,7 @@ export const o7PortfolioProjects = [
   {
     id: "home-design-marques",
     title: "Home Design Marques",
-    url: "https://www.homedesignmarques.com/",
+    url: "https://homedesign-eight.vercel.app/",
     category: "creativeDesignArchitecture",
     alt: "Custom Wood Design Website & Digital Presence",
   },
@@ -242,12 +242,6 @@ export const o7PortfolioProjects = [
     title: "Cusiflores",
     url: "https://www.cusiflores.com/",
     category: "ecommerce",
-  },
-  {
-    id: "elite7-piel",
-    title: "Elite7 Piel",
-    url: "https://elite7piel.com/",
-    category: "beautyWellness",
   },
   {
     id: "cenote-maravilla",
