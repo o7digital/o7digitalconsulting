@@ -94,29 +94,85 @@ function PortfolioCard({ project, labels, categoryLabel }) {
 
 export default function PortfolioPreviewGrid({ projects, copy }) {
   const { labels, categories } = copy;
+  const [activeCategory, setActiveCategory] = useState("all");
+  const industryOptions = useMemo(() => {
+    const counts = new Map();
+
+    projects.forEach((project) => {
+      counts.set(project.category, (counts.get(project.category) || 0) + 1);
+    });
+
+    return Array.from(counts, ([category, count]) => ({
+      category,
+      count,
+      label: categories?.[category] || category,
+    }));
+  }, [categories, projects]);
+  const visibleProjects = useMemo(
+    () =>
+      activeCategory === "all"
+        ? projects
+        : projects.filter((project) => project.category === activeCategory),
+    [activeCategory, projects]
+  );
 
   return (
-    <div className="row row--30 o7-portfolio-grid">
-      {projects.map((project, index) => {
-        const categoryLabel =
-          categories?.[project.category] || project.category;
+    <>
+      <div
+        className="o7-portfolio-filter"
+        role="group"
+        aria-label={labels.filterByIndustry}
+      >
+        <button
+          type="button"
+          className={activeCategory === "all" ? "is-active" : ""}
+          aria-pressed={activeCategory === "all"}
+          aria-controls="o7-portfolio-projects"
+          onClick={() => setActiveCategory("all")}
+        >
+          <span>{labels.allIndustries}</span>
+          <span className="o7-portfolio-filter-count">{projects.length}</span>
+        </button>
 
-        return (
-          <div
-            key={project.id}
-            className="col-lg-4 col-md-6 col-12 o7-portfolio-col"
-            data-sal="slide-up"
-            data-sal-duration={600}
-            data-sal-delay={index * 50}
+        {industryOptions.map(({ category, count, label }) => (
+          <button
+            key={category}
+            type="button"
+            className={activeCategory === category ? "is-active" : ""}
+            aria-pressed={activeCategory === category}
+            aria-controls="o7-portfolio-projects"
+            onClick={() => setActiveCategory(category)}
           >
-            <PortfolioCard
-              project={project}
-              labels={labels}
-              categoryLabel={categoryLabel}
-            />
-          </div>
-        );
-      })}
-    </div>
+            <span>{label}</span>
+            <span className="o7-portfolio-filter-count">{count}</span>
+          </button>
+        ))}
+      </div>
+
+      <p className="visually-hidden" aria-live="polite">
+        {visibleProjects.length} {labels.projectsShown}
+      </p>
+
+      <div id="o7-portfolio-projects" className="row row--30 o7-portfolio-grid">
+        {visibleProjects.map((project, index) => {
+          const categoryLabel =
+            categories?.[project.category] || project.category;
+
+          return (
+            <div
+              key={project.id}
+              className="col-lg-4 col-md-6 col-12 o7-portfolio-col"
+              style={{ animationDelay: `${Math.min(index * 35, 280)}ms` }}
+            >
+              <PortfolioCard
+                project={project}
+                labels={labels}
+                categoryLabel={categoryLabel}
+              />
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 }

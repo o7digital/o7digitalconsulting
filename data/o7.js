@@ -503,6 +503,9 @@ export const o7PortfolioCopy = {
     pageOneGoogle: "Page 1 Google",
     loading: "Chargement...",
     previewUnavailable: "Aperçu indisponible",
+    filterByIndustry: "Filtrer les réalisations par industrie",
+    allIndustries: "Toutes les industries",
+    projectsShown: "réalisations affichées",
   },
   categories: {
     hospitality: "Hôtellerie",

@@ -230,6 +230,9 @@ export const o7PortfolioCopy = {
     pageOneGoogle: "Google Seite 1",
     loading: "Laden...",
     previewUnavailable: "Vorschau nicht verfügbar",
+    filterByIndustry: "Projekte nach Branche filtern",
+    allIndustries: "Alle Branchen",
+    projectsShown: "Projekte angezeigt",
   },
   categories: {
     hospitality: "Hotellerie",
