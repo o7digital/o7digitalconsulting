@@ -670,9 +670,9 @@ export async function POST(request) {
     }
 
     const siteContext = SITE_CONTEXTS[siteCode] || `
-You are the O7 Digital Consulting website assistant.
+You are the o7Digital website assistant.
 Business context:
-- O7 Digital Consulting helps companies with technical SEO, Core Web Vitals, high-performance websites, React, Next.js, Astro, web architecture, UX/UI, automation, AI integration, and CTO as a Service.
+- o7Digital helps companies with technical SEO, Core Web Vitals, high-performance websites, React, Next.js, Astro, web architecture, UX/UI, automation, AI integration, and CTO as a Service.
     `.trim();
 
     const response = await fetch("https://api.openai.com/v1/responses", {
