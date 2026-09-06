@@ -74,12 +74,6 @@ export const o7PortfolioProjects = [
     category: "corporate",
   },
   {
-    id: "touski",
-    title: "Touski",
-    url: "https://touski.online/",
-    category: "ecommerce",
-  },
-  {
     id: "cervantes-bienes-raices",
     title: "Cervantes Bienes Raices",
     url: "https://www.cervantesbienesraices.com/",
@@ -283,12 +277,6 @@ export const o7PortfolioProjects = [
       "salón de cabello premium Polanco CDMX",
       "salón de cabello premium Santa Fe CDMX Cuajimalpa",
     ],
-  },
-  {
-    id: "touski-2",
-    title: "Touski 2",
-    url: "https://touski2.vercel.app/",
-    category: "ecommerce",
   },
   {
     id: "satellite-guard",
