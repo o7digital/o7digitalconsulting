@@ -227,7 +227,6 @@ export const o7PortfolioCopy = {
     "Entdecken Sie Projekte von O7 Digital Consulting mit dynamischen Live-Vorschauen der Websites.",
   labels: {
     viewProject: "Projekt ansehen",
-    pageOneGoogle: "Google Seite 1",
     loading: "Laden...",
     previewUnavailable: "Vorschau nicht verfügbar",
     filterByIndustry: "Projekte nach Branche filtern",

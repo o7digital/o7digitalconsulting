@@ -78,14 +78,6 @@ function PortfolioCard({ project, labels, categoryLabel }) {
           >
             {labels.viewProject}
           </a>
-          {project.isPageOneGoogle && project.primaryKeywords?.length > 0 && (
-            <div className="o7-portfolio-seo-proof">
-              <p className="o7-portfolio-seo-title">{labels.pageOneGoogle}</p>
-              <p className="o7-portfolio-seo-keywords">
-                {project.primaryKeywords.join(" • ")}
-              </p>
-            </div>
-          )}
         </div>
       </div>
     </div>

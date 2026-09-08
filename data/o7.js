@@ -500,7 +500,6 @@ export const o7PortfolioCopy = {
     "Découvrez des projets web O7 Digital Consulting avec aperçu live des sites, sans screenshots figés.",
   labels: {
     viewProject: "Voir le projet",
-    pageOneGoogle: "Page 1 Google",
     loading: "Chargement...",
     previewUnavailable: "Aperçu indisponible",
     filterByIndustry: "Filtrer les réalisations par industrie",
