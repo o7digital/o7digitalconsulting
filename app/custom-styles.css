@@ -10,13 +10,20 @@
     margin-top: 24px;
 }
 
-.home-service-card.service-span-two .image img {
+.home-service-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.home-service-card.service-span-two .home-service-image {
     width: calc(200% + 30px);
     max-width: none;
 }
 
 @media (max-width: 991px) {
-    .home-service-card.service-span-two .image img {
+    .home-service-card.service-span-two .home-service-image {
         width: 100%;
         max-width: 100%;
     }

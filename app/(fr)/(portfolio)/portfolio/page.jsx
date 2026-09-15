@@ -29,7 +29,7 @@ export const metadata = {
     description: o7PortfolioCopy.metaDescription,
     images: [
       {
-        url: "/assets/images/o7digital-logo.png",
+        url: "/images/o7digital-social-card.jpg",
         width: 1200,
         height: 630,
         alt: "Portfolio O7 Digital Consulting",
@@ -40,7 +40,7 @@ export const metadata = {
     card: "summary_large_image",
     title: o7PortfolioCopy.metaTitle,
     description: o7PortfolioCopy.metaDescription,
-    images: ["/assets/images/o7digital-logo.png"],
+    images: ["/images/o7digital-social-card.jpg"],
   },
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import SectionHeader from "../common/SectionHeader";
 import { o7HomeServices } from "@/data/o7";
 
@@ -41,7 +42,7 @@ export default function HomeServices({
                 </div>
                 <div className="content">
                   <h4 className="title w-600">
-                    <a href="#">{service.title}</a>
+                    {service.title}
                   </h4>
                   <p className="description b1 color-gray mb--0">
                     {service.description}
@@ -54,32 +55,26 @@ export default function HomeServices({
                     </ul>
                   )}
                 </div>
-                {service.image && (
-                  <div className="image mt--20">
-                    <img
+                {service.image?.src && (
+                  <div
+                    className={`image mt--20 home-service-image ${
+                      service.image.className || ""
+                    }`}
+                    style={{ height: service.image.height || "330px" }}
+                  >
+                    <Image
                       src={service.image.src}
                       alt={service.image.alt}
+                      fill
                       loading="lazy"
-                      decoding="async"
-                      className={`radius ${
-                        service.image.className || (!service.image.width ? "w-100" : "")
-                      }`}
-                      style={
-                        service.image.width || service.image.height
-                          ? {
-                              ...(service.image.width ? { width: service.image.width } : {}),
-                              marginInline: "auto",
-                              display: "block",
-                              ...(service.image.height
-                                ? {
-                                    height: service.image.height,
-                                    objectFit: "cover",
-                                    width: "100%",
-                                  }
-                                : {}),
-                            }
-                          : undefined
+                      quality={72}
+                      sizes={
+                        service.spanTwo
+                          ? "(max-width: 767px) calc(100vw - 30px), (max-width: 991px) calc(50vw - 30px), (max-width: 1399px) calc(66vw - 60px), 850px"
+                          : "(max-width: 767px) calc(100vw - 30px), (max-width: 991px) calc(50vw - 30px), (max-width: 1399px) calc(33vw - 30px), 410px"
                       }
+                      className="radius"
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
                 )}

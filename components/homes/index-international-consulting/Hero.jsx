@@ -84,14 +84,12 @@ export default function Hero({
   };
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      SLIDES.forEach((src) => {
-        const img = new window.Image();
-        img.src = src;
-      });
-    }
-    start();
-    const onVis = () => (document.hidden ? stop() : start());
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (!isMobile) start();
+    const onVis = () => {
+      if (document.hidden || isMobile) stop();
+      else start();
+    };
     document.addEventListener("visibilitychange", onVis);
     return () => {
       document.removeEventListener("visibilitychange", onVis);
@@ -103,6 +101,8 @@ export default function Hero({
   const goPrev = () =>
     setIndex((i) => (i - 1 + slideContents.length) % slideContents.length);
   const goNext = () => setIndex((i) => (i + 1) % slideContents.length);
+  const activeContent = slideContents[index] || slideContents[0];
+  const activeImage = SLIDES[index] || SLIDES[0];
 
   return (
     <div
@@ -113,39 +113,37 @@ export default function Hero({
     >
       {/* Slides */}
       <div className="hero-slides">
-        {SLIDES.map((src, i) => {
-          const content = slideContents[i] || slideContents[0];
-          return (
-          <div key={`${src}-${i}`} className={`slide hero-slide ${i === index ? "active" : ""}`}>
-            <Image
-              src={src}
-              alt={`Hero slide ${i + 1}`}
-              fill
-              priority={i === 0}
-              sizes="100vw"
-              style={{ objectFit: "cover" }}
-            />
-            <div className="container" style={{ position: "relative", zIndex: 2 }}>
-              <div className="row">
-                <div className="col-lg-12">
-                  <div className="inner text-center hero-content hero-content-white">
-                    {i === 0 ? (
-                      <h1 className="title display-one">{content.title}</h1>
-                    ) : (
-                      <h2 className="title display-one">{content.title}</h2>
-                    )}
-                    <p className="description">{content.subtitle}</p>
-                    <div className="button-group">
-                      <Link className="btn-default btn-medium btn-icon btn-border btn-hero" href={content.ctaHref}>
-                        {content.ctaLabel}
-                      </Link>
-                    </div>
+        <div key={activeImage} className="slide hero-slide">
+          <Image
+            src={activeImage}
+            alt=""
+            fill
+            priority={index === 0}
+            fetchPriority={index === 0 ? "high" : "auto"}
+            quality={55}
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
+          />
+          <div className="container" style={{ position: "relative", zIndex: 2 }}>
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="inner text-center hero-content hero-content-white">
+                  {index === 0 ? (
+                    <h1 className="title display-one">{activeContent.title}</h1>
+                  ) : (
+                    <h2 className="title display-one">{activeContent.title}</h2>
+                  )}
+                  <p className="description">{activeContent.subtitle}</p>
+                  <div className="button-group">
+                    <Link className="btn-default btn-medium btn-icon btn-border btn-hero" href={activeContent.ctaHref}>
+                      {activeContent.ctaLabel}
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        )})}
+        </div>
       </div>
 
       {/* Overlay pour lisibilité */}
@@ -180,10 +178,7 @@ export default function Hero({
         .slide {
           position: absolute;
           inset: 0;
-          opacity: 0;
-          pointer-events: none;
-          transition: opacity 800ms ease-in-out;
-          will-change: opacity;
+          animation: hero-fade-in 450ms ease-out;
         }
         .hero-slide::before {
           content: "";
@@ -198,10 +193,9 @@ export default function Hero({
           z-index: 1;
           pointer-events: none;
         }
-        .slide.active {
-          opacity: 1;
-          pointer-events: auto;
-          z-index: 1;
+        @keyframes hero-fade-in {
+          from { opacity: 0.72; }
+          to { opacity: 1; }
         }
         .overlay { display: none; }
         .hero-content,
@@ -276,6 +270,9 @@ export default function Hero({
         }
         .dots button.active {
           background: #fff;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .slide { animation: none; }
         }
       `}</style>
     </div>

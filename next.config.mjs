@@ -5,7 +5,7 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     loader: 'default',
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
@@ -19,6 +19,21 @@ const nextConfig = {
   poweredByHeader: false,
   // Performance
   reactStrictMode: true,
+  async headers() {
+    const immutableAssetHeaders = [
+      {
+        key: 'Cache-Control',
+        value: 'public, max-age=31536000, immutable',
+      },
+    ];
+
+    return [
+      { source: '/assets/:path*', headers: immutableAssetHeaders },
+      { source: '/strategie/:path*', headers: immutableAssetHeaders },
+      { source: '/design/:path*', headers: immutableAssetHeaders },
+      { source: '/images/:path*', headers: immutableAssetHeaders },
+    ];
+  },
   async redirects() {
     const templateRoutes = [
       '/accordion',

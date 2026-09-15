@@ -35,7 +35,7 @@ export const metadata = {
       "Découvrez O7 Digital Consulting, agence de consulting digital impliquée au cœur du business de ses clients.",
     images: [
       {
-        url: '/assets/images/o7digital-logo.png',
+        url: '/images/o7digital-social-card.jpg',
         width: 1200,
         height: 630,
         alt: 'À propos O7 Digital Consulting',
@@ -48,7 +48,7 @@ export const metadata = {
       "À propos de O7 Digital Consulting | Direction digitale & consulting stratégique",
     description:
       "Agence de consulting digital impliquée au cœur du business de ses clients.",
-    images: ['/assets/images/o7digital-logo.png'],
+    images: ['/images/o7digital-social-card.jpg'],
   },
 };
 

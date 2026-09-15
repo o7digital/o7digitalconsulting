@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect } from "react";
 
 export default function ModeSwitcher() {
   const handleClick = () => {
@@ -15,29 +14,41 @@ export default function ModeSwitcher() {
   };
 
   return (
-    <div id="my_switcher" onClick={handleClick} className="my_switcher">
+    <div id="my_switcher" className="my_switcher">
       <ul>
         <li>
-          <a data-theme="light" className="setColor light">
+          <button
+            type="button"
+            data-theme="light"
+            className="setColor light"
+            aria-label="Activer le thème clair"
+            onClick={handleClick}
+          >
             <Image
               className="sun-image"
-              alt="Sun images"
+              alt=""
               src="/assets/images/icons/sun-01.svg"
               width={18}
               height={18}
             />
-          </a>
+          </button>
         </li>
         <li>
-          <a data-theme="dark" className="setColor dark">
+          <button
+            type="button"
+            data-theme="dark"
+            className="setColor dark"
+            aria-label="Activer le thème sombre"
+            onClick={handleClick}
+          >
             <Image
-              className="Victor Image"
-              alt="Vector Images"
+              className="vector-image"
+              alt=""
               src="/assets/images/icons/vector.svg"
               width={18}
               height={18}
             />
-          </a>
+          </button>
         </li>
       </ul>
     </div>

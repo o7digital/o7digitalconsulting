@@ -18,5 +18,4 @@
   font-style: normal;
 }
 
-/* Optimisation Inter font (Google Fonts) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Inter est auto-hébergée et préchargée par next/font dans app/layout.js. */

@@ -1,10 +1,19 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../public/assets/css/plugins/feature.css";
 import "../public/assets/scss/main.scss";
-import "react-modal-video/scss/modal-video.scss";
-import "photoswipe/dist/photoswipe.css";
 import "../public/assets/css/fonts-optimized.css";
 import "./custom-styles.css";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import ClientLayout from "./ClientLayout";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  variable: "--font-inter",
+  fallback: ["Arial", "sans-serif"],
+});
 
 export const metadata = {
   metadataBase: new URL('https://www.o7digital.com'),
@@ -38,7 +47,7 @@ export const metadata = {
     description: 'O7 Digital Consulting est une agence de consulting digital spécialisée en stratégie digitale, CTO as a Service, développement web moderne, design graphique, motion design, SEO et performance digitale.',
     images: [
       {
-        url: '/assets/images/o7digital-logo.png',
+        url: '/images/o7digital-social-card.jpg',
         width: 1200,
         height: 630,
         alt: 'O7 Digital Consulting',
@@ -49,7 +58,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'O7 Digital Consulting | Agence de consulting digital, CTO & développement web',
     description: 'O7 Digital Consulting est une agence de consulting digital spécialisée en stratégie digitale, CTO as a Service, développement web moderne, design graphique, motion design, SEO et performance digitale.',
-    images: ['/assets/images/o7digital-logo.png'],
+    images: ['/images/o7digital-social-card.jpg'],
   },
   robots: {
     index: true,
@@ -73,9 +82,9 @@ export const viewport = {
   maximumScale: 5,
 };
 
-export default function RootLayout({ children }) {
+export default function RootDocument({ children, language }) {
   return (
-    <html lang="fr">
+    <html lang={language} className={inter.variable}>
       <head>
         {/* Preconnect pour accélérer le chargement */}
         <link rel="preconnect" href="https://consent.cookiebot.com" />

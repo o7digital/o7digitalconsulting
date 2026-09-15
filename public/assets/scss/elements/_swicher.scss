@@ -8,10 +8,10 @@
 .active-light-mode .my_switcher ul li .setColor.light {
     display: none;
 }
-.active-light-mode .my_switcher ul li a.dark img {
+.active-light-mode .my_switcher ul li button.dark img {
     display: block;
 }
-.my_switcher ul li a.dark img {
+.my_switcher ul li button.dark img {
     display: none;
     filter: brightness(100);
 }
@@ -45,7 +45,10 @@
         li {
             margin-top: 0;
             margin-bottom: 0;
-            a {
+            button {
+                border: 0;
+                padding: 0;
+                cursor: pointer;
                 display: block;
                 position: relative;
                 z-index: 2;

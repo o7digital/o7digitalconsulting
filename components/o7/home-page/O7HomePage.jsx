@@ -36,7 +36,7 @@ export const metadata = {
       "Agence SEO technique et développement web Next.js, React et Astro. O7 Digital améliore Core Web Vitals, indexation, architecture et positionnement Google.",
     images: [
       {
-        url: '/assets/images/o7digital-logo.png',
+        url: '/images/o7digital-social-card.jpg',
         width: 1200,
         height: 630,
         alt: 'O7 Digital Consulting',
@@ -49,7 +49,7 @@ export const metadata = {
       "Agence SEO technique, Next.js & Astro | O7 Digital",
     description:
       "Agence SEO technique et développement web Next.js, React et Astro. O7 Digital améliore Core Web Vitals, indexation, architecture et positionnement Google.",
-    images: ['/assets/images/o7digital-logo.png'],
+    images: ['/images/o7digital-social-card.jpg'],
   },
 };
 

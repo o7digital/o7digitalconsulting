@@ -30,7 +30,7 @@ export const metadata = {
       "Contactez O7 Digital Consulting pour échanger sur votre projet digital, votre stratégie technologique ou votre transformation digitale.",
     images: [
       {
-        url: '/assets/images/o7digital-logo.png',
+        url: '/images/o7digital-social-card.jpg',
         width: 1200,
         height: 630,
         alt: 'Contact O7 Digital Consulting',
@@ -42,7 +42,7 @@ export const metadata = {
     title: 'Contact O7 Digital Consulting | Parlez de votre projet digital',
     description:
       'Réponse rapide et accompagnement personnalisé pour votre projet digital.',
-    images: ['/assets/images/o7digital-logo.png'],
+    images: ['/images/o7digital-social-card.jpg'],
   },
 };
 
