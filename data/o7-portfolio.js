@@ -333,9 +333,9 @@ export const o7PortfolioProjects = [
     category: "hospitality",
   },
   {
-    id: "raquel-hedo",
-    title: "Raquel Hedo",
-    url: "https://raquel-hedo.vercel.app/",
-    category: "creativeDesignArchitecture",
+    id: "rheo",
+    title: "Rheo",
+    url: "https://www.rheo.com.mx/",
+    category: "corporate",
   },
 ];
