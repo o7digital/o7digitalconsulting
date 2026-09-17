@@ -120,6 +120,8 @@ export default function Hero({
             fill
             priority={index === 0}
             fetchPriority={index === 0 ? "high" : "auto"}
+            loading={index === 0 ? "eager" : "lazy"}
+            decoding={index === 0 ? "sync" : "async"}
             quality={48}
             sizes="100vw"
             style={{ objectFit: "cover" }}
