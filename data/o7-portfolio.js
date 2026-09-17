@@ -164,13 +164,6 @@ export const o7PortfolioProjects = [
     previewImage: "/assets/images/portfolio/uvb-universidad-valle-del-bravo.webp",
   },
   {
-    id: "luxury-villas-la-casa-que-canta",
-    title: "Luxury Villas by La Casa Que Canta",
-    url: "https://luxuryvillas.vercel.app/",
-    category: "hospitality",
-    previewImage: "/assets/images/portfolio/luxury-villas-la-casa-que-canta.webp",
-  },
-  {
     id: "neurodiversa",
     title: "Neurodiversa",
     url: "https://neurodiversa.mx/",
