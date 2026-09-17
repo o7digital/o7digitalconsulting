@@ -222,7 +222,7 @@ export const o7PortfolioCopy = {
   title: "Previsualizaciones en vivo",
   description:
     "Explora una selección de proyectos con previsualizaciones en vivo de los sitios entregados.",
-  metaTitle: "Realizaciones | O7 Digital Consulting",
+  metaTitle: "Realizaciones",
   metaDescription:
     "Explora proyectos de O7 Digital Consulting con vistas en vivo de los sitios, actualizadas dinámicamente.",
   labels: {

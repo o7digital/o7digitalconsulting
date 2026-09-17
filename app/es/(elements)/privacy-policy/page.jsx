@@ -3,7 +3,7 @@ import Header2 from "@/components/headers/Header2";
 import Footer2 from "@/components/footers/Footer2";
 
 export const metadata = {
-  title: "Aviso Legal y Política de Privacidad – O7 Digital",
+  title: "Aviso Legal y Política de Privacidad",
   description:
     "Información legal, detalles del editor, alojamiento y política de privacidad de O7 Digital Consulting.",
   alternates: {

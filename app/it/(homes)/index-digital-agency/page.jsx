@@ -13,7 +13,7 @@ import {
 } from "@/data/o7.it";
 
 export const metadata = {
-  title: "CTO as a Service e SEO tecnica | O7 Digital",
+  title: "CTO as a Service e SEO tecnica",
   description:
     "O7 Digital aiuta le aziende a migliorare performance web, SEO tecnica e architettura digitale con servizi di CTO esterno e consulenza.",
   alternates: {

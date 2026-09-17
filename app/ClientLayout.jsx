@@ -1,11 +1,15 @@
 "use client";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import sal from "sal.js";
+import dynamic from "next/dynamic";
 import BackToTop from "@/components/common/BackToTop";
 import MobileMenu from "@/components/headers/MobileMenu";
-import O7ChatWidget from "@/components/o7/chat/O7ChatWidget";
 import { closeMenu } from "@/utlis/toggleMenu";
+
+const O7ChatWidget = dynamic(
+  () => import("@/components/o7/chat/O7ChatWidget"),
+  { ssr: false }
+);
 
 export default function ClientLayout({ children }) {
   useEffect(() => {
@@ -28,10 +32,17 @@ export default function ClientLayout({ children }) {
   }, [pathname]);
 
   useEffect(() => {
-    sal({
-      threshold: 0.01,
-      once: true,
+    let isActive = true;
+
+    import("sal.js").then(({ default: sal }) => {
+      if (isActive) {
+        sal({ threshold: 0.01, once: true });
+      }
     });
+
+    return () => {
+      isActive = false;
+    };
   }, [pathname]);
 
   useEffect(() => {

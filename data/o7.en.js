@@ -222,7 +222,7 @@ export const o7PortfolioCopy = {
   title: "Live website previews",
   description:
     "Explore a selection of projects with live previews of the delivered sites.",
-  metaTitle: "Portfolio | O7 Digital Consulting",
+  metaTitle: "Portfolio",
   metaDescription:
     "Explore O7 Digital Consulting projects with live website previews, updated dynamically.",
   labels: {

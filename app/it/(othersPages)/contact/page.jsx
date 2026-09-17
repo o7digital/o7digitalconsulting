@@ -5,7 +5,7 @@ import ContactContent from "@/components/o7/contact/ContactContent";
 import { o7ContactCopy as o7ContactCopyIt } from "@/data/o7.it";
 
 export const metadata = {
-  title: "Contatto O7 Digital Consulting | Parliamo del vostro progetto digitale",
+  title: "Contatto | Parliamo del vostro progetto digitale",
   description:
     "Contattate O7 Digital Consulting per discutere del vostro progetto digitale, strategia tecnologica o trasformazione digitale. Risposta rapida e supporto personalizzato.",
   alternates: {

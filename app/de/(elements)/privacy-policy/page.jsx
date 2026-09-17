@@ -3,7 +3,7 @@ import Header2 from "@/components/headers/Header2";
 import Footer2 from "@/components/footers/Footer2";
 
 export const metadata = {
-  title: "Impressum & Datenschutzerklärung – O7 Digital",
+  title: "Impressum & Datenschutzerklärung",
   description:
     "Impressum, Anbieter-Informationen, Hosting und Datenschutzrichtlinie von O7 Digital Consulting.",
   alternates: {

@@ -3,7 +3,7 @@ import Header2 from "@/components/headers/Header2";
 import Footer2 from "@/components/footers/Footer2";
 
 export const metadata = {
-  title: "Mentions legales et politique de confidentialite | O7 Digital",
+  title: "Mentions légales et politique de confidentialité",
   description:
     "Informations legales, editeur, hebergement et politique de confidentialite du site O7 Digital Consulting.",
   alternates: {

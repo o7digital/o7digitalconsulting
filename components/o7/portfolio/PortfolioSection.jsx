@@ -12,6 +12,7 @@ export default function PortfolioSection({ copy, projects }) {
               eyebrow={copy.eyebrow}
               title={copy.title}
               description={copy.description}
+              headingLevel="h1"
             />
           </div>
         </div>

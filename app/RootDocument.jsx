@@ -100,8 +100,14 @@ export default function RootDocument({ children, language }) {
           data-blockingmode="auto"
           strategy="afterInteractive"
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5GR2L6P8T"></script>
-        <script
+        <Script
+          id="google-analytics-loader"
+          src="https://www.googletagmanager.com/gtag/js?id=G-N5GR2L6P8T"
+          strategy="lazyOnload"
+        />
+        <Script
+          id="google-analytics-config"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];

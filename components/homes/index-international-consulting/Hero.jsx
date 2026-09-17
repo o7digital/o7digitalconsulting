@@ -4,10 +4,10 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 const SLIDES = [
-  "/assets/images/hero/hero-1.jpg",
-  "/assets/images/hero/hero-2.jpg",
-  "/assets/images/hero/hero-3.jpg",
-  "/assets/images/hero/hero-4.jpg",
+  "/assets/images/hero/hero-1.webp",
+  "/assets/images/hero/hero-2.webp",
+  "/assets/images/hero/hero-3.webp",
+  "/assets/images/hero/hero-4.webp",
 ];
 
 const INTERVAL_MS = 5000; // 5s entre slides
@@ -113,14 +113,14 @@ export default function Hero({
     >
       {/* Slides */}
       <div className="hero-slides">
-        <div key={activeImage} className="slide hero-slide">
+        <div key={activeImage} className={`slide hero-slide ${index === 0 ? "is-first" : ""}`}>
           <Image
             src={activeImage}
             alt=""
             fill
             priority={index === 0}
             fetchPriority={index === 0 ? "high" : "auto"}
-            quality={55}
+            quality={48}
             sizes="100vw"
             style={{ objectFit: "cover" }}
           />
@@ -179,6 +179,9 @@ export default function Hero({
           position: absolute;
           inset: 0;
           animation: hero-fade-in 450ms ease-out;
+        }
+        .slide.is-first {
+          animation: none;
         }
         .hero-slide::before {
           content: "";

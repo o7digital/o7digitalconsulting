@@ -7,9 +7,11 @@ export default function SectionHeader({
   title,
   description,
   align = "center",
+  headingLevel = "h2",
   children,
 }) {
   const alignmentClass = align === "left" ? "text-left" : "text-center";
+  const Heading = headingLevel;
 
   return (
     <div
@@ -23,7 +25,7 @@ export default function SectionHeader({
           <span className="theme-gradient">{eyebrow}</span>
         </h4>
       )}
-      {title && <h2 className="title w-600 mb--20">{title}</h2>}
+      {title && <Heading className="title w-600 mb--20">{title}</Heading>}
       {description && <p className="description b1">{description}</p>}
       {children}
     </div>

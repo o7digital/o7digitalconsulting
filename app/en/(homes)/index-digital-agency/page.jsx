@@ -13,7 +13,7 @@ import {
 } from "@/data/o7.en";
 
 export const metadata = {
-  title: "Fractional CTO & Technical SEO Consulting | O7 Digital",
+  title: "Fractional CTO & Technical SEO Consulting",
   description:
     "O7 Digital helps companies improve web performance, technical SEO and digital architecture with fractional CTO and consulting services.",
   alternates: {

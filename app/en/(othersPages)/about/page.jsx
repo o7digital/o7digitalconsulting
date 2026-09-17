@@ -15,7 +15,7 @@ import {
 } from "@/data/o7.en";
 
 export const metadata = {
-  title: "About O7 Digital Consulting | Digital leadership & engineering",
+  title: "About | Digital leadership & engineering",
   description:
     "O7 Digital Consulting: strategy, engineering and performance. Discover our approach, mission, vision and values.",
   alternates: {

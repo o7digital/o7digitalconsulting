@@ -8,8 +8,7 @@ import Expertise from "@/components/o7/about/Expertise";
 import Methodology from "@/components/o7/about/Methodology";
 
 export const metadata = {
-  title:
-    "À propos de O7 Digital Consulting | Direction digitale & consulting stratégique",
+  title: "À propos | Direction digitale & consulting stratégique",
   description:
     "Découvrez O7 Digital Consulting, agence de consulting digital impliquée au cœur du business de ses clients, agissant comme direction informatique et digitale externalisée.",
   alternates: {

@@ -15,7 +15,7 @@ import {
 } from "@/data/o7.es";
 
 export const metadata = {
-  title: "Sobre O7 Digital Consulting | Dirección digital e ingeniería",
+  title: "Sobre nosotros | Dirección digital e ingeniería",
   description:
     "O7 Digital Consulting: estrategia, ingeniería y rendimiento. Descubre nuestro enfoque, misión, visión y valores.",
   alternates: {

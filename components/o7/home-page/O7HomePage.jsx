@@ -9,8 +9,7 @@ import HomeServices from "@/components/o7/home/HomeServices";
 import LocalCoverage from "@/components/o7/home/LocalCoverage";
 
 export const metadata = {
-  title:
-    "Agence SEO technique, Next.js & Astro | O7 Digital",
+  title: "Agence SEO technique, Next.js & Astro | O7 Digital",
   description:
     "Agence SEO technique et développement web Next.js, React et Astro. O7 Digital améliore Core Web Vitals, indexation, architecture et positionnement Google.",
   alternates: {
