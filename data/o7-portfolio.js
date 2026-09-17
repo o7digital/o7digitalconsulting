@@ -94,6 +94,12 @@ export const o7PortfolioProjects = [
     category: "ecommerce",
   },
   {
+    id: "dosalga-online",
+    title: "Dosalga Online",
+    url: "https://www.dosalga.online/",
+    category: "ecommerce",
+  },
+  {
     id: "home-design-marques",
     title: "Home Design Marques",
     url: "https://homedesign-eight.vercel.app/",
