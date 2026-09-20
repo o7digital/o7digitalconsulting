@@ -100,6 +100,12 @@ export const o7PortfolioProjects = [
     category: "ecommerce",
   },
   {
+    id: "sachetto",
+    title: "Sachetto",
+    url: "https://www.sachetto.store/",
+    category: "ecommerce",
+  },
+  {
     id: "home-design-marques",
     title: "Home Design Marques",
     url: "https://homedesign-eight.vercel.app/",
