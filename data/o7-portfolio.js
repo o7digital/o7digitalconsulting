@@ -343,4 +343,11 @@ export const o7PortfolioProjects = [
     url: "https://www.rheo.com.mx/",
     category: "corporate",
   },
+  {
+    id: "espacio-firme",
+    title: "Espacio Firme",
+    url: "https://www.espaciofirme.com/",
+    category: "corporate",
+    alt: "Espacio Firme, mantenimiento e ingeniería inmobiliaria",
+  },
 ];
