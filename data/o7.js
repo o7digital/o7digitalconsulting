@@ -492,12 +492,12 @@ export const o7ContactCopy = {
 
 export const o7PortfolioCopy = {
   eyebrow: "Nos réalisations",
-  title: "Nos réalisations en aperçu live",
+  title: "Nos réalisations en images",
   description:
-    "Découvrez une sélection de projets avec aperçu live des sites livrés par O7 Digital Consulting.",
+    "Découvrez une sélection de projets avec aperçu des sites livrés par O7 Digital Consulting.",
   metaTitle: "Nos réalisations",
   metaDescription:
-    "Découvrez des projets web O7 Digital Consulting avec aperçu live des sites, sans screenshots figés.",
+    "Découvrez les réalisations web O7 Digital Consulting en images et visitez les sites de nos clients.",
   labels: {
     viewProject: "Voir le projet",
     pageOneGoogle: "Page 1 Google",

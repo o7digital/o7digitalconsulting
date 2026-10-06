@@ -219,12 +219,12 @@ export const o7ContactCopy = {
 
 export const o7PortfolioCopy = {
   eyebrow: "Referenzen",
-  title: "Live-Vorschauen der Websites",
+  title: "Vorschauen der Websites",
   description:
-    "Eine Auswahl unserer Projekte mit Live-Vorschau der gelieferten Websites.",
+    "Eine Auswahl unserer Projekte mit Vorschauen der gelieferten Websites.",
   metaTitle: "Referenzen",
   metaDescription:
-    "Entdecken Sie Projekte von O7 Digital Consulting mit dynamischen Live-Vorschauen der Websites.",
+    "Entdecken Sie Projekte von O7 Digital Consulting mit dynamischen Vorschauen der Websites.",
   labels: {
     viewProject: "Projekt ansehen",
     pageOneGoogle: "Google Seite 1",

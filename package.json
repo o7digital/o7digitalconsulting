@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run check:portfolio && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:portfolio": "node scripts/check-portfolio-previews.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

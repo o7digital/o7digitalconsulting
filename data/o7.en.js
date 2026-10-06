@@ -219,12 +219,12 @@ export const o7ContactCopy = {
 
 export const o7PortfolioCopy = {
   eyebrow: "Portfolio",
-  title: "Live website previews",
+  title: "Website previews",
   description:
-    "Explore a selection of projects with live previews of the delivered sites.",
+    "Explore a selection of projects with previews of the delivered sites.",
   metaTitle: "Portfolio",
   metaDescription:
-    "Explore O7 Digital Consulting projects with live website previews, updated dynamically.",
+    "Explore O7 Digital Consulting projects with website previews and links to the delivered sites.",
   labels: {
     viewProject: "View project",
     pageOneGoogle: "Google Page 1",

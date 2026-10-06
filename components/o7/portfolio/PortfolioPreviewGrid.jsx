@@ -2,23 +2,10 @@
 
 import React, { useMemo, useState } from "react";
 
-const buildPreviewUrl = (url) => {
-  const safeUrl = (url || "").trim();
-  return `https://api.microlink.io/?url=${encodeURIComponent(
-    safeUrl
-  )}&screenshot=true&meta=false&embed=screenshot.url`;
-};
-
 function PortfolioCard({ project, labels, categoryLabel }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const previewImageUrl = useMemo(() => {
-    if (project.previewImage) {
-      return project.previewImage;
-    }
-
-    return buildPreviewUrl(project.url);
-  }, [project.url, project.previewImage]);
+  const previewImageUrl = project.previewImage;
   const isBusy = !isLoaded && !hasError;
 
   const handleLoad = () => setIsLoaded(true);
