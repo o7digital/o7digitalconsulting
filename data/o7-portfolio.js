@@ -202,6 +202,13 @@ export const o7PortfolioProjects = [
     previewImage: "/assets/images/portfolio/iatera.webp",
   },
   {
+    id: "gc-chapa-abogados",
+    title: "GC Chapa Abogados",
+    url: "https://www.gcchapacabogados.com/",
+    category: "legal",
+    previewImage: "/assets/images/portfolio/gc-chapa-abogados.webp",
+  },
+  {
     id: "kabin-financial",
     title: "Kabin Financial",
     url: "https://www.kabinfinancial.com.mx/",
