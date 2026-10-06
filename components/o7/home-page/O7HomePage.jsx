@@ -331,7 +331,7 @@ export default function Home() {
       <HomeServices />
       <LocalCoverage />
       <CtaSection anchorId="cta" />
-      <Footer2 showSeoFooterBlock />
+      <Footer2 />
     </>
   );
 }

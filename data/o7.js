@@ -35,6 +35,10 @@ export const o7HomeIntro = {
     "Agence SEO technique Next.js, Astro & React pour viser la page 1 Google",
   description:
     "O7 Digital conçoit, audite et optimise des sites Next.js, Astro et React pour améliorer l'indexation, les Core Web Vitals, la structure sémantique et le positionnement Google sur des requêtes business qualifiées.",
+  links: [
+    { label: "Migration WordPress vers Astro", href: "/migration-wordpress-astro" },
+    { label: "Optimisation de la performance web", href: "/performance-web" },
+  ],
   bullets: [
     "Audit SEO technique, performance mobile, Core Web Vitals, balises title/meta, données structurées, maillage interne et indexation propre.",
     "Migration WordPress vers Astro ou Next.js : reprise des contenus, redirections 301, nettoyage technique, sitemap, canonical et suivi de montée SEO.",
@@ -44,6 +48,7 @@ export const o7HomeIntro = {
 export const o7HomeServices = [
   {
     title: "SEO technique international & performance Google",
+    href: "/seo-technique",
     description:
       "Audit SEO technique complet : crawl, indexation, canonical, hreflang, sitemap, données structurées Schema.org, Core Web Vitals et architecture de contenu. Nous construisons des bases solides pour viser la page 1 Google selon la concurrence et le marché ciblé.",
     iconClass: "feather-cpu",
@@ -56,6 +61,7 @@ export const o7HomeServices = [
   },
   {
     title: "Développement web React Next.js haute performance",
+    href: "/developpement-web",
     description:
       "Développement web sur mesure avec React, Next.js et Astro pour sites rapides, maintenables et SEO-ready. Architecture haute performance, CMS headless, optimisation JavaScript, images WebP, accessibilité et intégration IA pour soutenir une croissance durable.",
     iconClass: "feather-zap",
@@ -88,6 +94,7 @@ export const o7HomeServices = [
   },
   {
     title: "CTO as a Service (expertise secondaire)",
+    href: "/cto-as-a-service",
     description:
       "Direction digitale externalisée pour entreprises internationales. Nous intervenons comme CTO as a Service pour sécuriser les décisions technologiques : architecture, roadmap produit, choix de stack, pilotage des équipes et gouvernance technique.",
     iconClass: "feather-shield",

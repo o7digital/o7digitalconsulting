@@ -127,7 +127,7 @@ export default function ContactContent({
               <div className="col-lg-8 offset-lg-2">
                 <div className="service service__style--1 bg-color-blackest radius text-left rbt-border">
                   <div className="content">
-                    <h4 className="title w-600 mb--10">{copy.whenTitle}</h4>
+                    <h2 className="title h4 w-600 mb--10">{copy.whenTitle}</h2>
                     <p className="description b1 mb--0">
                       {copy.whenItems.map((item, idx) => (
                         <React.Fragment key={item}>
@@ -149,7 +149,7 @@ export default function ContactContent({
                 <i className="feather-mail" />
               </div>
               <div className="inner">
-                <h4 className="title">{labels.emailTitle}</h4>
+                <h2 className="title h4">{labels.emailTitle}</h2>
                 <p>
                   <a href={`mailto:${o7ContactInfo.email}`}>
                     {o7ContactInfo.email}
@@ -164,7 +164,7 @@ export default function ContactContent({
                 <i className="feather-phone-call" />
               </div>
               <div className="inner">
-                <h4 className="title">{labels.phoneTitle}</h4>
+                <h2 className="title h4">{labels.phoneTitle}</h2>
                 {phoneLink ? (
                   <p>
                     <a href={phoneLink}>{phoneValue}</a>
@@ -181,7 +181,7 @@ export default function ContactContent({
                 <i className="feather-calendar" />
               </div>
               <div className="inner">
-                <h4 className="title">{labels.bookingTitle}</h4>
+                <h2 className="title h4">{labels.bookingTitle}</h2>
                 <p className="mb--0">
                   <a href="#contact-form">{labels.bookingCta}</a>
                 </p>
@@ -280,7 +280,7 @@ export default function ContactContent({
         <div className="row mt--60">
           <div className="col-lg-12">
             <div className="section-title text-center mb--40">
-              <h3 className="title">{copy.officesTitle || "Nos bureaux internationaux"}</h3>
+              <h2 className="title h3">{copy.officesTitle || "Nos bureaux internationaux"}</h2>
               <p className="description">{copy.officesDescription || "Une présence mondiale pour mieux vous accompagner"}</p>
             </div>
           </div>
@@ -294,7 +294,7 @@ export default function ContactContent({
                 <i className="feather-map-pin" />
               </div>
               <div className="inner">
-                <h4 className="title">France</h4>
+                <h3 className="title h4">France</h3>
                 <p className="mb--10">
                   <strong>O7 DIGITAL CONSULTING SAS</strong>
                 </p>
@@ -314,7 +314,7 @@ export default function ContactContent({
                 <i className="feather-map-pin" />
               </div>
               <div className="inner">
-                <h4 className="title">Canada</h4>
+                <h3 className="title h4">Canada</h3>
                 <p className="mb--10">
                   <strong>9517-6806 Québec inc</strong>
                 </p>

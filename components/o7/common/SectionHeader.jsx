@@ -21,9 +21,9 @@ export default function SectionHeader({
       data-sal-delay={100}
     >
       {eyebrow && (
-        <h4 className="subtitle">
+        <p className="subtitle">
           <span className="theme-gradient">{eyebrow}</span>
-        </h4>
+        </p>
       )}
       {title && <Heading className="title w-600 mb--20">{title}</Heading>}
       {description && <p className="description b1">{description}</p>}

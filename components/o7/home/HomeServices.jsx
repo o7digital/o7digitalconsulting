@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import SectionHeader from "../common/SectionHeader";
 import { o7HomeServices } from "@/data/o7";
@@ -41,9 +42,11 @@ export default function HomeServices({
                   <i className={service.iconClass} />
                 </div>
                 <div className="content">
-                  <h4 className="title w-600">
-                    {service.title}
-                  </h4>
+                  <h3 className="title h4 w-600">
+                    {service.href ? (
+                      <Link href={service.href}>{service.title}</Link>
+                    ) : service.title}
+                  </h3>
                   <p className="description b1 color-gray mb--0">
                     {service.description}
                   </p>

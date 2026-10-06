@@ -18,9 +18,9 @@ export default function AboutHero({ heroData = o7AboutHero }) {
               data-sal-delay={150}
             >
               <div>
-                <h3 className="rainbow-sub-badge">
+                <p className="rainbow-sub-badge">
                   <span className="theme-gradient">{heroData.eyebrow}</span>
-                </h3>
+                </p>
               </div>
               <h1 className="title display-one">{heroData.title}</h1>
               <p className="description b1 mt--15 mb--0">

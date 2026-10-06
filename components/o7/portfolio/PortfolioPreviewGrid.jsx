@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useMemo, useState } from "react";
 
 function PortfolioCard({ project, labels, categoryLabel }) {
@@ -32,9 +33,12 @@ function PortfolioCard({ project, labels, categoryLabel }) {
               rel="noreferrer noopener"
               aria-label={`${labels.viewProject}: ${project.title}`}
             >
-              <img
+              <Image
                 src={previewImageUrl}
                 alt={project.alt || project.title}
+                fill
+                sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 991px) calc(50vw - 30px), (max-width: 1399px) calc(33vw - 30px), 410px"
+                quality={75}
                 loading="lazy"
                 decoding="async"
                 onLoad={handleLoad}
@@ -55,7 +59,7 @@ function PortfolioCard({ project, labels, categoryLabel }) {
         </div>
         <div className="content">
           <span className="subtitle b2">{categoryLabel}</span>
-          <h3 className="title mb--10">{project.title}</h3>
+          <h2 className="title h3 mb--10">{project.title}</h2>
           <a
             className="btn-default btn-small"
             href={project.url}

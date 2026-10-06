@@ -28,7 +28,7 @@ export default function ServiceSection({ eyebrow, title, description, items }) {
                   <i className={item.iconClass || "feather-check"} />
                 </div>
                 <div className="content">
-                  <h4 className="title w-600 mb--10">{item.title}</h4>
+                  <h3 className="title h4 w-600 mb--10">{item.title}</h3>
                   <p className="description b1 mb--0">{item.description}</p>
                 </div>
               </div>

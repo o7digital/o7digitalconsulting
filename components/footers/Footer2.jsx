@@ -36,23 +36,8 @@ const editorialContent = {
   }
 };
 
-const seoFooterKeywords = {
-  fr: "CTO as a Service Paris · CTO externalise Paris · consultant transformation digitale Paris · consultant SEO technique Paris · developpement web Astro React Paris · developpement web haute performance Paris · architecture web moderne Paris · CTO as a Service Montreal · CTO externalise Montreal · consultant transformation digitale Montreal · consultant SEO technique Montreal · developpement web Astro React Montreal",
-  en: "CTO as a Service London · Fractional CTO London · outsourced CTO London · technical SEO consultant London · Astro React web development London · high performance web development London · web architecture consultant London · CTO as a Service New York · Fractional CTO New York · technical SEO consultant New York · Astro React web development New York · high performance web development New York",
-  es: "CTO as a Service Madrid · CTO fraccional Madrid · transformacion digital para empresas Madrid · consultor SEO tecnico Madrid · desarrollo web Astro React Madrid · desarrollo web de alto rendimiento Madrid · arquitectura web moderna Madrid · CTO as a Service CDMX · CTO fraccional CDMX · transformacion digital para empresas CDMX · consultor SEO tecnico CDMX · desarrollo web Astro React CDMX",
-  de: "CTO as a Service Frankfurt · externer CTO Frankfurt · digitale Transformation Frankfurt · technische SEO Beratung Frankfurt · Webentwicklung Astro React Frankfurt · High Performance Webentwicklung Frankfurt · moderne Webarchitektur Frankfurt · digitale Strategie B2B Frankfurt",
-  it: "CTO as a Service Milano · CTO esterno Milano · consulente trasformazione digitale Milano · consulente SEO tecnico Milano · sviluppo web Astro React Milano · sviluppo web ad alte prestazioni Milano · architettura web moderna Milano · consulenza digitale per aziende Milano",
-};
-
-const additionalSeoFooterKeywords = {
-  de: "CTO as a Service Berlin · externer CTO Berlin · technische SEO Agentur Berlin · SEO Beratung Berlin · Webentwicklung Next.js Berlin · Webentwicklung React Berlin · Astro Webentwicklung Berlin · Core Web Vitals Optimierung Berlin · Headless CMS Beratung Berlin · digitale Transformation Mittelstand Deutschland · IT Beratung Deutschland · KI Integration Deutschland · DevOps Beratung Deutschland · Cloud Beratung Deutschland · technische SEO München · CTO as a Service München · Web Performance Optimierung München · technische SEO Hamburg · CTO Beratung Hamburg · technische SEO Düsseldorf · technische SEO Stuttgart · technische SEO Österreich · technische SEO Schweiz",
-  it: "CTO as a Service Roma · CTO esterno Roma · consulente SEO tecnico Roma · agenzia SEO tecnica Roma · sviluppo web Next.js Roma · sviluppo web React Roma · sviluppo web Astro Roma · ottimizzazione Core Web Vitals Roma · consulenza CMS headless Roma · trasformazione digitale aziende Italia · consulenza IT Italia · integrazione AI Italia · consulenza DevOps Italia · consulenza cloud Italia · SEO tecnica Milano · agenzia SEO tecnica Milano · performance web Milano · consulente SEO Torino · CTO as a Service Torino · SEO tecnica Bologna · SEO tecnica Firenze · SEO tecnica Svizzera italiana · consulenza digitale B2B Italia",
-};
-
-export default function Footer2({ lang = "fr", showSeoFooterBlock = false }) {
+export default function Footer2({ lang = "fr" }) {
   const content = editorialContent[lang] || editorialContent.fr;
-  const seoKeywords = seoFooterKeywords[lang];
-  const additionalSeoKeywords = additionalSeoFooterKeywords[lang];
   const prefix =
     lang === "en" ? "/en" : lang === "es" ? "/es" : lang === "de" ? "/de" : lang === "it" ? "/it" : "";
 
@@ -91,21 +76,7 @@ export default function Footer2({ lang = "fr", showSeoFooterBlock = false }) {
           </span>
           <span style={{ color: "#8f8f8f", fontSize: "14px" }}>© o7 Digital</span>
         </p>
-        {showSeoFooterBlock && seoKeywords && (
-          <div
-            style={{
-              marginTop: "14px",
-              fontSize: "12px",
-              lineHeight: 1.7,
-              color: "rgba(143, 143, 143, 0.9)",
-            }}
-          >
-            <p style={{ margin: 0 }}>{seoKeywords}</p>
-            {additionalSeoKeywords && (
-              <p style={{ margin: "6px 0 0" }}>{additionalSeoKeywords}</p>
-            )}
-          </div>
-        )}
+
       </div>
     </footer>
   );

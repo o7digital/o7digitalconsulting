@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import SectionHeader from "../common/SectionHeader";
 import { o7HomeIntro } from "@/data/o7";
@@ -27,18 +28,25 @@ export default function HomeIntro({
                   </p>
                 ))}
               </div>
+              {data.links?.length > 0 && (
+                <ul className="list-style--1 mt--20">
+                  {data.links.map((link) => (
+                    <li key={link.href}><Link href={link.href}>{link.label}</Link></li>
+                  ))}
+                </ul>
+              )}
             </SectionHeader>
           </div>
           <div className="col-lg-6 mt_md--30 mt_sm--30">
             <div className="service service__style--1 bg-color-blackest radius text-left rbt-border">
               <div className="content">
-                <h4 className="title w-600">{approachTitle}</h4>
+                <h3 className="title h4 w-600">{approachTitle}</h3>
                 <p className="description b1 mb--0">{approachText}</p>
               </div>
             </div>
             <div className="service service__style--1 bg-color-blackest radius text-left rbt-border mt--20">
               <div className="content">
-                <h4 className="title w-600">{expertiseTitle}</h4>
+                <h3 className="title h4 w-600">{expertiseTitle}</h3>
                 <p className="description b1 mb--0">{expertiseText}</p>
               </div>
             </div>

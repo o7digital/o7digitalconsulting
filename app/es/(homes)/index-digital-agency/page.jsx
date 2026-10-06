@@ -336,7 +336,7 @@ export default function HomeEs() {
         description="Estrategia, desarrollo, IA, SEO, infogestión, diseño gráfico, motion design y 3D para cubrir tus necesidades digitales."
       />
       <CtaSection anchorId="cta-es" cta={o7CtaEs} contactHref="/es/contact" />
-      <Footer2 lang="es" showSeoFooterBlock />
+      <Footer2 lang="es" />
     </>
   );
 }
