@@ -1,5 +1,26 @@
 export const o7PortfolioProjects = [
   {
+    id: "artimex-bakery",
+    title: "Artimex Bakery",
+    url: "https://www.artimexbakery.com/",
+    category: "corporate",
+    previewImage: "/assets/images/portfolio/artimex-bakery.webp",
+  },
+  {
+    id: "luxury-villas-la-casa-que-canta",
+    title: "Luxury Villas by La Casa Que Canta",
+    url: "https://www.luxuryvillasbylacasaquecanta.com/",
+    category: "hospitality",
+    previewImage: "/assets/images/portfolio/luxury-villas-la-casa-que-canta.webp",
+  },
+  {
+    id: "business-suites-kepler",
+    title: "Business Suites Kepler",
+    url: "https://www.businesssuiteskepler.com/",
+    category: "hospitality",
+    previewImage: "/assets/images/portfolio/business-suites-kepler.webp",
+  },
+  {
     id: "la-casa-que-canta",
     title: "La Casa Que Canta",
     url: "https://www.lacasaquecanta.com/",
