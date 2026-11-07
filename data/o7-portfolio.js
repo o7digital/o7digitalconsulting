@@ -216,6 +216,13 @@ export const o7PortfolioProjects = [
     previewImage: "/assets/images/portfolio/zevi-capital.webp",
   },
   {
+    id: "camya-abogados",
+    title: "CAMYA Abogados",
+    url: "https://www.camya.mx/",
+    category: "legal",
+    previewImage: "/assets/images/portfolio/camya-abogados.webp",
+  },
+  {
     id: "iatera",
     title: "IATERA",
     url: "https://www.iatera.com.mx/",
