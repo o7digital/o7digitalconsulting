@@ -241,6 +241,7 @@ export const o7PortfolioCopy = {
     ecommerce: "Comercio electrónico",
     corporate: "Corporativo",
     studio: "Estudio creativo",
+    artsCulture: "Arte y cultura",
     creativeDesignArchitecture: "Creativo y diseño / Arquitectura e interiores",
     corporateDigitalTransformation: "Corporativo & transformación digital",
     technologySecurity: "Tecnología y soluciones de seguridad",

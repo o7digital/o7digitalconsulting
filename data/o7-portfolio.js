@@ -223,6 +223,27 @@ export const o7PortfolioProjects = [
     previewImage: "/assets/images/portfolio/camya-abogados.webp",
   },
   {
+    id: "bullbear-academy",
+    title: "Bull & Bear Academy",
+    url: "https://bullbear-academy-preview.vercel.app/",
+    category: "education",
+    previewImage: "/assets/images/portfolio/bullbear-academy.webp",
+  },
+  {
+    id: "bullbear-insurance",
+    title: "Bull & Bear Insurance Broker",
+    url: "https://bullbear-insurance-preview.vercel.app/",
+    category: "financialServices",
+    previewImage: "/assets/images/portfolio/bullbear-insurance.webp",
+  },
+  {
+    id: "nathalie-pena-comas",
+    title: "Nathalie Peña-Comas",
+    url: "https://nathalie-pena-comas.vercel.app/es/",
+    category: "artsCulture",
+    previewImage: "/assets/images/portfolio/nathalie-pena-comas.webp",
+  },
+  {
     id: "iatera",
     title: "IATERA",
     url: "https://www.iatera.com.mx/",
