@@ -230,6 +230,13 @@ export const o7PortfolioProjects = [
     previewImage: "/assets/images/portfolio/bullbear-academy.webp",
   },
   {
+    id: "etapel",
+    title: "Etapel",
+    url: "https://etapelv1-2.vercel.app/",
+    category: "corporate",
+    previewImage: "/assets/images/portfolio/etapel.webp",
+  },
+  {
     id: "bullbear-insurance",
     title: "Bull & Bear Insurance Broker",
     url: "https://bullbear-insurance-preview.vercel.app/",
